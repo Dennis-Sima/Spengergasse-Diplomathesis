@@ -1,109 +1,110 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='513px' preserveAspectRatio='none' style='width:512px;height:513px;' version='1.1' viewBox='0 0 512 513' width='512px' zoomAndPan='magnify'>
-  <defs/>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='347px' preserveAspectRatio='none' style='width:368px;height:347px;' version='1.1' viewBox='0 0 368 347' width='368px' zoomAndPan='magnify'>
+  <defs>
+    <filter height='300%' id='fm56thxzcma0w' width='300%' x='-1' y='-1'>
+      <feGaussianBlur result='blurOut' stdDeviation='2.0'/>
+      <feColorMatrix in='blurOut' result='blurOut2' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0'/>
+      <feOffset dx='4.0' dy='4.0' in='blurOut2' result='blurOut3'/>
+      <feBlend in='SourceGraphic' in2='blurOut3' mode='normal'/>
+    </filter>
+  </defs>
   <g>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='117' x='5' y='17.457'>
-      An error has occured!
+    <!--MD5=[b4fa10df80476353258f72a232547d63]
+class AbstractList-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='48' id='AbstractList' style='stroke: #A80036; stroke-width: 1.5;' width='99' x='176' y='155'/>
+    <ellipse cx='191' cy='171' fill='#A9DCDF' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M191.1133,166.5981 L189.9595,171.6699 L192.2754,171.6699 Z M189.6191,164.3569 L192.6157,164.3569 L195.9609,176.75 L193.5122,176.75 L192.7485,173.687 L189.4697,173.687 L188.7227,176.75 L186.2739,176.75 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='67' x='205' y='175.5352'>
+      AbstractList
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='206' x='5' y='32.5508'>
-      Just mentally though... are you okay ?
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='177' x2='274' y1='187' y2='187'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='177' x2='274' y1='195' y2='195'/>
+    <!--MD5=[8e34b16d8d8f96f4a11290cd523ed859]
+class AbstractCollection-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='48' id='AbstractCollection' style='stroke: #A80036; stroke-width: 1.5;' width='135' x='6' y='155'/>
+    <ellipse cx='21' cy='171' fill='#A9DCDF' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M21.1133,166.5981 L19.9595,171.6699 L22.2754,171.6699 Z M19.6191,164.3569 L22.6157,164.3569 L25.9609,176.75 L23.5122,176.75 L22.7485,173.687 L19.4697,173.687 L18.7227,176.75 L16.2739,176.75 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='103' x='35' y='175.5352'>
+      AbstractCollection
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='47.6445'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='217' x='5' y='62.7383'>
-      Diagram size: 24 lines / 365 characters.
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='7' x2='140' y1='187' y2='187'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='7' x2='140' y1='195' y2='195'/>
+    <!--MD5=[3d4177ac58b4411586d067f34e84928f]
+class List-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='48' id='List' style='stroke: #A80036; stroke-width: 1.5;' width='51' x='188' y='27.5'/>
+    <ellipse cx='203' cy='43.5' fill='#B4A7E5' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M199.4277,39.7651 L199.4277,37.6069 L206.8071,37.6069 L206.8071,39.7651 L204.3418,39.7651 L204.3418,47.8418 L206.8071,47.8418 L206.8071,50 L199.4277,50 L199.4277,47.8418 L201.8931,47.8418 L201.8931,39.7651 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='19' x='217' y='48.0352'>
+      List
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='77.832'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='245' x='5' y='92.9258'>
-      For some reason, dot/GraphViz has crashed.
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='189' x2='238' y1='59.5' y2='59.5'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='189' x2='238' y1='67.5' y2='67.5'/>
+    <!--MD5=[c160724f8e3bb89ca8141a12554ac2e3]
+class Collection-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='48' id='Collection' style='stroke: #A80036; stroke-width: 1.5;' width='87' x='42' y='27.5'/>
+    <ellipse cx='57' cy='43.5' fill='#B4A7E5' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M53.4277,39.7651 L53.4277,37.6069 L60.8071,37.6069 L60.8071,39.7651 L58.3418,39.7651 L58.3418,47.8418 L60.8071,47.8418 L60.8071,50 L53.4277,50 L53.4277,47.8418 L55.8931,47.8418 L55.8931,39.7651 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='55' x='71' y='48.0352'>
+      Collection
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='288' x='5' y='108.0195'>
-      This has been generated with PlantUML (1.2020.06).
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='43' x2='128' y1='59.5' y2='59.5'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='43' x2='128' y1='67.5' y2='67.5'/>
+    <!--MD5=[ab8871ed637f40707b866ba6597734bc]
+class ArrayList-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='73.9102' id='ArrayList' style='stroke: #A80036; stroke-width: 1.5;' width='124' x='163.5' y='263'/>
+    <ellipse cx='197.4' cy='279' fill='#ADD1B2' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M199.8731,285.1431 Q199.2921,285.4419 198.6529,285.5913 Q198.0138,285.7407 197.3082,285.7407 Q194.8014,285.7407 193.4815,284.0889 Q192.1617,282.437 192.1617,279.3159 Q192.1617,276.1865 193.4815,274.5347 Q194.8014,272.8828 197.3082,272.8828 Q198.0138,272.8828 198.6612,273.0322 Q199.3087,273.1816 199.8731,273.4805 L199.8731,276.2031 Q199.2423,275.6221 198.6488,275.3523 Q198.0553,275.0825 197.4244,275.0825 Q196.0797,275.0825 195.3949,276.1492 Q194.7101,277.2158 194.7101,279.3159 Q194.7101,281.4077 195.3949,282.4744 Q196.0797,283.541 197.4244,283.541 Q198.0553,283.541 198.6488,283.2712 Q199.2423,283.0015 199.8731,282.4204 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='50' x='215.6' y='283.5352'>
+      ArrayList
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='305' x='5' y='123.1133'>
-      This version of PlantUML is 294 days old, so you should
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='164.5' x2='286.5' y1='295' y2='295'/>
+    <text fill='#000000' font-family='sans-serif' font-size='11' lengthAdjust='spacingAndGlyphs' textLength='112' x='169.5' y='309.6348'>
+      Object[] elementData
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='299' x='11' y='138.207'>
-      consider upgrading from http://plantuml.com/download
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='164.5' x2='286.5' y1='315.9551' y2='315.9551'/>
+    <text fill='#000000' font-family='sans-serif' font-size='11' lengthAdjust='spacingAndGlyphs' textLength='29' x='169.5' y='330.5898'>
+      size()
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='153.3008'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='256' x='5' y='168.3945'>
-      Java Runtime: OpenJDK Runtime Environment
+    <!--MD5=[15b68e006199004da79ea2a4d117d8e9]
+class TimeUnit-->
+    <rect fill='#FEFECE' filter='url(#fm56thxzcma0w)' height='86.8652' id='TimeUnit' style='stroke: #A80036; stroke-width: 1.5;' width='83' x='274' y='8'/>
+    <ellipse cx='289' cy='24' fill='#EB937F' rx='11' ry='11' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <path d='M292.6143,30.5 L284.8945,30.5 L284.8945,18.1069 L292.6143,18.1069 L292.6143,20.2651 L287.3433,20.2651 L287.3433,22.938 L292.1162,22.938 L292.1162,25.0962 L287.3433,25.0962 L287.3433,28.3418 L292.6143,28.3418 Z '/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='51' x='303' y='28.5352'>
+      TimeUnit
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='173' x='5' y='183.4883'>
-      JVM: OpenJDK 64-Bit Server VM
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='275' x2='356' y1='40' y2='40'/>
+    <text fill='#000000' font-family='sans-serif' font-size='11' lengthAdjust='spacingAndGlyphs' textLength='29' x='280' y='54.6348'>
+      DAYS
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='142' x='5' y='198.582'>
-      Java Version: 15.0.1+9-18
+    <text fill='#000000' font-family='sans-serif' font-size='11' lengthAdjust='spacingAndGlyphs' textLength='38' x='280' y='67.5898'>
+      HOURS
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='172' x='5' y='213.6758'>
-      Operating System: Windows 10
+    <text fill='#000000' font-family='sans-serif' font-size='11' lengthAdjust='spacingAndGlyphs' textLength='47' x='280' y='80.5449'>
+      MINUTES
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='144' x='5' y='228.7695'>
-      Default Encoding: Cp1252
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='76' x='5' y='243.8633'>
-      Language: de
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='62' x='5' y='258.957'>
-      Country: AT
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='168' x='5' y='274.0508'>
-      Machine: DESKTOP-04G2H0R
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='166' x='5' y='289.1445'>
-      PLANTUML_LIMIT_SIZE: 4096
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='77' x='5' y='304.2383'>
-      Processors: 8
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='152' x='5' y='319.332'>
-      Max Memory: 4,282,384,384
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='148' x='5' y='334.4258'>
-      Total Memory: 293,601,280
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='146' x='5' y='349.5195'>
-      Free Memory: 154,494,752
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='151' x='5' y='364.6133'>
-      Used Memory: 139,106,528
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='122' x='5' y='379.707'>
-      Thread Active Count: 4
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='394.8008'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='358' x='5' y='409.8945'>
-      Default dot version: dot - graphviz version 2.44.1 (20200629.0846)
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='424.9883'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='417' x='5' y='440.082'>
-      Please go to http://plantuml.com/graphviz-dot to check your GraphViz
-      version.
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='455.1758'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='263' x='5' y='470.2695'>
-      You should send this diagram and this image to
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' font-weight='bold' lengthAdjust='spacingAndGlyphs' textLength='120' x='271' y='470.2695'>
-      plantuml@gmail.com
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='11' x='394' y='470.2695'>
-      or
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='37' x='5' y='485.3633'>
-      post to
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' font-weight='bold' lengthAdjust='spacingAndGlyphs' textLength='125' x='45' y='485.3633'>
-      http://plantuml.com/qa
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='102' x='173' y='485.3633'>
-      to solve this issue.
-    </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='349' x='5' y='500.457'>
-      You can try to turn arround this issue by simplifing your diagram.
-    </text>
-    <image height='51' width='51' x='451' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAABN0lEQVR4Xu3RQWrEMBBE0bn/FXzYZBUwj4i03K2WY/zhL8aWqsrM5/Py8hyO4/jKaN5WHDereVtwVFbzW3HMDz6Pan4rjnnUx2Q1vxXHZDW/FcdkNb8Vx2Q1vxXHZDW/FcdkNb8Vx4z03i1x9Ejv3RJHz2reVhw3q3lTlIR84h/hvVKqShw90nulZEocGtGMUjIlDo1oRimzZZ7Pan6K2XDPZzU/heGjEt9f1bxzRxrLRiW+v6p55440lq3W/lIsW639pVi2WvtLsWy19i/B0lXauwRLq7WvBUdUaU8LjqjSnlYcc1Vzt+Coq5q7FcdFNecWODKqObfCsY4ePW/Bco2eH70/3/3t/azmpYiG//X+FjzyY3wu0XMtjP4Bf4+IntvK6CMlem4r0ZHRcxHC9ytLX15e/gffQJWOecUKIPYAAAAASUVORK5CYII=' y='6'/>
-    <!--MD5=[b20f95b27bc0cb5b26a2b123a5e19934]
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='275' x2='356' y1='86.8652' y2='86.8652'/>
+    <!--MD5=[00308d07b6a5721fb0cf5861877e6652]
+reverse link List to AbstractList-->
+    <path d='M217.61,95.47 C219.51,115.32 221.69,138.11 223.27,154.7 ' fill='none' id='List&lt;-AbstractList' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <polygon fill='none' points='210.64,96.09,215.7,75.52,224.57,94.76,210.64,96.09' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <!--MD5=[1822909749df1453bdd84de7a60a3406]
+reverse link Collection to AbstractCollection-->
+    <path d='M81.39,95.47 C79.49,115.32 77.31,138.11 75.73,154.7 ' fill='none' id='Collection&lt;-AbstractCollection' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <polygon fill='none' points='74.43,94.76,83.3,75.52,88.36,96.09,74.43,94.76' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <!--MD5=[0159284274f96a472eb2618ad803aaca]
+reverse link Collection to List-->
+    <path d='M149.39,51.5 C162.2,51.5 175.02,51.5 187.83,51.5 ' fill='none' id='Collection&lt;-List' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <polygon fill='none' points='149.25,58.5,129.25,51.5,149.25,44.5,149.25,58.5' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <!--MD5=[7a3a52e8f65ef1a8d8d29530ea5cd870]
+reverse link AbstractCollection to AbstractList-->
+    <path d='M161.45,179 C166.22,179 171,179 175.77,179 ' fill='none' id='AbstractCollection&lt;-AbstractList' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <polygon fill='none' points='161.19,186,141.19,179,161.19,172,161.19,186' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <!--MD5=[40e4bb1af59cca28d4643aaff05088cc]
+reverse link AbstractList to ArrayList-->
+    <path d='M225.5,223.43 C225.5,236.33 225.5,250.32 225.5,262.71 ' fill='none' id='AbstractList&lt;-ArrayList' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <polygon fill='none' points='218.5,223.23,225.5,203.23,232.5,223.23,218.5,223.23' style='stroke: #A80036; stroke-width: 1.0;'/>
+    <!--MD5=[49ecf6e6192762c00928d7ede49cc769]
 @startuml
 abstract class AbstractList
 abstract AbstractCollection
@@ -133,9 +134,9 @@ PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
 (APACHE source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 15.0.1+9-18
-Operating System: Windows 10
-Default Encoding: Cp1252
+Java Version: 13+33
+Operating System: Mac OS X
+Default Encoding: UTF-8
 Language: de
 Country: AT
 -->

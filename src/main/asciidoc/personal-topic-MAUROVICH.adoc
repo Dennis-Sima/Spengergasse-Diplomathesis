@@ -1,0 +1,110 @@
+= Diplomarbeit : Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
+Paul Maurovich <mau18259@spengergasse.at>
+v1.0, 2021-01-30
+
+:doctype: book
+
+:toc:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+
+:blankline: pass:[ +]
+
+[colophon, right]
+== Colophon
+
+{blankline}
+
+*Spengergasse Press, Vienna*
+
+(C) 2021 Paul Maurovich
+
+{blankline}
+
+*Schuljahr 2020/21*
+
+.Abgabevermerk
+[cols="50,50", options="header"]
+|===
+|Datum:
+|übernommen von:
+
+|{blankline}
+ {blankline}
+|{blankline}
+ {blankline}
+|===
+
+[eidesstattliche-erklaerung]
+== Eidesstattliche Erklärung
+
+Ich erkläre an Eides statt, dass ich die vorliegende Diplomarbeit selbständig
+und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und
+Hilfsmittel nicht benutzt und die den benutzten Quellen wörtlich und
+inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
+
+[cols="30,70", options="header"]
+|===
+|Wien, am 30.03.2021
+|VerfasserInnen
+
+|{blankline}
+|{blankline}
+ {blankline}
+ {blankline}
+ Paul MAUROVICH
+|===
+
+[abstract]
+== Abstract
+
+<<<
+
+//include::chapters/01-personal-topic-grueneis.adoc[]
+
+<<<
+
+//include::chapters/02-personal-topic-unger.adoc[]
+
+<<<
+
+== Was ist das Java EE Framework?
+== Was ist das Spring Framework?
+== Regelmäßige Updates
+== Regelmäßige Updates
+== langfristiger Support
+== Funktionen
+== Developer Codebase + Community Größe
+== Querschnittsfunktion wie Security, Logging, Metriken
+== Vorteile/Nachteile Java EE
+== Vorteile/Nachteile Spring Framework
+== Wann was verwenden? (Entscheidungskriterien)
+== Unterschied Tabelle zwischen beiden
+== Spring Boot im Bezug auf das Diplomprojekt (Warum wir es verwenden anstatt Java EE etc.)
+
+[glossary]
+== Glossary
+
+software:: invisible
+hardware:: accessible
+
+<<<
+
+[bibliography]
+== References
+
+- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+  From Journeyman to Master. Addison-Wesley. 1999.
+
+<<<
+
+[index]
+== Index
+
+<<<
+
+[appendix]
+== Appendix
+
+:appendix-caption: Appendix
+:sectnums:
