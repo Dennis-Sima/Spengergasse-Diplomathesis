@@ -67,20 +67,38 @@ inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
 //include::chapters/02-personal-topic-unger.adoc[]
 
 <<<
+== Einleitung
+// Was war meine Aufgabe im Projekt
 
 == Was ist das Java EE Framework?
+//Erklärung, Benutzung etc.
 == Was ist das Spring Framework?
+//Erklärung, Benutzung, was gehört alles dazu etc.
 == Regelmäßige Updates
-== Regelmäßige Updates
+// Update Verfügbarkeit, Wartbarkeit, Stable Versions, gibt es noch Updates?
 == langfristiger Support
+// Gibt es noch Support für Java EE? Wie lange kann man damit rechnen?
+
 == Funktionen
+// 1. Spring Funktionen, Features etc.
+// 2. Java EE Funktionen, Features etc.
+
 == Developer Codebase + Community Größe
+// Wie groß ist Community, Stackoverflow, Aktualität etc.
+
 == Querschnittsfunktion wie Security, Logging, Metriken
 == Vorteile/Nachteile Java EE
+// Tabelle PRO Contra
+
 == Vorteile/Nachteile Spring Framework
+// Tabelle PRO Contra
+
 == Wann was verwenden? (Entscheidungskriterien)
 == Unterschied Tabelle zwischen beiden
-== Spring Boot im Bezug auf das Diplomprojekt (Warum wir es verwenden anstatt Java EE etc.)
+// USPs von beiden
+
+== Spring Boot im Bezug auf das Diplomprojekt
+// Warum wir es verwenden anstatt Java EE etc.
 
 [glossary]
 == Glossary
