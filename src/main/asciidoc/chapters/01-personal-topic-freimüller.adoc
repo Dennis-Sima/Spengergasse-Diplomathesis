@@ -1,0 +1,130 @@
+[section]
+= Themenstellung: Ein Vergleich von JVM Sprachen im Umgang mit modernen Programmierschnittstellen
+
+Florian Freimüller <fre18149@spengergasse.at>
+
+:toc:
+
+== Abstract
+
+In diesem Paper wird die Frage bewertet, welche JVM Sprache wie gut geeignet ist, um verschiedene
+Programmierschnittstellen anzusteuern.
+// Erklären, was die Absicht hinter diesem Paper ist (herausfinden, welche JVM Sprache am besten für
+// welche Schnittstelle/Schnittstellenart ist)
+
+
+== Bewertungskriterien
+
+
+// Kriterien: Testbarkeit, Lesbarkeit des Codes, Wartbarkeit, Lines of Code
+// , Unterstüzten Paradigmen (objektorientiert, funktionale Programmierung)
+// Alternativen in den jeweiligen Sprachen
+
+// Bewertungstabelle mit Punktesystem und Gewichtung der Punkte
+// Wie kann man Features der Sprachen möglichst gut einbauen
+
+
+== Auswahl der JVM Sprachen
+
+Um möglichst viele Vergleichswerte zu haben, werden die Schnittstellen in sechs verschiedenen JVM Sprachen verglichen.
+
+- Java
+
+Java ist eine objektorientierte Programmiersprache und wurde im Jahr 1995 von James Gosling veröffentlicht und wird
+bis heute in sehr vielen Bereichen verwendet.
+Da Java eine general purpose language ist und Java dank der JVM (Java virtual machine) plattformunabhängig ist,
+kann Java für sehr viele Anwendungsimplementierungen eingesetzt werden, angefangen von simplen Konsolenprogrammen
+bis hin zu Anwendungen auf Bordcomputern von Automobilen.
+
+- Kotlin
+
+Die Programmiersprache Kotlin wurde von der Firma JetBrains entwickelt und im Jahre 2011 veröffentlicht.
+Wichtig bei der Erstellung von Kotlin war sowohl, dass Kotlin problemlos mit Java gemeinsam verwendet werden kann als auch,
+dass der in Kotlin geschrieben Code eleganter und effizienter ist als der equivalente Java Code.
+Hauptsächlich wird Kotlin für Android Applikationen verwendet, allerdings ist es ebenso möglich, die Sprache
+für Web-Applikationen oder auch Native Applikationen zu verwenden, da Kotlin eine general purpose language ist.
+
+
+- Groovy
+- Scala
+- Clojure
+- Frege
+
+
+// Java, Kotlin, Groovy, Scala, Clojure, Frege
+
+
+== Auswahl der Schnittstellen
+
+// Streaming API, persistence API, Android API, Mail APIs, Google APIs, REST APIs, Stripe API via Bibliothek
+
+Bei den behandelten Schnittstellen wurde darauf geachtet, dass diese häufig Anwendung finden und
+es daher auch einen Grund für die Entwickler dieser Schnittstellen gibt, diese Schnittstellen so
+kompatibel wie möglich zu gestalten.
+
+Folgende Auswahl wurde getroffen:
+
+- Streaming API
+
+
+
+- Persistence API
+- Android API
+- Mail APIs
+- Google APIs
+- REST APIs
+- Stripe API (über Bibliotheken)
+
+
+== Stripe API
+
+// Bezug aufs Projekt, Testbarkeit,
+
+== Rest APIs
+
+// Codeaufwand vergleichen, verschiedene Solutions präsentieren und nach Kriterien vergleichen
+
+
+== Stream API
+
+// Sinnvoll in Kotlin, Groovy & Scala bzw bessere Alternativen?
+
+
+== Java persistence API (JPA)
+
+// Java -> records, Kotlin -> data class, Groovy -> ?, Scala -> ?
+
+
+== Android API
+
+// Java -> viel Code, etc; Kotlin -> lesbar, kurz, kompakt; Groovy -> ?, Scala -> ?
+
+
+== Java Mail API
+
+// Hauptaugenmerk: Amount of lines
+
+
+== Google API
+
+// Code vergleichen, Amount of lines etc.
+
+
+== Fazit
+
+// Berechnen, welche Sprache im Durchschnitt am Besten bei allen Schnittstellen abschneidet
+
+
+<<<
+
+[bibliography]
+== References
+<<<
+
+[glossary]
+== Glossary
+<<<
+
+[index]
+== Index
+<<<
