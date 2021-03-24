@@ -7,13 +7,34 @@ Florian Freimüller <fre18149@spengergasse.at>
 
 == Abstract
 
-In diesem Paper wird die Frage bewertet, welche JVM Sprache wie gut geeignet ist, um verschiedene
+In diesem Paper wird mithilfe von eigens ausgewählten Bewertungskriterien bewertet,
+welche JVM Sprache wie gut geeignet ist, um verschiedene
 Programmierschnittstellen anzusteuern.
+
 // Erklären, was die Absicht hinter diesem Paper ist (herausfinden, welche JVM Sprache am besten für
 // welche Schnittstelle/Schnittstellenart ist)
 
 
 == Bewertungskriterien
+
+Um die Schnittstellen so gut wie möglich bewerten zu können, wird eine Beurteilungstabelle erstellt.
+In dieser Tabelle werden folgende Kriterien behandelt:
+
+- Lesbarkeit des Codes
+
+Ein wichtiger Aspekt bei der Beurteilung ist, wie lesbar der Code ist, wenn die Schnittstelle angesteuert wird.
+Hierbei wird vor ein Augenmerk darauf gelegt, ob der Code durch das Ansprechen der Schnittstelle unlesbar wird oder nicht.
+
+- Wartbarkeit des Codes
+
+
+
+
+- Lines of Codes
+
+- Unterstüzte Paradigmen
+
+- Testbarkeit
 
 
 // Kriterien: Testbarkeit, Lesbarkeit des Codes, Wartbarkeit, Lines of Code
@@ -115,16 +136,4 @@ Folgende Auswahl wurde getroffen:
 // Berechnen, welche Sprache im Durchschnitt am Besten bei allen Schnittstellen abschneidet
 
 
-<<<
-
-[bibliography]
-== References
-<<<
-
-[glossary]
-== Glossary
-<<<
-
-[index]
-== Index
 <<<

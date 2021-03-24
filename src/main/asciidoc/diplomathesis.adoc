@@ -1,0 +1,74 @@
+= Diploma Thesis : title
+Joachim GRÜNEIS <grueneis@spengergasse.at>; Klaus UNGER <unger@spengergasse.at>
+v1.0, 2018-06-18
+
+:doctype: book
+
+:toc:
+:toc-title: Table of content
+:toclevels: 3
+
+:blankline: pass:[ +]
+
+[colophon, right]
+== Colophon
+
+{blankline}
+
+*Spengergasse Press, Vienna*
+
+(C) 2018 by Joachim GRÜNEIS, Klaus UNGER
+
+{blankline}
+
+*Schuljahr 2018/19*
+
+.Abgabevermerk
+[cols="50,50", options="header"]
+|===
+|Datum:
+|übernommen von:
+
+|{blankline}
+{blankline}
+|{blankline}
+{blankline}
+|===
+
+[eidesstattliche-erklaerung]
+== Eidesstattliche Erklärung
+
+Ich erkläre an Eides statt, dass ich die vorliegende Diplomarbeit selbständig
+und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und
+Hilfsmittel nicht benutzt und die den benutzten Quellen wörtlich und
+inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
+
+[cols="30,70", options="header"]
+|===
+|Wien, am 08.04.2019
+|VerfasserInnen
+
+|{blankline}
+|{blankline}
+{blankline}
+{blankline}
+Florian FREIMÜLLER
+|===
+
+<<<
+
+include::chapters/01-personal-topic-freimüller.adoc[]
+
+<<<
+
+[bibliography]
+== References
+<<<
+
+[glossary]
+== Glossary
+<<<
+
+[index]
+== Index
+<<<
