@@ -6,15 +6,17 @@ Paul MAUROVICH <mau18259@spengergasse.at>
 :toc:
 
 == Abstract
-In diesem Paper werden die zwei Software Architektur Frameworks, Java EE und Spring , auf unterschiedliche Kriterien, wie Funktionen, Wartbarkeit, Frequentierung von Updates, Software Support sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
+In diesem Paper werden die zwei Software Architektur Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie Funktionen, Wartbarkeit, Frequentierung von Updates, Software Support sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
 Um die Arbeit angemessen zu verstehen, werden Erfahrungen in Informatik und Programmiersprachen vorausgesetzt und soll als Basis einer Entscheidungsgrundlage der zu wählenden Architektur dienen.
 
 <<<
 
 == Einleitung
-Java Enwickler stehen, sei es im Projekt für einen Kunden oder privat, vor der Entscheidung, welches (Web-)Framework für ihr Projekt wählen sollten.
+Java Entwickler stehen, sei es im Projekt für einen Kunden oder privat, vor der Entscheidung, welches (Web-)Framework sie für ihr Projekt wählen wollen. Für diese Entscheidung stehen unter anderem die zwei (Web) Frameworks zur Verfügung: Java-EE und Spring.
 
 // An was muss ich denken, wenn ich damit einsteige
+
+== Get Started
 
 == Was ist das Java EE Framework?
 
@@ -30,7 +32,7 @@ Java Enwickler stehen, sei es im Projekt für einen Kunden oder privat, vor der 
 // enterprise support, open source, services, geld features
 
 == Kosten, Eleganz beim Programmieren
-// Programmier paradigmen, depe. inj., reactive Unterstützung
+// Programmier-Paradigmen, depe. inj., reactive Unterstützung
 
 == Funktionen
 // 1. Spring Funktionen, Features etc.
@@ -55,3 +57,6 @@ Java Enwickler stehen, sei es im Projekt für einen Kunden oder privat, vor der 
 == Spring Boot im Bezug auf das Diplomprojekt
 // Warum wir es verwenden anstatt Java EE etc.
 // Ranking
+
+
+# Vorschläge: Skalierbarkeit, Wie gut ist es dokumentiert, Lizenz, Features
