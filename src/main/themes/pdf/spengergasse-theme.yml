@@ -84,7 +84,6 @@ image:
 table:
   caption_side: bottom
 caption:
-  side: left
   side: bottom
   font_color: $brand_primary_color
   font_size: 10
