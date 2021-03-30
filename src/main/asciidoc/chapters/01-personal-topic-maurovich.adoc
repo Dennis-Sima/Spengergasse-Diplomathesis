@@ -33,7 +33,7 @@ Spring (Boot) kommt mit einem automatisch konfigurierten Anwendungskontext sowie
 Der Schwerpunkt von Spring (Boot) liegt auf der Entwicklung von und mit Microservices. Es ist daraus ausgelegt und verfügt, wie auch Java EE, über einige Module:
 
 * *Datenbank Zugang, Daten Integrität*: JDBC, JMS, ORM, OXM
-* *Web*: Servelts, WebSockets, Portlet
+* *Web*: Servelt, WebSocket, Portlet
 * *Core Container*: Beans, Core, Context und SpEL
 
 Eine Spring Boot Web Applikation Architektur sieht wie folgt aus:
@@ -47,7 +47,7 @@ Die “Business Logic” Ebene beinhaltet die Services, welche mit Business Logi
 Schlussendlich werden die Daten zum Beispiel in SQL, H2 oder PostgreSQL Datenbanken gespeichert und dort zugänglich gemacht. Die “Persistence Layer” Ebene führt mit der “Database Layer” Ebene “CRUD” (Create, Read, Update und Delete) Operationen durch, welche das Hinzufügen, Lesen, Aktualisieren und Löschen von Daten bereitstellt.
 
 == Get Started
-*Jave EE*:
+*Java EE*:
 
 *Spring*:
 
@@ -133,12 +133,12 @@ image::../images/SpringBootWeb.png[title = "REST API Response localhost"]
 
 == Regelmäßige Updates
 Java EE, seit Java EE 8 umbenannt auf Jakarta EE, erhält regelmäßig neue Version Updates. Die Frequentierung der Stable Updates ist durchschnittlich alle zwei bis vier Jahre und enthält meist neue Features und Verbesserungen. Das letzte Hauptupdate (Jakarta EE 9) war im Jahr 2020.
-Das Spring Framework wird kontinuierlich aktualisiert. Das letzte große Update war 2017 mit Spring 5.0 und als letzter Stabel Release gilt Spring 5.3.4, welches im Februar 2021 veröffentlich wurde. Beide Frameworks erhalten regelmäßig Updates, wohingegen das Spring Framework öfter Updates bekommt als Java EE. Dies ist wohl auch der stetig expandierenden Nutzerbasis von Spring geschuldet. Auch Dependencies werden seitens beider Frameworks im Laufe von Updates mit aktualisiert.
+Das Spring Framework wird kontinuierlich aktualisiert. Das letzte große Update war 2017 mit Spring 5.0 und als letzter Stable Release gilt Spring 5.3.4, welches im Februar 2021 veröffentlicht wurde. Beide Frameworks erhalten regelmäßig Updates, wohingegen das Spring Framework öfter Updates bekommt als Java EE. Dies ist wohl auch der stetig expandierenden Nutzerbasis von Spring geschuldet. Auch Dependencies werden seitens beider Frameworks im Laufe von Updates mit aktualisiert.
 
-Durch Dependency Injection und Cloud Migration seitens beider Frameworks, bei Spring ist es Spring Boot, ist eine gute Wartbarkeit gegeben. Spring Boot verfügt über Plain Old Java Objects (POJO), welche sich durch kleine und “leichtgewichtige” Klassen auszeichnet, ermöglicht eine präzise Wartbarkeit, da jegliche Logik in kleinen Klassen leicht erreichbar und nicht zu umfassend versteckt ist. Auch Jave EE verfügt über Dependencies, welche einfach aktualisiert werden können.
+Durch Dependency Injection und Cloud Migration seitens beider Frameworks, bei Spring ist es Spring Boot, ist eine gute Wartbarkeit gegeben. Spring Boot verfügt über Plain Old Java Objects (POJO), welche sich durch kleine und “leichtgewichtige” Klassen auszeichnet, ermöglicht eine präzise Wartbarkeit, da jegliche Logik in kleinen Klassen leicht erreichbar und nicht zu umfassend versteckt ist. Auch Java EE verfügt über Dependencies, welche einfach aktualisiert werden können.
 Bei der Wartbarkeit beider Frameworks kommt es vor allem darauf an, ob eine Monolithen- oder Microservice Architektur gewählt wurde. Letzteres bietet einen weit ausgehend mehr wartbaren Code, da der Code je nach Spezifikationen in verschiedene Module aufgeteilt ist. Hunderte Klassen in einem Package, unübersichtliche Klassennamen und hundert-zeilige Klasse mit Code sind hauptverantwortlich für schlechte Wartbarkeit.
 
-Durch immer neue Updates und deren neuen Funktionen und Verbesserungen wird die Wartbarkeit immer besser, sei es mit der Cloud Migration von Jave EE 8 oder Spring Boot, beide wurden auf den heutigen Stand der Technik gehoben.
+Durch immer neue Updates und deren neuen Funktionen und Verbesserungen wird die Wartbarkeit immer besser, sei es mit der Cloud Migration von Java EE 8 oder Spring Boot, beide wurden auf den heutigen Stand der Technik gehoben.
 
 == Langfristiger Support
 Wie bereits im vorhergehenden Kapitel eingegangen, erhalten beide Frameworks regelmäßig Updates. Jedoch wirkt seit 2017 Oracle, der damalige Leiter von der Java Enterprise Platform, nicht mehr an der Entwicklung von Java EE mitwirken und hat die Leitung abgegeben. Dies zeigt auf, dass Java EE immer weniger an Relevanz in der heutigen Software Gemeinschaft hat und einen langfristigen Support fragwürdig macht. Zwar kann man noch mit einigen Updates in der Zukunft rechnen, doch bahnbrechende Updates werden auf sich warten lassen. Die Website “JRebel” hat einige Entwickler gefragt, ob und wenn sie von Java EE zu Spring migriert hätten. Der Report ergab, dass lediglich 14 Prozent von Spring zu Java EE gewechselt haben bzw. es tun möchten, wohingegen 36 Prozent eher von Java EE zu Spring migriert haben bzw. es tun möchten.
@@ -147,6 +147,9 @@ Viele Portale sprechen von dem Tod von Java EE, nachdem Oracle die Leitung abgeg
 “Negotiations Failed: How Oracle killed Java EE”, so der Autor Markus Krag. In dem Bericht geht hervor, dass es einen Markenstreit zwischen Oracle und der Eclipse Foundation gab, welcher in keiner Einigung resultierte.
 
 Seitens des Spring (Boot) Frameworks gibt es keine Anzeichen eines nahestehenden Endes. Unter der Leitung der Apache Foundation gewinnt das Framework immer mehr und mehr an Interesse und Nutzung unter der Entwicklergemeinschaft. Nicht nur sind große skalierbare Projekt mit dem Framework möglich, auch regelmäßige stabile Versionen kommen auf den Markt.
+
+// Gibt es noch Support für Java EE? Wie lange kann man damit rechnen?
+// enterprise support, open source, services, geld features, LIZENZ . open source?
 
 == Kosten, Eleganz beim Programmieren
 // Programmier-Paradigmen, depe. inj., reactive Unterstützung
@@ -157,50 +160,105 @@ Seitens des Spring (Boot) Frameworks gibt es keine Anzeichen eines nahestehenden
 // 2. Java EE Funktionen, Features etc.
 // --> Welche Standards?
 
-== Developer Codebase + Community Größe
+== Developer Codebase und Community Größe
+Seitens beider Frameworks gibt es eine größere Developer-Base. Java EE bzw. Jakarta EE wird laut der Webseite “https://stackshare.io/”, welche unterschiedliche Frameworks, Programmiersprachen etc. bewertet und aufzeigt, wer Technologien verwendet, von 29 Unternehmen genutzt. Darunter “TripAdvisior”, “Biting Bit” und “IWB”. Außerdem hat Java EE auch Integrationen in “Eclipse”, “NetBeans IDE” sowie “Apache Wicket”.
+
+Auch Spring ist auf derselben Webseite vertreten. Angaben zu folge benutzen 501 Unternehmen Spring in ihrem Stack, darunter “Accenture”, “Zalando” und auch “deleokorea”.
+
+image::../images/EntwicklerStack.png[title = "Entwickler, welche den Stack verwenden"]
+image::../images/FirmenStack.png[title = "Firmen, welche den Stack verwenden"]
+image::../images/FragenStack.png[title = "Anzahl an Fragen auf StackOverflow zu dem Stack"]
 // Wie groß ist Community, Stackoverflow, Aktualität etc.
 
-== Querschnittsfunktion wie Security, Logging, Metriken
+== Querschnittsfunktion
+//wie Security, Logging, Metriken
 
-== Vorteile/Nachteile Java EE
+== Vorteile und Nachteile von Java EE
 // Tabelle PRO Contra
 
-== Vorteile/Nachteile Spring Framework
+== Vorteile und Nachteile von Spring Framework
 // Tabelle PRO Contra
-
-== Wann was verwenden? (Entscheidungskriterien)
 
 == Unterschied Tabelle zwischen beiden
 // USPs von beiden
 
-== Verwendung von Spring Boot im Diplomprojekt
-Im Diplomprojekt “ScanBuyGo” wurde als Framework auf die Verwendung von Spring Boot gesetzt.
+== Wann was verwenden? (Entscheidungskriterien)
 
-Grund dafür war, dass bereits viel Erfahrung und praktische Programmierung Fähigkeiten in der Schule erlernt wurden und so eine Programmierung mit dem Framework leicht fiel. In Kombination mit der Programmiersprache Kotlin und dem “Build Management Tool” Gradle wurde eine RESTful API Lösung für das Projekt erstellt. Hauptaugenmerk lag auf der Verwendung von Microservices statt einer Monolithen-Architektur, um einzelne Module unabhängiger und einzel startfähig zu machen.
+== Verwendung von Spring Boot im Diplomprojekt
+Im Diplomprojekt “ScanBuyGo” wurde als Framework auf die Verwendung von Spring, genauer Spring Boot, gesetzt.
+
+Grund dafür war, dass bereits viel Erfahrung und praktische Programmierung Fähigkeiten in der Informatik Ausbildung erlernt wurden und so eine Programmierung mit dem Framework leicht fiel. In Kombination mit der Programmiersprache Kotlin und dem Build Tool Gradle wurde eine REST-API Lösung für das Projekt programmiert. Hauptaugenmerk lag auf der Verwendung einer Microservice Architektur statt einer Monolithen-Architektur, um einzelne Module unabhängiger und einzel startfähig zu machen und neues Know-How zu erlangen.
+
+Ausschlaggebend war außerdem, die sehr gute Dokumentation des Frameworks, die herausstechenden Funktionen wie eingebetteter Tomcat Server, automatisierte Build Abläufe und produktsfähige Metriken wie Health Endpoints sowie allgemein die Arbeit, welche Spring dem Backend Team durch vorgefertigte Templates, Projekte und Module abgenommen hat.
 
 [glossary]
 == Glossary
 
-software:: invisible
-hardware:: accessible
+REST-API::
+Framework::
+Build Tool::
+JSP Pages::
+Microservice- und Monolithen Architektur::
 
 [references]
 == References
-* https://www.flaticon.com/, zuletzt abgerufen: 29.03.2021.
-* http://pawlan.com/monica/articles/j2eearch/art/container1.jpg, zuletzt abgerufen: 29.03.2021.
+.Quellen
+|===
+|Beschreibung |Quelle |Zugriff
 
-* https://hackr.io/blog/java-frameworks, zuletzt abgerufen: 29.03.2021.
-* https://geekflare.com/de/java-ee-frameworks/#:~:text=Java%20EE%2DFrameworks%20(Enterprise%20Edition,Erstellen%20komplizierter%20und%20umfassender%20Unternehmensanwendungen.&text=Auf%20dem%20Markt%20gibt%20es,denen%20Webanwendungen%20erstellt%20werden%20k%C3%B6nnen., zuletzt abgerufen: 29.03.2021.
-* https://www.javatpoint.com/java-ee#:~:text=The%20Java%20EE%20stands%20for,distributed%20computing%20and%20web%20services., zuletzt abgerufen: 29.03.2021.
-* https://spring.io/projects/spring-framework, zuletzt abgerufen: 29.03.2021.
-* https://spring.io/why-spring, zuletzt abgerufen: 29.03.2021.
-* https://en.wikipedia.org/wiki/Jakarta_EE, zuletzt abgerufen: 29.03.2021.
-* https://www.oreilly.com/library/view/java-ee-6/9781449338329/ch01.html, zuletzt abgerufen: 29.03.2021.
-* https://docs.spring.io/spring-framework/docs/4.3.20.RELEASE/spring-framework-reference/html/overview.html, zuletzt abgerufen: 29.03.2021.
-* https://www.javatpoint.com/spring-boot-architecture, zuletzt abgerufen: 29.03.2021.
-* https://headcrashing.wordpress.com/2019/05/03/negotiations-failed-how-oracle-killed-java-ee/, zuletzt abgerufen: 29.03.2021.
-* https://www.jrebel.com/blog/java-ee-vs-spring, zuletzt abgerufen: 29.03.2021.
-* https://spring.io/guides/gs/spring-boot/, zuletzt abgerufen: 30.03.2021.
-* URL, zuletzt abgerufen: 30.03.2021.
-* URL, zuletzt abgerufen: 30.03.2021.
-* URL, zuletzt abgerufen: 30.03.2021.
+|Flaticon - Bild Icons
+|https://www.flaticon.com/
+|29.03.2021
+
+|Java EE Architektur - Bild nachmodelliert
+|http://pawlan.com/monica/articles/j2eearch/art/container1.jpg
+|29.03.2021
+
+|Spring Boot Architektur - Bild nachmodelliert
+|https://www.javatpoint.com/spring-boot-architecture
+|29.03.2021
+
+|Java EE Spezifikationen
+|https://www.javatpoint.com/java-ee#:~:text=The%20Java%20EE%20stands%20for,distributed%20computing%20and%20web%20services.
+|29.03.2021
+
+|Spring Framework Überblick
+|https://spring.io/projects/spring-framework
+|29.03.2021
+
+|Spring Funktionen
+|https://spring.io/why-spring
+|29.03.2021
+
+|Jakarta (Java) EE Wikipedia
+|https://en.wikipedia.org/wiki/Jakarta_EE
+|29.03.2021
+
+|Java EE Versionen, Funktionen
+|https://www.oreilly.com/library/view/java-ee-6/9781449338329/ch01.html
+|29.03.2021
+
+|Spring Framework Dokumentation Überblick
+|https://docs.spring.io/spring-framework/docs/4.3.20.RELEASE/spring-framework-reference/html/overview.html
+|29.03.2021
+
+|How Oracle killed Java EE
+|https://headcrashing.wordpress.com/2019/05/03/negotiations-failed-how-oracle-killed-java-ee/
+|29.03.2021
+
+|Java EE vs. Spring Statistiken
+|https://www.jrebel.com/blog/java-ee-vs-spring
+|29.03.2021
+
+|Spring Boot Get Started
+|https://spring.io/guides/gs/spring-boot/
+|30.03.2021
+
+|Framework Community Statistiken
+|https://stackshare.io/
+|30.03.2021
+
+|Framework Fragen Statistiken
+|https://stackoverflow.com/
+|30.03.2021
+|===
