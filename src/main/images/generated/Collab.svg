@@ -5,8 +5,8 @@
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='117' x='5' y='17.457'>
       An error has occured!
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='206' x='5' y='32.5508'>
-      Just mentally though... are you okay ?
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='141' x='5' y='32.5508'>
+      Don't fix it if it's not broken
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='47.6445'/>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='217' x='5' y='62.7383'>
@@ -20,7 +20,7 @@
       This has been generated with PlantUML (1.2020.06).
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='305' x='5' y='123.1133'>
-      This version of PlantUML is 294 days old, so you should
+      This version of PlantUML is 357 days old, so you should
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='299' x='11' y='138.207'>
       consider upgrading from http://plantuml.com/download
@@ -60,13 +60,13 @@
       Max Memory: 4,282,384,384
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='148' x='5' y='334.4258'>
-      Total Memory: 293,601,280
+      Total Memory: 239,075,328
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='146' x='5' y='349.5195'>
-      Free Memory: 154,494,752
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='139' x='5' y='349.5195'>
+      Free Memory: 81,596,744
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='151' x='5' y='364.6133'>
-      Used Memory: 139,106,528
+      Used Memory: 157,478,584
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='122' x='5' y='379.707'>
       Thread Active Count: 4

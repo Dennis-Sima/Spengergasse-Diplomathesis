@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='513px' preserveAspectRatio='none' style='width:480px;height:513px;' version='1.1' viewBox='0 0 480 513' width='480px' zoomAndPan='magnify'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='513px' preserveAspectRatio='none' style='width:498px;height:513px;' version='1.1' viewBox='0 0 498 513' width='498px' zoomAndPan='magnify'>
   <defs/>
   <g>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='117' x='5' y='17.457'>
       An error has occured!
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='111' x='5' y='32.5508'>
-      Hasta la vista, baby.
+    <text fill='#000000' font-family='sans-serif' font-size='12' font-style='italic' lengthAdjust='spacingAndGlyphs' textLength='251' x='5' y='32.5508'>
+      Do you like your morning tea weak or strong ?
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='0' x='8' y='47.6445'/>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='210' x='5' y='62.7383'>
@@ -20,7 +20,7 @@
       This has been generated with PlantUML (1.2020.06).
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='305' x='5' y='123.1133'>
-      This version of PlantUML is 294 days old, so you should
+      This version of PlantUML is 357 days old, so you should
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='299' x='11' y='138.207'>
       consider upgrading from http://plantuml.com/download
@@ -60,13 +60,13 @@
       Max Memory: 4,282,384,384
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='148' x='5' y='334.4258'>
-      Total Memory: 352,321,536
+      Total Memory: 287,309,824
     </text>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='139' x='5' y='349.5195'>
-      Free Memory: 89,413,360
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='146' x='5' y='349.5195'>
+      Free Memory: 138,148,160
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='151' x='5' y='364.6133'>
-      Used Memory: 262,908,176
+      Used Memory: 149,161,664
     </text>
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='122' x='5' y='379.707'>
       Thread Active Count: 5
@@ -102,7 +102,7 @@
     <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='349' x='5' y='500.457'>
       You can try to turn arround this issue by simplifing your diagram.
     </text>
-    <image height='20' width='19' x='451' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAaUlEQVR4Xu2PywkAIQxE05L997AtRXBd0Ed+eHUfzGGSyYgiP9JUNx3BEqoMDz2l8CBTCMOZQpagPm3I83EZXuUxfVzIUFUmDFVlMpf8TuZZ8zKD3pHlw7IjmaxLK8wZ9xtcMEz/ze6jA/9BaSqaQt1qAAAAAElFTkSuQmCC' y='6'/>
+    <image height='32' width='37' x='451' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAgCAYAAACVU7GwAAAB3UlEQVR4Xt2WsU4CQRCGj4rEhIoXoKcg4SWuJPFJqHgJOnrjM0B4ChssbDQUNgYLKyQRTpORXzMH/Lezu2dyh/onf3LF7sy3s3NzlyR/XbOZSJq+S7st0mgcnCQbWa02wusr1XD4cQLRbJ4RCpVRgFbr+/nYtUNpdXBVAGKo2isFICQG0K+AGo+3pYAqh1ossvzKLCALar1+qwaq2z0AWVCAuEjupdO5kcHg9st4vrreCV6MWGM95y8IC0NVAgwgXFXh6oWMNuEYBaFKCmIBzecPZiBO6jMOxvsLwsmx2AJCz0wmd95AnNhyr/fsjZML96tQrqZGz/AeFid3GYfjfaZ0UDKQVsl3bSoGYJd+Q/GRZSgNhl7i9S4xBBvjhvd4hSZXKA4WC4V1lqNef5ZCqX9Sqf0i3JHbl2lUjBPp9bkMqJheKICQt6NRMMaJ+H+JHRoHEEO4vJtOg3Fy6TS3HHOFDGA5Wy6DsXIxCDs0hTm5z7zXlK+v1L5pzIl9ft0H4/1OPT75+wrWYYqPKTc/EpXxS78fBxZTLZcBikMhRiYiseb8TmEhJ4xxpX+ekP59lnHlUFBoRLBrgYLKVKw2KFVM89cOBSEh4JCcgc4GdSz0G76VgMQwVfPc+nf6BM7TeK7eGJBTAAAAAElFTkSuQmCC' y='6'/>
     <!--MD5=[acf4af256363103c56ff34335c39fab2]
 @startuml
 
