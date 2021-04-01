@@ -4,18 +4,18 @@ In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unters
 Um die Arbeit angemessen zu verstehen, werden fortgeschrittene Fähigkeiten und Erfahrung in Informatik bzw. Programmiersprachen vorausgesetzt. Das Paper dient als Basis einer Entscheidungsgrundlage des zu wählenden Frameworks für die Entwicklung von Business Applikationen.
 
 == Einleitung
-Java Entwickler und Java Entwicklerinnen stehen, sei es im Projekt für einen Kunden oder privat, für die Entwicklung von Business Applikationen, vor der Entscheidung, welches (Web) Framework sie für ihr Projekt wählen sollten. Sei es Hibernate, Spring, Apache Wicket, Grails oder Java EE bzw. Jakarta EE, für solch ein Projekt stehen viele Frameworks zur Verfügung. So macht es die Entscheidung schwer, welches Framework am besten für das Projekt passt. Hierfür wird in diesem Paper auf  die zwei Frameworks Spring und Java EE, speziell auf die Entwicklung von Business Applikationen und Web Lösungen, eingegangen.
+Java Entwickler und Java Entwicklerinnen stehen, sei es im Projekt für einen Kunden oder privat, für die Entwicklung von Business Applikationen, vor der Entscheidung, welches (Web) Framework sie für ihr Projekt wählen sollten. Sei es Hibernate, Spring, Apache Wicket, Grails oder Java EE bzw. Jakarta EE, für solch ein Projekt stehen viele Frameworks zur Verfügung. So macht es die Entscheidung schwer, welches Framework am besten für das Projekt passt. Hierfür wird in diesem Paper auf die zwei Frameworks Spring und Java EE, speziell auf die Entwicklung von Business Applikationen und Web Lösungen, eingegangen.
 
 Zu den jeweiligen Kategorien wird eine Bewertung in Form von Punkten vergeben, welchen den positiven Nutzungsgrad widerspiegeln. Dafür werden Punkte von einer SKale von 0 bis maximal 5 vergeben, wobei 0 für "Nicht ausreichend bzw. nicht vorhanden" und 5 für "Sehr gut" steht. Die Punktezahl wird am Ende jeder Kategorie definiert und am Ende ein finales resümierendes Fazit abgegeben.
 
-NOTE: Wichtig zu beachten ist, dass es kein “das beste Framework” für die Entwicklung *spezieller* Lösungen gibt, denn es kommt ganz darauf an, was die Business-Lösung können und welche Rahmenbedingungen wie Kosten oder Entwicklungsstandards es erfüllen soll.
+NOTE: Wichtig zu beachten ist, dass es kein "das beste Framework" für die Entwicklung *spezieller* Lösungen gibt, denn es kommt ganz darauf an, was die Business-Lösung können und welche Rahmenbedingungen wie Kosten oder Entwicklungsstandards es erfüllen soll.
 
 == Java EE Framework
 Java Enterprise Edition, kurz Java EE, früher auch J2EE genannt, ist ein Framework, ausgelegt für mittel bis große Projekte, welches es ermöglicht, umfassende und meist komplizierte (Unternehmens)Anwendungen zu entwickeln. Vor allem für Webanwendungslösungen im Unternehmensbereich, meist in Kombination mit REST Schnittstellen und verteiltes Computing kommt Java EE häufig zum Einsatz. Das Framework baut auf Java SE (Standard Edition) auf und wird beispielsweise mit einer Microservice- oder Monolithen Architektur entwickelt. Das Framework wurde seit Java EE 8 auf Jakarta EE 8 umbenannt und Augenmerk auf Cloud Migration gelegt. Java EE baut auf der Verwendung von der objektorientierten Programmiersprache Java.
 
 Benutzt wird es hauptsächlich zur Entwicklung von browserbasierten Web- und Enterprise (Business) Applikationen und bietet zahlreiche Spezifikationen wie
 
-* *Servlets - WebServlets*: Handhabung von Web Requests und Responses
+* *Servlets – WebServlets*: Handhabung von Web Requests und Responses
 * *Java API*: RESTful Webservices
 * *JPA und JMS*: Datenbank Verbindungen und Datenbank Transaktionen
 * *Bean Validation*: Deklariert eindeutige Constraints über eine Methode, ein Feld oder einer Klasse einer JavaBeans-Komponente
@@ -25,32 +25,87 @@ Eine grundlegende Java EE Architektur sieht wie folgt aus:
 
 image::../images/JavaEE-Architektur.png[title = "Java EE Architektur Überblick"]
 
-Es besteht aus drei Hauptkomponenten. Die “Client Machine” ist das Endgerät: Browser und/oder die Business-Applikation. Diese hat Verbindungen zum zweiten Teil, dem Java EE Server, welcher über ein Web Container, mit dem Web Servlet sowie den JSP Pages, diese sind "Jakarta Server Pages" (JSP), welches es ermöglichen, Java Code in HTML- oder XML-Seiten einzubetten, und dem Business Container, wo sich die Enterprise Beans befinden. Der Server ist mit einer Datenbank bzw. einem Datenbank-Server verbunden, worüber Datenbanktransaktionen (CRUD) durchgeführt werden können. Transaktionen können mit zum Beispiel einer REST-API oder via SOAP-API durchgeführt werden.
+Es besteht aus drei Hauptkomponenten. Die "Client Machine" ist das Endgerät: Browser und/oder die Business-Applikation. Diese hat Verbindungen zum zweiten Teil, dem Java EE Server, welcher über ein Web Container, mit dem Web Servlet sowie den JSP Pages, diese sind "Jakarta Server Pages" (JSP), welches es ermöglichen, Java Code in HTML- oder XML-Seiten einzubetten, und dem Business Container, wo sich die Enterprise Beans befinden. Der Server ist mit einer Datenbank bzw. einem Datenbank-Server verbunden, worüber Datenbanktransaktionen (CRUD) durchgeführt werden können. Transaktionen können mit zum Beispiel einer REST-API oder via SOAP-API durchgeführt werden.
 
 == Spring Framework
 Das Spring Framework ist eine Art Erweiterung, von der Java EE Platform ausgehend, für die Entwicklung von Java Applikationen im Hinblick auf Web Services und REST Schnittstellen. Vor allem die zwei Teile von Spring, Spring Boot und Spring MVC, werden dafür häufig eingesetzt. Hauptaugenmerk liegt auf die Entwicklung von Applikationen Business Logik, ohne viel Konfiguration von der Umgebung sowie Spezifikationen.
 
-Spring (Boot) kommt mit einem automatisch konfigurierten Anwendungskontext sowie einem Web Server, wie Tomcat, um den Einstieg zu erleichtern und aufwendiges Aufsetzen des Frameworks zu unterbinden. Wohingegen Java EE nur mit der Programmiersprache Java läuft, so benötigt Spring keine spezifische Sprache, doch meist wird Java oder Kotlin verwendet.
+Spring (Boot) kommt mit einem automatisch konfigurierten Anwendungskontext sowie einem Web Server, wie Tomcat, um den Einstieg zu erleichtern und aufwendiges Aufsetzen des Frameworks zu unterbinden. Wohingegen Java EE nur mit der Programmiersprache Java läuft, so benötigt Spring keine spezifische Sprache, doch meist wird Java, Groovy oder Kotlin verwendet.
 
 Der Schwerpunkt von Spring (Boot) liegt auf der Entwicklung von und mit Microservices. Es ist größtenteils dafür ausgelegt und verfügt, wie auch Java EE, über einige Module. Diese sind zum Beispiel:
 
 * *Datenbank Zugang, Daten Integrität*: JDBC, JMS, ORM, OXM
-* *Web*: Servelt, WebSocket, Portlet
+* *Web*: Servlet, WebSocket, Portlet
 * *Core Container*: Beans, Core, Context und SpEL
 * *Testing*: JUnit, Mockito etc.
 
-In diesem Beispiel wird sich auf die Spring Komponente Spring Boot fokussiert, solch eine Web Applikation Architektur sieht wie folgt aus:
+In diesem Beispiel wird sich auf die Spring Komponente Spring Boot fokussiert. Die Architektur dessen sieht wie folgt aus:
 
 image::../images/SpringBoot-Architektur.png[title = "Spring Boot Framework 4- Schichten Architektur"]
 
-Die Spring Boot Framework Architektur besteht aus vier Teilen. Die “Presentation Layer” Ebene, welche sich zum Beispiel um eingehende und ausgehende HTTP Requests/Responses kümmert. Sie übersetzt die Daten von und zu JSON Objekten, um den datenmäßigen Umgang mit der Applikationen zu gewährleisten. Grundsätzlich ist sie mit einer Frontend HTML oder XML Seite verbunden.
+Die Spring Boot Framework Architektur besteht aus vier Teilen. Die "Presentation Layer" Ebene, welche sich zum Beispiel um eingehende und ausgehende HTTP Requests/Responses kümmert. Sie übersetzt die Daten von und zu JSON Objekten, um den datenmäßigen Umgang mit der Applikationen zu gewährleisten. Grundsätzlich ist sie mit einer Frontend HTML oder XML Seite verbunden.
 
-Die “Business Logic” Ebene beinhaltet die Services, welche mit Business Logik ausgestattet sind. Die eingehenden Daten werden in die Ebene transferiert und dort validiert bzw. autorisiert. Um Daten abzugleichen und welche Speicher Lösungen gewählt wurden, um das geht es bei der “Persistence Layer” Ebene. Sie verfügt über mehrere Repositorien, welche Datenbankzugriffe festlegen bzw. meist ein geeignetes SQL-Skript im Hintergrund ausführen.
+Die "Business Logic" Ebene beinhaltet die Services, welche mit Business Logik ausgestattet sind. Die eingehenden Daten werden in die Ebene transferiert und dort validiert bzw. autorisiert. Um Daten abzugleichen und welche Speicher Lösungen gewählt wurden, um das geht es bei der "Persistence Layer" Ebene. Sie verfügt über mehrere Repositorien, welche Datenbankzugriffe festlegen bzw. meist ein geeignetes SQL-Skript im Hintergrund ausführen.
 
-Schlussendlich werden die Daten zum Beispiel in SQL, H2 oder PostgreSQL Datenbanken gespeichert und dort zugänglich gemacht. Die “Persistence Layer” Ebene führt mit der “Database Layer” Ebene “CRUD” (Create, Read, Update und Delete) Operationen durch, welche das Hinzufügen, Lesen, Aktualisieren und Löschen von Daten bereitstellt.
+Schlussendlich werden die Daten zum Beispiel in SQL, H2 oder PostgreSQL Datenbanken gespeichert und dort zugänglich gemacht. Die "Persistence Layer" Ebene führt mit der "Database Layer" Ebene "CRUD" (Create, Read, Update und Delete) Operationen durch, welche das Hinzufügen, Lesen, Aktualisieren und Löschen von Daten bereitstellt.
 
-== Get Started
+== Erste Schritte
+NOTE: Die API Beispiele werden mittels IntelliJ IDE realisiert.
+
 *Java EE*:
+
+1. In IntelliJ ein neues Projekt erstellen und "Java Enterprise" wählen. Danach bei "Projekt Template" "Rest service" wählen und "GlassFish 5.0.0" als "Application server" auswählen.
+2. Danach Dependencies überprüfen und Namen festlegen.
+3. Nach der Erstellung des Projektes wurden von IntelliJ Demo Klassen angelegt.
+4. Dependencies werden in der ``pom.xml`` Datei verwaltet:
+
+[source,xml]
+----
+<dependencies>
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.1.1</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- ... -->
+</dependencies>
+----
+
+5. Es wird ein grundlegender API Controller unter ``JavaEETest.java`` angelegt:
+
+[source,java]
+----
+@Path("/hallo-java-ee") // <1>
+public class JavaEETest {
+    @GET // <2>
+    @Produces("text/plain") // <3>
+    public String hello() {
+        return "Willkommen zu Java EE!"; // <4>
+    }
+}
+----
+
+<1> Name der Basis Route
+<2> Festlegung der Operation (GET, POST, ...)
+<3> Definierung des Rückgabeformats. In dem Fall plain Text.
+<4> Rückgabe eines String, um die Funktion zu testen.
+
+Nachdem das Projekt gestartet wure, ist unter "http://localhost:8080/JavaEEDemo-1.0-SNAPSHOT/hello-world" die sehr grundlegende REST-API abrufbar:
+
+image::../images/JavaEEWeb.png[title = "Java EE REST API GET-Response"]
 
 *Spring*:
 
@@ -59,8 +114,8 @@ In diesem Beispiel wird sich auf eine Komponente von dem Spring Framework konzen
 Unter https://start.spring.io/ ist es möglich, ein fertiges Spring Boot Projekt Template anlegen zu lassen.
 
 1. Die Webseite besuchen und wichtige Informationen wie das Build Tool, die Programmiersprache, die Versionen und geeignete Namen vergeben.
-2. Anschließend mit Klick auf den Knopf “ADD DEPENDENCIES…” die gewünschten Dependencies wie “Spring Web”, “Spring Data JPA”, “H2 Database” und “Thymeleaf” mit erneutem Klick hinzufügen.
-3. Letztlich auf den Knopf “GENERATE” klicken und ein ZIP-Ordner mit dem vorkonfiguriertem Projekt wird automatisch heruntergeladen und ist, sofern es in eine IDE wie IntelliJ geladen wird, einsatzbereit.
+2. Anschließend mit Klick auf den Knopf "ADD DEPENDENCIES…" die gewünschten Dependencies wie "Spring Web", "Spring Data JPA", "H2 Database" und "Thymeleaf" mit erneutem Klick hinzufügen.
+3. Letztlich auf den Knopf "GENERATE" klicken und ein ZIP-Ordner mit dem vorkonfiguriertem Projekt wird automatisch heruntergeladen und ist, sofern es in eine IDE wie IntelliJ geladen wird, einsatzbereit.
 
 Die Dependencies werden im späteren ``pom.xml``, in dem die Dependencies verwaltet werden, wie folgt angezeigt:
 
@@ -133,15 +188,15 @@ Die Applikation kann entweder via spezifischen Startknopf der gewählten IDE ode
 
 IMPORTANT: Für den Gebrauch von Maven Kommandos muss dieses erst auf der CLI installiert werden.
 
-Nun ist unter “http://localhost:8080/api/v1/test/hello” die sehr grundlegende REST-API abrufbar:
+Nun ist unter "http://localhost:8080/api/v1/test/hello" die sehr grundlegende REST-API abrufbar:
 
-image::../images/SpringBootWeb.png[title = "REST API GET-Response"]
+image::../images/SpringBootWeb.png[title = "Spring Boot REST API GET-Response"]
 
 == Regelmäßige Updates
 Java EE, seit Java EE 8 umbenannt auf Jakarta EE, erhält regelmäßig neue Versionsupdates. Die Frequentierung der Stable Updates ist durchschnittlich alle zwei bis vier Jahre und enthält meist neue Features und Verbesserungen. Das letzte Hauptupdate (Jakarta EE 9) fand im Jahr 2020 statt.
 Das Spring Framework wird kontinuierlich aktualisiert und dessen letztes großes Update war im Jahr 2017 mit der Version Spring 5.0 und als letzter Stable Release gilt Spring 5.3.4, welches im Februar 2021 veröffentlicht wurde. Zwar erhalten beide Frameworks regelmäßig Updates, wohingegen das Spring Framework öfters Updates bekommt als Java EE. Dies ist wohl auch der stetig expandierenden Nutzerbasis von Spring geschuldet. Auch Dependencies werden seitens beider Frameworks im Laufe von Updates mit aktualisiert.
 
-Durch Dependency Injection und Cloud Migration beider Frameworks, bei Spring ist dies beispielsweise Spring Boot, ist eine gute Wartbarkeit gegeben. Spring Boot verfügt über Plain Old Java Objects (POJO), welche sich durch kleine und “leichtgewichtige Klassen" auszeichnet, ermöglicht eine präzise Wartbarkeit, da jegliche Logik in kleinen Klassen leicht erreichbar und nicht zu umfassend verschachtelt ist. Auch Java EE verfügt über Dependencies, welche einfach aktualisiert werden können.
+Durch Dependency Injection und Cloud Migration beider Frameworks, bei Spring ist dies beispielsweise Spring Boot, ist eine gute Wartbarkeit gegeben. Spring Boot verfügt über Plain Old Java Objects (POJO), welche sich durch kleine und "leichtgewichtige Klassen" auszeichnet, ermöglicht eine präzise Wartbarkeit, da jegliche Logik in kleinen Klassen leicht erreichbar und nicht zu umfassend verschachtelt ist. Auch Java EE verfügt über Dependencies, welche einfach aktualisiert werden können.
 Bei der Wartbarkeit beider Frameworks kommt es vor allem darauf an, ob eine Monolithen- oder Microservice Architektur gewählt wurde. Letzteres bietet einen weit ausgehend mehr wartbaren Code, da der Code je nach Spezifikationen in verschiedene Module aufgesplittet ist. Hunderte Klassen in einem Package, unübersichtliche Klassennamen und hunderte Codezeilen in Klasse sind hauptverantwortlich für schlechte Wartbarkeit.
 
 Durch immer neue Updates und deren neuen Funktionen und Verbesserungen wird die Wartbarkeit immer besser, sei es mit der Cloud Migration von Java EE 8 oder Spring Boot, beide wurden auf den heutigen Stand der Technik gehoben und erreichen somit die volle Punktezahl von 5 Punkten.
@@ -158,10 +213,10 @@ Durch immer neue Updates und deren neuen Funktionen und Verbesserungen wird die 
 == Langfristiger Support
 Wie bereits im vorhergehenden Kapitel erwähnt, erhalten beide Frameworks stetig Updates. Jedoch wirkt seit 2017 Oracle, der damalige Leiter von der Java Enterprise Platform, nicht mehr an der Entwicklung von Java EE mit, da sie die Leitung dafür aus mangelnder Interesse einer Weiterentwicklung abgegeben haben. Dies zeigt auf, dass Java EE immer weniger Relevanz in der heutigen Software Gemeinschaft hat und einen langfristigen Support fragwürdig macht. Zwar wird mit einigen Updates in der Zukunft rechnen, vor allem notwendige Security Updates, doch bahnbrechende Updates werden auf sich warten lassen.
 
-Die Website “JRebel” beispielsweise, hat einige Entwickler befragt, ob und wenn sie von Java EE zu Spring migriert hätten bzw. es tun möchten. Der Report ergab, dass lediglich 14 Prozent von Spring zu Java EE, wohingegen 36 Prozent eher von Java EE zu Spring migriert haben bzw. es tun möchten. Deswegen wird Java EE resümierendes für diese Kategorie 3 von Punkten erhalten.
+Die Website "JRebel" beispielsweise, hat einige Entwickler befragt, ob und wenn sie von Java EE zu Spring migriert hätten bzw. es tun möchten. Der Report ergab, dass lediglich 14 Prozent von Spring zu Java EE, wohingegen 36 Prozent eher von Java EE zu Spring migriert haben bzw. es tun möchten. Deswegen wird Java EE resümierendes für diese Kategorie 3 von Punkten erhalten.
 
 Viele Portale sprechen von dem "Tod von Java EE", nachdem Oracle die Leitung dafür abgegeben hat.
-“Negotiations Failed: How Oracle killed Java EE”, so schreibt es beispielsweise der Autor Markus Krag in seinem Blog. In dem Bericht geht hervor, dass es einen Markenstreit zwischen Oracle und der Eclipse Foundation gab, welcher in keiner Einigung resultierte und Java EE einiges an Relevanz kostete.
+"Negotiations Failed: How Oracle killed Java EE", so schreibt es beispielsweise der Autor Markus Krag in seinem Blog. In dem Bericht geht hervor, dass es einen Markenstreit zwischen Oracle und der Eclipse Foundation gab, welcher in keiner Einigung resultierte und Java EE einiges an Relevanz kostete.
 
 Seitens des Spring Frameworks, vor allem die zwei Komponenten Spring Boot und Spring MVC, gibt es keine Anzeichen eines nahestehenden Endes des Supports. Unter der Leitung der Apache Foundation gewinnt das Framework immer mehr und mehr an Interesse und Nutzung unter der Entwicklergemeinschaft. Nicht nur sind große skalierbare Projekt mit dem Framework möglich, auch regelmäßige stabile Versionen kommen auf den Markt. Diesen Fakten geschuldet, erhält das Spring Framework in dieser Kategorie die volle Punktezahl.
 
@@ -175,8 +230,20 @@ Seitens des Spring Frameworks, vor allem die zwei Komponenten Spring Boot und Sp
 |===
 
 == Kosten, Eleganz beim Programmieren
-// TODO: open source, geld features, LIZENZ
-// TODO: Programmier-Paradigmen, depe. inj., reactive Unterstützung
+Seit Jakarta ist dieses Framework komplett Open Source, weswegen Oracle verfügt über die Markenrechte von "Java EE", weswegen die neue Leitung, die Eclipse Foundation, es auf "Jakarta EE" umbenannt hat. Dadurch ist Jakarta EE größtenteils kostenlos zu nutzen, jedoch gibt es neben den frei zugänglichen Java EE Servern wie "Tomcat" oder "Glassfish", auch kostenpflichtige Server. Java EE bietet folgende Paradigmen:
+
+* Cloud und PaaS: Cloud Migration (Web), durch Java EE 8, und PaaS (Platform as a service)
+* Aspect oriented programming (AOP)
+* Design Paradigmen POJO: Unterstützung von POJO (Plain Old Java Object)
+* Java EE unterstützt die Reactive Programmierung
+
+Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Lizenz ist. Das Framework ist somit unentgeltlich und auch Open-Source. Auch Spring hat sowohl kostenlose als auch kostenpflichtige Module und Server, welche aber grundsätzlich nicht nötig sind. Das Framework verfügt unter anderem über folgende Prinzipien:
+
+* *Lightweight*: Spring ist einfach aufgebaut und benötigt nicht viel Speicherplatz, beispielsweise ist die Basis Version nur 1 Megabyte groß.
+* *Inversion of control (IOC)*: Entwickler müssen Komponenten wie Libraries nicht selbst erstellen/anlegen, sondern lediglich durch Dependency Injection diese in einer Konfigurationsdatei bestimmen. Spring IOC hat dann die Aufgabe, alle Dependencies lauffähig zu vereinen.
+* *Aspect oriented programming (AOP)*: Spring unterstützt auch die aspektorientierte Programmierung. Wartbarkeit und Modularität wird durch die Trennung von logischen Aspekten und der hauptsächlichen Business Logik. AOP trennt diese zwei Komponenten, was bei der einfachen objektorientierten Programmierung schwer möglich ist.
+* Container: Spring unterteilt Code in Container und handhabt Lebenszyklen und Anwendungskonfigurationen.
+* Spring unterstützt auch eine Reactive Programmierung mit der Dependency "Reactor", vor allem in Kombination mit einer Microservice Architektur.
 
 == Funktionsumfang
 // TODO:
@@ -186,13 +253,13 @@ Seitens des Spring Frameworks, vor allem die zwei Komponenten Spring Boot und Sp
 // --> Welche Standards?
 
 == Developer Codebase und Community Größe
-Seitens beider Frameworks gibt es eine mittel bis große Developer-Base. Java EE bzw. Jakarta EE wird laut der Webseite “https://stackshare.io/”, welche unterschiedliche Frameworks, Programmiersprachen etc. bewertet und aufzeigt, welche Technologien heutzutage verwendet werden, von 29 Unternehmen genutzt. Darunter “TripAdvisior”, “Biting Bit” und “IWB”. Außerdem hat Java EE auch Integrationen in “Eclipse”, “NetBeans IDE” sowie “Apache Wicket”.
+Seitens beider Frameworks gibt es eine mittel bis große Developer-Base. Java EE bzw. Jakarta EE wird laut der Webseite "https://stackshare.io/", welche unterschiedliche Frameworks, Programmiersprachen etc. bewertet und aufzeigt, welche Technologien heutzutage verwendet werden, von 29 Unternehmen genutzt. Darunter "TripAdvisior", "Biting Bit" und "IWB". Außerdem hat Java EE auch Integrationen in "Eclipse", "NetBeans IDE" sowie "Apache Wicket".
 
-Auch Spring ist auf derselben Webseite vertreten. Angaben zufolge benutzen 501 Unternehmen Spring in ihrem Stack, darunter “Accenture”, “Zalando” und auch “deleokorea”.
+Auch Spring ist auf derselben Webseite vertreten. Angaben zufolge benutzen 501 Unternehmen Spring in ihrem Stack, darunter "Accenture", "Zalando" und auch "deleokorea".
 
 image::../images/EntwicklerStack.png[title = "Entwickler, welche den Stack verwenden"]
 
-Rund 13155 Entwickler haben bekannt gegeben, dass sie die Spring Komponente Spring Boot in ihrem Stack benutzten, bei Spring sind es rund 2358 Entwickler und Jave EE mit nur wenigen 299 Entwicklern.
+Rund 13155 Entwickler haben bekannt gegeben, dass sie die Spring Komponente Spring Boot in ihrem Stack benutzten, bei Spring sind es rund 2358 Entwickler und Java EE mit nur wenigen 299 Entwicklern.
 
 image::../images/FirmenStack.png[title = "Firmen, welche den Stack verwenden"]
 
@@ -202,7 +269,7 @@ image::../images/FragenStack.png[title = "Anzahl an Fragen auf StackOverflow zu 
 
 Am wohl bekanntesten Coding Portal "StackOverflow", wo täglich tausende Coding spezifische Fragen gestellt werden, dass es bei Spring insgesamt über 100.000 Fragen gibt, bei Spring Boot sogar mehr als 180.000. Java EE bzw. Jakarta EE hat demnach nur mehr als 29.000 Fragen. Dies zeigt, dass eine größere Community hinter Spring (Boot) steht und es sehr viele Fragen bzw. Informationsquellen dazu gibt, wohin gegen Java EE nur etwa ein Drittel der Fragen von Spring hat, und so anscheinend weniger relevant ist und Entwickler weniger Fragen bzw. hilfreiche Informationen auf StackOverflow diesbezüglich zur Verfügung stehen.
 
-Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhält Jave EE eine Punktezahl von 3 Punkten, wohingegen Spring (Boot) mit weitausgehend mehr Entwicklern, Firmen und Informationen die volle Punktezahl erhält.
+Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhält Java EE eine Punktezahl von 3 Punkten, wohingegen Spring (Boot) mit weitausgehend mehr Entwicklern, Firmen und Informationen die volle Punktezahl erhält.
 
 .Punkte Resümee "Developer Codebase und Community Größe"
 [cols=3,options=header, width="50%"]
@@ -214,14 +281,15 @@ Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhä
 == Querschnittsfunktion
 //wie Security, Logging, Metriken
 
-== Vorteile und Nachteile von Java EE
-// Tabelle PRO Contra
+== Unterschiede
 
-== Vorteile und Nachteile von Spring Framework
-// Tabelle PRO Contra
-
-== Unterschied Tabelle zwischen beiden
+//Tabelle zwischen beiden
 // USPs von beiden
+//== Vorteile und Nachteile von Java EE
+// Tabelle PRO Contra
+
+// Vorteile und Nachteile von Spring Framework
+// Tabelle PRO Contra
 
 == Entscheidungsresümee
 
@@ -238,10 +306,10 @@ Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhä
 h|Ergebnis h|11 h|15
 |===
 
-//Wann was verwenden? In Unternehmen etc; große oder kleine Projekte etc.
+//TODO: Wann was verwenden? In Unternehmen etc; große oder kleine Projekte etc.
 
 == Verwendung von Spring Boot im Diplomprojekt
-Im Diplomprojekt “ScanBuyGo” wurde als Framework auf die Verwendung von Spring, genauer Spring Boot, gesetzt.
+Im Diplomprojekt "ScanBuyGo" wurde als Framework auf die Verwendung von Spring, genauer Spring Boot, gesetzt.
 
 Grund dafür war, dass bereits viel Erfahrung und praktische Programmierung Fähigkeiten in der Informatik Ausbildung erlernt wurden und so eine Programmierung mit dem Framework leicht fiel. In Kombination mit der Programmiersprache Kotlin und dem Build Tool Gradle wurde eine REST-API Lösung für das Projekt programmiert. Hauptaugenmerk lag auf der Verwendung einer Microservice Architektur statt einer Monolithen-Architektur, um einzelne Module unabhängiger und einzel startfähig zu machen und neues Know-How zu erlangen.
 
@@ -277,7 +345,7 @@ Monolithen Architektur:: Alle Software Komponenten befinden sich in einem große
 |29.03.2021
 
 |Java EE Spezifikationen
-|https://www.javatpoint.com/java-ee#:~:text=The%20Java%20EE%20stands%20for,distributed%20computing%20and%20web%20services.
+|https://www.javatpoint.com/java-ee
 |29.03.2021
 
 |Spring Framework Überblick
@@ -308,7 +376,7 @@ Monolithen Architektur:: Alle Software Komponenten befinden sich in einem große
 |https://www.jrebel.com/blog/java-ee-vs-spring
 |29.03.2021
 
-|Spring Boot Get Started
+|Spring Boot Erste Schritte
 |https://spring.io/guides/gs/spring-boot/
 |30.03.2021
 
@@ -319,4 +387,24 @@ Monolithen Architektur:: Alle Software Komponenten befinden sich in einem große
 |Framework Fragen Statistiken
 |https://stackoverflow.com/
 |30.03.2021
+
+|Java EE REST Service Erste Schritte
+|https://www.jetbrains.com/help/idea/creating-and-running-your-first-restful-web-service.html#run_config
+|01.04.2021
+
+|
+|https://www.zdnet.com/article/java-finally-goes-all-in-on-open-source-with-the-release-of-jakarta-ee-8/
+|01.04.2021
+
+|Spring Paradigmen
+|https://java2blog.com/introduction-to-spring-framework/
+|01.04.2021
+
+|Spring Reactive
+|https://spring.io/reactive
+|01.04.2021
+
+|
+|
+|01.04.2021
 |===
