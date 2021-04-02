@@ -103,7 +103,7 @@ public class JavaEETest {
 <3> Definierung des Rückgabeformats. In dem Fall plain Text.
 <4> Rückgabe eines String, um die Funktion zu testen.
 
-Nachdem das Projekt gestartet wure, ist unter "http://localhost:8080/JavaEEDemo-1.0-SNAPSHOT/hello-world" die sehr grundlegende REST-API abrufbar:
+Nachdem das Projekt gestartet wurde, ist unter "http://localhost:8080/JavaEEDemo-1.0-SNAPSHOT/hello-world" die sehr grundlegende REST-API abrufbar:
 
 image::../images/JavaEEWeb.png[title = "Java EE REST API GET-Response"]
 
@@ -232,10 +232,12 @@ Seitens des Spring Frameworks, vor allem die zwei Komponenten Spring Boot und Sp
 == Kosten, Eleganz beim Programmieren
 Seit Jakarta ist dieses Framework komplett Open Source, weswegen Oracle verfügt über die Markenrechte von "Java EE", weswegen die neue Leitung, die Eclipse Foundation, es auf "Jakarta EE" umbenannt hat. Dadurch ist Jakarta EE größtenteils kostenlos zu nutzen, jedoch gibt es neben den frei zugänglichen Java EE Servern wie "Tomcat" oder "Glassfish", auch kostenpflichtige Server. Java EE bietet folgende Paradigmen:
 
-* Cloud und PaaS: Cloud Migration (Web), durch Java EE 8, und PaaS (Platform as a service)
-* Aspect oriented programming (AOP)
-* Design Paradigmen POJO: Unterstützung von POJO (Plain Old Java Object)
-* Java EE unterstützt die Reactive Programmierung
+* *Cloud und PaaS*: Cloud Migration (Web), durch Java EE 8, und PaaS (Platform as a service)
+* *Aspect oriented programming (AOP)*
+* *Design Paradigmen POJO*: Unterstützung von POJO (Plain Old Java Object)
+* Java EE unterstützt die *Reactive Programmierung*
+
+Jedoch verfügt es nicht von sovielen Prinzipien wie Spring. Spring verfolgt zudem neuartige Paradigmen, wo nach Java EE dabei zurückliegt.
 
 Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Lizenz ist. Das Framework ist somit unentgeltlich und auch Open-Source. Auch Spring hat sowohl kostenlose als auch kostenpflichtige Module und Server, welche aber grundsätzlich nicht nötig sind. Das Framework verfügt unter anderem über folgende Prinzipien:
 
@@ -243,7 +245,16 @@ Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Liz
 * *Inversion of control (IOC)*: Entwickler müssen Komponenten wie Libraries nicht selbst erstellen/anlegen, sondern lediglich durch Dependency Injection diese in einer Konfigurationsdatei bestimmen. Spring IOC hat dann die Aufgabe, alle Dependencies lauffähig zu vereinen.
 * *Aspect oriented programming (AOP)*: Spring unterstützt auch die aspektorientierte Programmierung. Wartbarkeit und Modularität wird durch die Trennung von logischen Aspekten und der hauptsächlichen Business Logik. AOP trennt diese zwei Komponenten, was bei der einfachen objektorientierten Programmierung schwer möglich ist.
 * Container: Spring unterteilt Code in Container und handhabt Lebenszyklen und Anwendungskonfigurationen.
-* Spring unterstützt auch eine Reactive Programmierung mit der Dependency "Reactor", vor allem in Kombination mit einer Microservice Architektur.
+* Spring unterstützt auch die *Reactive Programmierung* mit der Dependency "Reactor", vor allem in Kombination mit einer Microservice Architektur.
+
+*Fazit*:
+
+.Punkte Resümee "Kosten, Eleganz beim Programmieren"
+[cols=3,options=header, width="50%"]
+|===
+| |Java EE|Spring
+|Punkte |3 |5
+|===
 
 == Funktionsumfang
 // TODO:
@@ -251,6 +262,31 @@ Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Liz
 // Fasst Provider zusammen
 // 2. Java EE Funktionen, Features etc.
 // --> Welche Standards?
+
+.Punkte Resümee "Funktionsumfang"
+[cols=3,options=header, width="50%"]
+|===
+| |Java EE|Spring
+|Punkte |0 |0
+|===
+
+== Querschnittsfunktion
+Java EE sowie auch Spring unterstützen die Programmiersprache Java und Dependency Injection, weswegen sie einige Querschnittsfunktionen teilen:
+
+* *Logging und Tracing*: Mit log4j, Zipkin, Sleuth und dem ELK-Stack
+* *Caching*: Mechanismus, welcher es erlaubt, oft zu gegriffene Objekte/Informationen, temporär zwischen zu speichern und so ein erneutes Laden zu unterbinden.
+* *Security*: Sicherung von Daten und Zugriffskontrolle durch hohe Authentifizierungsstandards. Zudem gibt es "Spring Security", welche auf beide Frameworks anwendbar ist.
+
+Spring hat automatisierte Sicherheits Funktionen in die Security Architektur implementiert, Java EE hingegen ist nicht so ausgebaut und hat keine speziellen Funktionen, wie lightweight Funktionen, LDAP (Lightweight Directory Access Protocol), Web Form Authentifizierung sowie HTTP Authentisierung (Web Requests).
+
+* *Health Endpunkt Metriken*: Vor allem in Kombination mit einer Microservice Architektur bieten Health Endpoints Metriken an, um den Gesundheitsstand der Applikation, wie Uptime, zu überprüfen. Spring bietet dafür zude den *Actuator* an.
+
+.Punkte Resümee "Querschnittsfunktion"
+[cols=3,options=header, width="50%"]
+|===
+| |Java EE|Spring
+|Punkte |3 |5
+|===
 
 == Developer Codebase und Community Größe
 Seitens beider Frameworks gibt es eine mittel bis große Developer-Base. Java EE bzw. Jakarta EE wird laut der Webseite "https://stackshare.io/", welche unterschiedliche Frameworks, Programmiersprachen etc. bewertet und aufzeigt, welche Technologien heutzutage verwendet werden, von 29 Unternehmen genutzt. Darunter "TripAdvisior", "Biting Bit" und "IWB". Außerdem hat Java EE auch Integrationen in "Eclipse", "NetBeans IDE" sowie "Apache Wicket".
@@ -278,9 +314,6 @@ Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhä
 |Punkte |3 |5
 |===
 
-== Querschnittsfunktion
-//wie Security, Logging, Metriken
-
 == Unterschiede
 
 //Tabelle zwischen beiden
@@ -299,10 +332,10 @@ Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhä
 | |Java EE|Spring
 |Regelmäßige Updates |5 |5
 |Langfristiger Support |3 |5
-|Kosten, Eleganz beim Programmieren |0 |0
+|Kosten, Eleganz beim Programmieren |3 |5
 |Funktionsumfang |0 |0
 |Developer Codebase und Community Größe |3 |5
-|Querschnittsfunktion |0 |0
+|Querschnittsfunktion |3 |5
 h|Ergebnis h|11 h|15
 |===
 
@@ -325,6 +358,7 @@ Build Tool:: Automatisiert den Prozess der Bildung ausführbarer Dateien. Softwa
 JSP Pages:: Steht für "Jakarta Server Pages" und sind Seiten gebaut durch "JHTML" und erlaubt die Integrierung von Java Code in HTML und XML Webseiten.
 Microservice Architektur:: Anwendungen werden in kleine Module aufgeteilt und werden besser separat steuerbar und unabhängiger. Zusammen bilden alle Module die Anwendung.
 Monolithen Architektur:: Alle Software Komponenten befinden sich in einem großen Anwendungssystem, sie sind zentral, einzelne Softwareteile untrennbar und kaum unabhängig steuerbar.
+ELK-Stack:: Steht für Elasticsearch, Logstash und Kibana. Es ermöglicht das Tracing, die Verarbeitung und die visuelle Aufbereitung von zum Beispiel Metrik Daten einer Applikation.
 
 [quellen]
 == Quellen
@@ -404,7 +438,19 @@ Monolithen Architektur:: Alle Software Komponenten befinden sich in einem große
 |https://spring.io/reactive
 |01.04.2021
 
+|Querschnittsfunktionen
+|https://jaxenter.de/angular2-typescript-aop-45097
+|02.04.2021
+
+|Spring Security
+|https://spring.io/guides/topicals/spring-security-architecture
+|02.04.2021
+
+|Spring Security
+|https://data-flair.training/blogs/spring-security-tutorial/
+|02.04.2021
+
 |
 |
-|01.04.2021
+|02.04.2021
 |===
