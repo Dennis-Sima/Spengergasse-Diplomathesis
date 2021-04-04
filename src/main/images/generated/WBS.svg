@@ -68,7 +68,7 @@
       Complete innovate phase
     </text>
     <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='807' y1='65.0938' y2='65.0938'/>
-    <!--MD5=[b31ab2f8283e2f3c7fce3eb623434def]
+    <!--MD5=[2c0a4fb5381b193892d72072fb3f08a6]
 @startwbs
 * Business Process Modelling WBS
 ** Launch the project
@@ -85,9 +85,9 @@
 
 PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
 (APACHE source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Java Version: 15.0.1+9-18
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 14+36-1461
 Operating System: Windows 10
 Default Encoding: Cp1252
 Language: de

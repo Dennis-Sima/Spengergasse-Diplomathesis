@@ -72,13 +72,13 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 
 <<<
 
-include::chapters/01-personal-topic-grueneis.adoc[]
+include::chapters/personal-topic-wiener.adoc[]
 
 <<<
 
-include::chapters/02-personal-topic-unger.adoc[]
 
-<<<
+
+
 
 [glossary]
 == Glossary
