@@ -1,26 +1,29 @@
 == Abstract
-In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie unter anderem Regelmäßigkeit von Updates, langfristiger Support, Kosten sowie Eleganz beim Programmieren, Funktionen und Querschnittsfunktion wie Logging, Wartbarkeit sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
+In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie unter anderem Regelmäßigkeit von Updates, langfristiger Support, Kosten sowie Eleganz beim Programmieren, Funktionen und Querschnittsfunktion wie Logging, Dokumentation, Wartbarkeit sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
 
-Um die Arbeit angemessen zu verstehen, werden fortgeschrittene Fähigkeiten und Erfahrung in Informatik bzw. Programmiersprachen vorausgesetzt. Das Paper dient als Basis einer Entscheidungsgrundlage des zu wählenden Frameworks für die Entwicklung von Business Applikationen.
+Um die Arbeit angemessen verstehen zu können, werden fortgeschrittene Fähigkeiten und Erfahrungen in Informatik bzw. in der Programmierung vorausgesetzt. Das Paper dient als Basis einer Entscheidungsgrundlage des zu wählenden Frameworks für die Entwicklung von Business Applikationen.
 
 == Einleitung
-Java Entwickler und Java Entwicklerinnen stehen, sei es im Projekt für einen Kunden oder privat, für die Entwicklung von Business Applikationen, vor der Entscheidung, welches (Web) Framework sie für ihr Projekt wählen sollten. Sei es Hibernate, Spring, Apache Wicket, Grails oder Java EE bzw. Jakarta EE, für solch ein Projekt stehen viele Frameworks zur Verfügung. So macht es die Entscheidung schwer, welches Framework am besten für das Projekt passt. Hierfür wird in diesem Paper auf die zwei Frameworks Spring und Java EE, speziell auf die Entwicklung von Business Applikationen und Web Lösungen (REST), eingegangen.
+Java Entwickler und Java Entwicklerinnen stehen, sei es im Projekt für einen Kunden oder privat, für die Entwicklung von Business Applikationen, vor der Entscheidung, welches (Web) Framework sie für ihr Projekt wählen sollten. Sei es Hibernate, Spring, Apache Wicket, Grails oder Java EE bzw. Jakarta EE, für solch ein Projekt stehen viele Frameworks zur Verfügung. So macht es die Entscheidung schwer, welches Framework am besten für das Projekt passt, weswegen hierfür in diesem Paper auf die zwei Frameworks Spring und Java EE, speziell auf die Entwicklung von Business Applikationen und Web Lösungen (REST), eingegangen wird.
 
-Zu den jeweiligen Kategorien wird eine Bewertung in Form von Punkten vergeben, welchen den positiven Nutzungsgrad widerspiegeln. Dafür werden Punkte von einer Skala von minimal 0 bis maximal 5 vergeben, wobei 0 für "Nicht ausreichend bzw. nicht vorhanden" und 5 für "Sehr gut" steht. Die Punktezahl wird am Ende jeder Kategorie definiert und am Ende ein finales resümierendes Fazit abgegeben.
+Zu den jeweiligen Kategorien wird eine Bewertung in Form von Punkten vergeben, welchen den positiven Nutzungsgrad widerspiegeln. Dafür werden Punkte von einer Skala von minimal 0 bis maximal 5 vergeben, wobei 0 Punkte für "Nicht ausreichend bzw. nicht vorhanden" und 5 Punkte für "Sehr gut" steht. Die Punktezahl wird am Ende jeder Kategorie definiert und am Ende ein finales resümierendes Fazit abgegeben.
 
-NOTE: Wichtig zu beachten ist, dass es kein "das beste Framework" für die Entwicklung *spezieller* Lösungen gibt, denn es kommt ganz darauf an, was die Business-Lösung können und welche Rahmenbedingungen wie Kosten, Umfang und Entwicklungsstandards es erfüllen soll.
+NOTE: Wichtig zu beachten ist, dass es kein "perfektes Framework" für die Entwicklung von Business Applikationen gibt, denn es kommt ganz darauf an, was die *spezielle und individuelle* Business Lösung können soll und welche Rahmenbedingungen wie Kosten, Umfang und Entwicklungsstandards es erfüllen soll.
 
 == Java EE Framework
-Java Enterprise Edition, kurz Java EE, früher auch J2EE genannt, ist ein Framework, ausgelegt für mittel bis große Projekte, welches es ermöglicht, umfassende und meist komplizierte (Unternehmens)Anwendungen zu entwickeln. Vor allem für Webanwendungslösungen im Unternehmensbereich, meist in Kombination mit REST Schnittstellen und verteiltem Computing, kommt Java EE häufig zum Einsatz. Das Framework baut auf Java SE (Standard Edition) auf und wird meist mit einer Monolithen-Architektur entwickelt. Das Framework wurde seit Java EE 8 auf Jakarta EE 8 umbenannt, da Oracle die Leitung dafür abgab, und Augenmerk auf Cloud Migration gelegt. Java EE baut auf die Verwendung von der objektorientierten Programmiersprache Java.
+Java Enterprise Edition, kurz Java EE, früher auch J2EE genannt, ist ein Framework, ausgelegt für mittel bis große Projekte, welches es ermöglicht, umfassende und meist komplizierte (Unternehmens)Anwendungen zu entwickeln. Vor allem für Webanwendungslösungen im Unternehmensbereich, meist in Kombination mit REST-API Schnittstellen und verteiltem Computing, kommt Java EE häufig zum Einsatz. Das Framework baut auf Java SE (Java Standard Edition) auf und wird meist mit einer Monolithen-Architektur entwickelt.
+Das Framework wurde seit Java EE 8 auf Jakarta EE 8 umbenannt, da Oracle die Leitung dafür abgab, und es wurde Fokus auf Cloud Migration gelegt. Java EE baut auf der Verwendung von der objektorientierten Programmiersprache Java.
 
-Benutzt wird es hauptsächlich zur Entwicklung von browserbasierten Web- und Enterprise (Business) Applikationen und bietet zahlreiche Spezifikationen wie
+Benutzt wird es hauptsächlich zur Entwicklung von browserbasierten Web- und Enterprise (Business)Applikationen und bietet zahlreiche Spezifikationen wie beispielsweise:
 
-* *Servlets – WebServlets*: Handhabung von Web Requests und Responses
-* *Java API*: RESTful Webservices
+* *Web*: Web(Servlets) - Handhabung von Web Requests und Responses; _WebSockets_; _Java Server Faces_
+* *Web Service*: _Java API_ für RESTful Webservices, _JSON Processing_ und _Binding_ sowie _XML Webservices (SOAP)_
+* *Enterprise*: Container für _Dependency Injection_; _Enterprise JavaBean APIs_; _Java Persistence- und Transaction API_; Senden und Empfangen von Enterprise Nachrichten durch _Java Message Service_
+* *Weitere*: _Bean Validation API_; Lang laufende Hintergrundaufgaben werden durch _Batch Anwendungen_ unterstützt; Anbindung von Java-Servern an Enterprise Information System durch _Java EE Connector Architektur_
+
 * *JPA und JMS*: Datenbank Verbindungen und Datenbank Transaktionen
-* *Bean Validation*: Deklariert eindeutige Constraints über eine Methode, ein Feld oder einer Klasse einer JavaBeans-Komponente
-* *Application Server*: Genaue Konfiguration notwendig und eigene Definierung möglich.
-* *Uvm.*
+* *Bean Validation*: Deklariert eindeutige Constraints über eine Methode, ein Feld oder einer Klasse einer _JavaBeans-Komponente_
+* *Application Server*: Genaue Konfiguration notwendig, jedoch vertiefende eigene Definierungen möglich
 
 Eine grundlegende Java EE Architektur sieht wie folgt aus:
 
@@ -258,6 +261,23 @@ Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Liz
 |Punkte |3 |5
 |===
 
+== Dokumentation
+
+Java EE bietet eine Dokumentation von Oracle, welche bei Weitem nicht so umfangreich, leicht zugänglich und übersichtlich wie die von dem Spring Framework ist. Die Dokumentation ist verschachtelt durch einige Links erreichbar und listet alle nennenswerte Packages chronologisch auf, welches an die Standard Java Dokumentation erinnert. Die Documentation hat sich durch Jakarta jedoch verbessert.
+
+Die Spring Dokumentation bietet zwar auch die einzelnen Package Dokumentation, aber übersichtlicher und leichter verständlich dargestellt. Außerdem gibt es zahlreiche Guides und Anleitungen, wie eine bestimmte Sache von Spring genau funktioniert, wie zum Beispiel wie die ersten Schritte gehen. Auch allgemein bietet Spring mehr "Anleitungswebseiten" als Spring. Beide teilen jedoch einige Portale, so wie zum Beispiel die Webseite "Baeldung", welche sich auf Java und dem Spring Framework spezialisiert hat.
+
+Den Fakten geschuldet, dass Spring eine bessere Dokumentation im Hinblick auf Übersichtlichkeit, Inhalt und Erreichbarkeit liefert, erhält Spring die volle Punktezahl und Java EE nur 2 Punkte, da man allgemein wenig(er) zu Java EE bzw. Jakarta EE im Internet findet.
+
+*Fazit*:
+
+.Punkte Resümee "Dokumentation"
+[cols=3,options=header, width="50%"]
+|===
+| |Java EE|Spring
+|Punkte |2 |5
+|===
+
 == Funktionsumfang
 Das Spring Framework bietet eine breite Palette an Komponenten, wie Spring Boot, Spring MVC, Spring Batch sowie Spring Security. Java EE hingegen verfügt nur über sich selbst. Allgemein teilen beide Frameworks ähnliche Features:
 
@@ -360,6 +380,7 @@ Die einzelnen Bewertungen haben folgendes Ergebnis ergeben:
 |Regelmäßige Updates |5 |5
 |Langfristiger Support |3 |5
 |Kosten, Eleganz beim Programmieren |3 |5
+|Dokumentation |2 |5
 |Funktionsumfang |3 |4
 |Developer Codebase und Community Größe |3 |5
 |Querschnittsfunktion |3 |5
@@ -401,10 +422,6 @@ ELK-Stack:: Steht für Elasticsearch, Logstash und Kibana. Es ermöglicht das Tr
 .Quellen
 |===
 |Beschreibung |Quelle |Letzter Zugriff
-
-|Flaticon - Bild Icons
-|https://www.flaticon.com/
-|29.03.2021
 
 |Java EE Architektur - Bild nachmodelliert
 |http://pawlan.com/monica/articles/j2eearch/art/container1.jpg
