@@ -11,6 +11,10 @@ In diesem Paper wird mithilfe von eigens ausgewählten Bewertungskriterien bewer
 welche JVM Sprache wie gut geeignet ist, um verschiedene
 Programmierschnittstellen anzusteuern.
 
+Die Erwartungshaltung ist, dass die Ergebnisse in allen Sprachen ziemlich gleich
+sind, da die meisten JVM-Sprachen in der Auswahl ähnlich syntaktisch aufgebaut sind.
+
+
 // Erklären, was die Absicht hinter diesem Paper ist (herausfinden, welche JVM Sprache am besten für
 // welche Schnittstelle/Schnittstellenart ist)
 
@@ -53,9 +57,9 @@ Nicht zu Codezeilen zählt folgendes:
 
 === Unterstüzte Paradigmen
 
-Bei dem Kriterium "Unterstützte Paradigmen" wird darauf geachtet, dass alle Programmierparadigmen
-der jeweiligen Sprache (falls eine Sprache mehrere unterstützen sollte) unterstützt werden.
-Sollte dies nicht der Fall sein, gibt es hier einen Punkteabzug.
+Bei dem Kriterium "Unterstützte Paradigmen" wird darauf geachtet, dass benötigte Paradigmen unterstützt werden
+(zum Beispiel funktionale Programmierung für reactive Programming). Nur wenn das Paradigma nicht unterstützt wird,
+gibt es einen Punkteabzug.
 
 === Beispielstabelle
 
@@ -92,18 +96,18 @@ Sollte dies nicht der Fall sein, gibt es hier einen Punkteabzug.
 |5
 
 |Ergebnis
-|21
-|24
-|22
-|20
-|20
+|16
+|19
+|17
+|16
+|17
 |===
 _Figure 1. Beispielsbeurteilungstabelle_
 
 
 == Auswahl der JVM Sprachen
 
-Um möglichst viele Vergleichswerte zu haben, werden die Schnittstellen in sechs verschiedenen JVM Sprachen verglichen.
+Um möglichst viele Vergleichswerte zu haben, werden die Schnittstellen in fünf verschiedenen JVM Sprachen verglichen.
 
 === Java
 
@@ -142,7 +146,7 @@ Bei den behandelten Schnittstellen wurde darauf geachtet, dass diese häufig Anw
 es daher auch einen Grund für die Entwickler dieser Schnittstellen gibt, diese Schnittstellen so
 kompatibel wie möglich zu gestalten.
 
-=== Stripe API (über Bibliotheken)
+=== Stripe API [über Bibliotheken und Server-side]
 
 Stripe ist ein Zahlungsanbieter, der im Diplomprojekt verwendet wird.
 
@@ -168,22 +172,227 @@ es in den anderen Sprachen gibt.
 Wenn Daten in einer Datenbank gespeichert werden wird, kann man eine Persistence API verwenden.
 Hier wird der Fokus auf Lösungen für die jeweiligen Sprachen gelegt.
 
-=== Android API
-
-Die Android API wird verwendet, um auf Funktionen des Android Systems zuzugreifen, folglich kommt
-diese Schnittstelle hauptsächlich bei Applikationen für Mobilgeräte zum Einsatz.
-
 === E-Mail APIs
 
 E-Mail APIs werden vor allem in Backend Applikationen benötigt, um Benutzer*innen Informationen per E-Mail zu senden.
 
 
-// === Google APIs
-
-
-
 == Stripe API
-    
+
+In allen Sprachen wird
+
+- Eine Zahlung durchgeführt
+- Die ID der Zahlung gespeichert
+- Der Status der Zahlung mithilfe der ID abgefragt und auf die Konsole ausgegeben
+
+Die verwendete Bibliothek in allen Sprachen ist "stripe-java".
+
+=== Java
+
+*Code Snippet*
+
+Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
+
+[source, java]
+----
+/* File: Payment.java */
+public class Payment {
+    public String makePayment(Long amount, String stripeToken, RequestOptions options) throws StripeException {
+        ChargeCreateParams params = ChargeCreateParams.builder()
+                .setAmount(amount)
+                .setCurrency("EUR")
+                .setDescription("testpayment")
+                .setSource(stripeToken)
+                .build();
+
+        Charge charge = Charge.create(params, options);
+        return charge.getId();
+    }
+
+    public String getStatus(String chargeId, RequestOptions options) throws StripeException {
+        return Charge.retrieve(chargeId, options).getStatus();
+    }
+}
+//Lines: 7
+----
+
+Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
+
+[source,java]
+----
+/* File: Main.java */
+
+    public static void main(String[] args) {
+        try {
+            RequestOptions options = RequestOptions.builder()
+                    .setApiKey(STRIPE_API_KEY)
+                    .build();
+
+            Payment payment = new Payment();
+            String id = payment.makePayment(1000L, PAYMENT_TOKEN, options);
+
+            System.out.println(payment.getStatus(id, options));
+
+        } catch(StripeException stripeException) {
+            stripeException.printStackTrace();
+        }
+    }
+
+// Lines: 7
+----
+
+*Bewertung*
+
+- Lines of Code: 14 Zeilen. -> 2 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich, wird durch das in Java notwendige Exception-handling
+allerdings etwas unübersichtlich. -> 4/5 {blankline}
+
+- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter auch Java. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
+keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
+
+
+=== Kotlin
+
+*Code Snippet*
+
+Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
+
+[source,kotlin]
+----
+/* File: Payment.kt */
+
+class Payment {
+
+    fun makePayment(amount: Long, stripeToken: String, options: RequestOptions): String {
+        val params = ChargeCreateParams.builder()
+            .setAmount(amount)
+            .setCurrency("EUR")
+            .setDescription("testpayment")
+            .setSource(stripeToken)
+            .build()
+        val charge = Charge.create(params, options)
+        return charge.id
+    }
+
+    fun getStatus(chargeId: String, options: RequestOptions): String {
+        return Charge.retrieve(chargeId, options).status
+    }
+}
+
+//Lines: 7
+----
+
+Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
+
+[source,kotlin]
+----
+/* File: main.kt */
+
+fun main(args: Array<String>) {
+    val options = RequestOptions.builder()
+        .setApiKey(STRIPE_API_KEY)
+        .build()
+    val payment = Payment()
+    val id = payment.makePayment(1000L, PAYMENT_TOKEN, options)
+    println(payment.getStatus(id, options))
+}
+
+//Lines: 5
+----
+
+*Bewertung*
+
+- Lines of Code: 12 Zeilen. -> 4/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
+Java aber leider nicht Kotlin. Da der Code in Kotlin allerdings fast derselbe ist wie der in Java geschrieben Code
+gibt es hier keinen Punkteabzug.-> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
+keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
+
+
+=== Groovy
+
+*Code Snippet*
+
+Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
+
+[source,groovy]
+----
+/* File: Payment.groovy */
+
+class Payment {
+    String makePayment(Long amount, String stripeToken, RequestOptions options) {
+        ChargeCreateParams params = ChargeCreateParams.builder()
+                .setAmount(amount)
+                .setCurrency("EUR")
+                .setDescription("testpayment")
+                .setSource(stripeToken)
+                .build()
+        Charge charge = Charge.create(params, options)
+        charge.id
+    }
+
+    def getStatus(String chargeId, RequestOptions options) {
+        Charge.retrieve(chargeId, options).status
+    }
+}
+
+//Lines: 7
+----
+
+Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
+
+[source,groovy]
+----
+/* File: Main.groovy */
+
+    static main(args) {
+        def options = RequestOptions.builder()
+                .setApiKey(STRIPE_API_KEY)
+                .build()
+        Payment payment = new Payment()
+        String id = payment.makePayment(1000L, PAYMENT_TOKEN, options)
+        println(payment.getStatus(id, options))
+    }
+
+//Lines: 5
+----
+
+*Bewertung*
+
+- Lines of Code: 12 Zeilen. -> 4/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
+Java aber leider nicht Groovy. Da der Code in Groovy allerdings fast derselbe ist wie der in Java geschrieben Code
+gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
+keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
+
+
+
+=== Scala
+
+*Code Snippet*
+*Bewertung*
+
+=== Clojure
+
+*Code Snippet*
+*Bewertung*
+
 
 
 
@@ -193,13 +402,12 @@ In allen Sprachen wird die Rest-API von https://reqres.in/ verwendet.
 Als Code sample wird jeweils ein GET-Request und ein POST-Request abgesendet und das Resultat soll als
 Objekt soll in einer Variable abgespeichert werden.
 
+In allen Sprachen wird die Feign-Bibliothek verwendet, da diese in allen Sprachen verwendet werden kann.{blankline}
 Die DTO Klassen werden nicht zur Bewertung herangezogen.
 
 
 // Codeaufwand vergleichen, verschiedene Solutions präsentieren und nach Kriterien vergleichen
 === Java
-
-In Java wird die Bibliothek OpenFeign verwendet.
 
 **Code Snippet**
 
@@ -255,7 +463,7 @@ Anschließend wird ein Client mithilfe des FeignBuilders erstellt und die Funkti
 
 *Bewertung*
 
-- Lines of Code: 14 Zeilen {blankline}
+- Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
 - Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist sehr umfangreich und bietet
@@ -266,8 +474,6 @@ die von der Bibliothek unterstützt werden. -> 5/5  {blankline}
 Programmierung (mit CompletableFuture Objekten). -> 5/5
 
 === Kotlin
-
-In Kotlin wird die OpenFeign Bibliothek verwendet.
 
 *Code Snippet*
 
@@ -296,7 +502,7 @@ Nun wird eine Instanz des UserFeignClients mithilfe des FeignBuilders erstellt.
 /* File: Main.kt */
 
 fun main() {
-    val userFeignClient = Feign::builder()
+    val userFeignClient = Feign.builder()
             .client(OkHttpClient())
             .encoder(GsonEncoder())
             .decoder(GsonDecoder())
@@ -322,11 +528,13 @@ fun createUser(client: UserFeignClient, user: CreateUserRequest): CreateUserResp
 
 *Bewertung*
 
-- Lines of Code: 14 Zeilen {blankline}
+- Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
 - Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
-sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Kotlin. -> 3/5  {blankline}
+sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Kotlin.
+Da jedoch fast kein Unterschied bei der Umsetzung in Kotlin zu der Umsetzung in Java besteht, werden hierfür
+keine Punkte abgezogen-> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
 Programmierung (mit CompletableFuture Objekten). -> 5/5
@@ -334,37 +542,337 @@ Programmierung (mit CompletableFuture Objekten). -> 5/5
 
 === Groovy
 
+*Code Snippet*
+
+Um auf die Rest-API zuzugreifen wird ein Interface mit den Methoden, die später aufgerufen werden, deklariert.
+
+[source,groovy]
+----
+/* File: UserFeignClient.groovy */
+
+interface UserFeignClient {
+	@RequestLine("GET /users/{id}")
+	GetUser getUser(@Param("id") int id);
+
+	@RequestLine("POST /users")
+    @Headers("Content-Type: application/json")
+	CreateUser.Response createUser(CreateUser.Request createUser);
+}
+
+// Lines: 6
+----
+
+Mit dem FeignBuilder wird der Client instanziert und die Methoden werden aufgerufen.
+
+[source,groovy]
+----
+/* File: Main.groovy */
+
+    static main(args) {
+        def client = Feign.builder()
+                .client(new OkHttpClient())
+                .encoder(new GsonEncoder())
+                .decoder(new GsonDecoder())
+                .target(UserFeignClient.class, "https://reqres.in/api")
+
+        def user = getUser(client)
+        def createdUser = client.createUser(new CreateUser.Request("Testuser", "Programmer"))
+    }
+
+    static def getUser(UserFeignClient client) {
+        client.getUser(2)
+    }
+
+    static def createUser(UserFeignClient client, CreateUser.Request user) {
+        client.createUser(user)
+    }
+
+
+//Lines: 8
+----
+
+
+*Bewertung*
+
+- Lines of Code: 14 Zeilen. -> 4/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Groovy.
+Da jedoch fast kein Unterschied bei der Umsetzung in Groovy zu der Umsetzung in Java besteht, werden hierfür
+keine Punkte abgezogen-> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
+Programmierung (mit CompletableFuture Objekten). -> 5/5
+
+
+
 === Scala
+
+*Code Snippet*
+
+Zuerst wird ein trait erstellt, in dem die Routen und Parameter definiert werden.
+
+[source,scala]
+----
+/* File: UserFeignClient.scala */
+
+trait UserFeignClient {
+  @RequestLine("GET /users/{id}")
+  def getUser(@Param("id") id: Int): GetUser
+
+  @RequestLine("POST /users")
+  @Headers(Array[String]("Content-Type: application/json"))
+  def createUser(createUser: CreateUserRequest): CreateUserResponse
+}
+
+// Lines: 6
+----
+
+Der Client wird mit dem FeignBuilder erstellt und anschließend werden die Methoden des Clients aufgerufen.
+
+[source,scala]
+----
+/* File: Main.scala */
+
+  def main(args: Array[String]): Unit = {
+    val userFeignClient = Feign.builder()
+      .client(new OkHttpClient())
+      .encoder(new GsonEncoder())
+      .decoder(new GsonDecoder())
+      .target(classOf[UserFeignClient], "https://reqres.in/api")
+
+    val getUserResponse = getUser(client = userFeignClient)
+    val createUserResponse = createUser(client = userFeignClient, createUserRequest = CreateUserRequest(
+       name = "Testuser",
+       job = "Programmer"
+    ))
+  }
+
+  def getUser(client: UserFeignClient) :GetUser = {
+    client.getUser(2)
+  }
+
+  def createUser(client: UserFeignClient, createUserRequest: CreateUserRequest): CreateUserResponse = {
+    client.createUser(createUserRequest)
+  }
+
+// Lines: 8
+----
+
+*Bewertung*
+
+- Lines of Code: 14 Zeilen -> 4/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Scala.
+Da jedoch fast kein Unterschied bei der Umsetzung in Scala zu der Umsetzung in Java besteht, werden hierfür
+keine Punkte abgezogen-> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
+Programmierung (mit CompletableFuture Objekten). -> 5/5
+
 
 === Clojure
 
+*Code Snippet*
 
+Zuerst wird ein Interface definiert, in dem die REST-Methoden definiert werden, die aufgerufen werden sollen.
 
+[source,clojure]
+----
+;; File: userFeignClient.clj
 
+(definterface userFeignClient
+  (^{RequestLine "GET /users/{id}"}  getUser [^{Param "id"} id])
+  (^{RequestLine "POST /users"} ^{Headers ["Content-Type: application/json"]} createUser [user] )
+)
+
+;; Lines: 3
+----
+
+Anschließend wird ein Client mit dem FeignBuilder instanziert und verwendet, um die Requests abzusenden.
+
+[source,clojure]
+----
+;; File: core.clj
+
+(defn getUser
+  [client] (. client getUser 2)
+)
+
+(defn createUser
+  [client createUserRequest] (. client createUser createUserRequest)
+)
+
+(defn -main
+  ([] (let [client (-> (Feign/builder)
+          (.client (new OkHttpClient))
+          (.encoder (new GsonEncoder))
+          (.decoder (new GsonDecoder))
+          (.target userFeignClient "https://reqres.in/api"))]
+          (let [getUserResponse (getUser client)])
+          (let [createUserResponse (createUser client {:name "Testuser" :job "Programmer"})])
+        )
+   )
+)
+
+;; Lines: 8
+----
+
+*Bewertung*
+
+- Lines of Code: 11 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich, allerdings sorgen die Annotationen beim Interface dafür, dass der Code etwas
+    unübersichtlich wird. -> 4/5 {blankline}
+
+- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Clojure.
+Da Clojure sich syntaktisch stärker von Java unterscheidet als die anderen berücksichtigten JVM Sprachen werden
+hier Punkte abgezogen.-> 3/5  {blankline}
+
+- Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
+Programmierung (mit CompletableFuture Objekten). -> 5/5
+
+=== Beurteilungstabelle und Fazit
+
+[cols="<, ^, ^, ^, ^, ^", options="autowidth,header"]
+|===
+|Sprache{nbsp}{nbsp} |Java{nbsp}{nbsp} |Kotlin{nbsp}{nbsp} |Groovy{nbsp}{nbsp} |Scala{nbsp}{nbsp} |Clojure{nbsp}{nbsp}
+
+|Lines of Code
+|4
+|4
+|4
+|4
+|5
+
+|Lesbarkeit
+|5
+|5
+|5
+|5
+|4
+
+|Dokumentation
+|5
+|5
+|5
+|5
+|3
+
+|Unterstützte Paradigmen
+|5
+|5
+|5
+|5
+|5
+
+|Ergebnis
+|19
+|19
+|19
+|19
+|17
+|===
+_Figure 3. Beurteilungstabelle Rest-APIs_
+
+Die Ergebnisse sind bei allen Sprachen sehr ähnlich, da in allen Sprachen dieselbe Bibliothek
+verwendet werden konnte und diese Biblothek auch sehr gut geeignet ist, um Rest-APIs anzusteuern.
+
+Clojure belegt aufgrund der Dokumentation, die nur für Java verfasst wurde,
+den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etwas unübersichtlich.
 
 == Stream API
 
-// Sinnvoll in Kotlin, Groovy & Scala bzw bessere Alternativen?
+=== Java
+
+*Code Snippet*
+*Bewertung*
+
+=== Kotlin
+
+*Code Snippet*
+*Bewertung*
+
+=== Groovy
+
+*Code Snippet*
+*Bewertung*
+
+=== Scala
+
+*Code Snippet*
+*Bewertung*
+
+=== Clojure
+
+*Code Snippet*
+*Bewertung*
+
 
 
 == Java persistence API (JPA)
 
-// Java -> records, Kotlin -> data class, Groovy -> ?, Scala -> ?
+=== Java
+
+*Code Snippet*
+*Bewertung*
+
+=== Kotlin
+
+*Code Snippet*
+*Bewertung*
+
+=== Groovy
+
+*Code Snippet*
+*Bewertung*
+
+=== Scala
+
+*Code Snippet*
+*Bewertung*
+
+=== Clojure
+
+=== Java
+
+*Code Snippet*
+*Bewertung*
+
+=== Kotlin
+
+*Code Snippet*
+*Bewertung*
+
+=== Groovy
+
+*Code Snippet*
+*Bewertung*
+
+=== Scala
+
+*Code Snippet*
+*Bewertung*
+
+=== Clojure
+
+*Code Snippet*
+*Bewertung*
 
 
-== Android API
-
-// Java -> viel Code, etc; Kotlin -> lesbar, kurz, kompakt; Groovy -> ?, Scala -> ?
 
 
 == Java Mail API
 
-// Hauptaugenmerk: Amount of lines
-
-
-// == Google APIs
-
-// Code vergleichen, Amount of lines etc.
+=== Java
+=== Kotlin
+=== Groovy
+=== Scala
+=== Clojure
 
 
 == Fazit
@@ -376,14 +884,14 @@ Programmierung (mit CompletableFuture Objekten). -> 5/5
 
 [bibliography]
 == References
-https://practicalli.github.io/blog/posts/consuming-apis-with-clojure/
-
 https://reqres.in/
 
 https://www.baeldung.com/intro-to-feign
 
 https://github.com/OpenFeign/feign
 
+https://stripe.com/docs/api/
 
+https://github.com/stripe/stripe-java
 
 <<<
