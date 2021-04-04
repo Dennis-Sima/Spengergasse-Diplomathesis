@@ -289,16 +289,16 @@ Das Spring Framework bietet eine breite Palette an Komponenten, wie Spring Boot,
 *Nennenswerte Unterschiede*:
 
 .Java EE vs Spring
-[cols=3,options=header, width="50%"]
+[cols=3,options=header]
 |===
 |Faktor |Java EE|Spring (Boot)
-|Einarbeitung | Aufwendig und Webserver Konfiguration notwendig | Einfach, viele Features kommen "out of box"
-|Programmiersprache |Java |Keine spezifische Sprache
-|UI |JSF2 |Spring MVC
-|Testing |Arquillian (AppServer nötig) |Spring Testing (Mockito, ...), JUnit
-|Transaktionen |JTA |JTA/Spring Data
-|AOP |Interceptor |Spring AOT
-|XML-lastig |Wenig |Viel
+h|Einarbeitung | Aufwendig und Webserver Konfiguration notwendig | Einfach, viele Features kommen "out of box"
+h|Programmiersprache |Java |Keine spezifische Sprache
+h|UI |JSF2 |Spring MVC
+h|Testing |Arquillian (AppServer nötig) |Spring Testing (Mockito, ...), JUnit
+h|Transaktionen |JTA |JTA/Spring Data
+h|AOP |Interceptor |Spring AOT
+h|XML-lastig |Wenig |Viel
 |Geschwindigkeit |Schneller als Spring |Langsamer als Java EE
 |===
 
