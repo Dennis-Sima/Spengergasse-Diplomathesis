@@ -1,8 +1,10 @@
+[abstract]
 == Abstract
 In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie unter anderem Regelmäßigkeit von Updates, langfristiger Support, Kosten sowie Eleganz beim Programmieren, Funktionen und Querschnittsfunktion wie Logging, Dokumentation, Wartbarkeit sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
 
 Um die Arbeit angemessen verstehen zu können, werden fortgeschrittene Fähigkeiten und Erfahrungen in Informatik bzw. in der Programmierung vorausgesetzt. Das Paper dient als Basis einer Entscheidungsgrundlage des zu wählenden Frameworks für die Entwicklung von Business Applikationen.
 
+[introduction]
 == Einleitung
 Java Entwickler und Java Entwicklerinnen stehen, sei es im Projekt für einen Kunden oder privat, für die Entwicklung von Business Applikationen, vor der Entscheidung, welches (Web) Framework sie für ihr Projekt wählen sollten. Sei es Hibernate, Spring, Apache Wicket, Grails oder Java EE bzw. Jakarta EE, für solch ein Projekt stehen viele Frameworks zur Verfügung. So macht es die Entscheidung schwer, welches Framework am besten für das Projekt passt, weswegen hierfür in diesem Paper auf die zwei Frameworks Spring und Java EE, speziell auf die Entwicklung von Business Applikationen und Web Lösungen (REST), eingegangen wird.
 
@@ -196,7 +198,9 @@ Nun ist unter ``http://localhost:8080/api/v1/test/hello`` die sehr grundlegende 
 
 image::../images/SpringBootWeb.png[title = "Spring Boot REST API GET-Response"]
 
-== Regelmäßige Updates und Wartbarkeit
+== Bewertungskriterien
+
+=== Regelmäßige Updates und Wartbarkeit
 Java EE, seit Java EE 8 umbenannt auf Jakarta EE, erhält regelmäßig neue Versionsupdates. Die Frequentierung der Stable Updates ist durchschnittlich alle zwei bis vier Jahre und enthält meist neue Features und Verbesserungen. Das letzte Hauptupdate (Jakarta EE 9) fand im Jahr 2020 statt.
 Das Spring Framework wird kontinuierlich aktualisiert und dessen letztes großes Update war im Jahr 2017 mit der Version Spring 5.0 und als letztmaliger Stable Release gilt die Version Spring 5.3.4, welche im Februar 2021 veröffentlicht wurde. Zwar erhalten beide Frameworks regelmäßig Updates, wohingegen das Spring Framework öfters Updates bekommt als Java EE. Dies ist wohl auch der stetig expandierenden Nutzerbasis von Spring geschuldet und der Leitungsabgabe von Java EE durch Orace. Auch Dependencies werden seitens beider Frameworks im Laufe von Updates mit aktualisiert.
 
@@ -214,7 +218,7 @@ Durch immer neue Updates und deren neuen Funktionen und Verbesserungen wird die 
 |Punkte |5 |5
 |===
 
-== Langfristiger Support
+=== Langfristiger Support
 Wie bereits im vorhergehenden Kapitel erwähnt, erhalten beide Frameworks stetig Updates. Jedoch wirkt seit 2017 Oracle, der damalige Leiter von der Java Enterprise Plattform, nicht mehr primär an der Entwicklung von Java EE mit, da sie die Leitung dafür aus mangelnder Interesse einer Weiterentwicklung abgegeben haben. Dies zeigt auf, dass Java EE immer weniger Relevanz in der heutigen Software Gemeinschaft hat und einen langfristigen Support fragwürdig macht. Zwar wird mit einigen Updates in der Zukunft gerechnet, vor allem notwendige Sicherheitsupdates, doch bahnbrechende Weiterentwicklungsupdates werden wohl auf sich warten lassen.
 
 Die Website "JRebel" beispielsweise, hat einige Entwickler befragt, ob sie von Java EE zu Spring migriert hätten bzw. dies tun möchten. Die Befragung ergab, dass lediglich 14 Prozent von Spring zu Java EE und im Kontrast dazu 36 Prozent eher von Java EE zu Spring migriert haben bzw. es tun möchten. Deswegen enthält Java EE resümierendes für diese Kategorie 3 Punkte.
@@ -233,7 +237,7 @@ Seitens des Spring Frameworks, vor allem bei den zwei Komponenten Spring Boot un
 |Punkte |3 |5
 |===
 
-== Kosten, Eleganz beim Programmieren
+=== Kosten und Programmiereleganz
 Seit der Übernahme durch die Eclipse Foundation ist Jakarta EE komplett Open Source. Oracle verfügt über die Markenrechte von "Java EE", weswegen die neue Leitung es auf "Jakarta EE" umbenannt hat. Dadurch ist Jakarta EE größtenteils kostenlos zu nutzen, jedoch gibt es neben den frei zugänglichen Java EE Servern wie "Tomcat" oder "Glassfish", auch kostenpflichtige Server. Java EE bietet folgende Paradigmen:
 
 * *Cloud und PaaS*: Cloud Migration (Web), durch Java EE 8, und PaaS (Platform as a service)
@@ -261,7 +265,7 @@ Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Liz
 |Punkte |3 |5
 |===
 
-== Dokumentation
+=== Dokumentation
 
 Java EE bietet eine Dokumentation von Oracle, welche bei Weitem nicht so umfangreich, leicht zugänglich und übersichtlich wie die von dem Spring Framework ist. Die Dokumentation ist verschachtelt durch einige Links erreichbar und listet alle nennenswerte Packages chronologisch auf, welches an die Standard Java Dokumentation erinnert. Die Documentation hat sich durch Jakarta jedoch verbessert.
 
@@ -278,7 +282,7 @@ Den Fakten geschuldet, dass Spring eine bessere Dokumentation im Hinblick auf Ü
 |Punkte |2 |5
 |===
 
-== Funktionsumfang
+=== Funktionsumfang
 Das Spring Framework bietet eine breite Palette an Komponenten, wie Spring Boot, Spring MVC, Spring Batch sowie Spring Security. Java EE hingegen verfügt nur über sich selbst. Allgemein teilen beide Frameworks ähnliche Features:
 
 * *Dependency Injection*
@@ -301,6 +305,8 @@ h|AOP |Interceptor |Spring AOT
 h|XML-lastig |Wenig |Viel
 |Geschwindigkeit |Schneller als Spring |Langsamer als Java EE
 |===
+
+image::../images/SpringComponents.png[title = "Spring Framework Komponenten", 340, 310]
 
 Beide Frameworks bieten viele Features, Spring hingegen hat einige mehr. Dies liegt auch daran, dass es mehr Frameworks unterstützt und selbst beinhaltet. Java EE ist hingegen, laut Selbsttests, bei Applikationsstartzeiten um rund zehn Prozent schneller als Spring. Im Hinblick auf die Entwicklungen von Business Applikationen reichen die Features beider Framework grundlegend aus, Spring aber erleichtert durch mehr Funktionen und Frameworks die Implementierung der Applikationen, weswegen Spring 4 Punkte, durch unter anderem die niedrigere Geschwindigkeit, und Java EE, durch den höheren Konfigurationsaufwand als Spring, 3 Punkte erhält.
 
@@ -325,7 +331,7 @@ Beide Frameworks bieten viele Features, Spring hingegen hat einige mehr. Dies li
 |Punkte |3 |4
 |===
 
-== Querschnittsfunktion
+=== Querschnittsfunktion
 Java EE sowie auch Spring unterstützen die Programmiersprache Java sowie Dependency Injection, weswegen sie einige Querschnittsfunktionen teilen:
 
 * *Logging und Tracing*: Mit log4j, Zipkin, Sleuth und dem ELK-Stack
@@ -343,7 +349,7 @@ Spring hat automatisierte Sicherheitsfunktionen in die Security Architektur impl
 |Punkte |3 |5
 |===
 
-== Developer Codebase und Community Größe
+=== Developer Codebase und Community Support
 Seitens beider Frameworks gibt es eine mittel bis große Developer-Base. Java EE bzw. Jakarta EE wird laut der Webseite https://stackshare.io/[stackshare.io], welche unterschiedliche Frameworks, Programmiersprachen etc. bewertet und aufzeigt, welche Technologien heutzutage verwendet werden, von 29 Unternehmen genutzt. Darunter "TripAdvisior", "Biting Bit" und "IWB". Außerdem hat Java EE auch Integrationen in "Eclipse", "NetBeans IDE" sowie "Apache Wicket".
 
 Auch Spring ist auf derselben Webseite vertreten. Angaben zufolge benutzen 501 Unternehmen Spring in ihrem Stack, darunter "Accenture", "Zalando" und auch "deleokorea".
@@ -368,7 +374,6 @@ Durch die wenige Benutzung (von Firmen) und Information auf StackOverflow, erhä
 | |Java EE|Spring
 |Punkte |3 |5
 |===
-
 
 == Entscheidungsresümee
 Die einzelnen Bewertungen haben folgendes Ergebnis ergeben:
@@ -405,17 +410,17 @@ Grund dafür war, dass bereits viel Erfahrung und praktische Programmierung Fäh
 
 Ausschlaggebend war außerdem, die sehr gute Dokumentation des Frameworks, die herausstechenden Funktionen wie ein vorkonfigurierter eingebetteter Application Server, automatisierte Build Abläufe, die zahlreichen Frameworks und produktionsfähige Metriken wie Health Endpoints sowie allgemein die Arbeit, welche Spring dem Backend Team durch vorgefertigte Templates, Projekte und Module abgenommen hat. Spring Boot hat sich als ein sehr gutes Framework für die Entwicklung der APIs herausgestellt.
 
-[glossary]
-== Glossary
+[glossar]
+== Glossar
 
-REST-API:: Programmierschnittstelle, welche über HTTP-Anfragen mittels CRUD Operationen agiert.
-SOAP-API:: Mit diesem Netzwerkprotokoll können Daten in Form von Envelopes zwischen System ausgetauscht werden.
-Framework:: Programmiergerüst, bei dem vorgefertigte Rahmen, wie Funktionen und Elemente, bereitgestellt wird und den Einstieg in die jeweilige Technologie erleichtert.
 Build Tool:: Automatisiert den Prozess der Bildung ausführbarer Dateien. Software wird erstellt und beispielsweise werden nötige Dependencies heruntergeladen und verwaltet.
+ELK-Stack:: Steht für Elasticsearch, Logstash und Kibana. Es ermöglicht das Tracing, die Verarbeitung und die visuelle Aufbereitung von zum Beispiel Metrik Daten einer Applikation.
+Framework:: Programmiergerüst, bei dem vorgefertigte Rahmen, wie Funktionen und Elemente, bereitgestellt wird und den Einstieg in die jeweilige Technologie erleichtert.
 JSP Pages:: Steht für "Jakarta Server Pages" und sind Seiten gebaut durch "JHTML" und erlaubt die Integrierung von Java Code in HTML und XML Webseiten.
 Microservice Architektur:: Anwendungen werden in kleine Module aufgeteilt und werden besser separat steuerbar und unabhängiger. Zusammen bilden alle Module die Anwendung.
 Monolithen Architektur:: Alle Software Komponenten befinden sich in einem großen Anwendungssystem, sie sind zentral, einzelne Softwareteile untrennbar und kaum unabhängig steuerbar.
-ELK-Stack:: Steht für Elasticsearch, Logstash und Kibana. Es ermöglicht das Tracing, die Verarbeitung und die visuelle Aufbereitung von zum Beispiel Metrik Daten einer Applikation.
+REST-API:: Programmierschnittstelle, welche über HTTP-Anfragen mittels CRUD Operationen agiert.
+SOAP-API:: Mit diesem Netzwerkprotokoll können Daten in Form von Envelopes zwischen System ausgetauscht werden.
 
 [quellen]
 == Quellen
@@ -423,11 +428,11 @@ ELK-Stack:: Steht für Elasticsearch, Logstash und Kibana. Es ermöglicht das Tr
 |===
 |Beschreibung |Quelle |Letzter Zugriff
 
-|Java EE Architektur - Bild nachmodelliert
+|Java EE Architektur: Grafik nachmodelliert
 |http://pawlan.com/monica/articles/j2eearch/art/container1.jpg
 |29.03.2021
 
-|Spring Boot Architektur - Bild nachmodelliert
+|Spring Boot Architektur: Grafik nachmodelliert
 |https://www.javatpoint.com/spring-boot-architecture
 |29.03.2021
 

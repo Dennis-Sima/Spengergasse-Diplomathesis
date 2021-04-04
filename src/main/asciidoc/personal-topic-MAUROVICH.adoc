@@ -8,6 +8,10 @@ v0.5, 2021-04-04
 :toc-title: Inhaltsverzeichnis
 :toclevels: 3
 :sectnums:
+// Not working:
+:chapter-label: Kapitel
+:author: Paul Maurovich
+:doctitle: Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
 
 :blankline: pass:[ +]
 
