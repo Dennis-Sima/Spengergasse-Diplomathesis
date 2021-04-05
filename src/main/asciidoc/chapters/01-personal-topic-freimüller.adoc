@@ -138,7 +138,7 @@ Außerdem werden in Kotlin sowohl objektorientierte als auch funktionale Program
 
 *Tiobe Index*
 
-Kotlin belegt auf dem Tiobe Index den 39ten Platz.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
+Kotlin belegt auf dem Tiobe Index den 39ten Platz.
 
 === Groovy
 
@@ -150,7 +150,7 @@ footnote:[Scand: Groovy vs Java: Detailed Comparison and Tips on the Language Ch
 
 *Tiobe Index*
 
-Groovy ist auf dem 17ten Platz auf dem Tiobe Index und hat damit seit dem letzten Jahr 31 Plätze gut gemacht.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
+Groovy ist auf dem 17ten Platz auf dem Tiobe Index und hat damit seit dem letzten Jahr 31 Plätze gut gemacht.
 
 === Scala
 
@@ -162,7 +162,7 @@ footnote:[javaTpoint: History of Scala, https://www.javatpoint.com/history-of-sc
 
 *Tiobe Index*
 
-Auf dem Tiobe Index belegt Scala den 26ten Platz.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
+Auf dem Tiobe Index belegt Scala den 26ten Platz.
 
 === Clojure
 
@@ -174,7 +174,7 @@ footnote:[Hickey, Rich: A history of Clojure, https://download.clojure.org/paper
 
 *Tiobe Index*
 
-Clojure ist die in dieser Auswahl am wenigsten populäre Sprache und belegt nur den 60ten Platz im Tiobe Index.footnote:[Tiobe: TIOBE INDEX for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
+Clojure ist die in dieser Auswahl am wenigsten populäre Sprache und belegt nur den 60ten Platz im Tiobe Index.
 
 == Auswahl der Schnittstellen
 
@@ -206,7 +206,6 @@ es in den anderen Sprachen gibt.
 === E-Mail APIs
 
 E-Mail APIs werden vor allem in Backend Applikationen benötigt, um Benutzer*innen Informationen per E-Mail zu senden.
-
 
 == Stripe API
 
@@ -278,7 +277,7 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 - Lesbarkeit: Der Code ist leicht verständlich, wird durch das in Java notwendige Exception-handling
 allerdings etwas unübersichtlich. -> 4/5 {blankline}
 
-- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation footnote:[https://stripe.com/docs/api/] werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter auch Java. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
@@ -340,7 +339,7 @@ fun main(args: Array<String>) {
 - Lines of Code: 12 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
 Java aber leider nicht Kotlin. Da der Code in Kotlin allerdings fast derselbe ist wie der in Java geschrieben Code
 gibt es hier keinen Punkteabzug.-> 5/5  {blankline}
@@ -403,7 +402,7 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 - Lines of Code: 12 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
 Java aber leider nicht Groovy. Da der Code in Groovy allerdings fast derselbe ist wie der in Java geschrieben Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
@@ -467,7 +466,7 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 - Lines of Code: 12 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
 Java aber leider nicht Scala. Da der Code in Scala allerdings fast derselbe ist wie der in Java geschrieben Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
@@ -483,25 +482,28 @@ mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 
 Zuerst werden die Funktionen make-payment und get-status definiert, mit denen die benötigten Funktionen implementiert werden.
 
+
 [source,clojure]
 ----
 ;;File: payment.clj
 
 (defn make-payment
-  [amount stripeToken ^RequestOptions options] (let [chargeParams (-> (ChargeCreateParams/builder)
-                                                                      (.setSource stripeToken)
-                                                                      (.setCurrency "EUR")
-                                                                      (.setDescription "testpayment")
-                                                                      (.setAmount amount)
-                                                                      (.build)
-                                                                      )]
-              (.getId (Charge/create chargeParams options))))
+  [amount stripeToken ^RequestOptions options]
+        (let [chargeParams (-> (ChargeCreateParams/builder)
+                            (.setSource stripeToken)
+                            (.setCurrency "EUR")
+                            (.setDescription "testpayment")
+                            (.setAmount amount)
+                            (.build)
+                            )]
+        (.getId (Charge/create chargeParams options)))
+)
 
 (defn get-status
   [id requestOptions] (.getStatus (Charge/retrieve id requestOptions))
   )
 
-;;Lines: 5
+;;Lines: 6
 ----
 
 Als nächstes werden die RequestOptions definiert und die beiden Methoden werden aufgerufen und der Status der Zahlung wird auf die Konsole ausgegeben.
@@ -524,10 +526,10 @@ Als nächstes werden die RequestOptions definiert und die beiden Methoden werden
 
 *Bewertung*
 
-- Lines of Code: 9 Zeilen. -> 5/5 {blankline}
+- Lines of Code: 10 Zeilen. -> 5/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
 Java aber leider nicht Clojure. Da der Code in Clojure trotz unterschiedlicher Syntax fast derselbe ist wie der in Java geschrieben Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
@@ -658,7 +660,7 @@ Anschließend wird ein Client mithilfe des FeignBuilders erstellt und die Funkti
 - Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist sehr umfangreich und bietet
+- Dokumentation: Die Dokumentation footnote:[https://github.com/OpenFeign/feign] ist sehr umfangreich und bietet
 auch zahlreiche Beispiele zum Einsatz der Bibliothek, außerdem werden verschiedenste Encoder/Decoder vorgestellt,
 die von der Bibliothek unterstützt werden. -> 5/5  {blankline}
 
@@ -723,7 +725,7 @@ fun createUser(client: UserFeignClient, user: CreateUserRequest): CreateUserResp
 - Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+- Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Kotlin.
 Da jedoch fast kein Unterschied bei der Umsetzung in Kotlin zu der Umsetzung in Java besteht, werden hierfür
 keine Punkte abgezogen-> 5/5  {blankline}
@@ -789,7 +791,7 @@ Mit dem FeignBuilder wird der Client instanziert und die Methoden werden aufgeru
 - Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+- Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Groovy.
 Da jedoch fast kein Unterschied bei der Umsetzung in Groovy zu der Umsetzung in Java besteht, werden hierfür
 keine Punkte abgezogen-> 5/5  {blankline}
@@ -857,7 +859,7 @@ Der Client wird mit dem FeignBuilder erstellt und anschließend werden die Metho
 - Lines of Code: 14 Zeilen -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+- Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Scala.
 Da jedoch fast kein Unterschied bei der Umsetzung in Scala zu der Umsetzung in Java besteht, werden hierfür
 keine Punkte abgezogen-> 5/5  {blankline}
@@ -920,7 +922,7 @@ Anschließend wird ein Client mit dem FeignBuilder instanziert und verwendet, um
 - Lesbarkeit: Der Code ist leicht verständlich, allerdings sorgen die Annotationen beim Interface dafür, dass der Code etwas
     unübersichtlich wird. -> 4/5 {blankline}
 
-- Dokumentation: Die Dokumentation [https://github.com/OpenFeign/feign] ist zwar
+- Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Clojure.
 Da Clojure sich syntaktisch stärker von Java unterscheidet als die anderen berücksichtigten JVM Sprachen werden
 hier Punkte abgezogen.-> 3/5  {blankline}
@@ -979,33 +981,240 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 
 == Stream API
 
+In allen Sprachen soll mit der Stream API (oder der Alternative in der jeweiligen Sprache) eine
+Liste von Lebensmitteln in insgesamt drei Methoden
+
+- nach dem Namen sortiert werden
+- nach der Kategorie gruppiert werden
+- nach Lebensmitteln durchsucht werden, die weniger als einen Euro kosten.
+
+Die Liste soll unverändert bleiben.
 
 
 === Java
 
+In Java wird die Stream API verwenden.
+
 *Code Snippet*
+
+[source,java]
+----
+public static List<Food> sortFoodByName(List<Food> food) {
+    return food.stream().sorted(Comparator.comparing(Food::getName)).collect(Collectors.toList());
+}
+
+public static Map<Category, List<Food>> groupFoodByCategory(List<Food> food) {
+    return food.stream().collect(Collectors.groupingBy(Food::getCategory));
+}
+
+public static List<Food> findFoodWorthLessThanAEuro(List<Food> food) {
+    return food.stream().filter(f -> f.getPrice() < 1.0).collect(Collectors.toList());
+}
+
+//Lines: 6
+----
+
 *Bewertung*
+
+- Lines of Code: 6 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich, im Vergleich
+zu den anderen Sprachen fällt jedoch auf, dass die sorted(), groupingBy() und filter() Methoden nicht
+direkt auf dem Listenobjekt sind sondern auf einem Stream Objekt sind. Außerdem muss der Stream
+in zwei von drei Fällen wieder mit einem eigenen Call zu einer Liste umgewandelt werden. -> 3/5 {blankline}
+
+- Dokumentation: Die Dokumentation footnote:[https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html] enthält
+zahlreiche Beispiele und dokumentiert die komplette Stream API. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Stream API sorgt dafür, dass Collections funktional verarbeitet werden können, die
+gestreamte Liste wird nicht verändert. -> 5/5
+
 
 === Kotlin
 
+In Kotlin wird keine Stream API verwendet, da die Listen in Kotlin bereits die Funktionalitäten der Stream API implementieren.
+
 *Code Snippet*
+
+[source,kotlin]
+----
+fun sortFoodByName(food: List<Food>): List<Food> = food.sortedBy { it.category }
+
+fun groupFoodByCategory(food: List<Food>): Map<Category, List<Food>> = food.groupBy(Food::category)
+
+
+fun findFoodWorthLessThanAEuro(food: List<Food>): List<Food> = food.filter { f->f.price<1.0 }
+
+//Lines: 6
+----
+
 *Bewertung*
+
+- Lines of Code: 6 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: Da die Dokumentation von Collections in der Kotlinlang Dokumentation footnote:[https://kotlinlang.org/docs/] vollständig ist,
+die Dokumentation eine Suchfunktion hat und bei den jeweiligen Funktionen auch Anwendungsbeispiele vorhanden sind
+erhält Kotlin alle Punkte für die Dokumentation. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Methoden, die statt der Stream API verwendet werden, sind funktionale Konstrukte und die Listen, die
+verwendet werden, werden nicht verändert. -> 5/5
 
 === Groovy
 
+In Groovy wird die Stream API nicht verwendet, da die Listen in Groovy bereits die Funktionen der Stream API implementieren.
+
 *Code Snippet*
+
+[source,groovy]
+----
+static def sortFoodByName(List<Food> food) {
+    food.toSorted {f->f.name}
+}
+
+static def groupFoodByCategory(List<Food> food) {
+    food.groupBy {f->f.category}
+}
+
+static def findFoodWorthLessThanAEuro(List<Food> food) {
+    food.findAll {f->f.price < 1}
+}
+
+//Lines: 6
+----
+
 *Bewertung*
+
+- Lines of Code: 6 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: Die Dokumentation von Groovy für den Umgang mit Collections footnote:[http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html]
+enthält gute Beispiele und Beschreibungen für alle Methoden, die equivalent zu den Funktionen der Stream API in Java sind. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Methoden, die statt der Stream API verwendet werden, sind funktionale Konstrukte und die Listen, die
+verwendet werden, werden nicht verändert. -> 5/5
 
 === Scala
 
+In Scala wird die Stream API nicht verwendet, da die Listen in Scala bereits die Funktionen der Stream API implementieren.
+
 *Code Snippet*
+
+[source,scala]
+----
+def sortFoodByName(food: List[Food]): List[Food] = {
+  food.sortBy(f => f.name)
+}
+
+  def groupFoodByCategory(food: List[Food]): Map[String, List[Food]] = {
+  food.groupBy(f => f.category)
+}
+
+def findFoodWorthLessThanAEuro(food: List[Food]): List[Food] = {
+  food.filter(f => f.price<1)
+}
+
+//Lines: 6
+----
+
 *Bewertung*
+
+- Lines of Code: 6 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: In der Dokumentation von Scala footnote:[https://www.scala-lang.org/api/2.12.5/scala/collection/immutable/List.html]
+werden die Funktionen, die statt der Stream API verwendet werden können, dokumentiert und manche (nicht alle, zum Beispiel die "filter" Funktion)
+haben auch Beispiele dabei. Da nicht überall Beispiele sind gibt es hier einen Punkt Abzug, da alle anderen
+berücksichtigten JVM Sprachen mehr Beispiele gebracht haben. -> 4/5  {blankline}
+
+- Unterstützte Paradigmen: Die Methoden, die statt der Stream API verwendet werden, sind funktionale Konstrukte und die Listen, die
+verwendet werden, werden nicht verändert. -> 5/5
 
 === Clojure
 
+In clojure.core gibt es bereits die Funktionen der Stream API, deshalb wird die Stream API nicht verwendet.
+
 *Code Snippet*
+
+[source,clojure]
+----
+(defn sort-food-by-name
+  [food] (sort-by :name food))
+
+(defn group-food-by-category
+   [food] (group-by :category food))
+
+(defn find-food-worth-less-than-a-euro
+  [food] (filter #(< (:price %) 1) food))
+
+;;Lines: 6
+----
+
 *Bewertung*
 
+- Lines of Code: 6 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: Die Dokumentation, die in dem Cursive Plugin von dem IntelliJ Marktplatz footnote:[https://plugins.jetbrains.com/plugin/8090-cursive]
+inkludiert ist verfügt pro Funktion, die statt einer Stream API Funktion verwendet wird, sehr viele Beispiele mit verschiedenen
+Anwendungsfällen und erklärt auch die Funktion sehr detailliert, aus diesem Grund bekommt Clojure alle Punkte. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Clojure ist eine funktionale Programmiersprache und die Funktionen, die anstelle der Stream-API verwendet werden,
+sind auch funktional konzipiert. -> 5/5
+
+
+=== Beurteilungstabelle und Fazit
+
+[cols="<, ^, ^, ^, ^, ^", options="autowidth,header"]
+|===
+|Sprache{nbsp}{nbsp} |Java{nbsp}{nbsp} |Kotlin{nbsp}{nbsp} |Groovy{nbsp}{nbsp} |Scala{nbsp}{nbsp} |Clojure{nbsp}{nbsp}
+
+|Lines of Code
+|5
+|5
+|5
+|5
+|5
+
+|Lesbarkeit
+|3
+|5
+|5
+|5
+|5
+
+|Dokumentation
+|5
+|5
+|5
+|4
+|5
+
+|Unterstützte Paradigmen
+|5
+|5
+|5
+|5
+|5
+
+|Ergebnis
+|18
+|20
+|20
+|19
+|20
+|===
+_Figure 4. Beurteilungstabelle Stream-API und Alternativen_
+
+Mit 18 Punkten belegt Java den letzten Platz, das liegt daran, dass der Code in Java durch den Einsatz der Stream-API
+etwas unleserlicher wird als der Code der anderen Sprachen.
+
+Ansonsten haben alle Sprachen 19-20 Punkte, das liegt daran, dass die Alternativen zur Stream-API in den anderen Sprachen
+direkt auf den Collections sind (beziehungsweise core Funktionen in Clojure).
 
 == Java Mail API
 
@@ -1041,7 +1250,6 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 
 // Berechnen, welche Sprache im Durchschnitt am Besten bei allen Schnittstellen abschneidet
 
-
 <<<
 
 [bibliography]
@@ -1055,5 +1263,9 @@ https://github.com/OpenFeign/feign
 https://stripe.com/docs/api/
 
 https://github.com/stripe/stripe-java
+
+https://blog.frankel.ch/learning-clojure/5/
+
+https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html
 
 <<<
