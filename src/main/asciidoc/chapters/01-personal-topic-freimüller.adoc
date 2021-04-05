@@ -12,7 +12,7 @@ welche JVM Sprache wie gut geeignet ist, um verschiedene
 Programmierschnittstellen anzusteuern.
 
 Die Erwartungshaltung ist, dass die Ergebnisse in allen Sprachen ziemlich gleich
-sind, da die meisten JVM-Sprachen in der Auswahl ähnlich syntaktisch aufgebaut sind.
+sind, da die meisten JVM-Sprachen in der Auswahl syntaktisch ähnlich aufgebaut sind.
 
 
 // Erklären, was die Absicht hinter diesem Paper ist (herausfinden, welche JVM Sprache am besten für
@@ -116,6 +116,11 @@ bis heute in sehr vielen Bereichen verwendet.
 Da Java eine general purpose language ist und Java dank der JVM (Java virtual machine) plattformunabhängig ist,
 kann Java für sehr viele Anwendungsimplementierungen eingesetzt werden, angefangen von simplen Konsolenprogrammen
 bis hin zu Anwendungen auf Bordcomputern von Automobilen.
+footnote:[FreeJavaGuide: History of Java programming language, https://www.freejavaguide.com/history.html abgerufen am 25.03.2021]
+
+*Tiobe Index*
+
+Laut dem Tiobe Index ist Java die zweitpopulärste Sprache (nach C).footnote:[Toibe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
 
 === Kotlin
 
@@ -124,13 +129,36 @@ Wichtig bei der Erstellung von Kotlin war sowohl, dass Kotlin problemlos mit Jav
 dass der in Kotlin geschrieben Code eleganter und effizienter ist als der equivalente Java Code.
 Hauptsächlich wird Kotlin für Android Applikationen verwendet, allerdings ist es ebenso möglich, die Sprache
 für Web-Applikationen oder auch native Applikationen zu verwenden, da Kotlin eine general purpose language ist.
+Außerdem werden in Kotlin sowohl objektorientierte als auch funktionale Programmierung unterstüzt.footnote:[Deshmane, Rohini: Introduction to Kotlin, https://medium.com/@rohinideshmane.21/introduction-to-kotlin-5f39b31610e0 abgerufen am 25.03.2021]footnote:[Kotlinlang: Calling Java from Kotlin, https://kotlinlang.org/docs/java-interop.html abgerufen am 25.03.2021]
 
+*Tiobe Index*
+
+Kotlin belegt auf dem Tiobe Index den 39ten Platz.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
 
 === Groovy
 
+Apache Groovy ist eine OpenSource general purpose language, in der man sowohl Skripte schreiben kann als auch, wie in Java, objektorientierte
+Applikationen erstellen kann. Außerdem wird auch funktionale Programmierung in Groovy unterstützt.
+Groovy kann, wie Java und Kotlin auch, in etlichen Anwendungsfällen verwendet werden und man kann alle Java Bibliotheken
+auch in Groovy verwenden.
+footnote:[Scand: Groovy vs Java: Detailed Comparison and Tips on the Language Choice, https://scand.com/company/blog/groovy-vs-java/ abgerufen am 05.04.2021]footnote:[Groovy-lang: A multi-faceted language for the Java platform, https://groovy-lang.org/ abgerufen am 05.04.2021]
 
+*Tiobe Index*
+
+Groovy ist auf dem 17ten Platz auf dem Tiobe Index und hat damit seit dem letzten Jahr 31 Plätze gut gemacht.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
 
 === Scala
+
+Scala ist eine general purpose langauge mit voller Java Interoperabilität und wurde von Martin Odersky entwickelt.
+Die erste Version von Scala wurde am 20.01.2004 veröffentlicht und die Sprache wird immer noch weiterentwickelt.
+Wie bei den vorherigen Sprachen kann Scala für sehr viele Anwendungsfälle verwendet werden.
+footnote:[Hicks, Matt: Scala vs. Java: Why Should I Learn Scala?, https://www.toptal.com/scala/why-should-i-learn-scala abgerufen am 05.04.2021]
+footnote:[javaTpoint: History of Scala, https://www.javatpoint.com/history-of-scala abgerufen am 05.04.2021]
+
+*Tiobe Index*
+
+Auf dem Tiobe Index belegt Scala den 26ten Platz.footnote:[Tiobe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
+
 === Clojure
 
 
@@ -838,28 +866,6 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 
 === Clojure
 
-=== Java
-
-*Code Snippet*
-*Bewertung*
-
-=== Kotlin
-
-*Code Snippet*
-*Bewertung*
-
-=== Groovy
-
-*Code Snippet*
-*Bewertung*
-
-=== Scala
-
-*Code Snippet*
-*Bewertung*
-
-=== Clojure
-
 *Code Snippet*
 *Bewertung*
 
@@ -869,10 +875,31 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 == Java Mail API
 
 === Java
+
+*Code Snippet*
+*Bewertung*
+
 === Kotlin
+
+*Code Snippet*
+*Bewertung*
+
 === Groovy
+
+*Code Snippet*
+*Bewertung*
+
 === Scala
+
+*Code Snippet*
+*Bewertung*
+
 === Clojure
+
+*Code Snippet*
+*Bewertung*
+
+
 
 
 == Fazit
