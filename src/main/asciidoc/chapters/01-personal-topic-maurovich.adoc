@@ -1,6 +1,16 @@
 [abstract]
 == Abstract
-In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie unter anderem Regelmäßigkeit von Updates, langfristiger Support, Kosten sowie Eleganz beim Programmieren, Funktionen und Querschnittsfunktion wie Logging, Dokumentation, Wartbarkeit sowie die Developer Codebase untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
+In diesem Paper werden die zwei (Web) Frameworks, Java EE und Spring, auf unterschiedliche Kriterien, wie
+
+* *Regelmäßige Updates und Wartbarkeit*: Wie und wann kommen Updates? Sind noch mit Updates zurechnen? Wie wartbar ist es?
+* *Langfristiger Support*: Unter welcher Leitung gibt es noch Support? Ist mit langfristigem Framework Support zu rechnen?
+* *Kosten und Programmiereleganz*: Ist das Framework Open Source und welche Lizenzkosten gibt es? Welche Programmierparadigmen und allgemeine Prinzipien gibt es?
+* *Dokumentation*: Gibt es vorhandene übersichtliche und inhaltlich aussagekräftige Dokumentationen und Anleitungen?
+* *Funktionsumfang*: Welche Funktionen gibt es und welche Unterschiede gibt es zwischen den Frameworks?
+* *Querschnittsfunktion*: Metriken, Dependency Injection
+* *Developer Codebase und Community Support*: Wie groß ist die Community, gibt es genügend Informationen im Internet und wie aktuell wird das jeweilige Framework genutzt?
+
+untersucht. Die aus den Kriterien resultierenden Vor- und Nachteilen werden gegenübergestellt und bewertet.
 
 Um die Arbeit angemessen verstehen zu können, werden fortgeschrittene Fähigkeiten und Erfahrungen in Informatik bzw. in der Programmierung vorausgesetzt. Das Paper dient als Basis einer Entscheidungsgrundlage des zu wählenden Frameworks für die Entwicklung von Business Applikationen.
 
@@ -14,7 +24,7 @@ NOTE: Wichtig zu beachten ist, dass es kein "perfektes Framework" für die Entwi
 
 == Java EE Framework
 Java Enterprise Edition, kurz Java EE, früher auch J2EE genannt, ist ein Framework, ausgelegt für mittel bis große Projekte, welches es ermöglicht, umfassende und meist komplizierte (Unternehmens)Anwendungen zu entwickeln. Vor allem für Webanwendungslösungen im Unternehmensbereich, meist in Kombination mit REST-API Schnittstellen und verteiltem Computing, kommt Java EE häufig zum Einsatz. Das Framework baut auf Java SE (Java Standard Edition) auf und wird meist mit einer Monolithen-Architektur entwickelt.
-Das Framework wurde seit Java EE 8 auf Jakarta EE 8 umbenannt, da Oracle die Leitung dafür abgab, und es wurde Fokus auf Cloud Migration gelegt. Java EE baut auf der Verwendung von der objektorientierten Programmiersprache Java.
+Das Framework wurde seit Java EE 8 auf Jakarta EE 8 umbenannt, da Oracle die Leitung dafür abgab, und es wurde Fokus auf Cloud Migration gelegt. Java EE baut auf offiziel auf die Verwendung von der objektorientierten Programmiersprache Java, inoffiziel könnte aus mit anderen Programmiersprachen wie Kotlin funktionieren.
 
 Benutzt wird es hauptsächlich zur Entwicklung von browserbasierten Web- und Enterprise (Business)Applikationen und bietet zahlreiche Spezifikationen wie beispielsweise:
 
@@ -58,7 +68,7 @@ Schlussendlich werden die Daten zum Beispiel in SQL, H2 oder PostgreSQL Datenban
 == Erste Schritte
 NOTE: Die API Beispiele werden mittels der IntelliJ IDE realisiert, da sich diese sehr für die beiden Frameworks eignet.
 
-*Java EE*:
+=== Java EE Framework
 
 1. Zu Beginn in IntelliJ ein neues Projekt erstellen und "Java Enterprise" auswählen. Danach bei "Projekt Template" den Punkt "Rest service" wählen und "GlassFish 5.0.0" als "Application server" auswählen, dieser muss jedoch zuvor installiert werden.
 2. Anschließend die gewählten Dependencies überprüfen und geeignet Projekt- und Packagenamen festlegen.
@@ -113,7 +123,7 @@ Nachdem das Projekt gestartet wurde, ist beispielsweise, je nach URL Definierung
 
 image::../images/JavaEEWeb.png[title = "Java EE REST API GET-Response"]
 
-*Spring*:
+=== Spring Framework
 
 In diesem Beispiel wird sich auf eine Komponente von dem Spring Framework konzentriert: Spring Boot, in Kombination mit Java und dem Build Tool Maven.
 
@@ -201,7 +211,7 @@ image::../images/SpringBootWeb.png[title = "Spring Boot REST API GET-Response"]
 == Bewertungskriterien
 
 === Regelmäßige Updates und Wartbarkeit
-Java EE, seit Java EE 8 umbenannt auf Jakarta EE, erhält regelmäßig neue Versionsupdates. Die Frequentierung der Stable Updates ist durchschnittlich alle zwei bis vier Jahre und enthält meist neue Features und Verbesserungen. Das letzte Hauptupdate (Jakarta EE 9) fand im Jahr 2020 statt.
+Java EE, seit Java EE 8 umbenannt auf Jakarta EE, erhält regelmäßig neue Versionsupdates. Die Frequentierung der Major Updates ist durchschnittlich alle zwei bis vier Jahre und enthält meist neue Features und Verbesserungen. Das letzte Hauptupdate (Jakarta EE 9) fand im Jahr 2020 statt.
 Das Spring Framework wird kontinuierlich aktualisiert und dessen letztes großes Update war im Jahr 2017 mit der Version Spring 5.0 und als letztmaliger Stable Release gilt die Version Spring 5.3.4, welche im Februar 2021 veröffentlicht wurde. Zwar erhalten beide Frameworks regelmäßig Updates, wohingegen das Spring Framework öfters Updates bekommt als Java EE. Dies ist wohl auch der stetig expandierenden Nutzerbasis von Spring geschuldet und der Leitungsabgabe von Java EE durch Orace. Auch Dependencies werden seitens beider Frameworks im Laufe von Updates mit aktualisiert.
 
 Durch Dependency Injection und Cloud Migration beider Frameworks, bei Spring ist dies beispielsweise Spring Boot, ist eine gute Wartbarkeit gegeben. Spring Boot verfügt über Plain Old Java Objects (POJO), welche sich durch kleine und "leichtgewichtige Klassen" auszeichnen, ermöglicht eine präzise Wartbarkeit, da jegliche Logik in kleinen Klassen leicht erreichbar und nicht zu umfassend verschachtelt ist. Auch Java EE verfügt über Dependencies, welche einfach aktualisiert werden können.
@@ -267,11 +277,21 @@ Das Spring Framework unterliegt der Apache-Lizenz, welche eine Free-Software-Liz
 
 === Dokumentation
 
-Java EE bietet eine Dokumentation von Oracle, welche bei Weitem nicht so umfangreich, leicht zugänglich und übersichtlich wie die von dem Spring Framework ist. Die Dokumentation ist verschachtelt durch einige Links erreichbar und listet alle nennenswerte Packages chronologisch auf, welches an die Standard Java Dokumentation erinnert. Die Documentation hat sich durch Jakarta jedoch verbessert.
+Java EE bietet eine https://docs.oracle.com/javaee/7/index.html[Dokumentation] von Oracle, welche bei Weitem nicht so umfangreich, leicht zugänglich und übersichtlich wie die von dem Spring Framework ist. Die Oracle Dokumentation ist verschachtelt durch einige Links erreichbar und listet alle nennenswerte Packages chronologisch auf, welches an die Standard Java Dokumentation erinnert. Die Documentation hat sich durch Jakarta jedoch verbessert.
 
-Die Spring Dokumentation bietet zwar auch die einzelnen Package Dokumentation, aber übersichtlicher und leichter verständlich dargestellt. Außerdem gibt es zahlreiche Guides und Anleitungen, wie eine bestimmte Sache von Spring genau funktioniert, wie zum Beispiel wie die ersten Schritte gehen. Auch allgemein bietet Spring mehr "Anleitungswebseiten" als Spring. Beide teilen jedoch einige Portale, so wie zum Beispiel die Webseite "Baeldung", welche sich auf Java und dem Spring Framework spezialisiert hat.
+Die Spring Framework https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/[Dokumentation] bietet zwar auch die einzelnen Package Dokumentation, aber übersichtlicher und leichter verständlich dargestellt. Außerdem gibt es zahlreiche Guides und Anleitungen, wie eine bestimmte Sache von Spring genau funktioniert, wie zum Beispiel wie die ersten Schritte funktionieren oder wie eine REST-API mit Spring Boot aufgesetzt wird. Auch allgemein bietet Spring mehr Anleitung als das Java EE Framework. Beide teilen jedoch einige Portale, so wie zum Beispiel die Webseite "Baeldung", welche sich auf Java und dem Spring Framework spezialisiert hat.
 
-Den Fakten geschuldet, dass Spring eine bessere Dokumentation im Hinblick auf Übersichtlichkeit, Inhalt und Erreichbarkeit liefert, erhält Spring die volle Punktezahl und Java EE nur 2 Punkte, da man allgemein wenig(er) zu Java EE bzw. Jakarta EE im Internet findet.
+Grundsätzlich bieten beide Frameworks:
+
+* *Klassen Beschreibungen und deren Nutzung*
+* *Genaue Package Beschreibungen*: Übersicht, Spezifikationen, Interfaces etc.
+* *Genaue Methoden Dokumentation*: Beispiele, Exceptions, Konstruktoren, Parameter und Datentypen
+* *Installations und Get Started Anleitungen*
+* *Modulerklärungen*: Wie beispielsweise Anleitung für Integrationen, Web Servlets, Daten Transaktionen/Zugriff etc.
+* Ansicht von *veralteten* "deprecated" *Klassen-, Package- und Methoden*
+* *Allgemeine Dokumentation der Programmiersprache*: Java EE hat die Java Dokumentation und Spring die Java, Kotlin oder Groovy Dokumentation
+
+Den Fakten geschuldet, dass Spring eine bessere Dokumentation im Hinblick auf Übersichtlichkeit, Inhalt und Erreichbarkeit liefert, erhält Spring die volle Punktezahl und Java EE nur 3 Punkte, da man allgemein wenig(er) zu Java EE bzw. Jakarta EE im Internet findet. Auch allgemein die Art der Aufbereitung der Dokumentation ist uneinsichtig bei Java EE, da es seit der Übernahme durch die Eclipse Foundation unterschiedliche Dokumentation gibt. Jedoch bieten beide eine fundierte und vertrauenswürdige Dokumentation und liefern die gewünschten Informationen.
 
 *Fazit*:
 
@@ -279,7 +299,7 @@ Den Fakten geschuldet, dass Spring eine bessere Dokumentation im Hinblick auf Ü
 [cols=3,options=header, width="50%"]
 |===
 | |Java EE|Spring
-|Punkte |2 |5
+|Punkte |3 |5
 |===
 
 === Funktionsumfang
