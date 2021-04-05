@@ -14,6 +14,11 @@ Programmierschnittstellen anzusteuern.
 Die Erwartungshaltung ist, dass die Ergebnisse in allen Sprachen ziemlich gleich
 sind, da die meisten JVM-Sprachen in der Auswahl syntaktisch ähnlich aufgebaut sind.
 
+Um die Sprachen gut vergleichen zu können, wird für jede Programmierschnittstelle
+in jeder berücksichtigten JVM Sprache ein Code Snippet geschrieben. Die Aufgabe, die mit dem Snippet
+erfüllt werden soll, wird im Vorhinein definiert und dieses Snippet wird dann größtenteils zum Vergleich
+zwischen den Sprachen herangezogen.
+
 
 // Erklären, was die Absicht hinter diesem Paper ist (herausfinden, welche JVM Sprache am besten für
 // welche Schnittstelle/Schnittstellenart ist)
@@ -161,14 +166,17 @@ Auf dem Tiobe Index belegt Scala den 26ten Platz.footnote:[Tiobe: TIOBE Index fo
 
 === Clojure
 
+Clojure ist eine funktionale JVM Sprache, die im Jahre 2007 veröffentlicht wurde.
+Mit Clojure kann man sowohl Anwendungen schreiben als auch Skripte, da die Sprache, wie
+alle anderen berücksichtigten JVM Sprachen, eine general purpose language ist, kann man auch mit
+Clojure Webapplikationen, mobile Applikationen und native Applikationen erstellen.
+footnote:[Hickey, Rich: A history of Clojure, https://download.clojure.org/papers/clojure-hopl-iv-final.pdf abgerufen am 05.04.2021]
 
+*Tiobe Index*
 
-// Java, Kotlin, Groovy, Scala, Clojure, Frege
-
+Clojure ist die in dieser Auswahl am wenigsten populäre Sprache und belegt nur den 60ten Platz im Tiobe Index.footnote:[Tiobe: TIOBE INDEX for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021]
 
 == Auswahl der Schnittstellen
-
-// Streaming API, persistence API, Android API, Mail APIs, Google APIs, REST APIs, Stripe API via Bibliothek
 
 Bei den behandelten Schnittstellen wurde darauf geachtet, dass diese häufig Anwendung finden und
 es daher auch einen Grund für die Entwickler dieser Schnittstellen gibt, diese Schnittstellen so
@@ -194,11 +202,6 @@ in serverseitigen Anwendungen.
 
 In Java gibt es die Streaming-API, in diesem Kapitel wird verglichen, welche Alternativen oder nativen Sprachfeatures
 es in den anderen Sprachen gibt.
-
-=== Persistence API
-
-Wenn Daten in einer Datenbank gespeichert werden wird, kann man eine Persistence API verwenden.
-Hier wird der Fokus auf Lösungen für die jeweiligen Sprachen gelegt.
 
 === E-Mail APIs
 
@@ -414,14 +417,175 @@ mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 === Scala
 
 *Code Snippet*
+
+Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
+
+[source,scala]
+----
+/* File: Payment.scala */
+
+class Payment {
+  def makePayment(amount: Long, stripeToken: String, options: RequestOptions): String = {
+    val params = ChargeCreateParams.builder()
+      .setAmount(amount)
+      .setCurrency("EUR")
+      .setDescription("testpayment")
+      .setSource(stripeToken)
+      .build()
+    val charge = Charge.create(params, options)
+    charge.getId
+  }1
+
+  def getStatus(id: String, options: RequestOptions): String = {
+    Charge.retrieve(id, options).getStatus
+  }
+}
+
+//Lines: 7
+----
+
+Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
+
+[source,scala]
+----
+/* File: Main.scala */
+
+  def main(args: Array[String]): Unit = {
+    def options = RequestOptions.builder()
+      .setApiKey(STRIPE_API_KEY)
+      .build()
+    val payment = new Payment()
+    val id = payment.makePayment(1000L, PAYMENT_TOKEN, options)
+    println(payment.getStatus(id, options))
+  }
+
+//Lines: 5
+----
+
 *Bewertung*
+
+- Lines of Code: 12 Zeilen. -> 4/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
+
+- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
+Java aber leider nicht Scala. Da der Code in Scala allerdings fast derselbe ist wie der in Java geschrieben Code
+gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
+keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
+
 
 === Clojure
 
 *Code Snippet*
+
+Zuerst werden die Funktionen make-payment und get-status definiert, mit denen die benötigten Funktionen implementiert werden.
+
+[source,clojure]
+----
+;;File: payment.clj
+
+(defn make-payment
+  [amount stripeToken ^RequestOptions options] (let [chargeParams (-> (ChargeCreateParams/builder)
+                                                                      (.setSource stripeToken)
+                                                                      (.setCurrency "EUR")
+                                                                      (.setDescription "testpayment")
+                                                                      (.setAmount amount)
+                                                                      (.build)
+                                                                      )]
+              (.getId (Charge/create chargeParams options))))
+
+(defn get-status
+  [id requestOptions] (.getStatus (Charge/retrieve id requestOptions))
+  )
+
+;;Lines: 5
+----
+
+Als nächstes werden die RequestOptions definiert und die beiden Methoden werden aufgerufen und der Status der Zahlung wird auf die Konsole ausgegeben.
+
+[source,clojure]
+----
+;;File: core.clj
+
+(defn -main
+  ([] (let [options (-> (RequestOptions/builder)
+                        (.setApiKey STRIPE_API_KEY)
+                        (.build))]
+        (let [id (payment/make-payment 1000 PAYMENT_TOKEN options)]
+          (println (payment/get-status id options)))
+        )
+   )
+  )
+;;Lines: 4
+----
+
 *Bewertung*
 
+- Lines of Code: 9 Zeilen. -> 5/5 {blankline}
+- Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
+- Dokumentation: In der Dokumentation [https://stripe.com/docs/api/] werden
+alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
+Java aber leider nicht Clojure. Da der Code in Clojure trotz unterschiedlicher Syntax fast derselbe ist wie der in Java geschrieben Code
+gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
+funktionale Programmierung insofern nicht berücksichtigt dass man zum Beispiel
+mithilfe eines Observers auf Änderungen des Status achten könnte. Die Implementierung in Clojure (einer funktionalen Sprache)
+ist jedoch leicht möglich. -> 3/5
+
+=== Beurteilungstabelle und Fazit
+
+[cols="<, ^, ^, ^, ^, ^", options="autowidth,header"]
+|===
+|Sprache{nbsp}{nbsp} |Java{nbsp}{nbsp} |Kotlin{nbsp}{nbsp} |Groovy{nbsp}{nbsp} |Scala{nbsp}{nbsp} |Clojure{nbsp}{nbsp}
+
+|Lines of Code
+|3
+|4
+|4
+|4
+|5
+
+|Lesbarkeit
+|4
+|5
+|5
+|5
+|5
+
+|Dokumentation
+|5
+|5
+|5
+|5
+|5
+
+|Unterstützte Paradigmen
+|3
+|3
+|3
+|3
+|3
+
+|Ergebnis
+|15
+|17
+|17
+|17
+|18
+|===
+_Figure 2. Beurteilungstabelle Stripe-API_
+
+Da Java die meisten Zeilen Code benötigt und durch das notwendige Exceptionhandling auch unlesbarer wird, belegt
+Java in diesem Fall den letzten Platz.
+
+Dass Clojure auf dem ersten Platz liegt, liegt daran, dass die Schreibweise in Clojure am kompaktesten ist.
+Allgemein führt der Einsatz der Stripe-API nicht dazu, dass der Code unlesbarer wird, allerdings wäre es besser,
+wenn man den Status mit einem Observer asynchron überwachen könnte.
 
 
 == Rest APIs
@@ -739,7 +903,7 @@ Anschließend wird ein Client mit dem FeignBuilder instanziert und verwendet, um
           (.client (new OkHttpClient))
           (.encoder (new GsonEncoder))
           (.decoder (new GsonDecoder))
-          (.target userFeignClient "https://reqres.in/api"))]
+          (.target userFeignClient/userFeignClient "https://reqres.in/api"))]
           (let [getUserResponse (getUser client)])
           (let [createUserResponse (createUser client {:name "Testuser" :job "Programmer"})])
         )
@@ -815,34 +979,7 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 
 == Stream API
 
-=== Java
 
-*Code Snippet*
-*Bewertung*
-
-=== Kotlin
-
-*Code Snippet*
-*Bewertung*
-
-=== Groovy
-
-*Code Snippet*
-*Bewertung*
-
-=== Scala
-
-*Code Snippet*
-*Bewertung*
-
-=== Clojure
-
-*Code Snippet*
-*Bewertung*
-
-
-
-== Java persistence API (JPA)
 
 === Java
 
@@ -868,8 +1005,6 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 
 *Code Snippet*
 *Bewertung*
-
-
 
 
 == Java Mail API
