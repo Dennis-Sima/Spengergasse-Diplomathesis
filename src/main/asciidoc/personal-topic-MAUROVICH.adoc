@@ -1,0 +1,18 @@
+= Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
+Paul MAUROVICH <mau18259@spengergasse.at>
+v0.5, 2021-04-05
+
+:doctype: book
+
+:toc:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+:sectnums:
+// Not working:
+:chapter-label: Kapitel
+:author: Paul Maurovich
+:doctitle: Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
+
+:blankline: pass:[ +]
+
+include::chapters/01-personal-topic-maurovich.adoc[]
