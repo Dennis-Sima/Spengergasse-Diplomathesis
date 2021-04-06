@@ -1218,32 +1218,184 @@ direkt auf den Collections sind (beziehungsweise core Funktionen in Clojure).
 
 == Java Mail API
 
+In Java, Kotlin, Groovy und Scala wird die javax.mail Bibliothek verwendet,
+in Clojure hingegen wird die Bibliothek postal footnote:[https://clojars.org/com.draines/postal] verwendet.
+
+In jeder Sprache soll eine simple E-Mail mit einem Text versendet werden.
+
 === Java
 
 *Code Snippet*
+
+[source,java]
+----
+public static void sendEmail(String body) {
+    Properties properties = new Properties();
+    properties.put("mail.smtp.host", "smtp.gmail.com");
+    properties.put("mail.smtp.ssl.enable", true);
+    properties.put("mail.smtp.auth", true);
+
+    Session session = Session.getInstance(properties, new Authenticator() {
+                @Override
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication("5devhif", MAIL_PASSWORD);
+                }
+            });
+
+    try {
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress("5DevHIF"));
+        message.setRecipient(Message.RecipientType.TO, new InternetAddress("fre18149@spengergasse.at"));
+        message.setSubject("Message from Java");
+        message.setText(body);
+
+        Transport.send(message);
+    } catch (AddressException e) {
+        e.printStackTrace();
+    } catch (MessagingException e) {
+        e.printStackTrace();
+    }
+}
+
+public static void main(String[] args) {
+    sendEmail("This message has been sent via javax.mail");
+}
+
+//Lines: 22
+----
+
 *Bewertung*
 
 === Kotlin
 
 *Code Snippet*
+
+[source,kotlin]
+----
+fun sendEmail(body: String?) {
+    val properties = Properties()
+    properties["mail.smtp.host"] = "smtp.gmail.com"
+    properties["mail.smtp.ssl.enable"] = true
+    properties["mail.smtp.auth"] = true
+    val session = Session.getInstance(properties, object : Authenticator() {
+            override fun getPasswordAuthentication(): PasswordAuthentication {
+                return PasswordAuthentication("5devhifmailtest", MAIL_PASSWORD)
+            }
+        })
+
+    val message: Message = MimeMessage(session).apply {
+        setFrom(InternetAddress("5DevHIF"))
+        setRecipient(Message.RecipientType.TO, InternetAddress("fre18149@spengergasse.at"))
+        subject = "Message from Kotlin"
+        setText(body)
+    }
+    Transport.send(message)
+}
+
+fun main(args: Array<String>) {
+    sendEmail("This message has been sent via javax.mail")
+}
+
+//Lines: 16
+----
+
 *Bewertung*
 
 === Groovy
 
 *Code Snippet*
+
+[source,groovy]
+----
+static def sendEmail(body) {
+    Properties properties = new Properties()
+    properties["mail.smtp.host"] = "smtp.gmail.com"
+    properties["mail.smtp.ssl.enable"] = true
+    properties["mail.smtp.auth"] = true
+    Session session = Session.getInstance(properties, new Authenticator() {
+        @Override
+        protected PasswordAuthentication getPasswordAuthentication() {
+            new PasswordAuthentication("5devhifmailtest", MAIL_PASS)
+        }
+    })
+
+    Message message = new MimeMessage(session)
+    message.setFrom(new InternetAddress("5DevHIF"))
+    message.setRecipient(Message.RecipientType.TO, new InternetAddress("fre18149@spengergasse.at"))
+    message.subject = "Message from Groovy"
+    message.setText(body)
+
+    Transport.send(message)
+}
+
+static main(args) {
+    sendEmail("This message has been sent via javax.mail")
+}
+
+//Lines: 17
+----
+
 *Bewertung*
 
 === Scala
 
 *Code Snippet*
+
+[source,scala]
+----
+def sendEmail(body: String): Unit = {
+  val properties: Properties = new Properties
+  properties.put("mail.smtp.host", "smtp.gmail.com")
+  properties.put("mail.smtp.ssl.enable", true)
+  properties.put("mail.smtp.auth", true)
+  val session = Session.getInstance(properties, new Authenticator {
+    override def getPasswordAuthentication: PasswordAuthentication = {
+      new PasswordAuthentication("5devhif", MAIL_PASS)
+    }
+  })
+
+  val message: Message = new MimeMessage(session)
+  message.setFrom(new InternetAddress("5DevHIF"))
+  message.setRecipient(Message.RecipientType.TO, new InternetAddress("fre18149@spengergasse.at"))
+  message.setSubject("Message from Scala")
+  message.setText(body)
+
+  Transport.send(message)
+}
+
+def main(args: Array[String]): Unit = {
+  sendEmail("This message has been sent via javax.mail")
+}
+----
+
 *Bewertung*
 
 === Clojure
 
 *Code Snippet*
+
+[source,clojure]
+----
+(defn send-email
+  [message] (postal/send-message {:host "smtp.gmail.com"
+                                  :user "5devhif"
+                                  :pass MAIL_PASSWORD
+                                  :ssl true}
+                                 {:from "5DevHIF"
+                                  :to "fre18149@spengergasse.at"
+                                  :subject "Message from Clojure"
+                                  :body message} )
+)
+
+(defn -main
+([] (send-email "This message has been sent via Postal")))
+
+;;Lines: 4
+----
+
 *Bewertung*
 
-
+* Dokumentation:
 
 
 == Fazit
