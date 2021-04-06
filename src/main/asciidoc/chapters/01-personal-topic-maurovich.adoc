@@ -1,5 +1,8 @@
-//footnote:[Websitename: Beschreibung, URL abgerufen am 06.04.2021]
-//footnote:[Nachname, Vorname (Jahr): Beschreibung, URL abgerufen am 06.04.2021]
+:sectnums:
+:chapter-label: Kapitel
+:author: Paul Maurovich
+= Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
+
 [abstract]
 == Abstract
 In diesem Paper werden die zwei (Web)-Frameworks, Java EE und Spring, auf unterschiedliche Kriterien untersucht:
