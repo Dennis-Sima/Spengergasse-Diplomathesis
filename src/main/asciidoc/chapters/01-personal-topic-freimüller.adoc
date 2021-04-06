@@ -189,8 +189,8 @@ Stripe ist ein Zahlungsanbieter, der im Diplomprojekt verwendet wird.
 Im nachfolgenden Diagramm ist der Marktanteil der größten Zahlungsanbieter zu sehen, in dem Stripe den zweiten Platz
 belegt:
 
-image::freimueller/image-2021-04-03-22-12-51-618.png[]
-
+image::freimueller/zahlungsanbieterverteilung.png[]
+_Abbildung 1. Zahlungsanbieterverteilung_
 
 === REST APIs [Clients]
 
@@ -277,7 +277,7 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 - Lesbarkeit: Der Code ist leicht verständlich, wird durch das in Java notwendige Exception-handling
 allerdings etwas unübersichtlich. -> 4/5 {blankline}
 
-- Dokumentation: In der Dokumentation footnote:[https://stripe.com/docs/api/] werden
+- Dokumentation: In der Dokumentation footnote:[Stripe: Stripe API, https://stripe.com/docs/api/ abgerufen am 04.04.2021] werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter auch Java. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
@@ -660,7 +660,7 @@ Anschließend wird ein Client mithilfe des FeignBuilders erstellt und die Funkti
 - Lines of Code: 14 Zeilen. -> 4/5 {blankline}
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation footnote:[https://github.com/OpenFeign/feign] ist sehr umfangreich und bietet
+- Dokumentation: Die Dokumentation footnote:[OpenFeign: Feign makes writing Java http clients easier, https://github.com/OpenFeign/feign#readme abgerufen am 03.04.2021] ist sehr umfangreich und bietet
 auch zahlreiche Beispiele zum Einsatz der Bibliothek, außerdem werden verschiedenste Encoder/Decoder vorgestellt,
 die von der Bibliothek unterstützt werden. -> 5/5  {blankline}
 
@@ -1023,7 +1023,7 @@ zu den anderen Sprachen fällt jedoch auf, dass die sorted(), groupingBy() und f
 direkt auf dem Listenobjekt sind sondern auf einem Stream Objekt sind. Außerdem muss der Stream
 in zwei von drei Fällen wieder mit einem eigenen Call zu einer Liste umgewandelt werden. -> 3/5 {blankline}
 
-- Dokumentation: Die Dokumentation footnote:[https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html] enthält
+- Dokumentation: Die Dokumentation footnote:[Oracle: Stream documentation, https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html abgerufen am 05.04.2021] enthält
 zahlreiche Beispiele und dokumentiert die komplette Stream API. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Stream API sorgt dafür, dass Collections funktional verarbeitet werden können, die
@@ -1054,7 +1054,7 @@ fun findFoodWorthLessThanAEuro(food: List<Food>): List<Food> = food.filter { f->
 
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Da die Dokumentation von Collections in der Kotlinlang Dokumentation footnote:[https://kotlinlang.org/docs/] vollständig ist,
+- Dokumentation: Da die Dokumentation von Collections in der Kotlinlang Dokumentation footnote:[KotlinLang: Documentation, https://kotlinlang.org/docs/ abgerufen am 05.04.2021] vollständig ist,
 die Dokumentation eine Suchfunktion hat und bei den jeweiligen Funktionen auch Anwendungsbeispiele vorhanden sind
 erhält Kotlin alle Punkte für die Dokumentation. -> 5/5  {blankline}
 
@@ -1090,7 +1090,7 @@ static def findFoodWorthLessThanAEuro(List<Food> food) {
 
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation von Groovy für den Umgang mit Collections footnote:[http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html]
+- Dokumentation: Die Dokumentation von Groovy für den Umgang mit Collections footnote:[Groovy-lang: Working with collections, http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html abgerufen am 05.04.2021]
 enthält gute Beispiele und Beschreibungen für alle Methoden, die equivalent zu den Funktionen der Stream API in Java sind. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Methoden, die statt der Stream API verwendet werden, sind funktionale Konstrukte und die Listen, die
@@ -1125,7 +1125,7 @@ def findFoodWorthLessThanAEuro(food: List[Food]): List[Food] = {
 
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: In der Dokumentation von Scala footnote:[https://www.scala-lang.org/api/2.12.5/scala/collection/immutable/List.html]
+- Dokumentation: In der Dokumentation von Scala footnote:[Scala-lang: List documentation, https://www.scala-lang.org/api/2.12.5/scala/collection/immutable/List.html abgerufen am 05.04.2021]
 werden die Funktionen, die statt der Stream API verwendet werden können, dokumentiert und manche (nicht alle, zum Beispiel die "filter" Funktion)
 haben auch Beispiele dabei. Da nicht überall Beispiele sind gibt es hier einen Punkt Abzug, da alle anderen
 berücksichtigten JVM Sprachen mehr Beispiele gebracht haben. -> 4/5  {blankline}
@@ -1159,7 +1159,7 @@ In clojure.core gibt es bereits die Funktionen der Stream API, deshalb wird die 
 
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
-- Dokumentation: Die Dokumentation, die in dem Cursive Plugin von dem IntelliJ Marktplatz footnote:[https://plugins.jetbrains.com/plugin/8090-cursive]
+- Dokumentation: Die Dokumentation, die in dem Cursive Plugin von dem IntelliJ Marktplatz footnote:[Ideogram Limited: Cursive (Clojure IntelliJ Plugin), https://plugins.jetbrains.com/plugin/8090-cursive abgerufen am 05.04.2021]
 inkludiert ist verfügt pro Funktion, die statt einer Stream API Funktion verwendet wird, sehr viele Beispiele mit verschiedenen
 Anwendungsfällen und erklärt auch die Funktion sehr detailliert, aus diesem Grund bekommt Clojure alle Punkte. -> 5/5  {blankline}
 
@@ -1219,13 +1219,18 @@ direkt auf den Collections sind (beziehungsweise core Funktionen in Clojure).
 == Java Mail API
 
 In Java, Kotlin, Groovy und Scala wird die javax.mail Bibliothek verwendet,
-in Clojure hingegen wird die Bibliothek postal footnote:[https://clojars.org/com.draines/postal] verwendet.
+in Clojure hingegen wird die Bibliothek postal footnote:[Drewr: com.draines/postal, https://clojars.org/com.draines/postal abgerufen am 06.04.2021] verwendet.
 
 In jeder Sprache soll eine simple E-Mail mit einem Text versendet werden.
 
 === Java
 
 *Code Snippet*
+
+Zuerst werden die Eigenschaften der SMTP-Session festgelegt (host, ssl und authentication).
+Anschließend wird eine Session instanziert und mithilfe dieser Session wird
+über die statische Methode des Transport Objekts eine Nachricht versendet.
+
 
 [source,java]
 ----
@@ -1266,6 +1271,20 @@ public static void main(String[] args) {
 
 *Bewertung*
 
+- Lines of Code: 22 Zeilen -> 0/5 {blankline}
+
+- Lesbarkeit: Der Code ist sehr umständlich, vor allem durch den Einsatz des
+Properties Objektes, da hier die Werte per String zugewiesen werden müssen wodurch die Fehleranfälligkeit steigt.
+Die Benötigte try/catch Anweisung sorgt auch nicht dafür, dass der Code Lesbarer wird. -> 1/5 {blankline}
+
+- Dokumentation: Die Dokumentation der javax.mail API footnote:[JavaEE: JavaMail API documentation, https://javaee.github.io/javamail/docs/api/ abgerufen am 06.04.2021] bietet eine Auflistung der Properties, die gesetzt werden können,
+zeigt allerdings nicht, wie man eine authentifizierte Session erstellt. -> 2/5  {blankline}
+
+- Unterstützte Paradigmen: Die javax.mail API ist für objektorientierte Programmierung gebaut und funktionale
+oder reaktive Programmierung wird nicht unterstützt. Das wäre eventuell sinnvoll, um Rückmeldungen des Servers besser
+verarbeiten zu können. -> 2/5
+
+
 === Kotlin
 
 *Code Snippet*
@@ -1300,6 +1319,21 @@ fun main(args: Array<String>) {
 ----
 
 *Bewertung*
+
+- Lines of Code: 16 Zeilen -> 2/5 {blankline}
+
+- Lesbarkeit: Der Code ist, wie in Java auch, sehr umständlich, vor allem durch den Einsatz des
+Properties Objektes, da hier die Werte per String zugewiesen werden müssen, was zu einer hohen Fehleranfälligkeit führt.
+Da hier allerdings kein try/catch Konstrukt benötigt wird und der Einsatz von apply beim Erstellen der MimeMessage
+die Lesbarkeit verbessert, schneidet Kotlin in diesem Fall besser als Java ab. -> 3/5 {blankline}
+
+- Dokumentation: Die Dokumentation der javax.mail API bietet eine Auflistung der Properties, die gesetzt werden können,
+zeigt allerdings nicht, wie man eine authentifizierte Session erstellt. -> 2/5  {blankline}
+
+- Unterstützte Paradigmen: Die javax.mail API ist für objektorientierte Programmierung gebaut und funktionale
+oder reaktive Programmierung wird nicht unterstützt. Das wäre eventuell sinnvoll, um Rückmeldungen des Servers besser
+verarbeiten zu können. -> 2/5
+
 
 === Groovy
 
@@ -1337,6 +1371,19 @@ static main(args) {
 
 *Bewertung*
 
+- Lines of Code: 17 Zeilen -> 1/5 {blankline}
+
+- Lesbarkeit: Der Code ist, wie in Java auch, sehr umständlich, vor allem durch den Einsatz des
+Properties Objektes, da hier die Werte per String zugewiesen werden müssen, was zu einer hohen Fehleranfälligkeit führt.
+Da hier allerdings kein try/catch Konstrukt benötigt wird schneidet Groovy in diesem Fall besser als Java ab. -> 2/5 {blankline}
+
+- Dokumentation: Die Dokumentation der javax.mail bietet eine Auflistung der Properties, die gesetzt werden können,
+zeigt allerdings nicht, wie man eine authentifizierte Session erstellt. -> 2/5  {blankline}
+
+- Unterstützte Paradigmen: Die javax.mail API ist für objektorientierte Programmierung gebaut und funktionale
+oder reaktive Programmierung wird nicht unterstützt. Das wäre eventuell sinnvoll, um Rückmeldungen des Servers besser
+verarbeiten zu können. -> 2/5
+
 === Scala
 
 *Code Snippet*
@@ -1366,9 +1413,26 @@ def sendEmail(body: String): Unit = {
 def main(args: Array[String]): Unit = {
   sendEmail("This message has been sent via javax.mail")
 }
+
+//Lines: 16
 ----
 
+
+
 *Bewertung*
+
+- Lines of Code: 17 Zeilen -> 1/5 {blankline}
+
+- Lesbarkeit: Der Code ist, wie in Java auch, sehr umständlich, vor allem durch den Einsatz des
+Properties Objektes, da hier die Werte per String zugewiesen werden müssen, was zu einer hohen Fehleranfälligkeit führt.
+Da hier allerdings kein try/catch Konstrukt benötigt wird schneidet Scala  in diesem Fall besser als Java ab. -> 2/5 {blankline}
+
+- Dokumentation: Die Dokumentation der javax.mail API bietet eine Auflistung der Properties, die gesetzt werden können,
+zeigt allerdings nicht, wie man eine authentifizierte Session erstellt. -> 2/5  {blankline}
+
+- Unterstützte Paradigmen: Die javax.mail API ist für objektorientierte Programmierung gebaut und funktionale
+oder reaktive Programmierung wird nicht unterstützt. Das wäre eventuell sinnvoll, um Rückmeldungen des Servers besser
+verarbeiten zu können. -> 2/5
 
 === Clojure
 
@@ -1395,29 +1459,125 @@ def main(args: Array[String]): Unit = {
 
 *Bewertung*
 
-* Dokumentation:
+- Lines of Code: 4 Zeilen -> 5/5 {blankline}
+
+- Lesbarkeit: Der Code ist sehr leicht verständlich und effizient. -> 5/5 {blankline}
+
+- Dokumentation: Die Dokumentation der postal Bibliothek footnote:[CljDoc: postal documentation, https://cljdoc.org/d/com.draines/postal/2.0.4/doc/readme abgerufen am 06.04.2021]
+ist umfangreich, hat sehr viele Beispiele. -> 5/5  {blankline}
+
+- Unterstützte Paradigmen: Die postal Bibliothek wurde für Clojure designed, folglich unterstützt
+die postal Bibliothek auch funktionale Programmierung. -> 5/5
+
+=== Beurteilungstabelle und Fazit
+
+[cols="<, ^, ^, ^, ^, ^", options="autowidth,header"]
+|===
+|Sprache{nbsp}{nbsp} |Java{nbsp}{nbsp} |Kotlin{nbsp}{nbsp} |Groovy{nbsp}{nbsp} |Scala{nbsp}{nbsp} |Clojure{nbsp}{nbsp}
+
+|Lines of Code
+|0
+|2
+|1
+|2
+|5
+
+|Lesbarkeit
+|1
+|3
+|2
+|2
+|5
+
+|Dokumentation
+|2
+|2
+|2
+|2
+|5
+
+|Unterstützte Paradigmen
+|2
+|2
+|2
+|2
+|5
+
+|Ergebnis
+|5
+|9
+|7
+|8
+|20
+|===
+_Figure 4. Beurteilungstabelle Stream-API und Alternativen_
+
+
+Clojure sticht hier deutlich heraus, da eine andere Bibliothek verwendet wurde, die extra für Clojure designed wurde.
+Das größte Problem bei der javax.mail API ist, dass Properties verwendet werden, obwohl sich eine eigene Konfigurationsklasse
+deutlich besser zum Erstellen einer SMTP Session eignen würde, da dadurch Fehler durch hardgecodete Strings vermieden werden könnten.
 
 
 == Fazit
 
-// Berechnen, welche Sprache im Durchschnitt am Besten bei allen Schnittstellen abschneidet
+image::freimueller/abschlusstabelle.png[]
+_Abbildung 2. Abschlusstabelle_
+
+Wie in dem Diagramm zu sehen ist, belegt Clojure mit 75 Punkten den ersten Platz, gefolgt von Kotlin auf dem zweiten Platz
+mit 65 Punkten.
+Auf dem dritten Platz sind sowohl Groovy als auch Scala mit jeweils 63 Punkten und auf dem letzten Platz ist Java mit 57 Punkten.
+
+Dass Java den letzten Platz belegt ist insofern nicht überraschend, da die anderen Sprachen alle das Ziel haben,
+effizienter zu sein. Auch, dass Clojure auf dem ersten Platz ist, ist kein Wunder, da die Syntax von Clojure
+es einem erlaubt, sehr effizienten Code in nur wenigen Zeilen zu schreiben. {blankline}
+Allerdings ist wichtig zu erwähnen, dass Clojure die längste Einarbeitungszeit benötigt, wenn man schon eine
+der anderen berücksichtigten JVM Sprachen kann.
+
+
+
 
 <<<
 
 [bibliography]
 == References
-https://reqres.in/
 
-https://www.baeldung.com/intro-to-feign
+FreeJavaGuide: History of Java programming language, https://www.freejavaguide.com/history.html abgerufen am 25.03.2021
 
-https://github.com/OpenFeign/feign
+Toibe: TIOBE Index for April 2021, https://www.tiobe.com/tiobe-index/ abgerufen am 05.04.2021
 
-https://stripe.com/docs/api/
+Deshmane, Rohini: Introduction to Kotlin, https://medium.com/@rohinideshmane.21/introduction-to-kotlin-5f39b31610e0 abgerufen am 25.03.2021
 
-https://github.com/stripe/stripe-java
+Kotlinlang: Calling Java from Kotlin, https://kotlinlang.org/docs/java-interop.html abgerufen am 25.03.2021
 
-https://blog.frankel.ch/learning-clojure/5/
+Scand: Groovy vs Java: Detailed Comparison and Tips on the Language Choice, https://scand.com/company/blog/groovy-vs-java/ abgerufen am 05.04.2021
 
-https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html
+Groovy-lang: A multi-faceted language for the Java platform, https://groovy-lang.org/ abgerufen am 05.04.2021
+
+Hicks, Matt: Scala vs. Java: Why Should I Learn Scala?, https://www.toptal.com/scala/why-should-i-learn-scala abgerufen am 05.04.2021
+
+javaTpoint: History of Scala, https://www.javatpoint.com/history-of-scala abgerufen am 05.04.2021
+
+Hickey, Rich: A history of Clojure, https://download.clojure.org/papers/clojure-hopl-iv-final.pdf abgerufen am 05.04.2021
+
+Stripe: Stripe API, https://stripe.com/docs/api/ abgerufen am 04.04.2021
+
+OpenFeign: Feign makes writing Java http clients easier, https://github.com/OpenFeign/feign#readme abgerufen am 03.04.2021
+
+Oracle: Stream documentation, https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html abgerufen am 05.04.2021
+
+KotlinLang: Documentation, https://kotlinlang.org/docs/ abgerufen am 05.04.2021
+
+Groovy-lang: Working with collections, http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html abgerufen am 05.04.2021
+
+Scala-lang: List documentation, https://www.scala-lang.org/api/2.12.5/scala/collection/immutable/List.html abgerufen am 05.04.2021
+
+Ideogram Limited: Cursive (Clojure IntelliJ Plugin), https://plugins.jetbrains.com/plugin/8090-cursive abgerufen am 05.04.2021
+
+Drewr: com.draines/postal, https://clojars.org/com.draines/postal abgerufen am 06.04.2021
+
+JavaEE: JavaMail API documentation, https://javaee.github.io/javamail/docs/api/ abgerufen am 06.04.2021
+
+CljDoc: postal documentation, https://cljdoc.org/d/com.draines/postal/2.0.4/doc/readme abgerufen am 06.04.2021
+
 
 <<<
