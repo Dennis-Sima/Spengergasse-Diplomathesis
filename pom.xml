@@ -96,7 +96,7 @@
                                 <pdf-fontsdir>${project.basedir}/src/main/fonts</pdf-fontsdir>
                                 <pdf-stylesdir>${project.basedir}/src/main/themes/pdf</pdf-stylesdir>
                                 <pdf-style>spengergasse</pdf-style>
-                                <source-highlighter>coderay</source-highlighter>
+                                <source-highlighter>rouge</source-highlighter>
                             </attributes>
                         </configuration>
                     </execution>

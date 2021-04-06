@@ -19,7 +19,12 @@ Kreditkartenterminal besucht und stattdessen seine Zahlungsdaten von seinem Endg
 Grundsätzlich lassen sich Zahlungen grob auf Online- und Offlinezahlungen einteilen:
 
 image::../images/Zahlungsarten_Ueberblick.png[Überblick über Zahlungsarten]
-_Abbildung: Zahlungsarten [CITATION NEEDED]_
+_Abbildung: Zahlungsarten_
+
+Bei Offlinezahlungen (z.B. Zahlung mit Kreditkarte per NFC[GLOSSARY NEEDED] oder Magnet- oder Chipleser) ist der
+Kunde physisch anwesend, bei Offlinezahlungen werden nur Daten der Kreditkarte übergeben.
+
+Diese Arbeit fokussiert sich rein auf Zahlungen im Onlinebereich.
 
 == E-Wallets
 
@@ -97,6 +102,12 @@ Beispiele für solche Namen sind:
 
 Für Integrationen mit Zahlungsanbietern ist wichtig, dass der Zahlungsanbieter sowohl als auch die Integration 3-D Secure unterstützen.
 
+Wenn eine Zahlung mit 3D Secure abgewickelt wird kann ein Liability Shift, also eine Übertragung der Verantwortlichkeit
+vom verkaufenden Händler zum Kreditkartenunternehmen, geschehen. Dadurch ist im Fall eines Konflikts der Kreditkartenausgeber
+dafür verantwortlich, nachzuweisen, ob der Kreditkartenbesitzer die Zahlung autorisierte und nicht mehr der Händler.
+footnote:[Paysafe Developer: 3D Secure Results and Liability Shift, https://developer.paysafe.com/en/classic-apis/3ds/test-and-go-live/3d-secure-results-and-liability-shift/#Liability abgerufen am 06.04.2021]
+footnote:[Stripe Docs: Card authentication and 3D Secure, https://stripe.com/docs/payments/3d-secure abgerufen am 06.04.2021]
+
 == Vergleich von Zahlungsanbietern
 
 === Vergleichskriterien
@@ -149,7 +160,7 @@ wie möglich anzubieten, um die meisten Kunden zu erreichen und einen Abbruch de
 zu verhindern. Weltweit sind 73% von Onlinehändlern der Meinung, dass abgebrochene Zahlungen im Onlinehandel ein Problem
 sindfootnote:[How COVID-19 has reshaped the SMB checkout: Online (2020): Paysafe, https://www.paysafe.com/en/blog/how-covid-19-has-reshaped-the-smb-checkout-online/#c182623:%7E:text=73%25%20of%20online%20businesses%20say%20cart%20abandonments%20are%20an%20issue%20for%20them abgerufen am 30.03.2021].
 - Kosten, Gebühren und Zertifizierungen werden mit nur insgesamt 10% kaum berücksichtigt, da sich diese Faktoren
-häufig verändern und den Rahmen dieser technischen Analyse sprengen würden. [TODO THIS IS SHIT]
+häufig verändern und für den Prototypen und diese Analyse kaum relevant sind.
 - Sonstige Funktionen beinhalten schwer quantifizierbare Vorteile oder Nachteile einzelner Anbieter. Sie können
 beispielsweise eine vorgefertigte, gehostete Zahlungsseite oder eine White-Label Lösung beinhalten.
 
@@ -157,20 +168,24 @@ beispielsweise eine vorgefertigte, gehostete Zahlungsseite oder eine White-Label
 
 Verglichen werden die folgenden Zahlungsanbieter:
 
-- https://www.unzer.com/[Unzer]
 - https://stripe.com/[Stripe]
 - https://www.rapyd.net/[Rapyd]
 - https://www.adyen.com/[Adyen]
 - https://www.six-payment-services.com/[SIX Saferpay]
 - https://www.braintreepayments.com/[Braintree]
-- https://www.skrill.com/en/business/[Skrill]
 
 Diese Liste zielt darauf ab, unterschiedliche Anbieter für Onlinezahlungen im DACH-Raum
-so gut wie möglich abzudecken. Sie ist nicht vollständig.
+abzudecken. Sie ist nicht vollständig.
+
+Anbieter wurden nur in die Liste aufgenommen, wenn sie die folgenden Grundkriterien erfüllten:
+
+- Der Anbieter bietet Zahlungen in Deutschland, Österreich und der Schweiz an
+- Der Anbieter unterstützt Onlinezahlungen
+- Der Anbieter bietet eine API an, mit welcher individuelle Applikationen außerhalb von vorgefertigten Integrationen
+(z.B. WooCommerce-Integrationen) Zahlungen abwickeln können
+- Der Anbieter ermöglicht für diesen Vergleich Zugriff auf das API-Interface
 
 Auch werden direkte Anbindungen zu Banken, Kreditkartenunternehmen oder z.B. Apple Pay oder PayPal nicht verglichen.
-
-== Unzer
 
 == Stripe
 
@@ -242,7 +257,7 @@ Ein Nachteil an Stripe ist allerdings, dass PayPal nicht akzeptiert wird. Dies i
 besonders da PayPal 2019 20,2% des E-Commerce-Umsatzes in Deutschland ausmachtefootnote:[Coelsch, Caroline (2020): Studie: Online-Payment 2020, EHI, https://www.ehi-shop.de/image/data/PDF_Leseproben/Studie_Online-Payment_2020_Leseprobe.pdf abgerufen am 01.04.2021.].
 
 Da Stripe sehr viele Zahlungsmethoden inklusive E-Wallets anbietet, PayPal oder Diners Club allerdings nicht akzeptiert
-schneidet Stripe hier mit *9/10 Punkten* ab.
+schneidet Stripe hier mit *8/10 Punkten* ab.
 
 === Konformität mit Standards und Zertifizierungen
 Stripe ist zertifiziert als PCI Service Provider Level 1footnote:[Service Providers, Visa, https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe abgerufen am 01.04.2021]
@@ -266,8 +281,9 @@ gehostete, Zahlungsseite mit modernem User Interface aufgesetzt werden
 (z.B. Zahlung) führen können
 - Sämtliche Objekt-IDs in Stripe sind mit einem Präfix versehen, das den Entwickler schnell erkennen lässt, um welches
 Objekt es sich handelt. So beginnen beispielsweise IDs von PaymentIntents mit pi_ und IDs von Rechungen (Invoices) mit in_.
-- Stripe führt eine https://stripe.com/docs/testing[Liste von Testkartennummern], welche im Testmodus spezifische Vorgänge wie 3D Secure Verifikationen simulieren.
-- Der Support von Stripe kann API-Anfragen schnell und akkurat beantworten.
+- Stripe führt eine Liste von Testkartennummernfootnote:[Stripe Docs: Testing, https://stripe.com/docs/testing abgerufen am 06.04.2021]
+, welche im Testmodus spezifische Vorgänge wie 3D Secure Verifikationen simulieren.
+- Der Support von Stripe kann Anfragen zu Problemen mit APIs schnell und akkurat beantworten.
 
 === Fazit
 [options="autowidth"]
@@ -276,31 +292,32 @@ Objekt es sich handelt. So beginnen beispielsweise IDs von PaymentIntents mit pi
 
 |10/10
 |10/10
-|9/10
+|8/10
 |10/10
 |/10
 |10/10
-|/10
+|10/10
 
 |===
-
 
 == Rapyd
 
 === API: Verfügbarkeit und Funktionen
 Rapyd verfügt über eine detaillierte, weitreichende REST-API, welche alle Abläufe rund um Zahlungen automatisieren kann.
 
-Die API ist aufgeteilt in Rapyd Collect, Rapyd Disburse, Rapyd Wallet und Rapyd Issuing. [CITATION NEEDED]
+Die API ist aufgeteilt in Rapyd Collect, Rapyd Disburse, Rapyd Wallet und Rapyd Issuing
+footnote:[Rapyd Docs: Guides & Use Cases, https://docs.rapyd.net/build-with-rapyd/docs abgerufen am 06.04.2021].
 
-Rapyd bietet iOS- und Android-SDKs an[CITATION NEEDED], allerdings keine Libraries für serverseitige Integrationen.
-Libraries von Privatpersonen sind auch nicht leicht zu finden
+Rapyd bietet iOS- und Android-SDKs anfootnote:[Rapyd Docs: Introduction to Mobile SDK, https://docs.rapyd.net/works-with/reference/introduction-to-mobile-sdk abgerufen am 06.04.2021]
+, allerdings keine Libraries für serverseitige Integrationen. Libraries von Privatpersonen sind auch nicht vorhanden
 footnote:[Maven Repository: rapyd, https://mvnrepository.com/search?q=rapyd abgerufen am 02.04.2021.]
 footnote:[NuGet: rapyd, https://www.nuget.org/packages?q=rapyd abgerufen am 02.04.2021.]
 .
 
-Besonderheiten an der API sind:[CITATION NEEDED]
+Besonderheiten an der API sind:
 
-- Die spezifischen Header `access_key, salt, signature, timestamp` werden verwendet, die Signatur muss pro Request ein
+- Die spezifischen Header `access_key, salt, signature, timestamp` werden verwendet
+footnote:[Rapyd Docs: Make your first API call, https://docs.rapyd.net/build-with-rapyd/docs/make-your-first-api-call#step-4-build-auth-headers abgerufen am 06.04.2021], die Signatur muss pro Request ein
 BASE64-verschlüsselter SHA-256 Hash aus HTTP-Methode, URL, Salt, Timestamp, Access Key, Secret Key und Body sein.
 - Um eine Zahlung mit gegebenen Karten- und Kundendaten zu erstellen muss in separaten Requests eine Wallet,
 ein Customer und erst dann ein Payment erstellt werden.
@@ -315,9 +332,11 @@ kann, keine Libraries für Server existieren und durch Faktoren wie die Requests
 
 === API: Dokumentation
 
-[CITATION NEEDED]Rapyd bietet Quick Start Guides, die von der Erstellung eines Testkontos bis zum ersten API-Aufruf anhand von Beispielen
-erklären, wie Anfragen an die API erstellt werden sollen. Darin wird auch eine Postman-Collection angeboten, die
-alle Routen und ihre Dokumentation beinhalten. Wenn in dieser Postman-Collection API-Keys eingegeben werden können
+Rapyd bietet Quick Start Guides, die von der Erstellung eines Testkontos bis zum ersten API-Aufruf anhand von Beispielen
+erklären, wie Anfragen an die API erstellt werden sollen
+footnote:[Rapyd Docs: Get Started, https://docs.rapyd.net/build-with-rapyd/docs/getting-started abgerufen am 06.04.2021].
+Darin wird auch eine Postman-Collection angeboten, die
+alle Routen und ihre Dokumentation beinhaltet. Wenn in dieser Postman-Collection API-Keys eingegeben werden, können
 sofort alle Routen aufgerufen werden.
 
 Die API-Referenz erörtert sämtliche Objekte, Aufrufe und Fehlermeldungen und blendet seitlich JSON-Beispiele ein.
@@ -326,7 +345,7 @@ Da die Dokumentation sehr detailliert und Anweisungen sehr klar sind erhält Rap
 
 === Angebotene Zahlungsartenfootnote:[Rapyd: Countries and payments, https://www.rapyd.net/network/countries-and-payments/ abgerufen am 02.04.2021]
 Rapyd bietet in Österreich, Deutschland und der Schweiz Kreditkartenzahlungen, in Österreich und Deutschland Banküberweisungen an.
-E-Wallets fehlen allerdings in Europa vollständig. [TODO Support request]
+E-Wallets fehlen allerdings in Europa vollständig.
 
 Da E-Wallets besonders im gegebenen Projekt bei Mobilzahlungen sehr wichtig sind und Zahlungen per Bankkonto nicht im
 gesamten DACH-Raum verfügbar sind erhält Rapyd für dieses Kriterium nur *5/10 Punkte*.
@@ -337,12 +356,16 @@ footnote:[Rapyd: Collect Online, https://www.rapyd.net/platform/collect/online/#
 und erhält somit *10/10 Punkte*.
 
 === Kosten und Transaktionsgebühren
-Rapyd bietet weltweite Transaktionen für 2,9% + 30 Cent Gebühr pro Transaktion.
+Rapyd bietet weltweite Transaktionen für 2,9% + 30 Cent Gebühr pro Transaktionfootnote:[Rapyd: Pricing, https://www.rapyd.net/rapyd-pricing/ abgerufen am 06.04.2021],
+für Zahlungen mit europäischen Karten werden 1,2% + 25 Cent verrechnetfootnote:[Rapyd Service Agreement, http://iconslib.rapyd.net/assets/client-portal/Service_Agreement.pdf abgerufen am 06.04.2021].
 
 === Sonstige Funktionen
 - Rapyd bietet einen Sandboxmodus, in welchem API-Anfragen ähnlich zum Produktivsystem getestet werden können
 - Mit Webhooks können zahlreiche Ereignisse in Echtzeit von Rapyd an Anwendungsserver übermittelt werden
 - Rapyd versieht Objekt-IDs mit Prefixes (cus_... für Customer/Kunden, payment_... für Zahlungen)
+- Mittels Rapyd Checkout kann eine PCI/DSS-konforme Lösung schnell in ein existierendes System integriert werden.
+Rapyd Checkout wird als eigene gehostete Popupseite oder als Toolkit für einzelne Elemente auf einer existierenden
+Website angebotenfootnote:[Rapyd Docs: Rapyd Checkout Overview, https://docs.rapyd.net/build-with-rapyd/docs/rapyd-checkout-overview abgerufen am 06.04.2021].
 
 === Fazit
 [options="autowidth"]
@@ -354,30 +377,119 @@ Rapyd bietet weltweite Transaktionen für 2,9% + 30 Cent Gebühr pro Transaktion
 |5/10
 |10/10
 |/10
-|/10
+|10/10
 |/10
 
 |===
 
 == Adyen
+Adyen bietet Offlinezahlungen an Points of Sale sowie Onlinezahlungen an.
 
 === API: Verfügbarkeit und Funktionen
+Adyen bietet eine REST-API an, über welche Zahlungen abgewickelt, Abonnements eingerichtet und Daten verändert werden können.
+
+Für Verbindungen zur API werden Libraries für Ruby, Java, PHP, Python, C#, NodeJS und Go angeboten
+footnote:[Adyen Docs: Get Started, https://docs.adyen.com/online-payments/get-started, abgerufen am 06.04.2021].
+
+Adyen veröffentlicht Statusdatenfootnote:[Adyen: Platform Status, https://www.adyen.com/status abgerufen am 06.04.2021],
+schwerwiegende Ausfälle sind seit Mai 2020 nicht bekannt (Stand: 06.04.2021)footnote:[Adyen: Status history, https://www.adyen.com/landing/platform-status/history abgerufen am 06.04.2021].
+
+Da die API ausführlich sämtliche Zahlungsfunktionen abdeckt erhält Adyen für dieses Kriterium *10/10 Punkte*.
+
 === API: Dokumentation
+Adyen dokumentiert die API mit Quick Start Guidesfootnote:[Adyen Docs: Online Payments, https://docs.adyen.com/online-payments abgerufen am 06.04.2021]
+und einer API-Referenz (API Explorer)footnote:[Adyen: API Explorer, https://docs.adyen.com/api-explorer/#/CheckoutService/v67/overview abgerufen am 06.04.2021]
+.
+
+Die Quick Start Guides beinhalten an relevanten Stellen Beispielcode für cURL und alle Libraries:
+
+image::../images/adyen-doc-libex.png[Beispielcode in der Dokumentation von Adyen]
+footnote:[Bild: Adyen Docs: Web Drop-in integration guide, https://docs.adyen.com/online-payments/drop-in-web, abgerufen am 06.04.2021]
+
+Der API Explorer bietet JSON-Beispiele für mehrere Business Cases an, die gleich simuliert werden können und erklärt
+Request- und Responseparameter.
+
+image::../images/adyen-doc-apiexpl[Adyen Docs API Explorer]
+footnote:[Bild: Adyen API Explorer, https://docs.adyen.com/api-explorer/#/CheckoutService/v67/post/payments, abgerufen am 06.04.2021]
+
+Adyen erhält für die Dokumentation *10/10 Punkte*.
+
 === Angebotene Zahlungsarten
+Adyen bietet Zahlungen mit allen globalen Zahlungsarten und E-Wallets an.
+
+Im DACH-Raum werden Zahlungen mittels:
+Visa, Mastercard, American Express, Sofort, Alipay, Klarna, Apple Pay, UnionPay, Google Pay, Amazon Pay,
+SEPA (Nur DE, AT), JCB, Diners Club, Discover, PayPal
+
+Diese weite Kombination von Zahlungsmethoden und PayPal erreicht in diesem Kriterium *10/10 Punkte*.
+
 === Konformität mit Standards und Zertifizierungen
-=== Kosten und Transaktionsgebühren
+Adyen ist PCI DSS-zertifizierter Level 1 Service Provider
+footnote:[Adyen: Certifications, https://www.adyen.com/platform/certifications abgerufen am 06.04.2021].
+Somit erhält Adyen hierfür *10/10 Punkte*.
+
+=== Kosten und Transaktionsgebührenfootnote:[Adyen: Pricing, https://www.adyen.com/pricing?navItem=europe abgerufen am 06.04.2021]
+Im Vergleich zu anderen Zahlungsanbietern verrechnet Adyen pro Zahlungsart unterschiedliche Gebühren.
+
+Eine Bearbeitungsgebühr von 0,10€ wird pro Zahlung verrechnet, dazu werden Kosten abhängig von der
+verwendeten Zahlungsart aufgeschlagen.
+
+Bei Visa, Mastercard, V-Pay und Maestro werden Kosten nach Interchange++ verrechnet. Diese sind im EU-Raum
+reguliert, weshalb sie immer unter 0,2% für Debitkarten beziehungsweise 0,3% für Kreditkarten liegen
+footnote:[Adyen: EU Interchange fee cap (2015), https://www.adyen.com/blog/all-you-need-to-know-about-the-eu-interchange-cap abgerufen am 06.04.2021]
+footnote:[Visa: Domestic Multi-lateral Interchange Fees Austria (2018), https://www.visa.co.uk/dam/VCOM/regional/ve/unitedkingdom/PDF/fees-and-interchange/austria-october-2018.pdf abgerufen am 06.04.2021].
+
+Die Aufstellung der Transaktionsgebühren je Zahlungsart ist wie folgt:
+
+|===
+|Zahlungsart |Gebühren (exkl. €0,10 Bearbeitungsgebühr)
+
+|Amazon Pay
+|€ 0,80 + Interchange++ je nach verwendeter Kartefootnote:[Adyen: Amazon Pay, https://www.adyen.com/payment-methods/amazon-pay abgerufen am 06.04.2021]
+
+|Apple Pay, Google Pay
+|abhängig von verwendeter Karte
+
+|Diners Club oder Discover
+|3,95% oder Interchange++
+
+|EPS
+|1,3% + € 0,20
+
+|Maestro, V-pay
+|Interchange++
+
+|Mastercard, Visa
+|Interchange++
+
+|PayPal
+|abhängig von PayPal, üblicherweise 3,4% + 35 Cent
+footnote:[PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/at/webapps/mpp/merchant-fees abgerufen am 02.04.2021]
+
+|SEPA
+|€ 0,25
+|===
+
+
+
 === Sonstige Funktionen
+- Adyen bietet vorgefertigte UI-Elemente an, um Zahlungen entgegenzunehmen
+footnote:[Adyen Docs: Pre-built UI options, https://docs.adyen.com/online-payments/prebuilt-ui abgerufen am 06.04.2021],
+diese können entweder als einzelne Felder in ein UI integriert oder als gesamte Komponente importiert werden.
+- Adyen bietet einen separaten Testmodus an, in dem API-Integrationen getestet werden können. Für die Testumgebung
+wird ein eigenes Konto angelegt.
+
 === Fazit
 [options="autowidth"]
 |===
 |API: Funkt. |API: Dokum. |Zahlungs-arten |Zertif.{nbsp}{nbsp} |Kosten{nbsp}{nbsp} |Sonstige{nbsp}{nbsp} |Gesamt{nbsp}{nbsp}
 
+|10/10
+|10/10
+|10/10
+|10/10
 |/10
-|/10
-|/10
-|/10
-|/10
-|/10
+|10/10
 |/10
 
 |===
@@ -474,29 +586,6 @@ PCI-konforme, Zahlungsseite in eine existierende App eingebaut werden kann.
 |10/10
 |/10
 |10/10
-|/10
-
-|===
-
-== Skrill
-
-=== API: Verfügbarkeit und Funktionen
-=== API: Dokumentation
-=== Angebotene Zahlungsarten
-=== Konformität mit Standards und Zertifizierungen
-=== Kosten und Transaktionsgebühren
-=== Sonstige Funktionen
-=== Fazit
-[options="autowidth"]
-|===
-|API: Funkt. |API: Dokum. |Zahlungs-arten |Zertif.{nbsp}{nbsp} |Kosten{nbsp}{nbsp} |Sonstige{nbsp}{nbsp} |Gesamt{nbsp}{nbsp}
-
-|/10
-|/10
-|/10
-|/10
-|/10
-|/10
 |/10
 
 |===
