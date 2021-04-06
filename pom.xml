@@ -61,7 +61,7 @@
                 </dependencies>
                 <configuration>
                     <sourceDirectory>src/main/asciidoc</sourceDirectory>
-                    <sourceDocumentName>personal-topic-MAUROVICH.adoc</sourceDocumentName>
+                    <sourceDocumentName>diplomathesis.adoc</sourceDocumentName>
                     <requires>
                         <require>asciidoctor-diagram</require>
                     </requires>

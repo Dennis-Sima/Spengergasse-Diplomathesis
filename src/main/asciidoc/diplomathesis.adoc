@@ -1,11 +1,10 @@
-= Diploma Thesis : title
-Joachim GRÜNEIS <grueneis@spengergasse.at>; Klaus UNGER <unger@spengergasse.at>
+:doctype: book
+= Diploma Thesis : ScanBuyGo
+Alexander Wiener; Dennis Sima; Lucas Walter; Florian Freimüller; Paul Maurovich
 v1.0, 2018-06-18
 
-:doctype: book
-
 :toc:
-:toc-title: Table of content
+:toc-title: Inhaltsverzeichnis
 :toclevels: 3
 
 :blankline: pass:[ +]
@@ -17,11 +16,11 @@ v1.0, 2018-06-18
 
 *Spengergasse Press, Vienna*
 
-(C) 2018 by Joachim GRÜNEIS, Klaus UNGER
+(C) 2021 by Florian FREIMÜLLER, Paul MAUROVICH, Dennis SIMA, Lucas WALTER, Alexander WIENER
 
 {blankline}
 
-*Schuljahr 2018/19*
+*Schuljahr 2020/21*
 
 .Abgabevermerk
 [cols="50,50", options="header"]
@@ -45,20 +44,38 @@ inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
 
 [cols="30,70", options="header"]
 |===
-|Wien, am 08.04.2019
+|Wien, am 07.04.2021
 |VerfasserInnen
 
 |{blankline}
 |{blankline}
  {blankline}
  {blankline}
- Joachim GRÜNEIS
+ Florian FREIMÜLLER
 
 |{blankline}
 |{blankline}
- {blankline}
- {blankline}
- Klaus UNGER
+{blankline}
+{blankline}
+Paul MAUROVICH
+
+|{blankline}
+|{blankline}
+{blankline}
+{blankline}
+Dennis SIMA
+
+|{blankline}
+|{blankline}
+{blankline}
+{blankline}
+Lucas WALTER
+
+|{blankline}
+|{blankline}
+{blankline}
+{blankline}
+Alexander WIENER
 |===
 
 [abstract]
@@ -72,51 +89,31 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 
 <<<
 
-include::chapters/personal-topic-walter.adoc[]
+include::chapters/01-personal-topic-freimüller.adoc[]
+include::chapters/02-personal-topic-maurovich.adoc[]
+include::chapters/03-personal-topic-sima.adoc[]
+include::chapters/04-personal-topic-walter.adoc[]
+include::chapters/05-personal-topic-wiener.adoc[]
 
 <<<
 
-[glossary]
-== Glossary
-
-software:: invisible
-hardware:: accessible
-
-<<<
-
-[bibliography]
-== References
-
-- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
-  From Journeyman to Master. Addison-Wesley. 1999.
-
-<<<
-
-[index]
-== Index
-
-<<<
 
 [appendix]
-== Appendix
+= Anhänge
 
-:appendix-caption: Appendix
-:sectnums:
-
-=== The schema behind the data
-
-[source,json]
-----
-{
-  "bla": "bla"
-}
-----
-
-[source,java]
-----
-public class HelloWorld {
-
-  public static void main(String[] args) {
-  }
-}
-----
+image::../images/pdf/Kooperationsvertrag unterfertigt_2020-06-10_150551.pdf[pages=1..2]
+image::../images/pdf/ScanBuyGo_User_Stories_final.pdf[pages=1..38]
+image::../images/pdf/ScanBuyGo TOMs v2.pdf[pages=1..8]
+image::../images/pdf/ScanBuyGo Procedural Directory (1).pdf[pages=1..9]
+image::../images/pdf/Privacy Policy ScanBuyGo (1).pdf[pages=1..4]
+image::../images/pdf/Project Health Monitor.pdf[pages=1..1]
+image::../images/pdf/NoQuePOS_Vorstudien_v4.pdf[pages=1..33]
+image::../images/pdf/ScanBuyGo_Statusbericht_1.pdf[pages=1..8]
+image::../images/pdf/Besprechungsprotokoll 2020-06-18.pdf[pages=1..3]
+image::../images/pdf/Besprechungsprotokoll 2020-06-25.pdf[pages=1..2]
+image::../images/pdf/Besprechungsprotokoll 2020-07-02.pdf[pages=1..1]
+image::../images/pdf/Besprechungsprotokoll 2020-07-23.pdf[pages=1..1]
+image::../images/pdf/Besprechungsprotokoll 2020-07-30.pdf[pages=1..1]
+image::../images/pdf/Besprechungsprotokoll 2020-08-26.pdf[pages=1..1]
+image::../images/pdf/ChangeRequest_ScanBuyGo.pdf[pages=1..3]
+image::../images/pdf/5BHIF NoQuePOS Stellungnahme Trennung Projektpartner.pdf[pages=1..6]
