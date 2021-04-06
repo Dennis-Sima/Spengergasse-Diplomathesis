@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='374px' preserveAspectRatio='none' style='width:919px;height:374px;' version='1.1' viewBox='0 0 919 374' width='919px' zoomAndPan='magnify'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='381px' preserveAspectRatio='none' style='width:898px;height:381px;' version='1.1' viewBox='0 0 898 381' width='898px' zoomAndPan='magnify'>
   <defs>
     <filter height='300%' id='fi5pn26yj1e3i' width='300%' x='-1' y='-1'>
       <feGaussianBlur result='blurOut' stdDeviation='2.0'/>
@@ -9,66 +9,66 @@
     </filter>
   </defs>
   <g>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='203' x='337.5' y='10'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='183' x='347.5' y='31.6016'>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='208' x='324.75' y='10'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='188' x='334.75' y='32.457'>
       Business Process Modelling WBS
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='439' x2='439' y1='44.1328' y2='64.1328'/>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='73.5' x2='73.5' y1='64.1328' y2='84.1328'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='127' x='10' y='84.1328'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='107' x='20' y='105.7344'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='428.75' x2='428.75' y1='45.0938' y2='65.0938'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='70.5' y1='65.0938' y2='85.0938'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='121' x='10' y='85.0938'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='101' x='20' y='107.5508'>
       Launch the project
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='73.5' x2='83.5' y1='150.332' y2='150.332'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='204' x='83.5' y='133.2656'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='184' x='93.5' y='154.8672'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='80.5' y1='152.7344' y2='152.7344'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='200' x='80.5' y='135.1875'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='180' x='90.5' y='157.6445'>
       Complete Stakeholder Research
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='73.5' x2='83.5' y1='199.4648' y2='199.4648'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='171' x='83.5' y='182.3984'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='151' x='93.5' y='204'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='80.5' y1='202.8281' y2='202.8281'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='166' x='80.5' y='185.2813'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='146' x='90.5' y='207.7383'>
       Initial Implementation Plan
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='73.5' x2='73.5' y1='118.2656' y2='199.4648'/>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='356.5' x2='356.5' y1='64.1328' y2='84.1328'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='98' x='307.5' y='84.1328'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='78' x='317.5' y='105.7344'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='70.5' y1='120.1875' y2='202.8281'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='349.5' x2='349.5' y1='65.0938' y2='85.0938'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='98' x='300.5' y='85.0938'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='78' x='310.5' y='107.5508'>
       Design phase
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='356.5' x2='366.5' y1='150.332' y2='150.332'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='225' x='366.5' y='133.2656'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='205' x='376.5' y='154.8672'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='349.5' x2='359.5' y1='152.7344' y2='152.7344'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='220' x='359.5' y='135.1875'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='200' x='369.5' y='157.6445'>
       Model of AsIs Processes Completed
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='479' x2='489' y1='199.4648' y2='199.4648'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='233' x='489' y='182.3984'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='213' x='499' y='204'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='469.5' x2='479.5' y1='202.8281' y2='202.8281'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='227' x='479.5' y='185.2813'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='207' x='489.5' y='207.7383'>
       Model of AsIs Processes Completed1
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='479' x2='489' y1='248.5977' y2='248.5977'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='233' x='489' y='231.5313'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='213' x='499' y='253.1328'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='469.5' x2='479.5' y1='252.9219' y2='252.9219'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='227' x='479.5' y='235.375'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='207' x='489.5' y='257.832'>
       Model of AsIs Processes Completed2
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='479' x2='479' y1='167.3984' y2='248.5977'/>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='356.5' x2='366.5' y1='297.7305' y2='297.7305'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='220' x='366.5' y='280.6641'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='200' x='376.5' y='302.2656'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='469.5' x2='469.5' y1='170.2813' y2='252.9219'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='349.5' x2='359.5' y1='303.0156' y2='303.0156'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='212' x='359.5' y='285.4688'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='192' x='369.5' y='307.9258'>
       Measure AsIs performance metrics
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='356.5' x2='366.5' y1='346.8633' y2='346.8633'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='128' x='366.5' y='329.7969'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='108' x='376.5' y='351.3984'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='349.5' x2='359.5' y1='353.1094' y2='353.1094'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='123' x='359.5' y='335.5625'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='103' x='369.5' y='358.0195'>
       Identify Quick Wins
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='356.5' x2='356.5' y1='118.2656' y2='346.8633'/>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='825' x2='825' y1='64.1328' y2='84.1328'/>
-    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='34.1328' style='stroke: #A80036; stroke-width: 1.5;' width='166' x='742' y='84.1328'/>
-    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='146' x='752' y='105.7344'>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='349.5' x2='349.5' y1='120.1875' y2='353.1094'/>
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='807' x2='807' y1='65.0938' y2='85.0938'/>
+    <rect fill='#FEFECE' filter='url(#fi5pn26yj1e3i)' height='35.0938' style='stroke: #A80036; stroke-width: 1.5;' width='161' x='726.5' y='85.0938'/>
+    <text fill='#000000' font-family='sans-serif' font-size='12' lengthAdjust='spacingAndGlyphs' textLength='141' x='736.5' y='107.5508'>
       Complete innovate phase
     </text>
-    <line style='stroke: #A80036; stroke-width: 1.5;' x1='73.5' x2='825' y1='64.1328' y2='64.1328'/>
-    <!--MD5=[7511702bb27f0ecc59d57a5a430ca9a5]
+    <line style='stroke: #A80036; stroke-width: 1.5;' x1='70.5' x2='807' y1='65.0938' y2='65.0938'/>
+    <!--MD5=[2c0a4fb5381b193892d72072fb3f08a6]
 @startwbs
 * Business Process Modelling WBS
 ** Launch the project
@@ -85,11 +85,11 @@
 
 PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
 (APACHE source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Java Version: 13+33
-Operating System: Mac OS X
-Default Encoding: UTF-8
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 14+36-1461
+Operating System: Windows 10
+Default Encoding: Cp1252
 Language: de
 Country: AT
 -->
