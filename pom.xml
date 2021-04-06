@@ -44,6 +44,11 @@
                 <version>${asciidoctor-maven-plugin.version}</version>
                 <dependencies>
                     <dependency>
+                        <groupId>org.jruby</groupId>
+                        <artifactId>jruby-complete</artifactId>
+                       <version>9.2.9.0</version>
+                    </dependency>
+                    <dependency>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctorj-pdf</artifactId>
                         <version>${asciidoctorj-pdf.version}</version>
@@ -96,7 +101,7 @@
                                 <pdf-fontsdir>${project.basedir}/src/main/fonts</pdf-fontsdir>
                                 <pdf-stylesdir>${project.basedir}/src/main/themes/pdf</pdf-stylesdir>
                                 <pdf-style>spengergasse</pdf-style>
-                                <source-highlighter>coderay</source-highlighter>
+                                <source-highlighter>rouge</source-highlighter>
                             </attributes>
                         </configuration>
                     </execution>

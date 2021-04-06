@@ -1,5 +1,10 @@
 [section]
 
+:source-highlighter: rouge
+
+= Titel Wiener
+
+
 == Bedürfnisse
 In diesem Kapitel wird erarbeitet, dass es wichtig ist seine Anforderungen an die App zu kennen, bevor man
 sich für eine Sprache und ein Framework entscheidet. Wie in den folgenden Kapiteln nämlich herausgerarbeitet wird
@@ -15,7 +20,7 @@ ob man Dinge wie Biometrische Daten (FaceID, FingerPrint, etc...) benötigt. Auc
 === Native Apps
 Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden
 Jede Plattform (iOS, Android) hat ihre eigenen Programmiersprachen. Während für den Apple-Stack Swift/Objective-C verwendet wird
-, so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit C++ und JavaScript
+, so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit {CPP} und JavaScript
 gearbeitet. Bei Nativen Apps muss somit für jedes Betriebssystem die App in der jeweiligen Programmiersprache erarbeitet werden.
 Native Apps zeichnen sich auch dadurch aus, dass diese keine Internetverbindung brauchen, um funktioinsfähig zu sein.
 
@@ -72,7 +77,7 @@ nicht bezahlen muss, da die App nicht über den App Store vertrieben werden muss
 den vollen Funktionsumfang der Hardware Features der Smartphones nutzen.
 
 
-== About Most common Languages
+== Welche Sprachen verwendet werden
 
 === Swift
 
@@ -85,18 +90,18 @@ Swift ist eine intuitive und gut lesbare Sprache im Bereich der Mobile-Applicati
 === Java
 
 Java ist eine Objektorientiere Programmiersprache. Java ist eine durchdachte und eher leichtgewichtige Sprache,
-die bewusst auf einige Funktionien, die C++ bietet, verzichtet. Die Syntax von Java ist an C und C++
-angelehnt. Durch die Ähnlichkeit zu C und C++ fällt ein Umstieg auf Java leicht.
+die bewusst auf einige Funktionien, die {CPP} bietet, verzichtet. Die Syntax von Java ist an C und {CPP}
+angelehnt. Durch die Ähnlichkeit zu C und {CPP} fällt ein Umstieg auf Java leicht.
 
 
-=== C++
-
+=== {CPP}
+{CPP} ist eine von der ISO genormte Erweiterung der Programmiersprache C
 
 
 === HTML 5
 
 
-=== PHP
+===  TypeScript
 
 
 
@@ -105,7 +110,7 @@ angelehnt. Durch die Ähnlichkeit zu C und C++ fällt ein Umstieg auf Java leich
 === Appcelerator
 
 Erklärung:
-Appcelecerator ist ein Komplettpaket im Bereich der Mobilen Programmierung, denn es bietet die Möglichkeit
+Appcelerator ist ein Komplettpaket im Bereich der Mobilen Programmierung, denn es bietet die Möglichkeit
 eine App mit dem App-Designer zu bauen, sowie man ebenfalls ein Dashboard inkludiert hat, das
 mit einigen Statistiken zur App glänzen kann. Es wird außerdem die Möglichkeit geboten die App im Cross-Platform stil zu programmieren.
 Dies wird mithilfe von JavaScript umgesetzt. Für viele ebenso relevant ist der inkludierte API Builder, der sicherlich einiges an Zeit sparen kann.
@@ -118,8 +123,6 @@ Ebenso besteht die möglichkeit noch mehr zu kaufen, dies muss man sich allerdin
 variiert der Preis. Hier besteht zum Beispiel die Möglichkeit noch eine Crash detection und Performance Analysen zu bekommen, sowie
 auch automatiertes Testen zu benutzen.
 Als Extra werden noch Cloud Kapazitäten geboten, die mit 15$ / Monat anfangen.
-
-
 
 
 === RhoMobile
@@ -137,22 +140,10 @@ Gegen Bezahlung erhält man besseren Support sowie einige extra Features wie das
 Die Preise sind auf Anfrage.
 
 
-
-=== WidgetPad
-
-Erklärung:
-
-
-
-Preis:
-
-
-
-
 === MoSync
 Erklärung:
-Ist ein gratis open-sourc Software Development Kit.
-Mit MoSync greift man ebenfalls auf C++, HTML5 und JavaScript zurück. MoSync ist ebenfalls mittels Eclipse verwendbar.
+Ist ein gratis open-source Software Development Kit.
+Mit MoSync greift man ebenfalls auf {CPP}, HTML5 und JavaScript zurück. MoSync ist ebenfalls mittels Eclipse verwendbar.
 Einer der Vorteile von MoSync ist, dass man sicher und schnell Files in der Cloud mit anderen Usern (sogar Personen die keinen MoSync-Account besitzen)
 teilen kann. Mittels der Platform ist es möglich, dass man überall und jederzeit daran Arbeiten kann. Ebenso soll die Datensicherung und
 Wiederherstellung sehr gut funktionieren.
@@ -160,9 +151,6 @@ Wiederherstellung sehr gut funktionieren.
 
 Preis:
 Open Source SDK. Daher keine Kosten.
-
-
-
 
 
 === Sencha Ext JS
@@ -183,46 +171,363 @@ Ebenso ist vermutlich auf lange Sicht auch eine Kostenreduktion bei den Mitarbei
 Von der technischen Sicht, kriegt man einige Hilfestellungen, die vor allem den Erstellungs Prozess der App verkürzen, aber auch das
 Überwachen und Testen, sowie einige Analysen anbieten, was für kommerzielle Programmierung sicherlich einen starken Vorteil bringt.
 
-Im Diplomprojekt haben wir uns nicht für eine solche Lösung entschieden, da es für uns zu teuer gewesen wäre und die Features bis auf die App-Baukasten und
-das automatisierte Testen, für das Projekt im aktuellen Stadium nicht relevant gewesen wären. Ebenso hätten wir dann vermutlich kaum Arbeit gehabt, da die App zu schnell Fertig geworden wäre.
+Im Diplomprojekt wurde von so einer Lösung abgesehen, da es für  zu teuer gewesen wäre und die Features bis auf die App-Baukasten und
+das automatisierte Testen, für das Projekt im aktuellen Stadium nicht relevant gewesen wären. Ebenso hätten es vermutlich zu viel Arbeitszeit gespart, da die App zu schnell Fertig geworden wäre.
 
 
 
 == Frontend Frameworks
+Bei der Auswahl bei den Frameworks gibt es entscheidende Kritierien, die natürlich bei jeder App unterschiedlich sind.
+Daher ist eine allgemeine Aussage schwer zu treffen. Für diese Untersuchung gibt es folgende wichtige Kriterien.
+Alle Frontend Frameworks müssen schon etwas länger existieren und sollten auch in naher Zukunft nicht ohne Weiterführung und Support
+auskommen müssen. Aufgrund dieser zwei Punkte ist Ionic mit Vue aus der möglichen Auswahl rausgefallen, da sich dieses derzeit noch in einer
+Betaphase befindet.
+
+
+=== Weitere Kriterien:
+
+==== Übersetzung
+Kann man in dem Framework eine Internationalization umsetzen? Im Jahr 2021 sollten Apps in mehreren Sprachen verfügbar sein.
+Auch hier wird unterschieden, wie einfach sich eine Internationalisierung umsetzen lässt.
+
+==== Anpassbares Design (während der Runtime)
+Wie leicht ist es Designs umzusetzen und vor allem lässt sich das Design während der Nutzung ändern.
+
+==== Hardwarezugriff
+Viele Apps benötigen Zugriff auf die Kamera, auf Biometrische Sensoren und auch auf andere mögliche Funktionen der Smartphones.
+Hier wird unterschieden, wie einfach das Framework solche Schnittstellen zulässt.
+
+==== Support
+Es ist wichtig, dass regelmäßige Updates erfolgen, um die App auch zukunftssicher machen zu können.
+Regelmäßige Updates sind hierfür wichtig, allerdings ist der Abstand der Updates ebenfalls subjektiv zu werten, da für viele Entwickler zu häufige updates für mehraufwand sorgen können für andere dennoch kein Problem
+darstellen.
+
+==== Dokumentation
+Gibt es eine gute Dokumentation? Wie ausgereift und verständlich sind die Dokumentationen?
+
 
 === Flutter
+Disclaimer: Da im Diplomprojekt mit Flutter gearbeitet wurde, ist in diesem Teil auch erworbenes Wissen eingeflossen, deshalb ist die
+Erklärung / Analyse genauer und auch teils detailierter.
 
-=== Ionic
+Flutter ist ein Open-Source UI Entwicklungs-Kit. Die zugrundeliegende Programmiersprache
+ist Dart. Das Framework wird für die Programmierung von Apps verwendet.
+Das Framework selbst ist mittels {CPP} geschrieben worden.
 
-=== React / Native
+image::../images/flutter.png[Flutter]
+Funktionsweise von Flutter
+footnote:[medium.com:Cross-platform mobile apps development in 2021: Xamarin vs React Native vs Flutter vs Kotlin Multiplatform, https://medium.com/xorum-io/cross-platform-mobile-apps-development-in-2021-xamarin-vs-react-native-vs-flutter-vs-kotlin-ca8ea1f5a3e0 abgerufen am 06.04.2021]
+
+
+==== Übersetzung
+Die Übersetzung in Flutter ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
+die Feld-Namen verwendet, die als Key für die Übersetzung fungieren.
+
+
+==== Anpassbares Design
+Flutter ermöglicht es während der Runtime die Designs zu verändern. Hier geht es vor allem um das Ändern der Farben während dem Benutzen der App.
+Ebenso können natürlich alle Widgets während der Runtime geändert werden, dazu muss man nicht viel machen, da dies mittels Navigator
+funktioniert.
+
+
+==== Hardwarezugriff
+Da Flutter sehr eng mit der Hardware kommuniziert, ist der Hardwarezugriff einfach. Für diese Use Cases gibt es
+bereits fertige Packages, die eingebaut werden können.
+
+==== Support
+Flutter versucht ungefährt jedes Quartal ein stable Update zu releasen. Erst im März 2021 kam Flutter 2.0 auf den Markt.
+Updates sind einfach mit dem Befehl "flutter upgrade" durchzuführen.
+
+==== Dokumentation
+Obwohl Flutter noch (im Vergleich zu Anderen) relativ "neu" ist, wird es sehr stark von Google unterstützt und es gibt eine durchaus beachtliche Dokumentation.
+Ebenfalls gibt es viele Kurzvideos zu bestimmten Widgets oder Funktionen, die einem die Arbeit beim einlesen/einarbeiten erleichtern.
+Die Flutter Dokumentation ist vor allem sehr organisiert und einfach zu lesen.
+
+
+==== Bonus
+Für Flutter gibt es unzähloge fertige Packages, die einem das Leben als Entwickler erleichter, da man nicht alles von Grund auf neu machen muss.
+Für viele Use Cases gibt es bereits fertige Umsetzungen, die in die App eingebaut werden können.
+Ein Beispiel dafür wären Barcode Scanner. Hierfür ist es lediglich notwendig auf pub.dev danach zu suchen
+und eine dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
+Das verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
+
+image::../images/flutter_packages.jpg[Hallo]
+
+
+==== Gut zu wissen
+In Flutter dreht sich alles um Widgets. Alles was in der App dann sichtbar ist, ist ein Widget.
+Ein Widget kann wiederum in ein anderen Widget gepackt werden.
+Was ist nun also ein Widget?
+Es ist die Komponente, die Logik, Interaktion und Darstellung bündelt.
+
+==== Zusammengefasst
+Flutter kann Apps erstellen, die sehr gut aussehen und sehr starke Performancevorteile bieten. Im Gegensatz zu React Native, Ionic und anderen Webtechnologien ist es näher am Betriebssystem, was auch den Zugriff auf Gerätefunktionen wie die Kamera erleichtert.
+Die Community wächst und somit auch der Support unter den Entwicklern.
+
+Code Snippets
+
+.Beispiel eines Home-Screens in Flutter
+[source,dart]
+----
+class _StartPageState extends State<StartPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('NoQuePOS'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              _navigateToCartPage(context);
+            },
+          )
+        ],
+      ),
+      bottomNavigationBar: NavigationBar(),
+      drawer: DrawerMenu(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/start.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: RaisedButton(
+            onPressed: () {
+              _navigateToScanPage(context);
+            },
+            color: Colors.blue,
+            child: Text(
+              translate('start_page.enter_button'),
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+----
+
+
+
+.Beispiel einer Appbar in Flutter
+[source,dart]
+----
+Scaffold(
+  appBar: AppBar(
+    iconTheme: IconThemeData(
+      color: Color(0xffFF0000), //OR Colors.red or whatever you want
+    ),
+    title: Text("Title"),
+    backgroundColor: Color(0xffFAFAFA),
+  ),
+)
+----
+
+
+=== Ionic/Angular
+Ist ein Open-Source Webframework, dass vor allem für Cross-Platform und Progressive Webs Apps geeignet ist.
+Ionic mit Angular basiert, wie Angular auf TypeScript.
+
+image::../images/ionic.png[IonicAngular]
+Architektur Ionic
+footnote:[ICT-BZ.ch:Ionic Architektur, https://m335.ict-bz.ch/tag-1/ionic-architektur abgerufen am 06.04.2021]
+
+==== Übersetzung
+Die Übersetzung ist mittels rxweb Package möglich, allerdings ein wenig umständlicher in der Handhabung, als andere Frameworks.
+Dennoch gibt es für die Internatinalisierung bei Angular eine gute Dokumentation, die eine Step-by-Step Anleitung bereitstellt.
+
+
+==== Anpassbares Design
+Das Anpassen von Designs während der Runtime ist prinzipiell möglich, aber im Vergleich zu anderen Frameowrks
+eher unhandlich.
+
+
+==== Hardwarezugriff
+Der Hardwarezugriff bei Angular ist sehr gut und auch schon ausgereift.
+Im Ionic Framework gibt es das cordova-plugin-camera Plugin, welches die Schnittstelle zur Kamera bereitstellt.
+
+
+==== Support
+Major Releases werden alle sechs Monate veröffentlicht. Daneben gibt es noch Minor Releases, die sich mit API changes befassen, die
+keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat released.
+
+
+==== Dokumentation
+Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
+und somit auch die User Experience weiter verbessert wird.
+
+
+=== Ionic/React
+Ist ein Open-Source UI und Native API Projekt, dass vor allem für Cross-Platform und Progressive Webs Apps geeignet ist.
+Ionic mit React basiert, wie React auf JavaScript.
+
+
+image::../images/ionic.png[IonicAngular]
+Architektur Ionic
+footnote:[ICT-BZ.ch:Ionic Architektur, https://m335.ict-bz.ch/tag-1/ionic-architektur abgerufen am 06.04.2021]
+
+
+==== Übersetzung
+Die Übersetzung in Ionic/React ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
+die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
+verwendet, sonder direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
+Ermöglicht wird dies durch i18next.
+
+
+==== Anpassbares Design
+Ionic/React ermöglicht es während der Runtime die Designs zu verändern. Hierfür kann CSS oder ein bereits vorhandenes Theme Switcher Package
+verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
+
+
+
+==== Hardwarezugriff
+Im vergleich zu Flutter, fällt hier der Kamera Zugriff etwas schwerer aus, dennoch ist mittels Ionic/React der Hardwarezugriff
+generell auch relativ einfach möglich.
+
+
+==== Support
+Major Releases werden alle sechs Monate veröffentlicht. Daneben gibt es noch Minor Releases, die sich mit API changes befassen, die
+keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat released.
+
+==== Dokumentation
+Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
+und somit auch die User Experience weiter verbessert wird.
+
+
+=== React Native
+React Native ist ein Open-Source-Mobile Application Framework, das speziell für die Entwicklung von Apps für Android, Android TV, iOS, macOS, Web und Windows geeignet ist.
+Das Framework wurde von Facebook entwickelt.
+
+image::../images/reactnative.png[ReactNative]
+Architektur React Native
+footnote:[formidable.com : The New React Native Architecture Explained: Part Four, https://formidable.com/blog/2019/lean-core-part-4/ abgerufen am 06.04.2021]
+
+
+==== Übersetzung
+Die Übersetzung in React Native ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
+die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
+verwendet, sonder direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
+Ermöglicht wird dies durch i18next.
+
+
+
+==== Anpassbares Design
+React Native ermöglicht es während der Runtime die Designs zu verändern. Hierfür kann CSS oder ein bereits vorhandenes Theme Switcher Package
+verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
+
+
+
+==== Hardwarezugriff
+Dadurch, dass es Native Framework ist, fällt die Einbindung der Hardware relativ einfach und ist auch leicht umsetzbar.
+
+
+==== Support
+Es werden regelmäßig jedes Monat neue Updates released. Die Updates werden über das GitHub Repository ausgerollt. Bevor das update eingebaut wird, gibt es eine Testphase für 1 Monat, wo reviewt werden kann.
+Ebenso können sich die Entwickler in der Phase mit den Änderungen vertraut machen.
+
+
+==== Dokumentation
+Es gibt eine generelle Dokumentation, dennoch ist diese bei weitem nicht so ausgereift, wie bei anderen Frameworks
+
 
 === Xamarin
+Xamarin ist eine Open-Source Platform zum Erstellen von leistungsfähigen Anwendungen für den Mobilen Entwicklungsbereich, wie auch für Windows.
+Xamarin verwendet C# als Programmiersprache und hat Xamarin.Android, Xamarin.iOS und eine Xamarin.Essential Libraries, die für Native, aber auch für Cross-Platform Apps
+verwendet werden können.
+
+image::../images/xamarinaufbau.png[Xamarin]
+Architektur Xamarin
+footnote:[docs.microsoft.com : What is Xamarin? , https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin#how-xamarin-works abgerufen am 06.04.2021]
+https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/
+
+==== Übersetzung
+Die Übersetzung in Xamarin erfolgft mittels RESX Files. Im Vergleich zu Flutter und React ist, hier allerdings etwas mehr Aufwand zu betreiben, dennoch gibt es
+dazu eine detailierte Dokumentation auf docs.microsoft.com. Ebenfalls muss man iOS und Android etwas seperat behandeln, da es nicht einheitlich ist und man somit mehr Aufwand erfordert.
+
+
+==== Anpassbares Design
+Es ist möglich die Design während der Runtime zu ändern
+
+
+==== Hardwarezugriff
+Der Hardwarezugriff ist etwas schwieriger, da man für iOS und Android jeweils 2 unterschiedliche Codebases benötigt.
+Es ist grundseätztlich möglich sowohl auf Apple Geräten, als auch bei Android auf die Hardware zuzugreifen, dennoch ist es mit mehr Aufwand verbunden,
+als bei anderen Frameworks. Hierfür gibt es Libraries aus Xamarin.Essentials.
+
+
+==== Support
+Xamarin hat regelmäßige Updates, die ebenfalls auch immer in der Roadmap angepriesen werden, man kann sich also schon vorab darauf
+einstellen, was in der Zukunft auf einen zukommt. Ebenfalls steht auch dabei, wie lange diese Version supported wird.
+
+
+==== Dokumentation
+Xamarin hat eine vollständige Dokumentation samt intuitiver Navigation, die sehr weitreichend ist. Vom Anfänger bis zum Profi ist alles dabei.
+
+
+
+Code Snippets:
+
+[source,csharp]
+----
+private FahrzeugContext GetContext()
+        {
+            var db = new FahrzeugContext();
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+            db.Import("data.sql");
+            return db;
+        }
+----
+
 
 ===
 
 [section]
 == Auswertung / Vergleich
+Für jedes Kriterium, das für die Bewertung der Frameworks heranzgeogen wurde, können maximal 10 Punkte erreicht werden.
 
-[section]
-== Schlussfolgerung
+.Auswertungs Tabelle
+
+|=======
+| |Übersetzung | Anpassbares Design |Hardwarezugriff | Support | Dokumentation
+|Flutter | 8 | 8 | 8 | 8 | 8
+|Ionic Angular |9 | 5 | 8 | 8 | 8
+|Ionic React | 9 | 8 | 7 | 8 | 8
+|React Native | 9 | 8 | 8 | 8 | 6
+|Xamarin | 6 | 7 | 5 | 9 | 9
+
+|=======
+
+Wie man in der Tabelle oben sehen kann, liegen die Frameworks alle sehr nah bei einander.
+Durch diese Tabelle wird die Annahme am Beginn der Arbeit nochmals deutlich.
+Das perfekte Framework ist immer abhängig von den Anforderungen.
+Allgemein kann man sagen, dass fast alle sehr gut Dokumentiert sind und ebenfalls laufen Updates bekommen.
+Für das Diplomprojekt wurde Flutter verwendet, da das Team etwas komplett neues Lernen wollte und Flutter auch sehr ansprechend ist.
 
 
-:toc:
+== Schlussfolgerung der Arbeit
 
-== Abstract
+Es gibt zahlreiche Möglichkeiten im Frontend Bereich eine App zu entwickeln. Von Kompaktlösungen, die Geld kosten, bis zu Open Source Frameworks ist alles enthalten.
+Wichtig ist, dass vorab Kritierien festgelegt werden, die das jeweilige Framework erfüllen muss, um die Applikation umzusetzen.
+"Das Framework" gibt es hierbei nicht, denn jeder hat andere Anforderungen und Angewohnheiten, die eine Auswahl am Ende dann festlegen, denn die Frameworks sind im Großen und
+Ganzen alle sehr gut. Flutter hebt sich mit seiner besonderen Art dennoch ein wenig hervor, da es mit den Widgets eine doch sehr Bildhafte und einfache Programmierung ist und dadurch auch relativ schnell zu lernen ist.
+Die Syntax Highlighter vereinfachen die Lesbarkeit und auch die Fehlerbehebung sehr. Ebenfalls scheint die Zukunft von Flutter als relativ sicher.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 
-<<<
 
-== Vorgehen in der Diplomarbeit
-
-Well you have to write something
-
-=== Mindset
-
-_The Pragmatic Programmer_ <<pp>> is one of the most influencing ((books)).
