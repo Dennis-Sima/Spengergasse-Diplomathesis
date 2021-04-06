@@ -2,7 +2,6 @@
 Joachim GRÜNEIS <grueneis@spengergasse.at>; Klaus UNGER <unger@spengergasse.at>
 v1.0, 2018-06-18
 
-:source-highlighter: rouge
 :doctype: book
 
 :toc:
@@ -73,13 +72,9 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 
 <<<
 
-include::chapters/personal-topic-wiener.adoc[]
+include::chapters/personal-topic-walter.adoc[]
 
 <<<
-
-
-
-
 
 [glossary]
 == Glossary
@@ -123,19 +118,5 @@ public class HelloWorld {
 
   public static void main(String[] args) {
   }
-}
-----
-
-[source,dart]
-----
-// A function
-void printInteger(int aNumber) {
-  print('The number is $aNumber.'); // Print to console.
-}
-
-// The point where the application starts executing
-void main() {
-  var number = 10; // Declaration and initialization of  a variable.
-  printInteger(number); // Call a function.
 }
 ----
