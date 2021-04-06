@@ -63,7 +63,6 @@ In diesem Beispiel wird sich auf die Spring Komponente *Spring Boot* fokussiert.
 
 image::../images/SpringBoot-Architektur.png[title = "Spring Boot Framework Architektur Überblick"]
 
-// TODO: Domain Layer Erklärung
 Die Spring Boot Framework Architektur besteht aus fünf Teilen. Die _"Presentation Layer"_ Ebene, welche sich zum Beispiel um eingehende und ausgehende HTTP Requests/Responses kümmert. Sie übersetzt die Daten von und zu JSON Objekten, um den datenmässigen Umgang mit der Applikationen zu gewährleisten. Grundsätzlich ist sie mit einer Frontend HTML oder XML Seite, oder der Business Applikation verbunden.
 
 Die _"Business Logic"_ Ebene beinhaltet die Services, welche mit Business Logik ausgestattet sind. Es ist auch möglich "Fassaden" zwischen den Ebenen zu platzieren, um Datenintegrität und eine bessere Zugriffskontrolle zu gewährleisten. Die eingehenden Daten werden in diese Ebene transferiert und dort validiert bzw. autorisiert.
