@@ -225,9 +225,11 @@ footnote:[Davis, Vincy (2019): Stripe’s API suffered two consecutive outages y
 
 Da kaum Ausfälle bekannt sind und die API sehr fortgeschritten ist schneidet Stripe bei diesem Kriterium mit *10/10 Punkten* ab.
 
-=== API: Dokumentationfootnote:[Stripe, Inc.: Stripe API Reference, Stripe Docs, https://stripe.com/docs/api abgerufen am 01.04.2021.]
-Stripe bietet einen https://stripe.com/docs/development/quickstart[Quickstart-Guide] und eine vollständige API-Referenz für die REST-API an.
-Weiters existieren detaillierte Referenzen für das https://stripe.com/docs/cli[Stripe CLI] und die SDKs für Android und iOS.
+=== API: Dokumentation
+Stripe bietetfootnote:[Stripe, Inc.: Stripe API Reference, Stripe Docs, https://stripe.com/docs/api abgerufen am 01.04.2021.]
+einen Quickstart-Guidefootnote:[Stripe, Inc: Quick Start, https://stripe.com/docs/development/quickstart abgerufen am 01.04.2021] und eine vollständige API-Referenz für die REST-API an.
+Weiters existieren detaillierte Referenzen für das Stripe CLIfootnote:[Stripe, Inc.: Stripe CLI Reference, Stripe Docs, https://stripe.com/docs/cli abgerufen am 01.04.2021.]
+und die SDKs für Android und iOS.
 
 Für jeden Codeblock in der Dokumentation und in Hilfeartikeln werden genaue Instruktionen pro verwendeter Library angegeben,
 für jede Route der API können Requestcodezeilen in der gewählten Programmiersprache und Responseobjekte eingesehen werden.
@@ -263,8 +265,9 @@ schneidet Stripe hier mit *8/10 Punkten* ab.
 Stripe ist zertifiziert als PCI Service Provider Level 1footnote:[Service Providers, Visa, https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe abgerufen am 01.04.2021]
 . Da dies die industrieübliche Zertifizierung für Zahlungsanbieter ist, werden hierfür *10/10* Punkte vergeben.
 
-=== Kosten und Transaktionsgebührenfootnote:[Stripe, Inc.: Pricing & fees, Stripe, https://stripe.com/en-at/pricing abgerufen am 01.04.2021.]
-Transaktionsgebühren von Stripe sind abhängig von der Position des Händlers von Region zu Region unterschiedlich,
+=== Kosten und Transaktionsgebühren
+Transaktionsgebühren von Stripefootnote:[Stripe, Inc.: Pricing & fees, Stripe, https://stripe.com/en-at/pricing abgerufen am 01.04.2021.]
+sind abhängig von der Position des Händlers von Region zu Region unterschiedlich,
 für diesen Vergleich werden die Preise für österreichische Händler verglichen.
 
 Für innereuropäische Kredit- und Debitkarten werden pro Transaktion 1,4% und € 0,25 verrechnet,
