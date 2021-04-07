@@ -1,7 +1,7 @@
 :doctype: book
 = Diploma Thesis : ScanBuyGo
 Alexander Wiener; Dennis Sima; Lucas Walter; Florian Freimüller; Paul Maurovich
-v1.0, 2018-06-18
+v1.0, 2021-04-07
 
 :toc:
 :toc-title: Inhaltsverzeichnis
@@ -79,13 +79,22 @@ Alexander WIENER
 |===
 
 [abstract]
-== Abstract
-
-//TODO
-
 == Kurzfassung
 
-//TODO
+Im Zuge der Verlagerung des Verkaufsprozesses an den Endkunden setzen Einzelhändler auf Selfcheckout Prozesse, die zumeist in die Kundenbindungs-Apps der einzelnen Marken integriert sind oder auf Kiosk- und Automatensystemen durchgeführt werden. Will der Kunde über diesen Vertriebskanal einkaufen, muss er die App des Einzelhändlers installieren und sich bei einem Kundenbindungsprogramm anmelden. Dies ist für viele Kunden umständlich, da für die meisten Händler eine eigene App benötigt wird.
+
+Ziel des Projekts NoQuePos ist es, für dieses Problem eine Lösung zu bieten. Es handelt sich um den Prototypen einer App für Android und iOS, der das Einkaufen und mobile Kassieren per App in jedem teilnehmenden Geschäft des Projekts ermöglicht. Wenn ein Kunde in einem Geschäft einkaufen will, scannt er mit der App einen im Geschäft angebrachten QR-Code, um sich anzumelden. Folglich kann er Barcodes von Produkten in diesem Geschäft scannen und seinen Einkauf direkt in der App bezahlen.
+
+Durch NoQuePos werden herkömmliche Kassen abgelöst, die zu Schlangen bei Ausgängen und einem enormen Platzverlust in Geschäften führen. Kunden, die mit NoQuePos einkaufen, können Produkte aus dem Regal nehmen, Barcodes davon scannen und ihren Einkauf in der App bezahlen, ohne Zeit an der Kassa zu verlieren.
+
+== Abstract
+
+As part of moving the sales process toward the customer, retail stores use selfcheckout-processes, usually integrated into customer loyalty programs of connected brands or kiosks. If a customer wishes to purchase goods via this method, he needs to install the app of the specific retailer and sign up for a loyalty program. As this requires a separate app for each retailer it adds complexity for the customer.
+
+The goal of NoQuePos is to provide a solution to this problem. NoQuePos is a prototype of a mobile app for Android and iOS enabling the customer to shop at any participating store. If a customer wishes to shop in a store he scans a QR Code displayed in the store in order to sign in. Now the customer is able to scan barcodes of products in this store and pay for them from directly within the app.
+
+NoQuePos aims to replace conventional cash registers which cause lines at exits and result in an enormous loss of available space for merchandise. Customers shopping with NoQuePos can take products from store shelves, scan their barcodes and pay for their products within the app, without spending time waiting at a cash register.
+
 
 <<<
 
