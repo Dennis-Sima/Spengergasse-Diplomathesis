@@ -6,7 +6,7 @@
 
 Alexander Wiener <wie17087@spengergasse.at>
 
-== Bedürfnisse
+== Einführung
 In diesem Kapitel wird erarbeitet, dass es wichtig ist seine Anforderungen an die App zu kennen, bevor man
 sich für eine Sprache und ein Framework entscheidet. Wie in den folgenden Kapiteln nämlich herausgerarbeitet wird
 hat alles seine Vor- und Nachteile, daher ist es umso wichtiger zu wissen, welche Sachen man benötigt und
@@ -14,44 +14,52 @@ welche Funktionen nicht gebraucht werden. Vor der Programmierung sollte daher ei
 die beinhaltet welche Funktionen/Möglichkeiten die Sprache und das Framework haben sollten. Ebenso ist es wichtig zu wissen,
 ob man Dinge wie Biometrische Daten (FaceID, FingerPrint, etc...) benötigt. Auch hier gibt es unterschiede beim Programmieren.
 
+Für die folgende Untersuchung wurde bei den Frontend Frameworks die Voraussetzung angenommnen, dass diese Open-Source sein müssen.
 
 
 == Die Arten der Apps
 
 === Native Apps
-Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden
+Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden.
 Jede Plattform (iOS, Android) hat ihre eigenen Programmiersprachen. Während für den Apple-Stack Swift/Objective-C verwendet wird
 , so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit {CPP} und JavaScript
 gearbeitet. Bei Nativen Apps muss somit für jedes Betriebssystem die App in der jeweiligen Programmiersprache erarbeitet werden.
 Native Apps zeichnen sich auch dadurch aus, dass diese keine Internetverbindung brauchen, um funktioinsfähig zu sein.
 
-Vorteile:
+*Vorteile*: +
 Die Native Programmierung hat den Vorteil, dass diese zu 100% den Funktionalitäten der Geräte angepasst sind, daher können alle Features der Smartphones
 genutzt werden.
 Der Zugang zu den Hardware Eigenschaften (Kamera, GPS, etc...) ist bei der Native App ebenfalls sehr einfach.
 
-Nachteile:
+*Nachteile*: +
 Eine App pro Betriebssystem, das bedeutet möchte man iOS und Android abdecken, so müssen 2 Apps programmiert werden.
 Das kostet Zeit bei der Entwicklung, Zeit bei der Wartung und Schlussendlich jede Menge Geld.
 
-=== Web Apps
+Ein Beispiel für eine Native App wäre
 
-Die Art der Web App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen. Die App wird hier
-im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebsysteme entwickelt. Die Web App macht sich HTML und CSS zu nutze
+
+
+=== Web Apps
+Die Art der Web App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen.
+Im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebsysteme entwickelt. Die Web App macht sich HTML und CSS zu nutze
 und wird in einem Webbrowser durch eine URL ausgeführt. Nach dem Öffnen der App passt sich diese dann an das jeweilige Gerät an.
 Durch diese Umsetzung ist es ebenfalls nicht erforderlich die App auf dem Smartphone zu installieren. Deshalb sind diese meist auch nicht im App Store vertreten.
 Auf Apple wäre dies via Safari oder anderen heruntergeladenen Browsern möglich. Auf Android wäre es zum Beispiel mit Google Chrome verwendbar.
 
 
-Vorteile:
-Eine App für alle Geräte, das spart Zeit und Wartungsaufwand, sowie viel gespartes Geld am Ende.
+*Vorteile*: +
+Eine App für alle Geräte spart Zeit und Wartungsaufwand sowie einiges an Geld am Ende.
 Es wird kein App Store für den Betrieb benötigt, man ist also nicht auf die Nutzungsbedingungen der App Stores beschränkt
 
-Nachteile:
-Der größte Nachteil ist der schlechte bzw. fehlende Hardware Zugriff auf den Geräten.
+*Nachteile*: +
+Der größte Nachteil ist der schlechte bzw. teilweise fehlende Hardwarezugriff auf den Geräten.
 Ein ebenso nicht unwesentliches Kontra, ist dass die App nur mittels Internet funktioniert.
 
-Fazit: Daher sollte vorab bedacht werden, wo und wie die App in der Verwendung sein wird.
+Beispiel für eine PWA wäre Uber.
+
+
+image::../images/uber.jpg[uber,220,640]
+
 
 === Cross-Plattform (Hybride) Apps
 Die Hybride Programmierung kombiniert die native und die Web App miteinander.
@@ -59,10 +67,11 @@ Es wird hauptsächlich mit Web-Sprachen programmiert, dennoch wird der Hardware 
 Cross-Platform Apps werden via App Store installiert.
 
 
-Vorteile:
+*Vorteile*: +
 Durch die Kombination hat man bei der Hybriden App ein besseres Erlebnis als bei den Web Apps
+Man spart Zeit in der Entwicklung, da man nicht für iOS und Android 2 Apps schreiben muss.
 
-Nachteile:
+*Nachteile*: +
 Die Unterstützung ist nicht zu 100% die Selbe, wie bei nativer Programmierung, da neue Funktionen des öftern etwas länger auf
 sich warten lassen.
 Einige Elmente müssen Seperat programmiert werden, da sowohl iOS als auch Android bestimme Vorgaben bei einigen Elementen haben,
@@ -70,54 +79,35 @@ die mittels Cross-Platform bisher noch nicht gelöst werden konnten. Daher muss 
 Dennoch hält sich der Aufwand meist in Grenzen.
 
 
-
-Fazit:
+*Fazit*: +
 Aus der technischen Sicht, würde derzeit Cross-Platform am meisten Sinn machen, da man die vollen Funktionen der Geräte nutzen kann,
 ohne dass man eine App für jedes mobile Betriebsystem machen muss. Wenn man finanzielle Aspekte hinzuzieht, würden Web-Apps durchaus auch Sinn machen, da man somit die 30% Abgaben auf In-Game-Köufe
 nicht bezahlen muss, da die App nicht über den App Store vertrieben werden muss. Allerdings, kann man bei den WebApps oft nicht so gut oder teilweise erst später
 den vollen Funktionsumfang der Hardware Features der Smartphones nutzen.
 
+Beispiel für eine Cross Platform wäre Bloomberg.
 
-== Welche Sprachen verwendet werden
+image::../images/bloomberg.jpg[bloomberg,220,640]
 
-=== Swift
-
-Swift ist eine neuere Alternative zu Objective-C von Apple. Zwar basiert Swift auf
-Objective-C, dennoch soll Swift um einiges unkomplizierter und komfortabler sein. Diese Programmiersprache
-ist vor allem für iOS, macOS, watchOS und tvOS Apps zu benutzen, da diese logischerweise darauf ausgelegt ist.
-Swift ist eine intuitive und gut lesbare Sprache im Bereich der Mobile-Applications
-
-
-=== Java
-
-Java ist eine Objektorientiere Programmiersprache. Java ist eine durchdachte und eher leichtgewichtige Sprache,
-die bewusst auf einige Funktionien, die {CPP} bietet, verzichtet. Die Syntax von Java ist an C und {CPP}
-angelehnt. Durch die Ähnlichkeit zu C und {CPP} fällt ein Umstieg auf Java leicht.
+== Welche Sprachen für die Mobile Entwicklung verwendet werden
+Im Bereich der Appentwicklung kommen vor allem Programmiersprachen wie Java, {CPP}, C#, Dart, Swift, HTML5, TypeScript, JavaScript zum Einsatz.
+Diese werden von unterschiedlichen Frameworks in der Programmierung von Apps verwendet. Es gibt also eine große Auswahl an möglichen Sprachen für die Umsetzung
+einer mobilen Applikation.
 
 
-=== {CPP}
-{CPP} ist eine von der ISO genormte Erweiterung der Programmiersprache C
-
-
-=== HTML 5
-
-
-===  TypeScript
-
-
-
-== Frontend Kompaktlösungen
+== Kompaktlösungen
+In diesem Kapitel werden die verschiedenen, meist kostenpflichtigen Kompaktlösungen für die Entwicklung von Apps kurz erläutert und auf die verschiedenen Preise, sofern diese
+öffentlich einsehbar sind, eingegangen.
 
 === Appcelerator
-
-Erklärung:
+*Erklärung:* +
 Appcelerator ist ein Komplettpaket im Bereich der Mobilen Programmierung, denn es bietet die Möglichkeit
 eine App mit dem App-Designer zu bauen, sowie man ebenfalls ein Dashboard inkludiert hat, das
 mit einigen Statistiken zur App glänzen kann. Es wird außerdem die Möglichkeit geboten die App im Cross-Platform stil zu programmieren.
 Dies wird mithilfe von JavaScript umgesetzt. Für viele ebenso relevant ist der inkludierte API Builder, der sicherlich einiges an Zeit sparen kann.
 Einstellungen zu Push-Benachrichtigungen sind auch ein angepriesenes Feature.
 
-Preis:
+*Preis*: +
 Die Studio IDE und der API Builder sind gratis,.
 Für den App Designer und die API Calls sowie die App Preview muss man 99$ pro Monat bezahlen.
 Ebenso besteht die möglichkeit noch mehr zu kaufen, dies muss man sich allerdings selbst zusammenbauen und dementsprechend
@@ -127,45 +117,44 @@ Als Extra werden noch Cloud Kapazitäten geboten, die mit 15$ / Monat anfangen.
 
 
 === RhoMobile
-
-Erklärung:
+*Erklärung*:  +
 Rhomobile Suite ist ein Software Stack für App-Entwickler, der unter anderem die Möglichkeit bietet mit Ruby zu programmieren,
 was den Focus auf die Einfachheit und Produktivität lenkt. Es wir auf Cross-Platform Entwicklung gesetzt und zusätzlich ist es auch
 möglich HTML/CSS/JS zu verwenden. Programmiert wird mittels RhoStudio Extension in Eclipse.
 Der Sinn von RhoMobile besteht laut Hersteller darin, dass Firmen sichere, aber dennoch dem Customer-Standart entsprechende
 Apps progammieren können.
 
-Preis:
+*Preis*:  +
 Das Basis App Framework (Rhodes, RhoStudio, RhoElements) ist gratis.
 Gegen Bezahlung erhält man besseren Support sowie einige extra Features wie das Lesen von Barcodes oder automatische Daten verschlüsselung.
 Die Preise sind auf Anfrage.
 
 
 === MoSync
-Erklärung:
-Ist ein gratis open-source Software Development Kit.
+*Erklärung*:  +
+Ist ein gratis Open-Source Software Development Kit.
 Mit MoSync greift man ebenfalls auf {CPP}, HTML5 und JavaScript zurück. MoSync ist ebenfalls mittels Eclipse verwendbar.
 Einer der Vorteile von MoSync ist, dass man sicher und schnell Files in der Cloud mit anderen Usern (sogar Personen die keinen MoSync-Account besitzen)
 teilen kann. Mittels der Platform ist es möglich, dass man überall und jederzeit daran Arbeiten kann. Ebenso soll die Datensicherung und
 Wiederherstellung sehr gut funktionieren.
 
 
-Preis:
+*Preis*: +
 Open Source SDK. Daher keine Kosten.
 
 
 === Sencha Ext JS
-Erklärung:
+*Erklärung*: +
 Ist eine Komplettlösung mit App-Baukasten der durch Drag and Drop einiges an Zeit beim Programmieren spart
 Ebenfalls ist es möglich mit Sencha Test zusätzlich zu Testen, hierbei geht es um Unit und End-To-End Tests.
 Es besteht die Option Statistiken und Heatmaps zu verwenden um Monitoring und Datenauswertung zu machen.
 
-Preis:
+*Preis*:
 Ab 1800€ / Jahr für je einen Entwickler
 
 
 
-Fazit:
+*Fazit zu den Kompaktlösungen:* +
 Die meisten oben genannten Lösungen sind kostenpflichtig, dafür bekommt man wirklich etwas geboten, das durchaus sehr viel Zeit und Ressourcen spart.
 Wenn man eine App schnell auf den Markt bringen will, so sind diese Lösungen sicherlich von Vorteil, da sie Arbeit abnehmen.
 Ebenso ist vermutlich auf lange Sicht auch eine Kostenreduktion bei den Mitarbeitern ein positiver wirtschaftlicher Aspekt.
@@ -178,6 +167,8 @@ das automatisierte Testen, für das Projekt im aktuellen Stadium nicht relevant 
 
 
 == Frontend Frameworks
+In diesem Kapitel werden 5 verschiedene Frontend Frameworks näher beleuchtet und auf vorab definierte Kriterien überporüft.
+
 Bei der Auswahl bei den Frameworks gibt es entscheidende Kritierien, die natürlich bei jeder App unterschiedlich sind.
 Daher ist eine allgemeine Aussage schwer zu treffen. Für diese Untersuchung gibt es folgende wichtige Kriterien.
 Alle Frontend Frameworks müssen schon etwas länger existieren und sollten auch in naher Zukunft nicht ohne Weiterführung und Support
@@ -208,8 +199,9 @@ Gibt es eine gute Dokumentation? Wie ausgereift und verständlich sind die Dokum
 
 
 === Flutter
-Disclaimer: Da im Diplomprojekt mit Flutter gearbeitet wurde, ist in diesem Teil auch erworbenes Wissen eingeflossen, deshalb ist die
-Erklärung / Analyse genauer und auch teils detailierter.
+*Disclaimer:*  +
+Da im Diplomprojekt mit Flutter gearbeitet wurde, ist in diesem Teil auch erworbenes Wissen eingeflossen, deshalb ist die
+Erklärung / Analyse genauer und auch teilweise detailierter.
 
 Flutter ist ein Open-Source UI Entwicklungs-Kit. Die zugrundeliegende Programmiersprache
 ist Dart. Das Framework wird für die Programmierung von Apps verwendet.
@@ -246,12 +238,12 @@ Ebenfalls gibt es viele Kurzvideos zu bestimmten Widgets oder Funktionen, die ei
 Die Flutter Dokumentation ist vor allem sehr organisiert und einfach zu lesen.
 
 
-==== Bonus
-Für Flutter gibt es unzähloge fertige Packages, die einem das Leben als Entwickler erleichter, da man nicht alles von Grund auf neu machen muss.
+==== Extra
+Für Flutter gibt es unzählige fertige Packages, die einem das Leben als Entwickler erleichtern, da man nicht alles von Grund auf neu machen muss.
 Für viele Use Cases gibt es bereits fertige Umsetzungen, die in die App eingebaut werden können.
 Ein Beispiel dafür wären Barcode Scanner. Hierfür ist es lediglich notwendig auf pub.dev danach zu suchen
-und eine dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
-Das verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
+und eine Dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
+Das Verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
 
 image::../images/flutter_packages.jpg[Hallo]
 
@@ -262,11 +254,12 @@ Ein Widget kann wiederum in ein anderen Widget gepackt werden.
 Was ist nun also ein Widget?
 Es ist die Komponente, die Logik, Interaktion und Darstellung bündelt.
 
-==== Zusammengefasst
-Flutter kann Apps erstellen, die sehr gut aussehen und sehr starke Performancevorteile bieten. Im Gegensatz zu React Native, Ionic und anderen Webtechnologien ist es näher am Betriebssystem, was auch den Zugriff auf Gerätefunktionen wie die Kamera erleichtert.
-Die Community wächst und somit auch der Support unter den Entwicklern.
+Eine App die mit dem Flutter Framework gemacht wurde ist Alibaba für das Smartphone:
 
-Code Snippets
+image::../images/alibaba.jpg[alibaba,220,640]
+
+
+*Code Snippets:*
 
 .Beispiel eines Home-Screens in Flutter
 [source,dart]
@@ -276,7 +269,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('NoQuePOS'),
+        title: Text('ScanBuyGo'),
         centerTitle: true,
         actions: [
           IconButton(
@@ -369,6 +362,11 @@ keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat rele
 Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
 und somit auch die User Experience weiter verbessert wird.
 
+Eine App die mit dem Ionic Framework gemacht wurde ist McLaren Automotive:
+
+image::../images/mclaren.jpg[mclaren,220,640]
+
+*Code Snippets:*
 
 === Ionic/React
 Ist ein Open-Source UI und Native API Projekt, dass vor allem für Cross-Platform und Progressive Webs Apps geeignet ist.
@@ -393,7 +391,6 @@ Ionic/React ermöglicht es während der Runtime die Designs zu verändern. Hierf
 verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
 
 
-
 ==== Hardwarezugriff
 Im vergleich zu Flutter, fällt hier der Kamera Zugriff etwas schwerer aus, dennoch ist mittels Ionic/React der Hardwarezugriff
 generell auch relativ einfach möglich.
@@ -406,6 +403,9 @@ keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat rele
 ==== Dokumentation
 Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
 und somit auch die User Experience weiter verbessert wird.
+
+
+*Code Snippets:*
 
 
 === React Native
@@ -425,25 +425,27 @@ verwendet, sonder direkt der Text und mittels ":" dann die Übersetzung dahinter
 Ermöglicht wird dies durch i18next.
 
 
-
 ==== Anpassbares Design
 React Native ermöglicht es während der Runtime die Designs zu verändern. Hierfür kann CSS oder ein bereits vorhandenes Theme Switcher Package
 verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
 
 
-
 ==== Hardwarezugriff
 Dadurch, dass es Native Framework ist, fällt die Einbindung der Hardware relativ einfach und ist auch leicht umsetzbar.
-
 
 ==== Support
 Es werden regelmäßig jedes Monat neue Updates released. Die Updates werden über das GitHub Repository ausgerollt. Bevor das update eingebaut wird, gibt es eine Testphase für 1 Monat, wo reviewt werden kann.
 Ebenso können sich die Entwickler in der Phase mit den Änderungen vertraut machen.
 
-
 ==== Dokumentation
 Es gibt eine generelle Dokumentation, dennoch ist diese bei weitem nicht so ausgereift, wie bei anderen Frameworks
 
+Eine App die mit  React Native gemacht wurde ist AirBnB:
+
+image::../images/airbnb.jpg[airbnb,220,640]
+
+
+*Code Snippets:*
 
 === Xamarin
 Xamarin ist eine Open-Source Platform zum Erstellen von leistungsfähigen Anwendungen für den Mobilen Entwicklungsbereich, wie auch für Windows.
@@ -478,10 +480,14 @@ einstellen, was in der Zukunft auf einen zukommt. Ebenfalls steht auch dabei, wi
 ==== Dokumentation
 Xamarin hat eine vollständige Dokumentation samt intuitiver Navigation, die sehr weitreichend ist. Vom Anfänger bis zum Profi ist alles dabei.
 
+Eine App die mit  Xamarin gemacht wurde ist UPS:
+
+image::../images/ups.jpg[ups,220,640]
 
 
-Code Snippets:
+*Code Snippets:*
 
+.
 [source,csharp]
 ----
 private FahrzeugContext GetContext()
@@ -498,18 +504,17 @@ private FahrzeugContext GetContext()
 ===
 
 [section]
-== Auswertung / Vergleich
+=== Auswertung / Vergleich
 Für jedes Kriterium, das für die Bewertung der Frameworks heranzgeogen wurde, können maximal 10 Punkte erreicht werden.
 
 .Auswertungs Tabelle
-
 |=======
-| |Übersetzung | Anpassbares Design |Hardwarezugriff | Support | Dokumentation
-|Flutter | 8 | 8 | 8 | 8 | 8
-|Ionic Angular |9 | 5 | 8 | 8 | 8
-|Ionic React | 9 | 8 | 7 | 8 | 8
-|React Native | 9 | 8 | 8 | 8 | 6
-|Xamarin | 6 | 7 | 5 | 9 | 9
+| |Übersetzung | Anpassbares Design |Hardwarezugriff | Support | Dokumentation| Gesamt
+|Flutter | 8 | 8 | 8 | 8 | 8 | 40
+|Ionic Angular |9 | 5 | 8 | 8 | 8 | 38
+|Ionic React | 9 | 8 | 7 | 8 | 8 | 40
+|React Native | 9 | 8 | 8 | 8 | 6 | 39
+|Xamarin | 6 | 7 | 7 | 9 | 9 | 38
 
 |=======
 
@@ -521,7 +526,6 @@ Für das Diplomprojekt wurde Flutter verwendet, da das Team etwas komplett neues
 
 
 == Schlussfolgerung der Arbeit
-
 Es gibt zahlreiche Möglichkeiten im Frontend Bereich eine App zu entwickeln. Von Kompaktlösungen, die Geld kosten, bis zu Open Source Frameworks ist alles enthalten.
 Wichtig ist, dass vorab Kritierien festgelegt werden, die das jeweilige Framework erfüllen muss, um die Applikation umzusetzen.
 "Das Framework" gibt es hierbei nicht, denn jeder hat andere Anforderungen und Angewohnheiten, die eine Auswahl am Ende dann festlegen, denn die Frameworks sind im Großen und
@@ -529,6 +533,33 @@ Ganzen alle sehr gut. Flutter hebt sich mit seiner besonderen Art dennoch ein we
 Die Syntax Highlighter vereinfachen die Lesbarkeit und auch die Fehlerbehebung sehr. Ebenfalls scheint die Zukunft von Flutter als relativ sicher.
 
 
+== Quellen
+
+Für eine schnell Übersicht bei einigen Themen wurde https://de.wikipedia.org/ verwendet
+
+fingent.com:Top Technologies Used to Develop Mobile App, https://www.fingent.com/blog/top-technologies-used-to-develop-mobile-app/ abgerufen am 07.04.2021
+
+medium.com:5 Must-Try Open Source Mobile App Development Frameworks , https://medium.com/android-news/5-must-try-open-source-mobile-app-development-frameworks-933a1a5f5a6c  abgerufen am 07.04.2021
+
+tau-platform.com:Develop native cross-platform apps for iOS, Android, WinCE/WM, Windows Phone , https://tau-platform.com/en/products/rhomobile/ abgerufen am 07.04.2021
+
+mosync.com:Why cxhoose Mosync?, https://mosync.com/why-choose-moysnc/ abgerufen am 07.04.2021
+
+sencha.com:Sencha Touch Has Been Merged with Ext JS, https://www.sencha.com/products/touch/ abgerufen am 07.04.2021
+
+stackshare.io:Appcelerator vs Sencha touch, https://stackshare.io/stackups/appcelerator-vs-sencha-touch abgerufen am 07.04.2021
+
+devsheet.com:Flutter Code Snippets, https://devsheet.com/code-snippets/flutter/ abgerufen am 07.04.2021
+
+ionos.at:Was ist Flutter, https://www.ionos.at/digitalguide/websites/web-entwicklung/was-ist-flutter/ abgerufen am 07.04.2021
+
+ionicframework.com:Ionic, https://ionicframework.com/ abgerufen am 07.04.2021
+
+react.i18next.com:react-i18next documentation, https://react.i18next.com/ abgerufen am 07.04.2021
+
+docs.microsoft.com:Xamarin, https://docs.microsoft.com/en-us/xamarin abgerufen am 07.04.2021
+
+angular.io:i18n Guide, https://angular.io/guide/i18n abgerufen am 07.04.2021
 
 
 
