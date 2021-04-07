@@ -21,7 +21,7 @@ Grundsätzlich lassen sich Zahlungen grob auf Online- und Offlinezahlungen einte
 image::../images/Zahlungsarten_Ueberblick.png[Überblick über Zahlungsarten]
 _Abbildung: Zahlungsarten_
 
-Bei Offlinezahlungen (z.B. Zahlung mit Kreditkarte per NFC[GLOSSARY NEEDED] oder Magnet- oder Chipleser) ist der
+Bei Offlinezahlungen (z.B. Zahlung mit Kreditkarte per NFC oder Magnet- oder Chipleser) ist der
 Kunde physisch anwesend, bei Offlinezahlungen werden nur Daten der Kreditkarte übergeben.
 
 Diese Arbeit fokussiert sich rein auf Zahlungen im Onlinebereich.
@@ -46,9 +46,9 @@ Nicht jeder Anbieter bietet allerdings Onlinezahlungen und Offlinezahlungen an T
 Ein wichtiger Vorteil solcher Wallets ist die Möglichkeit, Onlinezahlungen schnell und ohne erneutes Ausfüllen von
 Kreditkarteninformationen abzuwickeln und somit Absprünge während dem Zahlungsprozess zu verringern.
 
-== PCI DSS-Konformitätfootnote:[PCI Security Standards Council, https://www.pcisecuritystandards.org/ abgerufen am 02.04.2021]
+== PCI DSS-Konformität
 PCI DSS, auch Payment Card Industry Data Security Standard, ist ein Standard für Informationssicherheit in der
-digitalen Zahlungsabwicklung. Er wird von dem PCI Security Standards Council ausgegeben, einem Rat, der aus
+digitalen Zahlungsabwicklungfootnote:[PCI Security Standards Council, https://www.pcisecuritystandards.org/ abgerufen am 02.04.2021]. Er wird von dem PCI Security Standards Council ausgegeben, einem Rat, der aus
 American Express, Discover, JCB, Mastercard und Visa besteht.footnote:[PCI Security: PCI Security Standards Council, https://www.pcisecuritystandards.org/pci_security/ abgerufen am 02.04.2021]
 
 Darin wird unter anderem festgelegt, welche Sicherheitsauflagen Zahlungsanbieter und Integrationen zu ihren Systemen
@@ -116,7 +116,7 @@ aufzustellen, nach welchen jeder Anbieter evaluiert werden kann.
 
 Die Kriterien, welche im Angesicht des gegebenen Projekts gewählt werden, sind:
 
-- API [GLOSSARY NEEDED]: Verfügbarkeit, Dokumentation, Unterstützung und Support für Entwickler
+- API: Verfügbarkeit, Dokumentation, Unterstützung und Support für Entwickler
 - angebotene Zahlungsarten
 - Konformität mit Standards und Zertifizierungen
 - Transaktionsgebühren
@@ -155,7 +155,7 @@ Besonders im gegebenen Projektzusammenhang ist dies ein sehr wichtiger Teil, da 
 Funktionen erweitert werden könnte und fehlende Möglichkeiten vonseiten des Zahlungsanbieters ein großes Problem
 darstellen können. Eine gute Dokumentation ist auch wichtig, da sie eine Integration stark vereinfachen kann.
 - 25% der Gewichtung nehmen angebotene Zahlungsanbieter im DACH-Raum ein. Da jeder potentielle Kunde nur wenige
-Zahlungsoptionen eingerichtet hat, verwendet bzw. [GLOSSARY NEEDED] verwenden will ist es wichtig, so viele Zahlungsmöglichkeiten
+Zahlungsoptionen eingerichtet hat, verwendet bzw. verwenden will ist es wichtig, so viele Zahlungsmöglichkeiten
 wie möglich anzubieten, um die meisten Kunden zu erreichen und einen Abbruch des Einkaufs bei der Zahlung
 zu verhindern. Weltweit sind 73% von Onlinehändlern der Meinung, dass abgebrochene Zahlungen im Onlinehandel ein Problem
 sindfootnote:[How COVID-19 has reshaped the SMB checkout: Online (2020): Paysafe, https://www.paysafe.com/en/blog/how-covid-19-has-reshaped-the-smb-checkout-online/#c182623:%7E:text=73%25%20of%20online%20businesses%20say%20cart%20abandonments%20are%20an%20issue%20for%20them abgerufen am 30.03.2021].
@@ -171,7 +171,6 @@ Verglichen werden die folgenden Zahlungsanbieter:
 - https://stripe.com/[Stripe]
 - https://www.rapyd.net/[Rapyd]
 - https://www.adyen.com/[Adyen]
-- https://www.six-payment-services.com/[SIX Saferpay]
 - https://www.braintreepayments.com/[Braintree]
 
 Diese Liste zielt darauf ab, unterschiedliche Anbieter für Onlinezahlungen im DACH-Raum
@@ -184,6 +183,7 @@ Anbieter wurden nur in die Liste aufgenommen, wenn sie die folgenden Grundkriter
 - Der Anbieter bietet eine API an, mit welcher individuelle Applikationen außerhalb von vorgefertigten Integrationen
 (z.B. WooCommerce-Integrationen) Zahlungen abwickeln können
 - Der Anbieter ermöglicht für diesen Vergleich Zugriff auf das API-Interface
+- Informationen für den Vergleich müssen öffentlich auf der Website oder per Support erhältlich sein
 
 Auch werden direkte Anbindungen zu Banken, Kreditkartenunternehmen oder z.B. Apple Pay oder PayPal nicht verglichen.
 
@@ -207,7 +207,7 @@ Operation automatisiert werden.
 
 Für die API werden Libraries für Ruby, Python, PHP, Java, Node.JS, Go und C#/.NET sowie ein CLI (Command Line Interface)
 angeboten.
-Mobile SDKs [GLOSSARY NEEDED] werden für Android sowie für iOS angebotenfootnote:[Documentation: Stripe Docs, https://stripe.com/docs abgerufen am 01.04.2021.].
+Mobile SDKs werden für Android sowie für iOS angebotenfootnote:[Documentation: Stripe Docs, https://stripe.com/docs abgerufen am 01.04.2021.].
 Für Dart existieren mehrere von Privatpersonen erstellte Packagesfootnote:[pub.dev: Stripe, https://pub.dev/packages?q=stripe abgerufen am 01.04.2021] für server- und clientseitige Applikationen.
 
 Rückwärtskompatible Änderungen in der API werden konstant ohne neue API-Versionen veröffentlicht, für nicht
@@ -270,7 +270,12 @@ für diesen Vergleich werden die Preise für österreichische Händler vergliche
 Für innereuropäische Kredit- und Debitkarten werden pro Transaktion 1,4% und € 0,25 verrechnet,
 für internationale Karten werden 2,9% und € 0,25 verrechnet (2% werden für Währungsumrechnungen verrechnet)
 
-Für lokale Zahlungsmethoden wie SEPA-Überweisungen werden https://stripe.com/en-at/pricing/local-payment-methods[andere Preise] angewandt.
+Für lokale Zahlungsmethoden wie SEPA-Überweisungen werden andere Preise
+footnote:[Stripe: Local Payment methods, https://stripe.com/en-at/pricing/local-payment-methods abgerufen am 07.04.2021]
+angewandt.
+
+Stripe liegt im preislichen Mittelfeld, hat allerdings Ausnahmen bei einigen Zahlungsarten, was die Errechnung von Kosten
+undurchsichtiger machen kann. Stripe erhält für dieses Kriterium *8/10 Punkte*.
 
 === Sonstige Funktionen
 - Stripe bietet einen vollständigen Testmodus mit eigenen Daten, Keys sowie Endpoints an.
@@ -294,9 +299,9 @@ Objekt es sich handelt. So beginnen beispielsweise IDs von PaymentIntents mit pi
 |10/10
 |8/10
 |10/10
-|/10
+|8/10
 |10/10
-|10/10
+|94%
 
 |===
 
@@ -343,8 +348,9 @@ Die API-Referenz erörtert sämtliche Objekte, Aufrufe und Fehlermeldungen und b
 
 Da die Dokumentation sehr detailliert und Anweisungen sehr klar sind erhält Rapyd hier **10/10 Punkte**.
 
-=== Angebotene Zahlungsartenfootnote:[Rapyd: Countries and payments, https://www.rapyd.net/network/countries-and-payments/ abgerufen am 02.04.2021]
-Rapyd bietet in Österreich, Deutschland und der Schweiz Kreditkartenzahlungen, in Österreich und Deutschland Banküberweisungen an.
+=== Angebotene Zahlungsarten
+Rapyd bietet in Österreich, Deutschland und der Schweiz Kreditkartenzahlungen, in Österreich und Deutschland Banküberweisungen an
+footnote:[Rapyd: Countries and payments, https://www.rapyd.net/network/countries-and-payments/ abgerufen am 02.04.2021].
 E-Wallets fehlen allerdings in Europa vollständig.
 
 Da E-Wallets besonders im gegebenen Projekt bei Mobilzahlungen sehr wichtig sind und Zahlungen per Bankkonto nicht im
@@ -358,6 +364,9 @@ und erhält somit *10/10 Punkte*.
 === Kosten und Transaktionsgebühren
 Rapyd bietet weltweite Transaktionen für 2,9% + 30 Cent Gebühr pro Transaktionfootnote:[Rapyd: Pricing, https://www.rapyd.net/rapyd-pricing/ abgerufen am 06.04.2021],
 für Zahlungen mit europäischen Karten werden 1,2% + 25 Cent verrechnetfootnote:[Rapyd Service Agreement, http://iconslib.rapyd.net/assets/client-portal/Service_Agreement.pdf abgerufen am 06.04.2021].
+
+Rapyd ermöglicht vergleichsweise billige Zahlungen mit europäischen Karten und liegt bei internationalen Karten im Mittelfeld.
+Da der Preis einfach gestaltet ist und keine Ausnahmen gemacht werden erhält Rapyd hier *9/10 Punkte*.
 
 === Sonstige Funktionen
 - Rapyd bietet einen Sandboxmodus, in welchem API-Anfragen ähnlich zum Produktivsystem getestet werden können
@@ -376,9 +385,9 @@ Website angebotenfootnote:[Rapyd Docs: Rapyd Checkout Overview, https://docs.rap
 |10/10
 |5/10
 |10/10
-|/10
+|9/10
 |10/10
-|/10
+|79,5%
 
 |===
 
@@ -428,8 +437,9 @@ Adyen ist PCI DSS-zertifizierter Level 1 Service Provider
 footnote:[Adyen: Certifications, https://www.adyen.com/platform/certifications abgerufen am 06.04.2021].
 Somit erhält Adyen hierfür *10/10 Punkte*.
 
-=== Kosten und Transaktionsgebührenfootnote:[Adyen: Pricing, https://www.adyen.com/pricing?navItem=europe abgerufen am 06.04.2021]
-Im Vergleich zu anderen Zahlungsanbietern verrechnet Adyen pro Zahlungsart unterschiedliche Gebühren.
+=== Kosten und Transaktionsgebühren
+Im Vergleich zu anderen Zahlungsanbietern verrechnet Adyen pro Zahlungsart unterschiedliche Gebühren
+footnote:[Adyen: Pricing, https://www.adyen.com/pricing?navItem=europe abgerufen am 06.04.2021].
 
 Eine Bearbeitungsgebühr von 0,10€ wird pro Zahlung verrechnet, dazu werden Kosten abhängig von der
 verwendeten Zahlungsart aufgeschlagen.
@@ -470,7 +480,9 @@ footnote:[PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/a
 |€ 0,25
 |===
 
-
+Die Konditionen von Adyen sind mit 10 Cent Bearbeitungsgebühr und sehr geringem prozentuellem Abschlag im Vergleich sehr gut.
+Da allerdings für jede Zahlungsart andere Kosten angewandt werden und sich Interchange++ regelmäßig verändert kann es
+zu preislichen Planungsschwierigkeiten kommen. Adyen erhält trotzdem *9/10 Punkte*.
 
 === Sonstige Funktionen
 - Adyen bietet vorgefertigte UI-Elemente an, um Zahlungen entgegenzunehmen
@@ -488,32 +500,9 @@ wird ein eigenes Konto angelegt.
 |10/10
 |10/10
 |10/10
-|/10
+|9/10
 |10/10
-|/10
-
-|===
-
-== SIX Saferpay
-
-=== API: Verfügbarkeit und Funktionen
-=== API: Dokumentation
-=== Angebotene Zahlungsarten
-=== Konformität mit Standards und Zertifizierungen
-=== Kosten und Transaktionsgebühren
-=== Sonstige Funktionen
-=== Fazit
-[options="autowidth"]
-|===
-|API: Funkt. |API: Dokum. |Zahlungs-arten |Zertif.{nbsp}{nbsp} |Kosten{nbsp}{nbsp} |Sonstige{nbsp}{nbsp} |Gesamt{nbsp}{nbsp}
-
-|/10
-|/10
-|/10
-|/10
-|/10
-|/10
-|/10
+|99,5%
 
 |===
 
@@ -571,6 +560,10 @@ footnote:[Braintree Payments: Pricing, https://www.braintreepayments.com/at/brai
 Zahlungen über PayPal kosten wegen Gebühren von PayPal 3,4% + 35 Cent
 footnote:[PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/at/webapps/mpp/merchant-fees abgerufen am 02.04.2021].
 
+Braintree ist generell für Zahlungen mit europäischen Karten teurer als andere Anbieter. Durch ein klares Gebührenmodell
+für alle Zahlungsarten kann allerdings besser mit Transaktionsgebühren gerechnet und geplant werden. Braintree erhält
+deshalb *7/10 Punkte* in diesem Kriterium.
+
 === Sonstige Funktionen
 - Braintree stellt in seinen Mobile und Web SDKs Drop-In UIs zur Verfügung, mit welchen schnell eine benutzerfreundliche,
 PCI-konforme, Zahlungsseite in eine existierende App eingebaut werden kann.
@@ -584,177 +577,119 @@ PCI-konforme, Zahlungsseite in eine existierende App eingebaut werden kann.
 |10/10
 |10/10
 |10/10
-|/10
+|7/10
 |10/10
-|/10
+|98,5%
 
 |===
 
 == Fazit
 
-The Lady of the Lake, her arm clad in the purest shimmering samite,
-held aloft Excalibur from the bosom of the water,
-signifying by divine providence that I, ((Arthur)),
-was to carry Excalibur (((Sword, Broadsword, Excalibur))).
-That is why I am your king. Shut up! Will you shut up?!
-Burn her anyway! I'm not a witch.
-Look, my liege! We found them.
+Die Aufstellung der Punkte jeweiliger Anbieter ist wie folgt (sortiert nach Gesamtwertung, absteigend):
 
-WARNING: Warning
+[options="autowidth"]
+|===
+|Anbieter |API: Funkt. |API: Dokum. |Zahlungs-arten |Zertif.{nbsp}{nbsp} |Kosten{nbsp}{nbsp} |Sonstige{nbsp}{nbsp} |Gesamt{nbsp}{nbsp}
 
-TIP: Tip
+|Adyen |10/10 |10/10 |10/10 |10/10 |9/10 |10/10 |*99,5%*
+|Braintree |10/10 |10/10 |10/10 |10/10 |7/10 |10/10 |*98,5%*
+|Stripe |10/10 |10/10 |8/10 |10/10 |8/10 |10/10 |*94%*
+|Rapyd |7/10 |10/10 |5/10 |10/10 |9/10 |10/10 |*79,5%*
 
-IMPORTANT: Important
+|===
 
-CAUTION: Caution
+Aus diesem Vergleich geht hervor, dass sich Anbieter auf dieser Liste nur in angebotenen Zahlungsarten und Preisen stark
+unterscheiden. APIs sind zumeist vorhanden, gut unterstützt und dokumentiert, nötige Zertifizierungen sind überall
+vorhanden und alle Anbieter auf dieser Liste bieten fertige Integrationen und eine gewisse Anzahl an anderen sonstigen
+Funktionen an.
 
-NOTE: Note
+Adyen und Braintree konnten bei den angebotenen Zahlungsarten durch eine Möglichkeit, PayPal-Zahlungen anzunehmen, gut
+punkten. Rapyd schnitt bei API-Funktionen aufgrund fehlender serverseitiger SDKs schlechter ab und verlor bei den
+angebotenen Zahlungsarten Punkte, da E-Wallets im DACH-Raum nicht unterstützt werden und Bankzahlungen nicht überall
+möglich sind.
 
-[IMPORTANT]
-.Feeding the Werewolves
-====
-While werewolves are hardy community members, keep in mind the following dietary concerns:
+Adyen, Braintree und Stripe sind im Projektzusammenhang drei gut wählbare Anbieter. Mit jedem dieser Anbieter kann
+eine sinnvolle Integration für den Prototypen im Selfcheckout erstellt werden, die Entscheidung fällt im Endeffekt
+auf Faktoren wie die Wichtigkeit eines schnellen Supportteams, PayPal, persönliche Erfahrungen mit einzelnen
+Zahlungsanbietern oder Erfahrungen mit deren APIs aus.
 
-. They are allergic to cinnamon.
-. More than two glasses of orange juice in 24 hours makes them howl in harmony with alarms and sirens.
-. Celery makes them sad.
-====
-////
-== Diagramming
+Adyen eignet sich am Besten, wenn so viele Zahlungsarten wie möglich billig abgedeckt werden sollen, Braintree bietet
+fortgeschrittene SDKs und eine einfach verwendbare GraphQL-API und Stripe bietet schnelle Unterstützung bei API-Fragen
+als auch SDKs für die meisten Plattformen, inklusive open source Libraries für Dart/Flutter.
 
-== Class Diagram
+== Glossar
 
-[plantuml, generated/Collab, svg]
-----
-@startuml
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+API:: Application Programming Interface, eine Schnittstelle, mit welcher Programme und Entwickler mit einem Softwaresystem
+kommunizieren können.
+bzw.:: beziehungsweise
+NFC:: Near Field Communication, eine Technologie, welche Datenaustausch über geringe Entfernungen ermöglicht.
+Wird häufig für kontaktloses Zahlen bei Kreditkarten verwendet.
+SDK:: Sammlung von Programmbibliotheken, die es Entwicklern ermöglichen, auf einem System basierende Anwendungen zu
+erstellen
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
-}
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
-@enduml
-----
-
-== Component
-
-[plantuml, generated/HighLevelArch, svg]
-----
-@startuml
-
-package "Some Group" {
-HTTP -up- [First Component]
-[Another Component] -up-> HTTP
-}
-
-package "Other Groups" {
-FTP -up- [Second Component]
-
-[First Component] -up-> FTP
-}
-
-@enduml
-----
-
-== WorkBreakDown
-
-[plantuml, generated/WBS, svg]
-----
-@startwbs
-* Business Process Modelling WBS
-** Launch the project
-*** Complete Stakeholder Research
-*** Initial Implementation Plan
-** Design phase
-*** Model of AsIs Processes Completed
-**** Model of AsIs Processes Completed1
-**** Model of AsIs Processes Completed2
-*** Measure AsIs performance metrics
-*** Identify Quick Wins
-** Complete innovate phase
-@endwbs
-----
-
-== Entity Relationship Diagram
-
-[plantuml, generated/ER, svg]
-----
-@startuml
-
-Entity01 }|..|| Entity02
-Entity03 }o..o| Entity04
-Entity05 ||--o{ Entity06
-Entity07 |o--|| Entity08
-
-@enduml
-----
-
-== Gantt
-
-[plantuml, generated/Gantt, svg]
-----
-@startgantt
-[Prototype design] lasts 15 days
-[Test prototype] lasts 10 days
-@endgantt
-----
-
-== AsciiMath
-
-[plantuml, generated/AsciiMath, svg]
-----
-@startlatex
-\sum_{i=0}^{n-1} (a_i + b_i^2)
-@endlatex
-----
-
-== DOT
-
-[plantuml, generated/DOT, svg]
-----
-@startdot
-digraph foo {
-  node [style=rounded]
-  node1 [shape=box]
-  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
-  node3 [shape=record, label="{ a | b | c }"]
-
-  node1 -> node2 -> node3
-}
-@enddot
-----
-
-== Ditaa
-
-[ditaa, generated/Ditaa, png]
-----
-@startditaa
-+--------+   +-------+    +-------+
-|        +---+ ditaa +--> |       |
-|  Text  |   +-------+    |Diagram|
-|Dokument|   |!Magie!|    |       |
-|     {d}|   |       |    |       |
-+---+----+   +-------+    +-------+
-	:                         ^
-	|    Ein Haufen Arbeit    |
-	+-------------------------+
-@endditaa
-----
-
-////
+== Quellen
+- Stripe, Inc.: Stripe API Reference, Stripe Docs, https://stripe.com/docs/api abgerufen am 01.04.2021.
+- Stripe, Inc.: Pricing & fees, Stripe, https://stripe.com/en-at/pricing abgerufen am 01.04.2021.
+- [Infographic] Mobile Payments and Digital Wallets in Europe (2018): Clearhaus, https://www.clearhaus.com/blog/mobile-payments-and-digital-wallets/ abgerufen am 30.03.2021
+- PCI Security Standards Council, https://www.pcisecuritystandards.org/ abgerufen am 02.04.2021
+- PCI Security: PCI Security Standards Council, https://www.pcisecuritystandards.org/pci_security/ abgerufen am 02.04.2021
+- PCI DSS v3.2.1 Quick Reference Guide (2018): PCI Security Standards Council, https://www.pcisecuritystandards.org/documents/PCI_DSS-QRG-v3_2_1.pdf?agreement=true&time=1617368112327 abgerufen am 02.04.2021.
+- Baker, Alice (2020): A guide to the 4 PCI DSS compliance levels, IT Governance Blog En, https://www.itgovernance.eu/blog/en/a-guide-to-the-4-pci-dss-compliance-levels abgerufen am 02.04.2021.
+- Learn More about Service Providers, Visa, https://usa.visa.com/splisting/splistinglearnmore.html#pdvsp abgerufen am 02.04.2021
+- Visa: Visa Secure, https://www.visa.de/bezahlen-mit-visa/genutzte-technologien/visa-secure.html abgerufen am 02.04.2021
+- card complete: Visa Secure, https://www.cardcomplete.com/fuer-unternehmen/e-m-commerce/3-d-secure/visa-secure/ abgerufen am 02.04.2021
+- Mastercard: Mastercard® Identity Check™ Vorteile & Anmeldung, https://www.mastercard.at/de-at/privatkunden/services-wissenswertes-innovationen/innovationen/idcheck.html abgerufen am 02.04.2021
+- Discover Global Network: ProtectBuy, https://www.discoverglobalnetwork.com/en-us/business-resources/fraud-security/products-tools/protect-buy abgerufen am 02.04.2021
+- Paysafe Developer: 3D Secure Results and Liability Shift, https://developer.paysafe.com/en/classic-apis/3ds/test-and-go-live/3d-secure-results-and-liability-shift/#Liability abgerufen am 06.04.2021
+- Stripe Docs: Card authentication and 3D Secure, https://stripe.com/docs/payments/3d-secure abgerufen am 06.04.2021
+- How COVID-19 has reshaped the SMB checkout: Online (2020): Paysafe, https://www.paysafe.com/en/blog/how-covid-19-has-reshaped-the-smb-checkout-online/#c182623:%7E:text=73%25%20of%20online%20businesses%20say%20cart%20abandonments%20are%20an%20issue%20for%20them abgerufen am 30.03.2021
+- About Us: Stripe, Inc., https://stripe.com/en-at#:~:text=Designed%20for%20developers abgerufen am 01.04.2021.
+- Stripe Partner Program: Stripe, Inc., https://stripe.com/en-at/partner-program#who-partners-with-stripe:~:text=Thousands%20of%20companies abgerufen am 01.04.2021.
+- Documentation: Stripe Docs, https://stripe.com/docs abgerufen am 01.04.2021.
+- pub.dev: Stripe, https://pub.dev/packages?q=stripe abgerufen am 01.04.2021
+- API upgrades: Stripe Docs, https://stripe.com/docs/upgrades abgerufen am 01.04.2021.
+- Stripe System Status: Stripe, Inc., https://status.stripe.com/ abgerufen am 01.04.2021.
+- Singleton, David (2019): Root cause analysis: significantly elevated error rates on 2019‑07‑10, Stripe, https://stripe.com/rcas/2019-07-10 abgerufen am 01.04.2021.
+- Davis, Vincy (2019): Stripe’s API suffered two consecutive outages yesterday causing elevated error rates and response times, Packt Hub, https://hub.packtpub.com/stripes-api-suffered-two-consecutive-outages-yesterday-causing-elevated-error-rates-and-response-times/ abgerufen am 01.04.2021.
+- Coelsch, Caroline (2020): Studie: Online-Payment 2020, EHI, https://www.ehi-shop.de/image/data/PDF_Leseproben/Studie_Online-Payment_2020_Leseprobe.pdf abgerufen am 01.04.2021.
+- Service Providers, Visa, https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe abgerufen am 01.04.2021
+- Stripe: Local Payment methods, https://stripe.com/en-at/pricing/local-payment-methods abgerufen am 07.04.2021
+- Stripe Docs: Testing, https://stripe.com/docs/testing abgerufen am 06.04.2021
+- Rapyd Docs: Guides & Use Cases, https://docs.rapyd.net/build-with-rapyd/docs abgerufen am 06.04.2021
+- Rapyd Docs: Introduction to Mobile SDK, https://docs.rapyd.net/works-with/reference/introduction-to-mobile-sdk abgerufen am 06.04.2021
+- Maven Repository: rapyd, https://mvnrepository.com/search?q=rapyd abgerufen am 02.04.2021.
+- NuGet: rapyd, https://www.nuget.org/packages?q=rapyd abgerufen am 02.04.2021.
+- Rapyd Docs: Make your first API call, https://docs.rapyd.net/build-with-rapyd/docs/make-your-first-api-call#step-4-build-auth-headers abgerufen am 06.04.2021
+- Rapyd Docs: Get Started, https://docs.rapyd.net/build-with-rapyd/docs/getting-started abgerufen am 06.04.2021
+- Rapyd: Countries and payments, https://www.rapyd.net/network/countries-and-payments/ abgerufen am 02.04.2021
+- Rapyd: Collect Online, https://www.rapyd.net/platform/collect/online/#single-blocks:~:text=Get%20peace%2Dof%2Dmind%20with%20a%20fully%2Dcertified%20PSD2%20and%20PCI%2DDSS%20Compliant%20solution abgerufen am 02.04.2021
+- Rapyd: Pricing, https://www.rapyd.net/rapyd-pricing/ abgerufen am 06.04.2021
+- Rapyd Service Agreement, http://iconslib.rapyd.net/assets/client-portal/Service_Agreement.pdf abgerufen am 06.04.2021
+- Rapyd Docs: Rapyd Checkout Overview, https://docs.rapyd.net/build-with-rapyd/docs/rapyd-checkout-overview abgerufen am 06.04.2021
+- Adyen Docs: Get Started, https://docs.adyen.com/online-payments/get-started, abgerufen am 06.04.2021
+- Adyen: Platform Status, https://www.adyen.com/status abgerufen am 06.04.2021
+- Adyen: Status history, https://www.adyen.com/landing/platform-status/history abgerufen am 06.04.2021
+- Adyen Docs: Online Payments, https://docs.adyen.com/online-payments abgerufen am 06.04.2021
+- Adyen: API Explorer, https://docs.adyen.com/api-explorer/#/CheckoutService/v67/overview abgerufen am 06.04.2021
+- Bild: Adyen Docs: Web Drop-in integration guide, https://docs.adyen.com/online-payments/drop-in-web, abgerufen am 06.04.2021
+- Bild: Adyen API Explorer, https://docs.adyen.com/api-explorer/#/CheckoutService/v67/post/payments, abgerufen am 06.04.2021
+- Adyen: Certifications, https://www.adyen.com/platform/certifications abgerufen am 06.04.2021
+- Adyen: Pricing, https://www.adyen.com/pricing?navItem=europe abgerufen am 06.04.2021
+- Adyen: EU Interchange fee cap (2015), https://www.adyen.com/blog/all-you-need-to-know-about-the-eu-interchange-cap abgerufen am 06.04.2021
+- Visa: Domestic Multi-lateral Interchange Fees Austria (2018), https://www.visa.co.uk/dam/VCOM/regional/ve/unitedkingdom/PDF/fees-and-interchange/austria-october-2018.pdf abgerufen am 06.04.2021
+- Adyen: Amazon Pay, https://www.adyen.com/payment-methods/amazon-pay abgerufen am 06.04.2021
+- PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/at/webapps/mpp/merchant-fees abgerufen am 02.04.2021
+- Adyen Docs: Pre-built UI options, https://docs.adyen.com/online-payments/prebuilt-ui abgerufen am 06.04.2021
+- Braintree Payments: Braintree Privacy Statement, https://www.braintreepayments.com/at/legal/braintree-privacy-policy abgerufen am 02.04.2021
+- Braintree Developer Documentation: Overview, https://developers.braintreepayments.com/start/overview#client-and-server-sdks abgerufen am 02.04.2021
+- pub.dev:flutter_braintree, https://pub.dev/packages/flutter_braintree abgerufen am 02.04.2021
+- pub.dev:braintree_payment, https://pub.dev/packages/braintree_payment abgerufen am 02.04.2021
+- Braintree Developer Docs: Transaction: Sale, https://developers.braintreepayments.com/reference/request/transaction/sale/java abgerufen am 02.04.2021
+- Braintree GraphQL API: Creating Transactions, https://graphql.braintreepayments.com/guides/creating_transactions/ abgerufen am 02.04.2021
+- Braintree GraphQL API: Reference, https://graphql.braintreepayments.com/reference/#Mutation abgerufen am 02.04.2021
+- Braintree GraphQL API: API Explorer, https://graphql.braintreepayments.com/explorer/ abgerufen am 02.04.2021
+- Braintree Payments: Data Security, https://www.braintreepayments.com/at/features/data-security abgerufen am 02.04.2021
+- Visa: Visa Global Registry of Service Providers, https://www.visa.com/splisting/searchGrsp.do abgerufen am 02.04.2021
+- Mastercard: Site Data Protection (SDP) Program Registered Service Provider List, https://www.mastercard.us/content/dam/mccom/global/documents/Sitedataprotection/site-data-protection-pci-list.pdf abgerufen am 02.04.2021
+- Braintree Payments: Pricing, https://www.braintreepayments.com/at/braintree-pricing abgerufen am 02.04.2021
+- PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/at/webapps/mpp/merchant-fees abgerufen am 02.04.2021
