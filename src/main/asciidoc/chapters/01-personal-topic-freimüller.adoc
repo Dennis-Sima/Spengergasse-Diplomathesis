@@ -2,7 +2,7 @@
 :chapter-label: Kapitel
 :author: Florian Freimüller
 
-= Themenstellung: Ein Vergleich von JVM Sprachen im Umgang mit modernen Programmierschnittstellen
+= *Themenstellung: Ein Vergleich von JVM Sprachen im Umgang mit modernen Programmierschnittstellen*
 
 Florian Freimüller <fre18149@spengergasse.at>
 

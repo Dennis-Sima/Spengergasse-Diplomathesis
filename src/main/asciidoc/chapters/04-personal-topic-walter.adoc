@@ -2,7 +2,7 @@
 :chapter-label: Kapitel
 :author: Lucas Walter
 
-= Untersuchung und die Gegenüberstellung von Payment Providern und deren APIs
+= *Untersuchung und die Gegenüberstellung von Payment Providern und deren APIs*
 
 Lucas WALTER <wal18388@spengergasse.at>
 

@@ -2,7 +2,7 @@
 :chapter-label: Kapitel
 :author: Alexander Wiener
 
-= Untersuchung und Vergleich von Frontend Frameworks auf deren Eignung für mobile Apps
+= *Untersuchung und Vergleich von Frontend Frameworks auf deren Eignung für mobile Apps*
 
 Alexander Wiener <wie17087@spengergasse.at>
 

@@ -2,7 +2,7 @@
 :chapter-label: Kapitel
 :author: Paul Maurovich
 
-= Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications
+= *Vergleich des Java EE Standard-Frameworks im Vergleich zu Spring zur Entwicklung von Business Applications*
 
 Paul Maurovich <mau18259@spengergasse.at>
 

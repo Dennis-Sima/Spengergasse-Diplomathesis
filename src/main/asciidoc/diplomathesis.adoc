@@ -1,5 +1,5 @@
 :doctype: book
-= Diploma Thesis : NoQuePOS
+= Diploma Thesis : NoQuePos
 Florian Freimüller; Paul Maurovich; Dennis Sima; Lucas Walter; Alexander Wiener
 v1.0, 2021-04-07
 
@@ -8,6 +8,8 @@ v1.0, 2021-04-07
 :toclevels: 5
 
 :blankline: pass:[ +]
+
+<<<
 
 [colophon, right]
 == Colophon
@@ -64,6 +66,9 @@ Paul MAUROVICH
 
 |{blankline}
 {blankline}
+{blankline}
+{blankline}
+{blankline}
 Wien, am 07.04.2021
 |{blankline}
 image:../images/signatur_sima.png[Signatur_Sima,200,100]{blankline}
@@ -77,6 +82,7 @@ image:../images/signatur_walter.png[Signatur_Walter,200,100]{blankline}
 Lucas WALTER
 
 |{blankline}
+{blankline}
 {blankline}
 Wien, am 07.04.2021
 |{blankline}
@@ -113,54 +119,54 @@ include::chapters/05-personal-topic-wiener.adoc[]
 <<<
 
 [appendix]
-= Kooperationsvertrag
+= *Kooperationsvertrag*
 
 image::../images/pdf/Kooperationsvertrag unterfertigt_2020-06-10_150551.pdf[pages=1..2]
 
 [appendix]
-= User Stories
+= *User Stories*
 
 image::../images/pdf/ScanBuyGo_User_Stories_final.pdf[pages=1..38]
 
 [appendix]
-= Technical and organizational measurements (TOMs)
+= *Technical and organizational measurements (TOMs)*
 
 image::../images/pdf/ScanBuyGo TOMs v2.pdf[pages=1..8]
 
 [appendix]
-= Procedural directory
+= *Procedural directory*
 
 image::../images/pdf/ScanBuyGo Procedural Directory (1).pdf[pages=1..9]
 
 [appendix]
-= Privacy Policy
+= *Privacy Policy*
 
 image::../images/pdf/Privacy Policy ScanBuyGo (1).pdf[pages=1..4]
 
 [appendix]
-= Project Health Monitor
+= *Project Health Monitor*
 
 image::../images/pdf/Project Health Monitor.pdf[pages=1..1]
 
 [appendix]
-= Vorstudien
+= *Vorstudien*
 
 image::../images/pdf/NoQuePOS_Vorstudien_v4.pdf[pages=1..33]
 
 [appendix]
-= Spezifikationen
+= *Spezifikationen*
 
 image::../images/pdf/NoQuePOS_Spez_v07 (Aktuell) (1).pdf[pages=1..87]
 image::../images/pdf/ScanBuyGo_Spez BE 20201123.pdf[pages=1..8]
 
 [appendix]
-= Statusberichte
+= *Statusberichte*
 
-image::../images/pdf/ScanBuyGo_Statusbericht_1.pdf[pages=1..8]
+image::../images/pdf/SBG_Status_18_02_2021.pdf[pages=1..9]
 image::../images/pdf/Status_neu.pdf[pages=1..10]
 
 [appendix]
-= Change Request
+= *Change Request*
 
 image::../images/pdf/ChangeRequest_ScanBuyGo.pdf[pages=1..3]
 
