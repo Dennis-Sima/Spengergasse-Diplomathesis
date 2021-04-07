@@ -1,5 +1,5 @@
 = Diploma Thesis : title
-Joachim GRÜNEIS <grueneis@spengergasse.at>; Klaus UNGER <unger@spengergasse.at>
+
 v1.0, 2018-06-18
 
 :source-highlighter: rouge
@@ -18,11 +18,11 @@ v1.0, 2018-06-18
 
 *Spengergasse Press, Vienna*
 
-(C) 2018 by Joachim GRÜNEIS, Klaus UNGER
+
 
 {blankline}
 
-*Schuljahr 2018/19*
+*Schuljahr 2020/21*
 
 .Abgabevermerk
 [cols="50,50", options="header"]
@@ -53,23 +53,15 @@ inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
 |{blankline}
  {blankline}
  {blankline}
- Joachim GRÜNEIS
+
 
 |{blankline}
 |{blankline}
  {blankline}
  {blankline}
- Klaus UNGER
+
 |===
 
-[abstract]
-== Abstract
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 
 <<<
 
@@ -108,34 +100,5 @@ hardware:: accessible
 :appendix-caption: Appendix
 :sectnums:
 
-=== The schema behind the data
 
-[source,json]
-----
-{
-  "bla": "bla"
-}
-----
 
-[source,java]
-----
-public class HelloWorld {
-
-  public static void main(String[] args) {
-  }
-}
-----
-
-[source,dart]
-----
-// A function
-void printInteger(int aNumber) {
-  print('The number is $aNumber.'); // Print to console.
-}
-
-// The point where the application starts executing
-void main() {
-  var number = 10; // Declaration and initialization of  a variable.
-  printInteger(number); // Call a function.
-}
-----
