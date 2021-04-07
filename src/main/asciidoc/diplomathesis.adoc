@@ -44,37 +44,43 @@ inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe.
 
 [cols="30,70", options="header"]
 |===
-|Wien, am 07.04.2021
+|Ort, Datum
 |VerfasserInnen
 
 |{blankline}
-|{blankline}
- {blankline}
- {blankline}
- Florian FREIMÜLLER
+{blankline}
+Wien, am 07.04.2021
+|
+{blankline}
+image:../images/signatur_freimueller.png[Signatur_Freimueller,200,100]{blankline}
+Florian FREIMÜLLER
 
 |{blankline}
+{blankline}
+Wien, am 07.04.2021
 |{blankline}
-{blankline}
-{blankline}
+image:../images/signatur_maurovich.png[Signatur_Maurovich,200,100]{blankline}
 Paul MAUROVICH
 
 |{blankline}
+{blankline}
+Wien, am 07.04.2021
 |{blankline}
-{blankline}
-{blankline}
+image:../images/signatur_sima.png[Signatur_Sima,200,100]{blankline}
 Dennis SIMA
 
 |{blankline}
+{blankline}
+Wien, am 07.04.2021
 |{blankline}
-{blankline}
-{blankline}
+image:../images/signatur_walter.png[Signatur_Walter,200,100]{blankline}
 Lucas WALTER
 
 |{blankline}
+{blankline}
+Wien, am 07.04.2021
 |{blankline}
-{blankline}
-{blankline}
+image:../images/signatur_wiener.png[Signatur_Wiener,200,100]{blankline}
 Alexander WIENER
 |===
 
