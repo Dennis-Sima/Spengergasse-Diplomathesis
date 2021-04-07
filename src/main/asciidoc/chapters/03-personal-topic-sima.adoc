@@ -461,83 +461,41 @@ PWA:: Progressive Web Apps sind Websites, welche zusätzlich als mobile Apps opt
 
 [quellen]
 == Quellen
-.Quellen
-[cols="<, <, <", options="autowidth,header"]
-|===
-^|Beschreibung ^|Quelle ^|Letzter Zugriff
+Prenger C. (2019 14. August): matter-of-design, https://matter-of-design.com/darum-ist-user-experience-so-wichtig aufgerufen am 06.04.2021
 
-|Prenger C. (2019 14. August): matter-of-design
-|https://matter-of-design.com/darum-ist-user-experience-so-wichtig
-|06.04.2021
+Seobility: Usability, vgl. https://www.seobility.net/de/wiki/Usability aufgerufen am 07.04.2021
 
-|Seobility: Usability
-|vgl. https://www.seobility.net/de/wiki/Usability
-|07.04.2021
+Wikipedia: Tim Berners-Lee, vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee aufgerufen am 07.04.2021
 
-|Wikipedia: Tim Berners-Lee
-|vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee
-|07.04.2021
+Technikum-wien: WAS IST UX-DESIGN?, vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design aufgerufen am 07.04.2021
 
-|Technikum-wien: WAS IST UX-DESIGN?
-|vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design/
-|07.04.2021
+Medium: UX/UI Design Process (Bild), https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241 aufgerufen am 07.04.2021
 
-|Medium: UX/UI Design Process (Bild)
-|https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241
-|07.04.2021
+Uxmatters: Mobile App UX Design Process, vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php aufgerufen am 07.04.2021
 
-|Uxmatters: Mobile App UX Design Process
-|vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php
-|07.04.2021
+obileappdaily: Mobile App Design Guidelines to Build an App Users Love, vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines aufgerufen am 07.04.2021
 
-|Mobileappdaily: Mobile App Design Guidelines to Build an App Users Love
-|vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines
-|07.04.2021
+Careerfoundry: What Are User Interface (UI) Design Patterns? Everything You Need To Know, vgl. https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns aufgerufen am 07.04.2021
 
-|Careerfoundry: What Are User Interface (UI) Design Patterns? Everything You Need To Know
-|vgl. https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns
-|07.04.2021
+Darkpatterns: TYPES OF DARK PATTERN, vgl. https://www.darkpatterns.org/types-of-dark-pattern aufgerufen am 07.04.2021
 
-|Darkpatterns: TYPES OF DARK PATTERN
-|vgl. https://www.darkpatterns.org/types-of-dark-pattern
-|07.04.2021
+Apple Inc.: App Store Review Guidelines, vgl. https://developer.apple.com/app-store/review/guidelines aufgerufen am 07.04.2021
 
-|Apple Inc.: App Store Review Guidelines
-|vgl. https://developer.apple.com/app-store/review/guidelines/
-|07.04.2021
+Tigercolor: Basic color schemes - Introduction to Color Theory, vgl. https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm aufgerufen am 07.04.2021
 
-|Tigercolor: Basic color schemes - Introduction to Color Theory
-|vgl. https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm
-|07.04.2021
+Tigercolor: Basic color schemes - Introduction to Color Theory (Bilder), https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors aufgerufen am 07.04.2021
 
-|Tigercolor: Basic color schemes - Introduction to Color Theory (Bilder)
-|https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors
-|07.04.2021
+Ionos: Corporate Identity, vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity aufgerufen am 07.04.2021
 
-|Ionos: Corporate Identity
-|vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/
-|07.04.2021
+Yeeply: App Design: Die Bedeutung der Typografie, vgl. https://de.yeeply.com/blog/app-design-die-bedeutung-der-typografie aufgerufen am 07.04.2021
 
-|Yeeply: App Design: Die Bedeutung der Typografie
-|vgl. https://de.yeeply.com/blog/app-design-die-bedeutung-der-typografie/
-|07.04.2021
+Mobilbranche: 3 typografische Fauxpas im App-Design., vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design aufgerufen am 07.04.2021
 
-|Mobilbranche: 3 typografische Fauxpas im App-Design.
-|vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design
-|07.04.2021
+Medium: How to create an accessible app (and why you should), vgl. https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb aufgerufen am 07.04.2021
 
-|Medium: How to create an accessible app (and why you should)
-|vgl. https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb
-|07.04.2021
+Plusqa: The Best Accessibility Apps in 2020, vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020 aufgerufen am 07.04.2021
 
-|Plusqa: The Best Accessibility Apps in 2020
-|vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020/
-|07.04.2021
-
-|Infopulse: Internationalisierung der mobilen Apps: Wege und Methoden zur Steigerung der Einnahmen um 26%
-|vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26/
-|07.04.2021
-
+Infopulse: Internationalisierung der mobilen Apps: Wege und Methoden zur Steigerung der Einnahmen um 26%, vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26 aufgerufen am 07.04.2021
 
 |===
 
