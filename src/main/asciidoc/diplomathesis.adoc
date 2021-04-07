@@ -1,5 +1,5 @@
 :doctype: book
-= Diploma Thesis : ScanBuyGo
+= Diploma Thesis : NoQuePOS
 Florian Freimüller; Paul Maurovich; Dennis Sima; Lucas Walter; Alexander Wiener
 v1.0, 2021-04-07
 
@@ -158,20 +158,6 @@ image::../images/pdf/ScanBuyGo_Spez BE 20201123.pdf[pages=1..8]
 
 image::../images/pdf/ScanBuyGo_Statusbericht_1.pdf[pages=1..8]
 image::../images/pdf/Status_neu.pdf[pages=1..10]
-
-[appendix]
-= Besprechungsprotokolle
-
-image::../images/pdf/Besprechungsprotokoll 2020-06-18.pdf[pages=1..3]
-image::../images/pdf/Besprechungsprotokoll 2020-06-23.pdf[pages=1..3]
-image::../images/pdf/Besprechungsprotokoll 2020-06-25.pdf[pages=1..2]
-image::../images/pdf/Besprechungsprotokoll 2020-07-02.pdf[pages=1..1]
-image::../images/pdf/Besprechungsprotokoll 2020-07-03.pdf[pages=1..3]
-image::../images/pdf/Besprechungsprotokoll 2020-07-19.pdf[pages=1..1]
-image::../images/pdf/Besprechungsprotokoll 2020-07-23.pdf[pages=1..1]
-image::../images/pdf/Besprechungsprotokoll 2020-07-25.pdf[pages=1..2]
-image::../images/pdf/Besprechungsprotokoll 2020-07-30.pdf[pages=1..1]
-image::../images/pdf/Besprechungsprotokoll 2020-08-26.pdf[pages=1..1]
 
 [appendix]
 = Change Request
