@@ -695,3 +695,5 @@ erstellen
 - Mastercard: Site Data Protection (SDP) Program Registered Service Provider List, https://www.mastercard.us/content/dam/mccom/global/documents/Sitedataprotection/site-data-protection-pci-list.pdf abgerufen am 02.04.2021
 - Braintree Payments: Pricing, https://www.braintreepayments.com/at/braintree-pricing abgerufen am 02.04.2021
 - PayPal AT: Händler- und Verkäufergebühren, https://www.paypal.com/at/webapps/mpp/merchant-fees abgerufen am 02.04.2021
+
+<<<

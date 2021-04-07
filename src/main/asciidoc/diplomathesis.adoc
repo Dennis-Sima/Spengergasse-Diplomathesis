@@ -1,6 +1,6 @@
 :doctype: book
 = Diploma Thesis : ScanBuyGo
-Alexander Wiener; Dennis Sima; Lucas Walter; Florian Freimüller; Paul Maurovich
+Florian Freimüller; Paul Maurovich; Dennis Sima; Lucas Walter; Alexander Wiener
 v1.0, 2021-04-07
 
 :toc:
@@ -106,18 +106,56 @@ include::chapters/05-personal-topic-wiener.adoc[]
 
 <<<
 
-
 [appendix]
-= Anhänge
+= Kooperationsvertrag
 
 image::../images/pdf/Kooperationsvertrag unterfertigt_2020-06-10_150551.pdf[pages=1..2]
+
+[appendix]
+= User Stories
+
 image::../images/pdf/ScanBuyGo_User_Stories_final.pdf[pages=1..38]
+
+[appendix]
+= Technical and organizational measurements (TOMs)
+
 image::../images/pdf/ScanBuyGo TOMs v2.pdf[pages=1..8]
+
+[appendix]
+= Procedural directory
+
 image::../images/pdf/ScanBuyGo Procedural Directory (1).pdf[pages=1..9]
+
+[appendix]
+= Privacy Policy
+
 image::../images/pdf/Privacy Policy ScanBuyGo (1).pdf[pages=1..4]
+
+[appendix]
+= Project Health Monitor
+
 image::../images/pdf/Project Health Monitor.pdf[pages=1..1]
+
+[appendix]
+= Vorstudien
+
 image::../images/pdf/NoQuePOS_Vorstudien_v4.pdf[pages=1..33]
+
+[appendix]
+= Spezifikationen
+
+image::../images/pdf/NoQuePOS_Spez_v07 (Aktuell) (1).pdf[pages=1..87]
+image::../images/pdf/ScanBuyGo_Spez BE 20201123.pdf[pages=1..8]
+
+[appendix]
+= Statusberichte
+
 image::../images/pdf/ScanBuyGo_Statusbericht_1.pdf[pages=1..8]
+image::../images/pdf/Status_neu.pdf[pages=1..10]
+
+[appendix]
+= Besprechungsprotokolle
+
 image::../images/pdf/Besprechungsprotokoll 2020-06-18.pdf[pages=1..3]
 image::../images/pdf/Besprechungsprotokoll 2020-06-23.pdf[pages=1..3]
 image::../images/pdf/Besprechungsprotokoll 2020-06-25.pdf[pages=1..2]
@@ -128,5 +166,13 @@ image::../images/pdf/Besprechungsprotokoll 2020-07-23.pdf[pages=1..1]
 image::../images/pdf/Besprechungsprotokoll 2020-07-25.pdf[pages=1..2]
 image::../images/pdf/Besprechungsprotokoll 2020-07-30.pdf[pages=1..1]
 image::../images/pdf/Besprechungsprotokoll 2020-08-26.pdf[pages=1..1]
+
+[appendix]
+= Change Request
+
 image::../images/pdf/ChangeRequest_ScanBuyGo.pdf[pages=1..3]
+
+[appendix]
+= Stellungnahme Trennung vom Projektpartner
+
 image::../images/pdf/5BHIF NoQuePOS Stellungnahme Trennung Projektpartner.pdf[pages=1..6]
