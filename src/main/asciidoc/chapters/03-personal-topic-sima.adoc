@@ -9,26 +9,22 @@ Dennis Sima <sim18354@spengergasse.at>
 [abstract]
 == Abstract
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Diese Arbeit bietet die Grundlage für User Interface- und User Experience-Design Guidelines für mobile Applikationen. Es werden nicht die Basics des App-Designs erklärt, sondern auch Themen, wie Accessibility, Internationalisierung etc., welche für eine moderne Smartphone-App oftmals entscheident sein können, um erfolgreich zu werden.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-<<<
+Es ist dennoch zu beachten, dass es sich um keine vollständige Richtlinien handelt, da diese Schriftfassung als kompakte Recherche zum Thema UI und UX dienen soll in einem für den Leser einfachen dünnen Format.
 
 
 == Warum ist UI und UX wichtig?
 
 === Was ist UI & UX?
 
-Damit der End User mit einer Software kommunizieren kann (z.B. Daten bearbeiten, speichern etc.) braucht dieser eine Schnittstelle, um dies einfach zu tätigen. In der modernen Softwareentwicklung ist auch oft die Rede des Frontends, wobei dies als obersten Sammelbegriff für die gesamte Userapplikation verwendet wird. Da der User keine Hintergrundprozesse des Backends im Normalfall mitbekommt, ist das User Interface, alles was der User sieht und bedienen darf. Es ist auch beim UI folglich das Screen Design die Rede, da es nur um das Design der Applikation geht.
+Damit der Enduser mit einer Software kommunizieren kann (z.B. Daten bearbeiten, speichern etc.) braucht dieser eine Schnittstelle, um dies einfach zu tätigen. In der modernen Softwareentwicklung ist auch oft die Rede des Frontends, wobei dies als obersten Sammelbegriff für die gesamte User-Applikation verwendet wird. Da der User keine Hintergrundprozesse des Backends im Normalfall mitbekommt, ist das Userinterface, alles, was der User sieht und bedienen darf. Es ist auch beim UI folglich das Screendesign die Rede, da es nur um das Design der Applikation geht.
 
-Um das User Interface von der User Experience zu unterscheiden, kann man logisch differenzieren, dass das UI, jene Komponenten zusammenfasst, was der User sieht und die UX wie der User die Applikation bedient. So gesehen gehen UI und UX komplementär ineinander und sind in der modernen Frontend-Entwicklung nicht mehr wegzudenken.
+Um das User Interface von der User Experience zu unterscheiden, kann man logisch differenzieren, dass das UI, jene Komponenten zusammenfasst, was der User sieht und die UX wie der User die Applikation bedient. So gesehen stehen UI und UX komplementär zueinander und sind in der modernen Frontend-Entwicklung nicht mehr wegzudenken.
 
-Darüber hinaus ist das UX-Design so gesehen essentieller als das Screen-Design, das sich im Regelfall aus der User Experience das Design der App ergibt und nicht umgekehrt.
+Darüber hinaus ist das UX-Design so gesehen essenzieller als das Screendesign, da sich im Regelfall aus der User Experience das Design der App ergibt und nicht umgekehrt.
 
-[quote, Prenger C. (2019, 14. August), Darum ist User Experience so wichtig; matter of design;]
+[quote, Prenger C. (2019 14. August): matter-of-design, https://matter-of-design.com/darum-ist-user-experience-so-wichtig aufgerufen am 06.04.2021]
 __"Vergleicht man nur ein Handy aus den 1990er Jahren mit einem Smartphone von heute wird deutlich, wie komplex Produkte zum Teil geworden sind. Genau dann wird die User Experience essenziell wichtig für die Produktentwicklung."__
 
 .Table UI VS. UX
@@ -40,7 +36,7 @@ __"Vergleicht man nur ein Handy aus den 1990er Jahren mit einem Smartphone von h
 a|
 * Visuelles Aussehen der Applikation
 * Fokussiert sich auf das Produkt
-* Elemente die der User sieht und bedienen muss
+* Elemente die der User sieht und bedienen darf
 
 a|
 * Identifizierung der Bedürfnisse eines Benutzers
@@ -59,11 +55,11 @@ Der Unterschied zwischen UX und Usability ist jedoch, dass bei der Usability nur
 
 Besonderes Augenmerk sollte bei Apps beispielsweise auf die Menüleiste für die Navigation gerichtet sein, da dieses eventuell zentrale Element ist. Zudem muss stets eine gute Lesbarkeit der Inhalte gegeben sein. In diesem Fall ist es wichtig, dass nicht nur genügend große Buchstaben verwendet werden, sondern auch, dass die ausgewählte Schriftart unabhängig von der verwendeten Plattform gut lesbar ist. In diesem Fall sind Buchstaben mit einfachem Design von Vorteil.
 
-In Bezug auf die Benutzerfreundlichkeit geht es nicht nur um das optische Design der App. Es geht auch um die Inhalte, zum Beispiel, wenn es vor allem um eine intuitive Navigation geht. Denn neben der Menüplatzierung ist die Beschriftung der Themenfelder äußerst wichtig. Deshalb sollte großen Wert auf geläufige Begriffe gelegt werden. So können sich User sehr in der App zurechtfinden und die Usability ist gewährleistet.
+In Bezug auf die Benutzerfreundlichkeit geht es nicht nur um das optische Design der App. Es geht auch um die Inhalte, zum Beispiel, wenn es vor allem um eine intuitive Navigation geht. Denn neben der Menüplatzierung ist die Beschriftung der Themenfelder äußerst wichtig. Deshalb sollte großen Wert auf geläufige Begriffe gelegt werden. So können sich User sehr in der App zurechtfinden und die Usability ist gewährleistet.footnote:[vgl. https://www.seobility.net/de/wiki/Usability]
 
 
 === UI & UX im Laufe der Geschichte:
-Die historische Entwicklung von der sogenannten User Interface und der User Experience begann mit der Erfindung des HTML (Hyper Text Markup Language), welcher der Informatiker Tim Berner Lee im Jahre 1990 im Laufe seines Projektes im europäischen Kernforschungszentrum CERN betrieb. Damals war es oberstes Ziel möglich einfach Daten und Informationen sowohl möglich effizient und visuell ansprechend über Computer zu versenden.
+Die historische Entwicklung von der sogenannten User Interface und der User Experience begann mit der Erfindung des HTML (Hypertext Markup Language), welcher der Informatiker Tim Berner Lee im Jahre 1990 im Laufe seines Projektes im europäischen Kernforschungszentrum CERN betrieb. Damals war es oberstes Ziel möglich einfach Daten und Informationen sowohl möglich effizient und visuell ansprechend über Computer zu versenden.footnote:[vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee]
 Über HTML konnte man strukturiert Daten und Informationen darstellen.
 
 Hier sieht man ein einfaches HTML-Beispiel, wie früher das UI ausgesehen hat:
@@ -74,7 +70,7 @@ Hier sieht man ein einfaches HTML-Beispiel, wie früher das UI ausgesehen hat:
 <html lang="de">
    <head>
       <meta charset="UTF-8">
-      <meta content="Hier finden Sie alle Informationen über das HTML-Basisgerüst" name="description">
+      <meta content="Das sind alle Informationen über HTML" name="description">
       <title>HTML lernen: Das Grundgerüst</title>
    </head>
    <body>
@@ -92,6 +88,8 @@ Hier sieht man ein einfaches HTML-Beispiel, wie früher das UI ausgesehen hat:
 </html>
 ----
 
+<<<
+
 *Dieses HTMl erzeugt folgendes UI:*
 
 image::../images/HTML-Example.png[title = "HTML-Frontend Beispiel"]
@@ -99,7 +97,7 @@ image::../images/HTML-Example.png[title = "HTML-Frontend Beispiel"]
 
 Seit der Erfindung des HTML wurde der optischen Gestaltung für die Enduser mehr Aufmerksamkeit geschenkt und wurde laufend weiterentwickelt. Sowohl die Ansprüche heutiger Apps und Websites haben sich angepasst, wodurch man heutzutage wesentlich mehr braucht als ein HTML-file um den User zufriedenzustellen mit allen Funktionen.
 
-<<<
+
 
 == Wie entsteht User Experience?
 
@@ -108,39 +106,78 @@ Für User Experience gibt es keine einheitlichen Vorgaben oder konkrete Prozesse
 === Den Nutzer verstehen
 Der Enduser steht immer im Mittelpunkt, mit samt seiner Wünsche und Bedürfnisse. Je nach Budget und Zeitdruck kann man dies mittels Umfragen direkt am Markt oder durch Kundenbeobachtungen abschätzen.
 
-Zentrales Element sind hierbei die Personas, welche realitätstreu die Kunden abbilden, welche schließlich die Software Applikation nutzen sollen.
+Zentrales Element sind hierbei die Personas, welche realitätsgetreu die Kunden abbilden, welche schließlich die Software Applikation nutzen sollen.
 
-Im Zuge des UX-Design Prozesses werden ebenso auch erste Wireframes oder Click-Dummys visualisiert.
+Im Zuge des UX-Designprozesses werden ebenso auch erste Wireframes oder Klick-Dummys visualisiert.footnote:[vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design/]
 
 image::../images/UX-Design.png[title = "UX-Design Prozess, Quelle: https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241", width=510,height=260]
+
+NOTE: Es gibt in der Theorie sehr viele Arten von gängigen UX-Prozessen, aber grundätzlich meinen alle das Selbe: *_Customer first!_*
+
+=== User Research
+Üblicherweise beginnt der UX-Design Prozes mit einer sogenannten User Research. Hier versucht man zu verstehen, was die Kunden aktuell und in Zukunft auch für Features brauchen oder ebenso auch nicht wollen.
+Diese Recherche kann über mehrere Formen passieren. Zum einen über Marktumfragen oder Kundenbeobachtungen. Sei gesagt, dass Marktumfragen wiederrum sehr kostenintensiv sind, aber meist bessere und genauere Ergebnisse liefern.
+
+Wichtig zu verstehen ist genauso, dass man nicht nur die zukünftigen Kunden analysiert, sondern auch die Projektanforderungen, sowie eine Wettbewerbsanalyse.footnote:UX[vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php]
+
+=== Empathize
+
+In dieser Phase muss man sich in den Kunden hineinversetzen. Gängige Methoden wären unteranderem mehrere Personas zu erstellen, welche die Zielgruppe darstellen sollen.
+Zusätzlich werden diese Personas, abhängig ihres persönlichen Background verschiedene Senarios durchleben, wie, wann, wo, warum, diese Persona mit der App interagiert.:footnote:UX[]
+
+=== Create
+Mit den bisher gesammelten Daten wird im Anschluss erste Design-Entwürfe erstellt.
+Diese können in Form von Wireframes, Click-Dummies etc dargestellt werden.footnote:[vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines]
+
+Um erste Entwürfe zu skizzieren, kann dies mit zahlreichen Online-Tools oder auf Papier erstellt werden.
+
+**Hier sieht man einen Beispiel-Wireframe der Smartphone-App:**
+
+image::../images/Wireframe.png[title = "Wireframe-Design von einer App", width= 500,height=400]
+
+=== Test
+Beim Testen ist essenziell zu beobachten, wie der Erstentwurf bei den potentiellen User ankommen wird:footnote:UX[]
+
+* Prototyp soll markttauglich genug sein, um genaues Marktfeedback zu bekommen
+* Ziel ist zu Erkennen, ob der Design-Prototyp nach Plan funktioniert
+* Feedback kritisch analysieren und einbauen
+
+<<<
+
+=== Develop
+In der letzten Phase wird das fertige Produkt/ Prototyp entwickelt, Feedback der Kunden eingearbeitet und grunsätzliche Feinarbeiten an der App erledigt.
+Danach können eventuelle Beta-Tests angestrebt werden.
+
+image::../images/FertigeApp.png[title = "Wireframe-Design zum Prototypen", width= 220,height=640]
+{blankline}
 
 
 == UI-Patters für mobile Apps
 
 === Was ist das?
 
-Besonders wichtig im Allgemeinen ist nicht nur in der Software Entwicklung, so wenig wie möglich das Rad neu zu erfinden. Es gibt viele bereits fertige Software-Lösungen zum Einbinden etc. Genauso ist es auch beim Screen Design, Zeit und Arbeit zu sparen.
+Besonders wichtig im Allgemeinen ist, nicht nur in der Software Entwicklung, so wenig wie möglich das Rad neu zu erfinden. Es gibt viele bereits fertige Software-Lösungen zum Einbinden etc. Genauso ist es auch beim Screen Design, Zeit und Arbeit zu sparen.
 
-Gewisse UI-Patterns wurden nicht speziell nur für UI-Designer entwickelt und definiert. Sie sollen darüber hinaus auch der Software Architektur und den Programmierern zu Gute kommen.
+Gewisse UI-Patterns wurden nicht speziell nur für UI-Designer entwickelt und definiert. Sie sollen darüber hinaus auch der Software Architektur und den Programmierern zugutekommen.
 
-Heutzutage sind UI-Patterns vollständig in die Software Entwicklung integriert und nicht mehr wegzudenken. Man findet diese in allen gängigen Apps und sogar Websites. Vor allem auch Endnutzer profitieren von solchen Patterns. Durch den Erkennungseffekt der bedienbaren Elementen wissen Nutzer in wenigen Sekunden wie diese jene Komponenten handhaben.
+Heutzutage sind UI-Patterns vollständig in die Software Entwicklung integriert und nicht mehr wegzudenken. Man findet diese in allen gängigen Apps und sogar Websites. Vor allem auch Endnutzer profitieren von solchen Patterns. Durch den Erkennungseffekt der bedienbaren Elementen wissen Nutzer in wenigen Sekunden wie diese jene Komponenten handhaben.footnote:UIpatterns[vgl. https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns]
 
-NOTE: Wichtig ist bei UI-Patterns, dass nicht alle Lösungsentwürfe für alle App-Lösungen geeignet sind. Diese müssen immer stets an den individuellen Use-Case angepasst werden.
+NOTE: Wichtig ist bei UI-Patterns, dass nicht alle Lösungsentwürfe für alle App-Lösungen geeignet sind. Diese müssen immer stets an den individuellen Use Case angepasst werden.
 
-[quote, MARIA DE LA RIVA. (2020, 12. August), What Are User Interface (UI) Design Patterns? Everything You Need To Know; Careerfoundry]
+[quote, MARIA DE LA RIVA. (2020 12. August): Careerfoundry, https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns aufgerufen am 06.04.2021]
 __„Most of us wear t-shirts. My t-shirt and yours may vary in size and fit, but both are recognizable as t-shirts. We can add a nifty little pocket, details on the short sleeves, and print all kinds of stuff on them. However, the structure is pretty much the same regardless of how much we tailor the garment to our liking.“
 __
 
 
 === Vorteile von UI-Patterns
 
-Nicht zum Verwechseln sind UI-Patterns allerdings mit einem Baukasten, mit welchen man Features zusammenbauen kann und die Arbeit damit getan ist. UI-Patterns sind für UI-Designers wie Baupläne, mit denen man sich bei der Frontendgestalltung richten kann.
+Nicht zum Verwechseln sind UI-Patterns allerdings mit einem Baukasten, mit welchen man Features zusammenbauen kann und die Arbeit damit getan ist. UI-Patterns sind für UI-Designers wie Baupläne, mit denen man sich bei der Frontendgestaltung richten kann.
 
 Zusätzlich sind UI-Patterns eine gemeinsame Sprache für die Kommunikation für UI-Designer. Dadurch werden vor allem auch Missverständnisse reduziert und sorgen für Kontinuität bei der Zusammenarbeit mit mehreren Designern am selben Projekt.
 
 Bei den Endusern der Apps werden Design-Patterns auch zum Vorteil. Da sich viele Apps von der Gestaltung nicht allzu unterscheiden, haben Nutzer bereits eine gewisse Vorstellung auf welcher App-Page welche Elemente zum Vorschein kommen.
 
-Beispielweise erwarten sich User als Mindestanforderungen von einer Login-Seite einer App Zwei Input-Felder (Für E-Mail und Passwort) und einen „Bestätigen“-Button zu einloggen in die App. Andere Elemente wären unschlüssig und führen zu Verwirrungen der Nutzer.
+Beispielweise erwarten sich User als Mindestanforderungen von einer Login-Seite einer App Zwei Input-Felder (Für E-Mail und Passwort) und einen „Bestätigen“-Button zu einloggen in die App. Andere Elemente wären unschlüssig und führen zu Verwirrungen der Nutzer.footnote:UIpatterns[]
 
 <<<
 
@@ -151,7 +188,9 @@ Beispielweise erwarten sich User als Mindestanforderungen von einer Login-Seite 
 
 image::../images/LoginPage.png[title = "Design Patterns einer Login-Maske von einer App", width= 210,height=600]
 
-=== Beliebtesten Patterns in der Smartphone-Welt
+=== Beliebteste Patterns in der Smartphone-Welt
+
+Pauschal kann man nie definieren welche Patterns in eine App gehören. Jedoch gibt es aufffallend viele Apps die zumindest folgende aufweisen:footnote:UIpatterns[]
 
 1.  *Teilen*: Ermöglicht, meist als Button, dem User seinen Inhalt auf Social-Media-Plattformen zu teilen
 2.	*Navigation*: Ermöglicht, meist als Pfeil nach links, dem User zur vorigen Page zu gelangen oder zurück zur Startseite
@@ -164,14 +203,16 @@ image::../images/LoginPage.png[title = "Design Patterns einer Login-Maske von ei
 Direkt vergleichbar mit den „normalen“ UI-Design Patterns gibt es zusätzlich die sogenannten „dark UI-Design Pattern“. Wie der Name bereits ausdrückt stecken für den Enduser meist nicht ganz moralische Design Entwürfe zur Verfügung. Man versucht den Usern in der App (gibt es in allen Frontend-Software-Lösungen) zu einer speziellen Aktion zu drängen, der dieser eventuell ohne dieses Design-Pattern nicht machen würde.
 Natürlich versuchen sowohl UX- und UI-Designer geteilt mit der Psychologie der zukünftigen Kunden zu spielen, um diese zu überlisten.
 
-Trotzdem sind Dark Patterns heutzutage in der Frontend-Gestaltung sehr üblich und auf vielen Apps und auch Websites zu finden. Trotzdem sind sie allgemein unbeliebt und gefährden bei Missbrauch die Beziehung eines Unternehmens zu seinen Verbrauchern.
+Trotzdem sind Dark Patterns heutzutage in der Frontend-Gestaltung sehr üblich und auf vielen Apps und auch Websites zu finden. Trotzdem sind sie allgemein unbeliebt und gefährden bei Missbrauch die Beziehung eines Unternehmens zu seinen Kunden.
 
 ==== Beliebteste „Dark Patterns“
+
+Auffallend ist, dass Dark Patterns überwiegend von Shopping-Applikationen und bei der Anmeldung der User angewended wird:footnote:[vgl. https://www.darkpatterns.org/types-of-dark-pattern]
 
 ===== Verwirrende Fragen & Sprache:
 Hier versucht man den User oftmals durch mehrere Verneinungen zu verwirren und mehrere vermeidlich ähnliche Fragen zu täuschen.
 
-image::../images/Warenkorb.png[title = "Beispiel: Verwirrende Sprache und Fragen bei der Registrierung", width=370,height=200]
+image::../images/Warenkorb.png[title = "Beispiel: Verwirrende Sprache und Fragen bei der Registrierung, Quelle: https://www.darkpatterns.org/types-of-dark-pattern/trick-questions", width=370,height=200]
 
 ===== Warenkorb-"Schleicherei"
 Auf manchen Verkaufs-Apps kann es sein, dass man mit einem automatisch aktivierten Optionsfeld ein zusätzliches Produkt hinzugefügt bekommt. Wie beispielsweise auf godaddy.com
@@ -180,7 +221,7 @@ Auf manchen Verkaufs-Apps kann es sein, dass man mit einem automatisch aktiviert
 Das Design und das Nutzererlebnis machen es möglichst einfach etwas zu kaufen, aber im Nachhinein sehr schwer es wieder abzubestellen. Dadurch muss man oft Umwege durch die App nehmen.
 
 ===== Ablenkung
-Das Design wird entsprechend gestaltet, dass der User unterbewusst seine Aufmerksamkeit auf etwas lenkt und etwas anderes wichtiges vernachlässigt oder sogar übersieht. Wenn beispielsweise etwas groß funkelt angezeigt wird, schaut der Mensch automatisch.
+Das Design wird entsprechend gestaltet, dass der User unterbewusst seine Aufmerksamkeit auf etwas lenkt und etwas anderes wichtiges vernachlässigt oder sogar übersieht. Wenn beispielsweise etwas groß funkelt, angezeigt wird, schaut der Mensch automatisch.
 
 ===== Versteckte Kosten
 Dem User werden erst kurz vor dem Check-out Prozess alle Kosten angezeigt und nicht vorher.
@@ -192,15 +233,17 @@ Zahlreiche Beispiele sind unter https://confirmshaming.tumblr.com zu finden.
 
 === Wie sollte man UI-Design Patterns anwenden?
 
-Zunächst ist wichtig zu verstehen, dass man nicht einfach mit einzelnen UI-Design Patterns eine grafische Oberfläche erstellen kann oder eher sollte. Zuerst muss man diese noch speziell für den eigenen Use-case anpassen.
+Zunächst ist wichtig zu verstehen, dass man nicht einfach mit einzelnem UI-Design Patterns eine grafische Oberfläche erstellen kann oder eher sollte. Zuerst muss man diese noch speziell für den eigenen Use Case anpassen.
 
-Beschreibe das Problem, welches aktuell bearbeitet wird. Dann wäre ein Blick in eine UI-Design Pattern Library empfehlenswert, wie anderen Designers ähnliche Lösungen entwickelt haben. Danach stellen sich die Frage, was man daraus lernen kann im Bezug zu dem eigenen Problem und erstellt im Anschluss seine eigene Lösung.
+Beschreibe das Problem, welches aktuell bearbeitet wird. Dann wäre ein Blick in eine UI-Design Pattern Library empfehlenswert, wie anderen Designers ähnliche Lösungen entwickelt haben. Danach stellen sich die Frage, was man daraus lernen kann in Bezug zu dem eigenen Problem und erstellt im Anschluss seine eigene Lösung.footnote:UIpatterns[]
 
 === Beliebteste UI-Patterns Library
 
-In dem gesamten Wide World Web gibt sehr viele UI-Design Libraries. Zu Beginn sollte man sich nicht nur auf eine fokussieren und in der weiteren Folge wird man seine Lieblings-Library finden.
+In dem gesamten World Wide Web gibt sehr viele UI-Design Libraries. Zu Beginn sollte man sich nicht nur auf eine fokussieren und in der weiteren Folge wird man seine Lieblings-Library finden.
 
-Bekanntere UI-Design Libaries sind folgende:
+<<<
+
+*Bekanntere UI-Design Libaries sind folgende:*
 
 1.	https://mobbin.design/patterns
 2.	https://pttrns.com/
@@ -210,12 +253,11 @@ Bekanntere UI-Design Libaries sind folgende:
 
 NOTE: Für Cross Plattform App oder Progressive Web-Apps gibt es wenig bis keine Unterschiede zum Design für iOS oder Android. Bei einer Native-App sieht dies ein wenig anders aus. Man sollte hierbei achten, ob das jeweilige Design des Patterns auf dieser App-Plattform passt.
 
-
 ==== Apple Human Interface Guidelines
 
-Apples eigener AppStore legt im gegensatz zu dem von Mitbewerber Google angebotenen Google Play Store sehr großen Wert auf Standards.
+Apples eigener App Store legt im Gegensatz zu dem von Mitbewerber Google angebotenen Google Play Store sehr großen Wert auf Standards.
 
-Zusammengefasst, sind diese in gesamt 5 Punkten unterteilt:
+Zusammengefasst, sind diese in gesamt 5 Punkten unterteilt: footnote:[vgl. https://developer.apple.com/app-store/review/guidelines/]
 
 1. Safty
 2. Performance
@@ -223,7 +265,7 @@ Zusammengefasst, sind diese in gesamt 5 Punkten unterteilt:
 4. Design
 5. Legal
 
-Sollte eine App nicht die Mindeststandards der UI/UX-Guidelines entsprechen wird die auf dem Weg in den AppStore abgelehnt. Deswegen ist es absolut essenziell für jeden UI/UX-Designer sich mit Apples Vorgaben auseinandergesetzt zu haben.
+Sollte eine App nicht die Mindeststandards der UI/UX-Guidelines entsprechen wird sie auf dem Weg in den App Store abgelehnt. Deswegen ist es absolut essenziell für jeden UI/UX-Designer sich mit Apples Vorgaben auseinandergesetzt zu haben.
 
 Zu finden sind diese Richtlinien von Apple unter: https://developer.apple.com/design/human-interface-guidelines/
 
@@ -233,53 +275,54 @@ Ebenfalls wie Apple besitzt auch Google für ihre Plattform Empfehlungen und Hil
 
 Zu finden sind diese Empfehlungen/Hilfestellungen von Google unter: https://material.io
 
-NOTE: Material.io enthält sowohl Elemente und Components für iOS, Android, Web und dem Frontend-Framework Flutter
+NOTE: Material.io enthält sowohl Elemente und Komponente für iOS, Android, Web und dem Frontend-Framework Flutter
+{blankline}
+
 
 == Weiteres Design
 
-Für eine gelungene App spielen hierbei noch mehrere Faktoren eine Rolle. Es ist vielmehr ein Zusammenspiel von zusätzlich, einerseits der *Farbwahl*, welche man keineswegs von sowohl ihren Nutzen und Effektivität nicht unterschätzen darf und andererseits der *Typographie*.
+Für eine gelungene App spielen hierbei noch mehrere Faktoren eine Rolle. Es ist vielmehr ein Zusammenspiel von zusätzlich, einerseits der *Farbwahl*, welche man keineswegs von sowohl ihren Nutzen und Effektivität nicht unterschätzen darf und andererseits der *Typografie*.
 
 === Farbwahl
 
 Eine grundlegende Entscheidung für jede mobile App wird jene sein eine geeignete Farbe zu suchen. Deswegen ist es von großer Bedeutung eine Farbpalette mit Bedacht auszuwählen.
 Zusätzlich spielen Farben ebenso auch in der Psychologie des Menschen eine Rolle, mit Emotionen und Gefühlen, welche unterbewusst ausgelöst werden.
 
-Deswegen verhilft die sogenannte Color Theory diesen Prozess der Farbwahl zu beschleunigen. Dieser umfasst zudem das Color Wheel.
+Deswegen verhilft die sogenannte Color Theory diesen Prozess der Farbwahl zu beschleunigen. Dieser umfasst zudem das Color Wheel.footnote:Color[vgl. https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm]
 
 ==== Das Color Wheel
 
-image::../images/ColorWheel.png[title = "Das Color Wheel", width=300,height=300]
+image::../images/ColorWheel.png[title = "Das Color Wheel, Quelle: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors", width=300,height=300]
 
 Der Aufgabenbereich des Color wheel, auch Farbkreis genannt, besteht darin Beziehungen zwischen Primär-, Sekundär,- und Tertitärfarbe aufzuzeigen. Einen ersten Entwurf lieferte im Jahre 1666 Sir Isaac Newton.
 
-Dabei umfassen diese Primärfarben Blau, Rot und Gelb. Aus diesen Grundfarben ergeben sich wiederum die Sekundärfarben Grün, Orange und Violett. Die zusätzlichen Tertiärfarben sind im Anschluss grün-gelb, gelb-orange, orange-rot, rot-violett, violett-blau und blau-grün.
+Dabei umfassen diese Primärfarben Blau, Rot und Gelb. Aus diesen Grundfarben ergeben sich wiederum die Sekundärfarben Grün, Orange und Violett. Die zusätzlichen Tertiärfarben sind im Anschluss grün-gelb, gelb-orange, orange-rot, rot-violett, violett-blau und blau-grün.footnote:Color[]
 
 
 ===== Warme und kühle Farben
 
-image::../images/WarmColdWheel.png[title = "Warme oder kalte Farben im Color Wheel", width=200,height=200]
+image::../images/WarmColdWheel.png[title = "Warme oder kalte Farben im Color Wheel, Quelle: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors", width=200,height=200]
 
-Grundsätzlich kann man Farben in zwei große Überkategorien fassen. Da die Augen warme oder kaltes Licht speziell war nehmen, gilt dies ebenso bei Farben. Es werden beispielsweise die Farben von Rot über Orange bis Gelb als warme Farbe bezeichnet, da der Mensch diese mit warmen Gegebenheiten assoziiert, wie das Feuer (Rot-Orange) und die Sonne (Gelb). Dem Gegenübergestellt sind die kühlenden Farben. Mit Blau wird beispielweise kühles frisches Wasser verbunden.
+Grundsätzlich kann man Farben in zwei große Überkategorien fassen. Da die Augen warme oder kaltes Licht speziell war nehmen, gilt dies ebenso bei Farben. Es werden beispielsweise die Farben von Rot über Orange bis Gelb als warme Farbe bezeichnet, da der Mensch diese mit warmen Gegebenheiten assoziiert, wie das Feuer (Rot-Orange) und die Sonne (Gelb). Dem Gegenübergestellt sind die kühlenden Farben. Mit Blau wird beispielweise kühles frisches Wasser verbunden.footnote:Color[]
 
 ===== Farbharmonie
 
 Um passende Farben für das User Interface auszuwählen ist es wichtig eine gewisse Harmonie zwischen den Farben aufzubauen.
 
-**Hierfür gibt es mehrere Möglichkeiten Farben zu bestimmen:
-**
+**Hierfür gibt es mehrere Möglichkeiten Farben zu bestimmen:** footnote:Color[]
 
 <<<
 
 ===== Monochromatische Farbvariante
-Die monochromatische Farbvariante besteht aus mehreren Farbtönen aus desselben Primärfarbe. Diese entstehen, wenn man diese Farbe heller oder dunkler aussehen lässt
+Die monochromatische Farbvariante besteht aus mehreren Farbtönen aus derselben Primärfarbe. Diese entstehen, wenn man diese Farbe heller oder dunkler aussehen lässt.footnote:Color[]
 
 {blankline}
 
 ===== Komplementäre Farbvariante
 
-image::../images/Komplementaer.png[title = "Eine komplementäre Farbmischung", width=100,height=100]
+image::../images/Komplementaer.png[title = "Eine komplementäre Farbmischung, Quelle: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors", width=100,height=100]
 
-Komplementärfarben sind in den meisten Fällen schwierig anwendbar, funktionieren dennoch als Farben, damit ein Element auffällig aussieht.
+Komplementärfarben sind in den meisten Fällen schwierig anwendbar, funktionieren dennoch als Farben, damit ein Element auffällig aussieht.footnote:Color[]
 
 NOTE: Komplementärfarben sind schlecht für Text geeignet.
 
@@ -287,31 +330,27 @@ NOTE: Komplementärfarben sind schlecht für Text geeignet.
 
 ===== Analoge Farbvariante
 
-image::../images/Analog.png[title = "Eine analoge Farbmischung", width=100,height=100]
+image::../images/Analog.png[title = "Eine analoge Farbmischung, Quelle: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors", width=100,height=100]
 
 Da diese Farben sehr nah nebeneinander liegen, fungieren diese einheitlich. Diese Farbkombination lässt sich vor allem in der Natur vorfinden und ist dem menschlichen Auge sehr angenehm.
-Üblicherweise verwendet man eine dominante Farbe, eine Zweite zur Unterstützung und zusätzlich eine dritte als Akzentfarbe.
+Üblicherweise verwendet man eine dominante Farbe, eine Zweite zur Unterstützung und zusätzlich eine dritte als Akzentfarbe.footnote:Color[]
 
 
 ===== Triadische Farbvariante
 
-image::../images/Triadisch.png[title = "Eine triadische Farbmischung", width=100,height=100]
+image::../images/Triadisch.png[title = "Eine triadische Farbmischung, Quelle: https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors", width=100,height=100]
 
-Aufgrund dieser Farbkombination wird eine lebendigere Stimmung erzeugt, mit der zusätzlich, im Gegensatz zur analogen Variante, mehr Kontrast zum Vorschein kommt. Üblicherweise wird eine dominantere ausgewählt und die restlichen Farben nur zur Unterstützung verwendet.
-
-<<<
+Aufgrund dieser Farbkombination wird eine lebendigere Stimmung erzeugt, mit der zusätzlich, im Gegensatz zur analogen Variante, mehr Kontrast zum Vorschein kommt. Üblicherweise wird eine dominantere ausgewählt und die restlichen Farben nur zur Unterstützung verwendet.footnote:Color[]
 
 ==== Welche Farben für welche App?
 Für die Gestaltung des Frontends darf man die Wichtigkeit und Wirkung dieser niemals unterschätzen.
 Mit einer adäquaten Farbgestaltung des UI kann man dem User positiv emotional und unterbewusst beeinflussen. Beispielsweise strahlt die Farbe Blau Ruhe, Objektivität, Neutralität und Klarheit. Dieses verstärkt das Vertrauen der User und gibt diesen ein sicheres Gefühl als bei anderen Farben.
 
-image::../images/Startpage.png[title = "Blau wäre eine Option für eine Payment-App", width= 220,height=600]
+image::../images/Startpage.png[title = "Blau wäre eine Option für eine vertrauenswürdige Payment-App", width= 120,height=350]
 
 
 ==== Corporate Identity
-Die sogenannte Corporate Identity ist das Selbstbild jedes Unternehmens. Es umfasst alle Strategien, welche zu einer besseren, sowohl Firmeninternen und -externen, Ausstrahlung verhelfen.
-
-<<<
+Die sogenannte Corporate Identity ist das Selbstbild jedes Unternehmens. Es umfasst alle Strategien, welche zu einer besseren, sowohl Firmeninternen und -externen, Ausstrahlung verhelfen.footnote:Color[vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/]
 
 **Eine Corporate Identity wird in weitere Untergebiete unterteilt:**
 
@@ -328,9 +367,9 @@ Das CD richtet sich spezifisch auf den Wiedererkennungseffekt eines Unternehmens
 Grundsätzlich ist davon auszugehen, dass die Farbwahl mit denen des Firmenlogos möglichst übereinstimmen sollte, wenn dieses in der App verwendet werden soll, da dadurch ein größerer Wiedererkennungseffekt von der App ausgestrahlt wird. In Summe umfasst das Corporate Design sämtliche Bereiche um die Farbauswahl, Logodesign und Schriftdesign.
 
 === Typografie
-In der weiten Welt der App-Entwicklung werden ungefähr 95% des gesamten Contents über Text dargestellt. Das heißt, dass der User egal ob bewusst oder unterbewusst mit dem Text kommunizieren wird. Wenn ein Logo beispielsweise ein einen Schriftzug beherbergt, fällt dieser immer dem menschlichen Auge zuerst auf. Dies unterstreicht die Wichtigkeit von Typografie.
+In der weiten Welt der App-Entwicklung werden ungefähr 95% des gesamten Contents über Text dargestellt. Das heißt, dass der User egal ob bewusst oder unterbewusst mit dem Text kommunizieren wird. Wenn ein Logo beispielsweise ein einen Schriftzug beherbergt, fällt dieser immer dem menschlichen Auge zuerst auf. Dies unterstreicht die Wichtigkeit von Typografie.footnote:Typo[vgl. https://de.yeeply.com/blog/app-design-die-bedeutung-der-typografie/]
 
-NOTE: Bei iOS und Android-Apps sind der Default-Schriftzug Roboto beziehungsweise Helvetica Neue.
+NOTE: Bei iOS und Android-Apps sind der Default-Schriftzug Roboto beziehungsweise Helvetica Neue.footnote:[vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design]
 
 ==== Lesbarkeit
 Obwohl Smartphones mit der Zeit tendenziell größer werden, ist es auf den kleinen Bildschirm nicht immer leicht viel Text unterzubringen. Besonders für Apps die großen Mengen an Text dem User aufbereiten, ist die Lesbarkeit sehr von Bedeutung. Optimal wäre es vor allem auch im mobilen App Bereich lesbare Schrift, welche auch bei direkter Sonneneinstrahlung gut lesbar ist.
@@ -338,83 +377,87 @@ Obwohl Smartphones mit der Zeit tendenziell größer werden, ist es auf den klei
 
 ==== Professionalität:
 Die Schriftart sollte stets mit dem Image der App und der eigentlichen Zielgruppe
-übereinstimmen. Wenn beispielsweise eine Banking-App keine seriöse Schrift wählt, verunsichert dies viele Kunden.
+übereinstimmen. Wenn beispielsweise eine Banking-App keine seriöse Schrift wählt, verunsichert dies viele Kunden.footnote:Typo[]
 
 ==== Schriftgröße
-Die Guidelines von Apple geben Aufschluss darüber, dass bei iOS-Apps die Schriftgröße nur zwischen 11 und 17p betragen darf. Für Android-Apps ist diese Richtlinie ebenfalls legitim. Zu beachten gilt weiter auch, dass die ungefähre Zeichenanzahl pro Linie im Hochformat bei 35bis 50 liegt. Dadurch entsteht die Herausforderung Sätze nicht kompliziert zu halten und dennoch genug Informationen an den User zu bringen.
+Die Guidelines von Apple geben Aufschluss darüber, dass bei iOS-Apps die Schriftgröße nur zwischen 11 und 17p betragen darf. Für Android-Apps ist diese Richtlinie ebenfalls legitim. Zu beachten gilt weiter auch, dass die ungefähre Zeichenanzahl pro Linie im Hochformat bei 35bis 50 liegt. Dadurch entsteht die Herausforderung Sätze nicht kompliziert zu halten und dennoch genug Informationen an den User zu bringen.footnote:Typo[]
 
 ==== Kontrast
-Ebenso wichtig ist auch der Spielraum zwischen Buchstaben und dem Hintergrund. Den Besten Kontrast liefert dementsprechend schwarz auch weiß. Allerdings soll hier auch Bezug genommen werden zum Logo, Corporate Design etc…
+Ebenso wichtig ist auch der Spielraum zwischen Buchstaben und dem Hintergrund. Den Besten Kontrast liefert dementsprechend schwarz auch weiß. Allerdings soll hier auch Bezug genommen werden zum Logo, Corporate Design etc.footnote:Typo[]
 
 
 == Accessibility und Internationalisierung
-Heutzutage bestehen Apps im Gegensatz zu früher, aus mehr als nur Funktionalen Features. Mehr Design, mehr Experience, mehr Usability sind die Folge um User zufriedenzustellen und nicht mehr wegzudenken. Jedoch wird sehr schnell die Bedeutung von Accessability vergessen, also eine Hilfestellung für Beeinträchtigte Menschen.
+Heutzutage bestehen Apps im Gegensatz zu früher, aus mehr als nur funktionalen Features. Mehr Design, mehr Experience, mehr Usability sind die Folge um User zufriedenzustellen und nicht mehr wegzudenken. Jedoch wird sehr schnell die Bedeutung von Accessability vergessen, also eine Hilfestellung für beeinträchtigte Menschen.
 
-[quote, MARIA DE LA RIVA. (2020, 12. August), What Are User Interface (UI) Design Patterns? Everything You Need To Know; Careerfoundry]
+[quote, Caspar Geerlings (2019, 21. Oktober): How to create an accessible app (and why you should); Quelle: https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb]
 __„Whilst many development teams see accessibility as a ‘nice-to-have’, it is crucial in today’s mobile world.“
 __
 
-„Whilst many development teams see accessibility as a ‘nice-to-have’, it is crucial in today’s mobile world.“
-
 === Warum sollte man auf Accessibility Bezug nehmen?
-Ein großes Missverständnis liegt auf Accessibility. Viele UI- und UX-Designer, sowie Entwickler nehmen dies als optionales Feature war. Jedoch wird geschätzt, dass ungefähr 15%, also 1.000.000.000 Menschen davon betroffen sind. Zusätzlich möchte der User eventuell auch die App während dem Autofahren oder beim Joggen verwenden. Das bedeutet, dass es auf jeden Fall sinnvoll und in der heutigen Welt essentiell geworden ist, seine App accessible zu designen und entwickeln.
+Ein großes Missverständnis liegt auf Accessibility. Viele UI- und UX-Designer, sowie Entwickler nehmen dies als optionales Feature war. Jedoch wird geschätzt, dass ungefähr 15%, also 1.000.000.000 Menschen davon betroffen sind.footnote:[vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design] Zusätzlich möchte der User eventuell auch die App während dem Autofahren oder beim Joggen verwenden. Das bedeutet, dass es auf jeden Fall sinnvoll und in der heutigen Welt essentiell geworden ist, seine App accessible zu designen und entwickeln.footnote:Access[vgl. https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb]
 
-
-https://www.bizeps.or.at/neuer-who-bericht-weltweit-1-milliarde-behinderte-menschen/
 
 === Auf was achten?
-Um für möglichst viele User verfügbar zu sein, sollte man ebenso auf die verschiedenen Aspekte der Accessibility eingehen. Was sind die Bedürfnisse, die daraus resultieren? Was brauchen die User?
+Um für möglichst viele User verfügbar zu sein, sollte man ebenso auf die verschiedenen Aspekte der Accessibility eingehen. Was sind die Bedürfnisse, die daraus resultieren? Was brauchen die User?footnote:Access[]
 
 ==== Sehschwäche
-Da man hauptsächlich mit den visuell mit dem Smartphone kommuniziert, ist dies ein großes Hinderniss für zahlreiche Menschen. Hinzu kommen mehrere Ausprägungen, wie Farbenblindheit und Blindheit über mehrere Stufen bis zum kompletten Sehverlust. Abhilfe schafft hier nicht explitzit auf Farben zu setzten und das UI ebenfalls auch anders zu gestalten, z.B. größeren Zoom der Texte auf 200% erlauben etc. Zusätzlich würde es der Accessibility gut tun einen Screen Reader oder ähnlich einzubinden.
+Da man hauptsächlich mit den visuell mit dem Smartphone kommuniziert, ist dies ein großes Hinderniss für zahlreiche Menschen. Hinzu kommen mehrere Ausprägungen, wie Farbenblindheit und Blindheit über mehrere Stufen bis zum kompletten Sehverlust. Abhilfe schafft hier nicht explitzit auf Farben zu setzten und das UI ebenfalls auch anders zu gestalten, z.B. größeren Zoom der Texte auf 200% erlauben etc. Zusätzlich würde es der Accessibility gut tun einen Screen Reader oder ähnlich einzubinden.footnote:Access[]
 
-image::../images/Zoom.png[title = "Beispiel für größere Schrift", width= 800,height=640]
+image::../images/Zoom.png[title = "Beispiel für größere Schrift", width= 500, height=500]
 
 
 ==== Hörschwäche
-Diese Beeinträchtigung ist normallerweise bei Apps kein allzu großes Problem. Bei Videos oder Sound-files könnten als Option zusätzlich mittels Transkription angezeigt werden.
+Diese Beeinträchtigung ist normallerweise bei Apps kein allzu großes Problem. Bei Videos oder Sound-files könnten als Option zusätzlich mittels Transkription angezeigt werden.footnote:Access[]
 
 ==== Lernschwäche
-Unter diesem Übergriff werden sämtliche Konzentrations-, Lese- und Schreibschwächen gemeint. Diese kann beispielsweise mit kurzen Sätzen, mehr Icons oder über Spracheingabe statt dem Schreiben in der Smartphone-App optimieren.
+Unter diesem Übergriff werden sämtliche Konzentrations-, Lese- und Schreibschwächen gemeint. Diese kann beispielsweise mit kurzen Sätzen, mehr Icons oder über Spracheingabe statt dem Schreiben in der Smartphone-App optimieren.footnote:Access[]
 
 ==== Was liefern Apple and Google?
 Da sowohl die Betriebssysteme iOS und Android zahlreiche Accessibility-Features in ihr Ecosystem integriert haben, sind diese Funktionen ebenso für Apps verwendbar.
 
-*Gängige iOS-Features sind:*
+*Gängige iOS-Features sind:* footnote:Access2[vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020/]
 
 • Untertitel und Audiobeschreibungen
-•Voice-over
+• Voice-over
 • Übersetzung
-•Geführter Zugang
+• Geführter Zugang
 • Anpassung anzeigen
 
-*Gängige Android-Features sind:*
+*Gängige Android-Features sind:* footnote:Access2[]
 
 •	Audio und Bildschirmtext
 •	Anzeigeoptionen
 •	Interaktionskontrollen
 •	Screenreader
 
-=== Internationalisierung
-Um global zu denken und eine mobile App erfolgreich über Vertriebskanäle wie gängige App-Stores zu vertreiben ist es äußerst ratsam ebenfalls diese in möglichst viele Sprachen zu übersetzen. In der IT-Welt ist auch häufig von i18n die Rede. Dies hat den folgenden Hintergrund, da genau 18 Buchstaben zwischen dem I und dem n von Internationatization sind.
+<<<
 
-Aus der Praxis empfiehlt sich zumindest eine App als absolute Mindestanforderung in Englisch bereitzustellen. Bestenfalls sogar in die meistgesprochene Sprache der Welt. Diese sind beispielsweise: Englisch, Deutsch, Französisch, Spanisch, Portuguisisch, Italienisch, Japanisch und Russisch. Sei gesagt, dass dies vorwiegend von westlichen Ländern gesprochen wird, da in anderen bevölkerungsstarken Ländern, wie China und Indien mehrere Sprachen gesprochen werden.
+=== Internationalisierung
+Um global zu denken und eine mobile App erfolgreich über Vertriebskanäle wie gängige App-Stores zu vertreiben ist es äußerst ratsam ebenfalls diese in möglichst viele Sprachen zu übersetzen. In der IT-Welt ist auch häufig von i18n die Rede. Dies hat den folgenden Hintergrund, da genau 18 Buchstaben zwischen dem _"I"_ und dem _"n"_ von Internationalization sind.
+
+Aus der Praxis empfiehlt sich zumindest eine App, als absolute Mindestanforderung in Englisch bereitzustellen. Bestenfalls sogar in die meistgesprochene Sprache der Welt. Diese sind beispielsweise: Englisch, Deutsch, Französisch, Spanisch, Portuguisisch, Italienisch, Japanisch und Russisch. Sei gesagt, dass dies vorwiegend von westlichen Ländern gesprochen wird, da in anderen bevölkerungsstarken Ländern, wie China und Indien mehrere Sprachen gesprochen werden.
 
 image::../images/Languages.png[title = "Eine App in mehere Sprachen ist mittlerweile schon Pflicht", width= 220,height=640]
 
 ==== Lokalisierung
+
 Lokalisierung auch l10n genannt ist die Anpassung von nicht textlichen Elementen wie Formatierung von Datum, Uhrzeit, Adressen, Icons und Währungen etc.
-Die bewahrheitet sich in der Entwicklung als sehr mühsam, aber erhöht und verbessert den Komfort und die User Experience der Nutzer.
+Die bewahrheitet sich in der Entwicklung als sehr mühsam, aber erhöht und verbessert den Komfort und die User Experience der Nutzer.footnote:[vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26/]
 
 image::../images/Lokalisierung.png[title = "Beim Warenkorb sind besipielsweise das Datum und die Währung wichtig", width= 220,height=640]
+{blankline}
 
 
 
 [glossar]
 == Glossar
 
-Build Tool:: Automatisiert den Prozess der Bildung ausführbarer Dateien. Software wird erstellt und beispielsweise werden nötige Dependencies heruntergeladen und verwaltet.
-CLI:: Ist das Command Line Interface, welches es ermöglicht, Kommandos auszuführen.
+HTML:: Ist die Grundstruktur, mit der Websites aufgebaut sind und Text dargestellt werden.
+Wireframes:: Ein visueller Design-Entwurf, wie Elemente in einer App dargestellt werden.
+Click-Dummys:: Ist eine reine Frontend-Applikation zum Testen, ohne Backend-Zugriff und komplexere Funktionen.
+Cross-Plattform Apps:: Ein Framework, welches dem Frontend ermöglicht auf iOS und Android lauffähig zu sein.
+PWA:: Progressive Web Apps sind Websites, welche zusätzlich als mobile Apps optimiert sind.
+
 
 [quellen]
 == Quellen
@@ -423,11 +466,77 @@ CLI:: Ist das Command Line Interface, welches es ermöglicht, Kommandos auszufü
 |===
 ^|Beschreibung ^|Quelle ^|Letzter Zugriff
 
-|Java EE Architektur: Grafik nachmodelliert
-|http://pawlan.com/monica/articles/j2eearch/art/container1.jpg
-|29.03.2021
+|Prenger C. (2019 14. August): matter-of-design
+|https://matter-of-design.com/darum-ist-user-experience-so-wichtig
+|06.04.2021
 
-|Java EE vs. Spring
-|https://blog.doubleslash.de/jee-vs-spring-gemeinsamkeiten-unterschiede-und-entscheidungskriterien/
-|03.04.2021
+|Seobility: Usability
+|vgl. https://www.seobility.net/de/wiki/Usability
+|07.04.2021
+
+|Wikipedia: Tim Berners-Lee
+|vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee
+|07.04.2021
+
+|Technikum-wien: WAS IST UX-DESIGN?
+|vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design/
+|07.04.2021
+
+|Medium: UX/UI Design Process (Bild)
+|https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241
+|07.04.2021
+
+|Uxmatters: Mobile App UX Design Process
+|vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php
+|07.04.2021
+
+|Mobileappdaily: Mobile App Design Guidelines to Build an App Users Love
+|vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines
+|07.04.2021
+
+|Careerfoundry: What Are User Interface (UI) Design Patterns? Everything You Need To Know
+|vgl. https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns
+|07.04.2021
+
+|Darkpatterns: TYPES OF DARK PATTERN
+|vgl. https://www.darkpatterns.org/types-of-dark-pattern
+|07.04.2021
+
+|Apple Inc.: App Store Review Guidelines
+|vgl. https://developer.apple.com/app-store/review/guidelines/
+|07.04.2021
+
+|Tigercolor: Basic color schemes - Introduction to Color Theory
+|vgl. https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm
+|07.04.2021
+
+|Tigercolor: Basic color schemes - Introduction to Color Theory (Bilder)
+|https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors
+|07.04.2021
+
+|Ionos: Corporate Identity
+|vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/
+|07.04.2021
+
+|Yeeply: App Design: Die Bedeutung der Typografie
+|vgl. https://de.yeeply.com/blog/app-design-die-bedeutung-der-typografie/
+|07.04.2021
+
+|Mobilbranche: 3 typografische Fauxpas im App-Design.
+|vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design
+|07.04.2021
+
+|Medium: How to create an accessible app (and why you should)
+|vgl. https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb
+|07.04.2021
+
+|Plusqa: The Best Accessibility Apps in 2020
+|vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020/
+|07.04.2021
+
+|Infopulse: Internationalisierung der mobilen Apps: Wege und Methoden zur Steigerung der Einnahmen um 26%
+|vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26/
+|07.04.2021
+
+
 |===
