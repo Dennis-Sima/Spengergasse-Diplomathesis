@@ -1,11 +1,9 @@
 [abstract]
 == Abstract
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Diese Arbeit bietet die Grundlage für User Interface- und User Experience-Design Guidelines für mobile Applikationen. Es werden nicht die Basics des App-Designs erklärt, sondern auch Themen, wie Accessibility, Internationalisierung etc., welche für eine moderne Smartphone-App oftmals entscheident sein können, um erfolgreich zu werden.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Es ist dennoch zu beachten, dass es sich um keine vollständige Richtlinien handelt, da diese Schriftfassung als kompakte Recherche zum Thema UI und UX dienen soll in einem für den Leser einfachen dünnen Format.
 
 
 == Warum ist UI und UX wichtig?
@@ -344,7 +342,7 @@ image::../images/Startpage.png[title = "Blau wäre eine Option für eine vertrau
 
 
 ==== Corporate Identity
-Die sogenannte Corporate Identity ist das Selbstbild jedes Unternehmens. Es umfasst alle Strategien, welche zu einer besseren, sowohl Firmeninternen und -externen, Ausstrahlung verhelfen.footnote:Color[vgl. vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/]
+Die sogenannte Corporate Identity ist das Selbstbild jedes Unternehmens. Es umfasst alle Strategien, welche zu einer besseren, sowohl Firmeninternen und -externen, Ausstrahlung verhelfen.footnote:Color[vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/]
 
 **Eine Corporate Identity wird in weitere Untergebiete unterteilt:**
 
@@ -377,7 +375,7 @@ Die Schriftart sollte stets mit dem Image der App und der eigentlichen Zielgrupp
 Die Guidelines von Apple geben Aufschluss darüber, dass bei iOS-Apps die Schriftgröße nur zwischen 11 und 17p betragen darf. Für Android-Apps ist diese Richtlinie ebenfalls legitim. Zu beachten gilt weiter auch, dass die ungefähre Zeichenanzahl pro Linie im Hochformat bei 35bis 50 liegt. Dadurch entsteht die Herausforderung Sätze nicht kompliziert zu halten und dennoch genug Informationen an den User zu bringen.footnote:Typo[]
 
 ==== Kontrast
-Ebenso wichtig ist auch der Spielraum zwischen Buchstaben und dem Hintergrund. Den Besten Kontrast liefert dementsprechend schwarz auch weiß. Allerdings soll hier auch Bezug genommen werden zum Logo, Corporate Design etc.foodnote:Typo[]
+Ebenso wichtig ist auch der Spielraum zwischen Buchstaben und dem Hintergrund. Den Besten Kontrast liefert dementsprechend schwarz auch weiß. Allerdings soll hier auch Bezug genommen werden zum Logo, Corporate Design etc.footnote:Typo[]
 
 
 == Accessibility und Internationalisierung
@@ -409,7 +407,7 @@ Unter diesem Übergriff werden sämtliche Konzentrations-, Lese- und Schreibschw
 ==== Was liefern Apple and Google?
 Da sowohl die Betriebssysteme iOS und Android zahlreiche Accessibility-Features in ihr Ecosystem integriert haben, sind diese Funktionen ebenso für Apps verwendbar.
 
-*Gängige iOS-Features sind:*
+*Gängige iOS-Features sind:* footnote:Access2[vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020/]
 
 • Untertitel und Audiobeschreibungen
 • Voice-over
@@ -417,7 +415,7 @@ Da sowohl die Betriebssysteme iOS und Android zahlreiche Accessibility-Features 
 • Geführter Zugang
 • Anpassung anzeigen
 
-*Gängige Android-Features sind:*
+*Gängige Android-Features sind:* footnote:Access2[]
 
 •	Audio und Bildschirmtext
 •	Anzeigeoptionen
@@ -446,8 +444,12 @@ image::../images/Lokalisierung.png[title = "Beim Warenkorb sind besipielsweise d
 [glossar]
 == Glossar
 
-Build Tool:: Automatisiert den Prozess der Bildung ausführbarer Dateien. Software wird erstellt und beispielsweise werden nötige Dependencies heruntergeladen und verwaltet.
-CLI:: Ist das Command Line Interface, welches es ermöglicht, Kommandos auszuführen.
+HTML:: Ist die Grundstruktur, mit der Websites aufgebaut sind und Text dargestellt werden.
+Wireframes:: Ein visueller Design-Entwurf, wie Elemente in einer App dargestellt werden.
+Click-Dummys:: Ist eine reine Frontend-Applikation zum Testen, ohne Backend-Zugriff und komplexere Funktionen.
+Cross-Plattform Apps:: Ein Framework, welches dem Frontend ermöglicht auf iOS und Android lauffähig zu sein.
+PWA:: Progressive Web Apps sind Websites, welche zusätzlich als mobile Apps optimiert sind.
+
 
 [quellen]
 == Quellen
@@ -456,11 +458,77 @@ CLI:: Ist das Command Line Interface, welches es ermöglicht, Kommandos auszufü
 |===
 ^|Beschreibung ^|Quelle ^|Letzter Zugriff
 
-|Java EE Architektur: Grafik nachmodelliert
-|http://pawlan.com/monica/articles/j2eearch/art/container1.jpg
-|29.03.2021
+|Prenger C. (2019 14. August): matter-of-design
+|https://matter-of-design.com/darum-ist-user-experience-so-wichtig
+|06.04.2021
 
-|Java EE vs. Spring
-|https://blog.doubleslash.de/jee-vs-spring-gemeinsamkeiten-unterschiede-und-entscheidungskriterien/
-|03.04.2021
+|Seobility: Usability
+|vgl. https://www.seobility.net/de/wiki/Usability
+|07.04.2021
+
+|Wikipedia: Tim Berners-Lee
+|vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee
+|07.04.2021
+
+|Technikum-wien: WAS IST UX-DESIGN?
+|vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design/
+|07.04.2021
+
+|Medium: UX/UI Design Process (Bild)
+|https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241
+|07.04.2021
+
+|Uxmatters: Mobile App UX Design Process
+|vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php
+|07.04.2021
+
+|Mobileappdaily: Mobile App Design Guidelines to Build an App Users Love
+|vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines
+|07.04.2021
+
+|Careerfoundry: What Are User Interface (UI) Design Patterns? Everything You Need To Know
+|vgl. https://careerfoundry.com/en/blog/ui-design/user-interface-patterns/#1-what-are-ui-design-patterns
+|07.04.2021
+
+|Darkpatterns: TYPES OF DARK PATTERN
+|vgl. https://www.darkpatterns.org/types-of-dark-pattern
+|07.04.2021
+
+|Apple Inc.: App Store Review Guidelines
+|vgl. https://developer.apple.com/app-store/review/guidelines/
+|07.04.2021
+
+|Tigercolor: Basic color schemes - Introduction to Color Theory
+|vgl. https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm
+|07.04.2021
+
+|Tigercolor: Basic color schemes - Introduction to Color Theory (Bilder)
+|https://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#Primary_colors
+|07.04.2021
+
+|Ionos: Corporate Identity
+|vgl. https://www.ionos.at/startupguide/unternehmensfuehrung/corporate-identity/
+|07.04.2021
+
+|Yeeply: App Design: Die Bedeutung der Typografie
+|vgl. https://de.yeeply.com/blog/app-design-die-bedeutung-der-typografie/
+|07.04.2021
+
+|Mobilbranche: 3 typografische Fauxpas im App-Design.
+|vgl. https://mobilbranche.de/2014/08/typografie-beim-app-design
+|07.04.2021
+
+|Medium: How to create an accessible app (and why you should)
+|vgl. https://medium.com/oberonamsterdam/how-to-create-an-accessible-app-and-why-you-should-5493f41f8bdb
+|07.04.2021
+
+|Plusqa: The Best Accessibility Apps in 2020
+|vgl. https://plusqa.com/2020/03/26/the-best-accessibility-apps-in-2020/
+|07.04.2021
+
+|Infopulse: Internationalisierung der mobilen Apps: Wege und Methoden zur Steigerung der Einnahmen um 26%
+|vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26/
+|07.04.2021
+
+
 |===
