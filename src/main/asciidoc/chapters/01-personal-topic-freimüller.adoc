@@ -47,7 +47,7 @@ gibt. Sollte es eine geben, wird bewertet, wie gut und übersichtlich die Dokume
 
 Je weniger Codezeilen benötigt werden, um ein Beispiel in der jeweiligen Sprache zu programmieren
 desto mehr Punkte werden hier vergeben.
-Als Grundlage wird der Code von der Sprache genommen, die am wenigsten Zeilen für das jeweilige
+Als Grundlage wird der Code von der Sprache genommen, welche am wenigsten Zeilen für das jeweilige
 Beispiel benötigt.
 
 Eine Zeile ist:
@@ -143,7 +143,7 @@ Kotlin belegt auf dem Tiobe Index den 39ten Platz.
 
 === Groovy
 
-Apache Groovy ist eine OpenSource general purpose language, in der man sowohl Skripte schreiben kann als auch, wie in Java, objektorientierte
+Apache Groovy ist eine OpenSource general purpose language, in der man sowohl Skripte schreiben, als auch, wie in Java, objektorientierte
 Applikationen erstellen kann. Außerdem wird auch funktionale Programmierung in Groovy unterstützt.
 Groovy kann, wie Java und Kotlin auch, in etlichen Anwendungsfällen verwendet werden und man kann alle Java Bibliotheken
 auch in Groovy verwenden.
@@ -157,7 +157,7 @@ Groovy ist auf dem 17ten Platz auf dem Tiobe Index und hat damit seit dem letzte
 
 Scala ist eine general purpose langauge mit voller Java Interoperabilität und wurde von Martin Odersky entwickelt.
 Die erste Version von Scala wurde am 20.01.2004 veröffentlicht und die Sprache wird immer noch weiterentwickelt.
-Wie bei den vorherigen Sprachen kann Scala für sehr viele Anwendungsfälle verwendet werden.
+Wie bei den vorherigen Sprachen auch kann Scala für sehr viele Anwendungsfälle verwendet werden.
 footnote:[Hicks, Matt: Scala vs. Java: Why Should I Learn Scala?, https://www.toptal.com/scala/why-should-i-learn-scala abgerufen am 05.04.2021]
 footnote:[javaTpoint: History of Scala, https://www.javatpoint.com/history-of-scala abgerufen am 05.04.2021]
 
@@ -168,8 +168,8 @@ Auf dem Tiobe Index belegt Scala den 26ten Platz.
 === Clojure
 
 Clojure ist eine funktionale JVM Sprache, die im Jahre 2007 veröffentlicht wurde.
-Mit Clojure kann man sowohl Anwendungen schreiben als auch Skripte, da die Sprache, wie
-alle anderen berücksichtigten JVM Sprachen, eine general purpose language ist, kann man auch mit
+Mit Clojure kann man sowohl Anwendungen schreiben als auch Skripte.
+Da die Sprache, wie alle anderen berücksichtigten JVM Sprachen, eine general purpose language ist, kann man mit
 Clojure Webapplikationen, mobile Applikationen und native Applikationen erstellen.
 footnote:[Hickey, Rich: A history of Clojure, https://download.clojure.org/papers/clojure-hopl-iv-final.pdf abgerufen am 05.04.2021]
 
@@ -196,8 +196,8 @@ _Abbildung 1. Zahlungsanbieterverteilung_
 === REST APIs [Clients]
 
 Da heutzutage sehr viele Services als REST-API zur Verfügung gestellt werden ist es oftmals notwendig,
-REST-APIs mithilfe von Clients anzusprechen. Dies kann sowohl in Mobilapplikationen der Fall sein als auch
-in serverseitigen Anwendungen.
+REST-APIs mithilfe von Clients anzusprechen. Dies kann sowohl in Mobilapplikationen als auch
+in serverseitigen Anwendungen der Fall sein.
 
 === Streaming API
 
@@ -212,11 +212,11 @@ E-Mail APIs werden vor allem in Backend Applikationen benötigt, um Benutzer*inn
 
 In allen Sprachen wird
 
-- Eine Zahlung durchgeführt
-- Die ID der Zahlung gespeichert
-- Der Status der Zahlung mithilfe der ID abgefragt und auf die Konsole ausgegeben
+- eine Zahlung durchgeführt,
+- die ID der Zahlung gespeichert und
+- der Status der Zahlung mithilfe der ID abgefragt und auf die Konsole ausgegeben.
 
-Die verwendete Bibliothek in allen Sprachen ist "stripe-java".
+Die verwendete Bibliothek ist in allen Sprachen "stripe-java".
 
 === Java
 
@@ -247,7 +247,7 @@ public class Payment {
 //Lines: 7
 ----
 
-Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
+Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse aufgerufen.
 
 [source,java]
 ----
@@ -290,8 +290,6 @@ mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 
 *Code Snippet*
 
-Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
-
 [source,kotlin]
 ----
 /* File: Payment.kt */
@@ -317,8 +315,6 @@ class Payment {
 //Lines: 7
 ----
 
-Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
-
 [source,kotlin]
 ----
 /* File: main.kt */
@@ -342,19 +338,17 @@ fun main(args: Array<String>) {
 
 - Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
-Java aber leider nicht Kotlin. Da der Code in Kotlin allerdings fast derselbe ist wie der in Java geschrieben Code
+Java aber leider nicht Kotlin. Da der Code in Kotlin allerdings fast derselbe ist wie der in Java geschriebene Code
 gibt es hier keinen Punkteabzug.-> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
-keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+keine funktionale Programmierung berücksichtigt, diese wäre aber in diesem Fall sinnvoll, da man dadurch zum Beispiel
 mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 
 
 === Groovy
 
 *Code Snippet*
-
-Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
 
 [source,groovy]
 ----
@@ -380,20 +374,18 @@ class Payment {
 //Lines: 7
 ----
 
-Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
-
 [source,groovy]
 ----
 /* File: Main.groovy */
 
-    static main(args) {
-        def options = RequestOptions.builder()
-                .setApiKey(STRIPE_API_KEY)
-                .build()
-        Payment payment = new Payment()
-        String id = payment.makePayment(1000L, PAYMENT_TOKEN, options)
-        println(payment.getStatus(id, options))
-    }
+static main(args) {
+    def options = RequestOptions.builder()
+            .setApiKey(STRIPE_API_KEY)
+            .build()
+    Payment payment = new Payment()
+    String id = payment.makePayment(1000L, PAYMENT_TOKEN, options)
+    println(payment.getStatus(id, options))
+}
 
 //Lines: 5
 ----
@@ -405,11 +397,11 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 
 - Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
-Java aber leider nicht Groovy. Da der Code in Groovy allerdings fast derselbe ist wie der in Java geschrieben Code
+Java aber leider nicht Groovy. Da der Code in Groovy allerdings fast derselbe ist wie der in Java geschriebene Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
-keine funktionale Programmierung berücksichtigt, diese wäre in diesem Fall sinnvoll, da man dadurch zum Beispiel
+keine funktionale Programmierung berücksichtigt, diese wäre aber in diesem Fall sinnvoll, da man dadurch zum Beispiel
 mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 
 
@@ -417,8 +409,6 @@ mithilfe eines Observers auf Änderungen des Status achten könnte. -> 3/5
 === Scala
 
 *Code Snippet*
-
-Zuerst wird eine Klasse erstellt, mit der eine Zahlung getätigt werden kann und die auch den Status per Methode zurückgibt.
 
 [source,scala]
 ----
@@ -444,8 +434,6 @@ class Payment {
 //Lines: 7
 ----
 
-Anschließend werden die RequestOptions festgelegt und die Funktionen der Payment Klasse werden aufgerufen.
-
 [source,scala]
 ----
 /* File: Main.scala */
@@ -469,7 +457,7 @@ Anschließend werden die RequestOptions festgelegt und die Funktionen der Paymen
 
 - Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
-Java aber leider nicht Scala. Da der Code in Scala allerdings fast derselbe ist wie der in Java geschrieben Code
+Java aber leider nicht Scala. Da der Code in Scala allerdings fast derselbe ist wie der in Java geschriebene Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
@@ -532,7 +520,7 @@ Als nächstes werden die RequestOptions definiert und die beiden Methoden werden
 
 - Dokumentation: In der Dokumentation werden
 alle Endpunkte dokumentiert und es gibt auch Beispiele für verschiedene Sprachen, darunter zwar
-Java aber leider nicht Clojure. Da der Code in Clojure trotz unterschiedlicher Syntax fast derselbe ist wie der in Java geschrieben Code
+Java aber leider nicht Clojure. Da der Code in Clojure trotz unterschiedlicher Syntax fast derselbe ist wie der in Java geschriebene Code
 gibt es hier keinen Punkteabzug. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Bibliothek unterstützt objektorientierte Programmierung, allerdings wird
@@ -595,7 +583,7 @@ wenn man den Status mit einem Observer asynchron überwachen könnte.
 
 In allen Sprachen wird die Rest-API von https://reqres.in/ verwendet.
 Als Code sample wird jeweils ein GET-Request und ein POST-Request abgesendet und das Resultat soll als
-Objekt soll in einer Variable abgespeichert werden.
+Objekt in einer Variable abgespeichert werden.
 
 In allen Sprachen wird die Feign-Bibliothek verwendet, da diese in allen Sprachen verwendet werden kann.{blankline}
 Die DTO Klassen werden nicht zur Bewertung herangezogen.
@@ -606,7 +594,7 @@ Die DTO Klassen werden nicht zur Bewertung herangezogen.
 
 **Code Snippet**
 
-Um die Rest-API aufzurufen wird ein Client erstellt, der die Funktionen der API deklariert.
+Um die Rest-API aufzurufen, wird ein Client erstellt, der die Funktionen der API deklariert.
 
 [source,java]
 ----
@@ -795,7 +783,7 @@ Mit dem FeignBuilder wird der Client instanziert und die Methoden werden aufgeru
 - Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Groovy.
 Da jedoch fast kein Unterschied bei der Umsetzung in Groovy zu der Umsetzung in Java besteht, werden hierfür
-keine Punkte abgezogen-> 5/5  {blankline}
+keine Punkte abgezogen. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
 Programmierung (mit CompletableFuture Objekten). -> 5/5
@@ -863,7 +851,7 @@ Der Client wird mit dem FeignBuilder erstellt und anschließend werden die Metho
 - Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Scala.
 Da jedoch fast kein Unterschied bei der Umsetzung in Scala zu der Umsetzung in Java besteht, werden hierfür
-keine Punkte abgezogen-> 5/5  {blankline}
+keine Punkte abgezogen. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
 Programmierung (mit CompletableFuture Objekten). -> 5/5
@@ -926,7 +914,7 @@ Anschließend wird ein Client mit dem FeignBuilder instanziert und verwendet, um
 - Dokumentation: Die Dokumentation ist zwar
 sehr umfangreich und enthält viele Beispiele, allerdings gibt es leider keine Beispiele für den Umgang mit Clojure.
 Da Clojure sich syntaktisch stärker von Java unterscheidet als die anderen berücksichtigten JVM Sprachen werden
-hier Punkte abgezogen.-> 3/5  {blankline}
+hier Punkte abgezogen. -> 3/5  {blankline}
 
 - Unterstützte Paradigmen: Die OpenFeign Bibliothek unterstützt sowohl objektorientierte Programmierung als auch funktionale
 Programmierung (mit CompletableFuture Objekten). -> 5/5
@@ -983,10 +971,10 @@ den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etw
 == Stream API
 
 In allen Sprachen soll mit der Stream API (oder der Alternative in der jeweiligen Sprache) eine
-Liste von Lebensmitteln in insgesamt drei Methoden
+Liste von Lebensmitteln in insgesamt drei Methoden:
 
-- nach dem Namen sortiert werden
-- nach der Kategorie gruppiert werden
+- nach dem Namen sortiert werden.
+- nach der Kategorie gruppiert werden.
 - nach Lebensmitteln durchsucht werden, die weniger als einen Euro kosten.
 
 Die Liste soll unverändert bleiben.
@@ -1021,7 +1009,7 @@ public static List<Food> findFoodWorthLessThanAEuro(List<Food> food) {
 
 - Lesbarkeit: Der Code ist leicht verständlich, im Vergleich
 zu den anderen Sprachen fällt jedoch auf, dass die sorted(), groupingBy() und filter() Methoden nicht
-direkt auf dem Listenobjekt sind sondern auf einem Stream Objekt sind. Außerdem muss der Stream
+direkt auf dem Listenobjekt sind, sondern auf einem Stream Objekt sind. Außerdem muss der Stream
 in zwei von drei Fällen wieder mit einem eigenen Call zu einer Liste umgewandelt werden. -> 3/5 {blankline}
 
 - Dokumentation: Die Dokumentation footnote:[Oracle: Stream documentation, https://docs.oracle.com/javase/8/docs/api/?java/util/stream/Stream.html abgerufen am 05.04.2021] enthält
@@ -1164,7 +1152,7 @@ In clojure.core gibt es bereits die Funktionen der Stream API, deshalb wird die 
 inkludiert ist verfügt pro Funktion, die statt einer Stream API Funktion verwendet wird, sehr viele Beispiele mit verschiedenen
 Anwendungsfällen und erklärt auch die Funktion sehr detailliert, aus diesem Grund bekommt Clojure alle Punkte. -> 5/5  {blankline}
 
-- Unterstützte Paradigmen: Clojure ist eine funktionale Programmiersprache und die Funktionen, die anstelle der Stream-API verwendet werden,
+- Unterstützte Paradigmen: Clojure ist eine funktionale Programmiersprache und die Funktionen, die anstelle der Stream API verwendet werden,
 sind auch funktional konzipiert. -> 5/5
 
 
@@ -1533,7 +1521,6 @@ effizienter zu sein. Auch, dass Clojure auf dem ersten Platz ist, ist kein Wunde
 es einem erlaubt, sehr effizienten Code in nur wenigen Zeilen zu schreiben. {blankline}
 Allerdings ist wichtig zu erwähnen, dass Clojure die längste Einarbeitungszeit benötigt, wenn man schon eine
 der anderen berücksichtigten JVM Sprachen kann.
-
 
 
 
