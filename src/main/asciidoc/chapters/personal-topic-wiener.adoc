@@ -19,7 +19,7 @@ Für die folgende Untersuchung wurde bei den Frontend Frameworks die Voraussetzu
 == Die Arten der Apps
 
 === Native Apps
-Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden
+Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden.
 Jede Plattform (iOS, Android) hat ihre eigenen Programmiersprachen. Während für den Apple-Stack Swift/Objective-C verwendet wird
 , so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit {CPP} und JavaScript
 gearbeitet. Bei Nativen Apps muss somit für jedes Betriebssystem die App in der jeweiligen Programmiersprache erarbeitet werden.
@@ -39,24 +39,25 @@ Ein Beispiel für eine Native App wäre
 
 
 === Web Apps
-Die Art der Web App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen. Die App wird hier
-im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebsysteme entwickelt. Die Web App macht sich HTML und CSS zu nutze
+Die Art der Web App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen.
+Im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebsysteme entwickelt. Die Web App macht sich HTML und CSS zu nutze
 und wird in einem Webbrowser durch eine URL ausgeführt. Nach dem Öffnen der App passt sich diese dann an das jeweilige Gerät an.
 Durch diese Umsetzung ist es ebenfalls nicht erforderlich die App auf dem Smartphone zu installieren. Deshalb sind diese meist auch nicht im App Store vertreten.
 Auf Apple wäre dies via Safari oder anderen heruntergeladenen Browsern möglich. Auf Android wäre es zum Beispiel mit Google Chrome verwendbar.
 
 
 *Vorteile*: +
-Eine App für alle Geräte, das spart Zeit und Wartungsaufwand, sowie viel gespartes Geld am Ende.
+Eine App für alle Geräte spart Zeit und Wartungsaufwand sowie einiges an Geld am Ende.
 Es wird kein App Store für den Betrieb benötigt, man ist also nicht auf die Nutzungsbedingungen der App Stores beschränkt
 
 *Nachteile*: +
-Der größte Nachteil ist der schlechte bzw. fehlende Hardware Zugriff auf den Geräten.
+Der größte Nachteil ist der schlechte bzw. teilweise fehlende Hardwarezugriff auf den Geräten.
 Ein ebenso nicht unwesentliches Kontra, ist dass die App nur mittels Internet funktioniert.
 
 Beispiel für eine PWA wäre Uber.
 
-image::../images/uber.jpg[uber]
+
+image::../images/uber.jpg[uber,220,640]
 
 
 === Cross-Plattform (Hybride) Apps
@@ -85,7 +86,7 @@ den vollen Funktionsumfang der Hardware Features der Smartphones nutzen.
 
 Beispiel für eine Cross Platform wäre Bloomberg.
 
-image::../images/bloomberg.jpg[bloomberg]
+image::../images/bloomberg.jpg[bloomberg,220,640]
 
 == Welche Sprachen für die Mobile Entwicklung verwendet werden
 Im Bereich der Appentwicklung kommen vor allem Programmiersprachen wie Java, {CPP}, C#, Dart, Swift, HTML5, TypeScript, JavaScript zum Einsatz.
@@ -130,7 +131,7 @@ Die Preise sind auf Anfrage.
 
 === MoSync
 *Erklärung*:  +
-Ist ein gratis open-source Software Development Kit.
+Ist ein gratis Open-Source Software Development Kit.
 Mit MoSync greift man ebenfalls auf {CPP}, HTML5 und JavaScript zurück. MoSync ist ebenfalls mittels Eclipse verwendbar.
 Einer der Vorteile von MoSync ist, dass man sicher und schnell Files in der Cloud mit anderen Usern (sogar Personen die keinen MoSync-Account besitzen)
 teilen kann. Mittels der Platform ist es möglich, dass man überall und jederzeit daran Arbeiten kann. Ebenso soll die Datensicherung und
@@ -142,17 +143,17 @@ Open Source SDK. Daher keine Kosten.
 
 
 === Sencha Ext JS
-Erklärung: +
+*Erklärung*: +
 Ist eine Komplettlösung mit App-Baukasten der durch Drag and Drop einiges an Zeit beim Programmieren spart
 Ebenfalls ist es möglich mit Sencha Test zusätzlich zu Testen, hierbei geht es um Unit und End-To-End Tests.
 Es besteht die Option Statistiken und Heatmaps zu verwenden um Monitoring und Datenauswertung zu machen.
 
-Preis:
+*Preis*:
 Ab 1800€ / Jahr für je einen Entwickler
 
 
 
-Fazit zu den Kompaktlösungen: +
+*Fazit zu den Kompaktlösungen:* +
 Die meisten oben genannten Lösungen sind kostenpflichtig, dafür bekommt man wirklich etwas geboten, das durchaus sehr viel Zeit und Ressourcen spart.
 Wenn man eine App schnell auf den Markt bringen will, so sind diese Lösungen sicherlich von Vorteil, da sie Arbeit abnehmen.
 Ebenso ist vermutlich auf lange Sicht auch eine Kostenreduktion bei den Mitarbeitern ein positiver wirtschaftlicher Aspekt.
@@ -197,7 +198,7 @@ Gibt es eine gute Dokumentation? Wie ausgereift und verständlich sind die Dokum
 
 
 === Flutter
-*Disclaimer*:  +
+*Disclaimer:*  +
 Da im Diplomprojekt mit Flutter gearbeitet wurde, ist in diesem Teil auch erworbenes Wissen eingeflossen, deshalb ist die
 Erklärung / Analyse genauer und auch teilweise detailierter.
 
@@ -236,12 +237,12 @@ Ebenfalls gibt es viele Kurzvideos zu bestimmten Widgets oder Funktionen, die ei
 Die Flutter Dokumentation ist vor allem sehr organisiert und einfach zu lesen.
 
 
-==== Bonus
-Für Flutter gibt es unzähloge fertige Packages, die einem das Leben als Entwickler erleichter, da man nicht alles von Grund auf neu machen muss.
+==== Extra
+Für Flutter gibt es unzählige fertige Packages, die einem das Leben als Entwickler erleichtern, da man nicht alles von Grund auf neu machen muss.
 Für viele Use Cases gibt es bereits fertige Umsetzungen, die in die App eingebaut werden können.
 Ein Beispiel dafür wären Barcode Scanner. Hierfür ist es lediglich notwendig auf pub.dev danach zu suchen
-und eine dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
-Das verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
+und eine Dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
+Das Verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
 
 image::../images/flutter_packages.jpg[Hallo]
 
@@ -254,7 +255,7 @@ Es ist die Komponente, die Logik, Interaktion und Darstellung bündelt.
 
 Eine App die mit dem Flutter Framework gemacht wurde ist Alibaba für das Smartphone:
 
-image::../images/alibaba.jpg[alibaba]
+image::../images/alibaba.jpg[alibaba,220,640]
 
 
 *Code Snippets:*
@@ -267,7 +268,7 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('NoQuePOS'),
+        title: Text('ScanBuyGo'),
         centerTitle: true,
         actions: [
           IconButton(
@@ -362,7 +363,7 @@ und somit auch die User Experience weiter verbessert wird.
 
 Eine App die mit dem Ionic Framework gemacht wurde ist McLaren Automotive:
 
-image::../images/mclaren.jpg[mclaren]
+image::../images/mclaren.jpg[mclaren,220,640]
 
 *Code Snippets:*
 
@@ -440,7 +441,7 @@ Es gibt eine generelle Dokumentation, dennoch ist diese bei weitem nicht so ausg
 
 Eine App die mit  React Native gemacht wurde ist AirBnB:
 
-image::../images/airbnb.jpg[airbnb]
+image::../images/airbnb.jpg[airbnb,220,640]
 
 
 *Code Snippets:*
@@ -480,7 +481,7 @@ Xamarin hat eine vollständige Dokumentation samt intuitiver Navigation, die seh
 
 Eine App die mit  Xamarin gemacht wurde ist UPS:
 
-image::../images/ups.jpg[ups]
+image::../images/ups.jpg[ups,220,640]
 
 
 *Code Snippets:*
@@ -529,8 +530,6 @@ Wichtig ist, dass vorab Kritierien festgelegt werden, die das jeweilige Framewor
 "Das Framework" gibt es hierbei nicht, denn jeder hat andere Anforderungen und Angewohnheiten, die eine Auswahl am Ende dann festlegen, denn die Frameworks sind im Großen und
 Ganzen alle sehr gut. Flutter hebt sich mit seiner besonderen Art dennoch ein wenig hervor, da es mit den Widgets eine doch sehr Bildhafte und einfache Programmierung ist und dadurch auch relativ schnell zu lernen ist.
 Die Syntax Highlighter vereinfachen die Lesbarkeit und auch die Fehlerbehebung sehr. Ebenfalls scheint die Zukunft von Flutter als relativ sicher.
-
-== Glossar
 
 
 == Quellen
