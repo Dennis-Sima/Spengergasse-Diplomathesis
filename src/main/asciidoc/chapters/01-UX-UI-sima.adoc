@@ -1,10 +1,9 @@
 [abstract]
 == Abstract
 
-Diese Arbeit bietet die Grundlage für User Interface- und User Experience-Design Guidelines für mobile Applikationen. Es werden nicht die Basics des App-Designs erklärt, sondern auch Themen, wie Accessibility, Internationalisierung etc., welche für eine moderne Smartphone-App oftmals entscheident sein können, um erfolgreich zu werden.
+Diese Arbeit bietet die Grundlage für User Interface und User Experience-Design Guidelines für mobile Applikationen. Es werden nicht die Basics des App-Designs erklärt, sondern auch Themen, wie Accessibility, Internationalisierung etc., welche für eine moderne Smartphone-App oftmals entscheidend sein können, um erfolgreich zu werden.
 
-Es ist dennoch zu beachten, dass es sich um keine vollständige Richtlinien handelt, da diese Schriftfassung als kompakte Recherche zum Thema UI und UX dienen soll in einem für den Leser einfachen dünnen Format.
-
+Es ist dennoch zu beachten, dass es sich um keine vollständigen Richtlinien handelt, da diese Schriftfassung als kompakte Recherche zum Thema UI und UX dienen soll, in einem für den Leser möglichst einfachen dünnen Format.
 
 == Warum ist UI und UX wichtig?
 
@@ -12,7 +11,7 @@ Es ist dennoch zu beachten, dass es sich um keine vollständige Richtlinien hand
 
 Damit der Enduser mit einer Software kommunizieren kann (z.B. Daten bearbeiten, speichern etc.) braucht dieser eine Schnittstelle, um dies einfach zu tätigen. In der modernen Softwareentwicklung ist auch oft die Rede des Frontends, wobei dies als obersten Sammelbegriff für die gesamte User-Applikation verwendet wird. Da der User keine Hintergrundprozesse des Backends im Normalfall mitbekommt, ist das Userinterface, alles, was der User sieht und bedienen darf. Es ist auch beim UI folglich das Screendesign die Rede, da es nur um das Design der Applikation geht.
 
-Um das User Interface von der User Experience zu unterscheiden, kann man logisch differenzieren, dass das UI, jene Komponenten zusammenfasst, was der User sieht und die UX wie der User die Applikation bedient. So gesehen stehen UI und UX komplementär zueinander und sind in der modernen Frontend-Entwicklung nicht mehr wegzudenken.
+Um das User Interface von der User Experience zu unterscheiden, kann man logisch differenzieren, dass das UI, jene Komponenten zusammenfasst, welche der User sieht und die UX wie der User die Applikation folglich bedient. So gesehen stehen UI und UX komplementär zueinander und sind in der modernen Frontend-Entwicklung nicht mehr wegzudenken.
 
 Darüber hinaus ist das UX-Design so gesehen essenzieller als das Screendesign, da sich im Regelfall aus der User Experience das Design der App ergibt und nicht umgekehrt.
 
@@ -31,8 +30,8 @@ a|
 * Elemente die der User sieht und bedienen darf
 
 a|
-* Identifizierung der Bedürfnisse eines Benutzers
-* Kümmert sich um dem Zweck und die Funktionalität
+* Identifizierung der Bedürfnisse der Benutzer
+* Fokus auf den Zweck und die Funktionalität
 * Fokussiert sich auf die Probleme der User
 
 |===
@@ -43,15 +42,20 @@ Usability ist vom englischen übersetzt die Benutzerfreundlichkeit. Es beschreib
 
 NOTE: Als Enduser fällt schlechte Usability mehr auf als Gute.
 
-Der Unterschied zwischen UX und Usability ist jedoch, dass bei der Usability nur der Fokus auf die effiziente Nutzergestaltung gelegt wird. Wohingegen User Experience das komplette Nutzererlebnis samt Emotionen, Gefühle und Freude beschreibt.
+Der Unterschied zwischen User Experience und Usability ist, dass bei der Usability nur der Fokus auf die effiziente Nutzergestaltung gelegt wird. Wohingegen User Experience das komplette Nutzererlebnis samt Emotionen, Gefühle und Freude beschreibt.
 
-Besonderes Augenmerk sollte bei Apps beispielsweise auf die Menüleiste für die Navigation gerichtet sein, da dieses eventuell zentrale Element ist. Zudem muss stets eine gute Lesbarkeit der Inhalte gegeben sein. In diesem Fall ist es wichtig, dass nicht nur genügend große Buchstaben verwendet werden, sondern auch, dass die ausgewählte Schriftart unabhängig von der verwendeten Plattform gut lesbar ist. In diesem Fall sind Buchstaben mit einfachem Design von Vorteil.
+Aus der Praxis würde dies bedeuten, dass man besonderes Augenmerk beispielsweise auf die Menüleiste für die Navigation legen sollte, da dies meist der Startpunkt für den User ist, um sämtliche Features der App zu erkunden.
 
-In Bezug auf die Benutzerfreundlichkeit geht es nicht nur um das optische Design der App. Es geht auch um die Inhalte, zum Beispiel, wenn es vor allem um eine intuitive Navigation geht. Denn neben der Menüplatzierung ist die Beschriftung der Themenfelder äußerst wichtig. Deshalb sollte großen Wert auf geläufige Begriffe gelegt werden. So können sich User sehr in der App zurechtfinden und die Usability ist gewährleistet.footnote:[vgl. https://www.seobility.net/de/wiki/Usability]
+Die App-Navigation sollte sich hierbei möglichst für den Benutzer intuitiv anfühlen. Wichtig sind zusätzlich ebenso, neben der Menüplatzierung, die Beschriftung der Themenfelder. Deshalb sollte großen Wert auf geläufige Begriffe gelegt werden. So können sich User sehr gut in der App zurechtfinden.
+
+Trotzdem muss stets eine gute Lesbarkeit der Inhalte gegeben sein. In diesem Fall ist es wichtig, dass nicht nur genügend große Buchstaben verwendet werden, sondern auch, dass die ausgewählte Schriftart unabhängig von der verwendeten Plattform gut lesbar ist. In diesem Fall sind Buchstaben mit einfachem Design von Vorteil.footnote:[vgl. https://www.seobility.net/de/wiki/Usability]
+
+
+
 
 
 === UI & UX im Laufe der Geschichte:
-Die historische Entwicklung von der sogenannten User Interface und der User Experience begann mit der Erfindung des HTML (Hypertext Markup Language), welcher der Informatiker Tim Berner Lee im Jahre 1990 im Laufe seines Projektes im europäischen Kernforschungszentrum CERN betrieb. Damals war es oberstes Ziel möglich einfach Daten und Informationen sowohl möglich effizient und visuell ansprechend über Computer zu versenden.footnote:[vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee]
+Die historische Entwicklung von dem sogenannten User Interface und der User Experience begann mit der Erfindung des *HTML (Hypertext Markup Language)*, welcher der Informatiker Tim Berner Lee im Jahre 1990 im Laufe seines Projektes im europäischen Kernforschungszentrum CERN betrieb. Damals war das oberste Ziel möglichst einfach Daten und Informationen, sowohl effizient und visuell ansprechend, über Computer zu versenden.footnote:[vgl. https://de.wikipedia.org/wiki/Tim_Berners-Lee]
 Über HTML konnte man strukturiert Daten und Informationen darstellen.
 
 Hier sieht man ein einfaches HTML-Beispiel, wie früher das UI ausgesehen hat:
@@ -87,7 +91,7 @@ Hier sieht man ein einfaches HTML-Beispiel, wie früher das UI ausgesehen hat:
 image::../images/HTML-Example.png[title = "HTML-Frontend Beispiel"]
 
 
-Seit der Erfindung des HTML wurde der optischen Gestaltung für die Enduser mehr Aufmerksamkeit geschenkt und wurde laufend weiterentwickelt. Sowohl die Ansprüche heutiger Apps und Websites haben sich angepasst, wodurch man heutzutage wesentlich mehr braucht als ein HTML-file um den User zufriedenzustellen mit allen Funktionen.
+Seit der Erfindung des HTML wurde der optischen Gestaltung des UI für die Enduser mehr Aufmerksamkeit geschenkt und wurde laufend weiterentwickelt. Sowohl die Ansprüche heutiger Apps und Websites haben sich angepasst, wodurch man heutzutage wesentlich mehr braucht als ein HTML-file um den User zufriedenzustellen mit allen Funktionen.
 
 
 
@@ -98,28 +102,26 @@ Für User Experience gibt es keine einheitlichen Vorgaben oder konkrete Prozesse
 === Den Nutzer verstehen
 Der Enduser steht immer im Mittelpunkt, mit samt seiner Wünsche und Bedürfnisse. Je nach Budget und Zeitdruck kann man dies mittels Umfragen direkt am Markt oder durch Kundenbeobachtungen abschätzen.
 
-Zentrales Element sind hierbei die Personas, welche realitätsgetreu die Kunden abbilden, welche schließlich die Software Applikation nutzen sollen.
+Zentrales Element sind hierbei die Personas, welche realitätsgetreu die Kunden abbilden, welche schließlich die Software Applikation nutzen werden.
 
 Im Zuge des UX-Designprozesses werden ebenso auch erste Wireframes oder Klick-Dummys visualisiert.footnote:[vgl. https://academy.technikum-wien.at/ratgeber/was-ist-ux-design/]
 
 image::../images/UX-Design.png[title = "UX-Design Prozess, Quelle: https://medium.com/nyc-design/ux-ui-design-process-for-beginner-753952bb2241", width=510,height=260]
 
-NOTE: Es gibt in der Theorie sehr viele Arten von gängigen UX-Prozessen, aber grundätzlich meinen alle das Selbe: *_Customer first!_*
+NOTE: Es gibt in der Theorie sehr viele Arten von gängigen UX-Prozessen, aber grundsätzlich meinen alle dasselbe: *_Customer first!_*
 
 === User Research
-Üblicherweise beginnt der UX-Design Prozes mit einer sogenannten User Research. Hier versucht man zu verstehen, was die Kunden aktuell und in Zukunft auch für Features brauchen oder ebenso auch nicht wollen.
-Diese Recherche kann über mehrere Formen passieren. Zum einen über Marktumfragen oder Kundenbeobachtungen. Sei gesagt, dass Marktumfragen wiederrum sehr kostenintensiv sind, aber meist bessere und genauere Ergebnisse liefern.
+Üblicherweise beginnt der UX-Designprozess mit einer sogenannten User Research. Hier versucht man zu verstehen, was die Kunden aktuell und in Zukunft auch für Features brauchen oder ebenso auch nicht wollen. Diese Recherche kann über mehrere Formen passieren. Zum einen über Marktumfragen oder Kundenbeobachtungen. Sei gesagt, dass Marktumfragen wiederum sehr kostenintensiv sind, aber meist bessere und genauere Ergebnisse liefern.
 
 Wichtig zu verstehen ist genauso, dass man nicht nur die zukünftigen Kunden analysiert, sondern auch die Projektanforderungen, sowie eine Wettbewerbsanalyse.footnote:UX[vgl. https://www.uxmatters.com/mt/archives/2020/08/mobile-app-ux-design-process.php]
 
 === Empathize
 
-In dieser Phase muss man sich in den Kunden hineinversetzen. Gängige Methoden wären unteranderem mehrere Personas zu erstellen, welche die Zielgruppe darstellen sollen.
-Zusätzlich werden diese Personas, abhängig ihres persönlichen Background verschiedene Senarios durchleben, wie, wann, wo, warum, diese Persona mit der App interagiert.:footnote:UX[]
+In dieser Phase muss man sich in den Kunden hineinversetzen. Gängige Methoden wären unter anderem mehrere Personas zu erstellen, welche die Zielgruppe darstellen. Zusätzlich sollten diese Personas, abhängig ihres persönlichen Backgrounds, verschiedene Szenarios durchleben, wie, wann, wo, warum, diese Persona mit der App interagiert.footnote:UX[]
 
 === Create
-Mit den bisher gesammelten Daten wird im Anschluss erste Design-Entwürfe erstellt.
-Diese können in Form von Wireframes, Click-Dummies etc dargestellt werden.footnote:[vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines]
+Mit den bisher gesammelten Daten sämtlicher zukünftiger Nutzer werden im Anschluss erste Design-Entwürfe erstellt.
+Diese können in Form von Wireframes, Click-Dummies etc. dargestellt werden.footnote:[vgl. https://www.mobileappdaily.com/mobile-app-design-guidelines]
 
 Um erste Entwürfe zu skizzieren, kann dies mit zahlreichen Online-Tools oder auf Papier erstellt werden.
 
@@ -128,7 +130,7 @@ Um erste Entwürfe zu skizzieren, kann dies mit zahlreichen Online-Tools oder au
 image::../images/Wireframe.png[title = "Wireframe-Design von einer App", width= 500,height=400]
 
 === Test
-Beim Testen ist essenziell zu beobachten, wie der Erstentwurf bei den potentiellen User ankommen wird:footnote:UX[]
+Beim Testen ist es essenziell zu beobachten, wie der Erstentwurf bei den potenziellen User ankommt:footnote:UX[]
 
 * Prototyp soll markttauglich genug sein, um genaues Marktfeedback zu bekommen
 * Ziel ist zu Erkennen, ob der Design-Prototyp nach Plan funktioniert
@@ -137,10 +139,13 @@ Beim Testen ist essenziell zu beobachten, wie der Erstentwurf bei den potentiell
 <<<
 
 === Develop
-In der letzten Phase wird das fertige Produkt/ Prototyp entwickelt, Feedback der Kunden eingearbeitet und grunsätzliche Feinarbeiten an der App erledigt.
+In der letzten Phase wird das fertige Produkt/ Prototyp entwickelt, Feedback der Kunden eingearbeitet und grundsätzliche Feinarbeiten an der App erledigt.
 Danach können eventuelle Beta-Tests angestrebt werden.
 
 image::../images/FertigeApp.png[title = "Wireframe-Design zum Prototypen", width= 220,height=640]
+
+NOTE: Wie am Beispielbild zu erkennen ist, ist es wichtig auch von den ersten Entwürfen und Ideen abzulassen und nicht auf diese zu beharren, wenn die Ergebnisse dafür sprechen.
+
 {blankline}
 
 
@@ -444,6 +449,7 @@ image::../images/Lokalisierung.png[title = "Beim Warenkorb sind besipielsweise d
 [glossar]
 == Glossar
 
+Backend:: Schnittstelle zwischen der User-Applikation und einer Datenbank.
 HTML:: Ist die Grundstruktur, mit der Websites aufgebaut sind und Text dargestellt werden.
 Wireframes:: Ein visueller Design-Entwurf, wie Elemente in einer App dargestellt werden.
 Click-Dummys:: Ist eine reine Frontend-Applikation zum Testen, ohne Backend-Zugriff und komplexere Funktionen.
@@ -489,4 +495,3 @@ Plusqa: The Best Accessibility Apps in 2020, vgl. https://plusqa.com/2020/03/26/
 
 Infopulse: Internationalisierung der mobilen Apps: Wege und Methoden zur Steigerung der Einnahmen um 26%, vgl. https://www.infopulse.com/de/blog/internationalisierung-der-mobilen-apps-wege-und-methoden-zur-steigerung-der-einnahmen-um-26 aufgerufen am 07.04.2021
 
-|===
