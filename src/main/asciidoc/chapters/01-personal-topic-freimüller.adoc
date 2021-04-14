@@ -131,7 +131,7 @@ Laut dem Tiobe Index ist Java die zweitpopulärste Sprache (nach C).footnote:[To
 
 Die Programmiersprache Kotlin wurde von der Firma JetBrains entwickelt und im Jahre 2011 veröffentlicht.
 Wichtig bei der Erstellung von Kotlin war sowohl, dass Kotlin problemlos mit Java gemeinsam verwendet werden kann als auch,
-dass der in Kotlin geschrieben Code eleganter und effizienter ist als der equivalente Java Code.
+dass der in Kotlin geschrieben Code eleganter und effizienter ist als der äquivalente Java Code.
 Hauptsächlich wird Kotlin für Android Applikationen verwendet, allerdings ist es ebenso möglich, die Sprache
 für Web-Applikationen oder auch native Applikationen zu verwenden, da Kotlin eine general purpose language ist.
 Außerdem werden in Kotlin sowohl objektorientierte als auch funktionale Programmierung unterstüzt.footnote:[Deshmane, Rohini: Introduction to Kotlin, https://medium.com/@rohinideshmane.21/introduction-to-kotlin-5f39b31610e0 abgerufen am 25.03.2021]footnote:[Kotlinlang: Calling Java from Kotlin, https://kotlinlang.org/docs/java-interop.html abgerufen am 25.03.2021]
@@ -744,7 +744,7 @@ interface UserFeignClient {
 // Lines: 6
 ----
 
-Mit dem FeignBuilder wird der Client instanziert und die Methoden werden aufgerufen.
+Mit dem FeignBuilder wird der Client instanziiert und die Methoden werden aufgerufen.
 
 [source,groovy]
 ----
@@ -874,7 +874,7 @@ Zuerst wird ein Interface definiert, in dem die REST-Methoden definiert werden, 
 ;; Lines: 3
 ----
 
-Anschließend wird ein Client mit dem FeignBuilder instanziert und verwendet, um die Requests abzusenden.
+Anschließend wird ein Client mit dem FeignBuilder instanziiert und verwendet, um die Requests abzusenden.
 
 [source,clojure]
 ----
@@ -962,7 +962,7 @@ Programmierung (mit CompletableFuture Objekten). -> 5/5
 _Figure 3. Beurteilungstabelle Rest-APIs_
 
 Die Ergebnisse sind bei allen Sprachen sehr ähnlich, da in allen Sprachen dieselbe Bibliothek
-verwendet werden konnte und diese Biblothek auch sehr gut geeignet ist, um Rest-APIs anzusteuern.
+verwendet werden konnte und diese Bibliothek auch sehr gut geeignet ist, um Rest-APIs anzusteuern.
 
 Clojure belegt aufgrund der Dokumentation, die nur für Java verfasst wurde,
 den letzten Platz, außerdem wird der Code durch die Annotationen in Clojure etwas unübersichtlich.
@@ -1079,7 +1079,7 @@ static def findFoodWorthLessThanAEuro(List<Food> food) {
 - Lesbarkeit: Der Code ist leicht verständlich. -> 5/5 {blankline}
 
 - Dokumentation: Die Dokumentation von Groovy für den Umgang mit Collections footnote:[Groovy-lang: Working with collections, http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html abgerufen am 05.04.2021]
-enthält gute Beispiele und Beschreibungen für alle Methoden, die equivalent zu den Funktionen der Stream API in Java sind. -> 5/5  {blankline}
+enthält gute Beispiele und Beschreibungen für alle Methoden, die äquivalent zu den Funktionen der Stream API in Java sind. -> 5/5  {blankline}
 
 - Unterstützte Paradigmen: Die Methoden, die statt der Stream API verwendet werden, sind funktionale Konstrukte und die Listen, die
 verwendet werden, werden nicht verändert. -> 5/5
@@ -1216,7 +1216,7 @@ In jeder Sprache soll eine simple E-Mail mit einem Text versendet werden.
 *Code Snippet*
 
 Zuerst werden die Eigenschaften der SMTP-Session festgelegt (host, ssl und authentication).
-Anschließend wird eine Session instanziert und mithilfe dieser Session wird
+Anschließend wird eine Session instanziiert und mithilfe dieser Session wird
 über die statische Methode des Transport Objekts eine Nachricht versendet.
 
 
@@ -1523,7 +1523,7 @@ der anderen berücksichtigten JVM Sprachen kann.
 
 
 
-<<<
+<<< 
 
 [bibliography]
 == References
