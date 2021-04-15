@@ -6,42 +6,50 @@
 
 Alexander Wiener <wie17087@spengergasse.at>
 
-== Einführung
-In diesem Kapitel wird erarbeitet, dass es wichtig ist seine Anforderungen an die App zu kennen, bevor man
-sich für eine Sprache und ein Framework entscheidet. Wie in den folgenden Kapiteln nämlich herausgerarbeitet wird
+== Abstract
+Diese Fragestellung befasst sich mit den verschiedenen Frameworks für die Mobile Appentwicklung.
+Es wird erarbeitet, dass es wichtig ist seine Anforderungen an die App zu kennen, bevor man
+sich für eine Sprache und ein Framework entscheidet. Wie in den folgenden Kapiteln nämlich herausgearbeitet wird
 hat alles seine Vor- und Nachteile, daher ist es umso wichtiger zu wissen, welche Sachen man benötigt und
 welche Funktionen nicht gebraucht werden. Vor der Programmierung sollte daher eine Liste erstellt werden,
 die beinhaltet welche Funktionen/Möglichkeiten die Sprache und das Framework haben sollten. Ebenso ist es wichtig zu wissen,
-ob man Dinge wie Biometrische Daten (FaceID, FingerPrint, etc...) benötigt. Auch hier gibt es unterschiede beim Programmieren.
+ob man Dinge wie zum Beispiel Biometrische Daten (Face ID, Finger Print, etc...) benötigt. Auch hier gibt es Unterschiede beim Programmieren.
 
-Für die folgende Untersuchung wurde bei den Frontend Frameworks die Voraussetzung angenommnen, dass diese Open-Source sein müssen.
+Für die folgende Untersuchung wurde bei den Frontend Frameworks die Voraussetzung angenommen, dass diese Open-Source sein müssen.
+Beginnend mit der Untersuchung der verschiedenen App Typen, werden diese auf Stärken und Schwächen untersucht.
+Im zweiten Chapter werden einige Kompaktlösungen, die nicht nur ein Framework bieten, sondern auch analytische Tools sowie teilweise Appbaukasten mitbringen.
+Am Ende werden reine Open-Source Frameworks verglichen und dafür wurde eine Kriterienliste erstellt, die je nach Eigenbedarf logischerweise immer
+etwas anders ausfällt, je nachdem welche Features die App am Ende haben soll.
 
+Nach jedem der Kapitel wird jeweils ein auf das behandelte Thema ausgerichtetes Fazit gezogen.
 
 == Die Arten der Apps
+In diesem Kapitel werden die derzeit 3 unterschiedlichen Arten von Apps erläutert und auf die jeweiligen Vor- und Nachteile eingegangen.
+
 
 === Native Apps
 Unter nativen Apps versteht man, Mobile-Anwendungen, die speziell für ein bestimmtes Betriebssystem entwickelt werden.
 Jede Plattform (iOS, Android) hat ihre eigenen Programmiersprachen. Während für den Apple-Stack Swift/Objective-C verwendet wird
-, so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit {CPP} und JavaScript
-gearbeitet. Bei Nativen Apps muss somit für jedes Betriebssystem die App in der jeweiligen Programmiersprache erarbeitet werden.
-Native Apps zeichnen sich auch dadurch aus, dass diese keine Internetverbindung brauchen, um funktioinsfähig zu sein.
+,so sieht es bei Android mit Java wieder ganz anders aus. Beim Windows Phone wiederum wird vor allem mit {CPP} und JavaScript
+gearbeitet. Bei nativen Apps muss somit für jedes Betriebssystem die App in der jeweiligen Programmiersprache erarbeitet werden.
+Native Apps zeichnen sich auch dadurch aus, dass diese keine Internetverbindung brauchen, um funktionsfähig zu sein.
 
 *Vorteile*: +
-Die Native Programmierung hat den Vorteil, dass diese zu 100% den Funktionalitäten der Geräte angepasst sind, daher können alle Features der Smartphones
+Die native Programmierung hat den Vorteil, dass diese zu 100 % den Funktionalitäten der Geräte angepasst sind, daher können alle Features der Smartphones
 genutzt werden.
-Der Zugang zu den Hardware Eigenschaften (Kamera, GPS, etc...) ist bei der Native App ebenfalls sehr einfach.
+Der Zugang zu den Hardwareeigenschaften (Kamera, GPS, etc...) ist bei der Native App ebenfalls sehr einfach.
 
 *Nachteile*: +
 Eine App pro Betriebssystem, das bedeutet möchte man iOS und Android abdecken, so müssen 2 Apps programmiert werden.
 Das kostet Zeit bei der Entwicklung, Zeit bei der Wartung und Schlussendlich jede Menge Geld.
 
-Ein Beispiel für eine Native App wäre
+Ein Beispiel für eine native App wäre ....
 
 
 
 === Web Apps
-Die Art der Web App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen.
-Im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebsysteme entwickelt. Die Web App macht sich HTML und CSS zu nutze
+Die Art der Web-App Entwicklung ist darauf ausgerichtet, die App von jedem Gerät und Browser zugänglich zu machen.
+Im Gegensatz zur nativen Programmierung wird hier eine App für alle Betriebssysteme entwickelt. Die Web-App macht sich HTML und CSS zunutze
 und wird in einem Webbrowser durch eine URL ausgeführt. Nach dem Öffnen der App passt sich diese dann an das jeweilige Gerät an.
 Durch diese Umsetzung ist es ebenfalls nicht erforderlich die App auf dem Smartphone zu installieren. Deshalb sind diese meist auch nicht im App Store vertreten.
 Auf Apple wäre dies via Safari oder anderen heruntergeladenen Browsern möglich. Auf Android wäre es zum Beispiel mit Google Chrome verwendbar.
@@ -49,33 +57,33 @@ Auf Apple wäre dies via Safari oder anderen heruntergeladenen Browsern möglich
 
 *Vorteile*: +
 Eine App für alle Geräte spart Zeit und Wartungsaufwand sowie einiges an Geld am Ende.
-Es wird kein App Store für den Betrieb benötigt, man ist also nicht auf die Nutzungsbedingungen der App Stores beschränkt
+Es wird kein App Store für den Betrieb benötigt, man ist also nicht auf die Nutzungsbedingungen der App Stores beschränkt.
 
 *Nachteile*: +
 Der größte Nachteil ist der schlechte bzw. teilweise fehlende Hardwarezugriff auf den Geräten.
 Ein ebenso nicht unwesentliches Kontra, ist dass die App nur mittels Internet funktioniert.
 
-Beispiel für eine PWA wäre Uber.
+Beispiel für eine Progressiv Web App wäre die App des Fahrtendienstes Uber.
 
 
 image::../images/uber.jpg[uber,220,640]
 
 
 === Cross-Plattform (Hybride) Apps
-Die Hybride Programmierung kombiniert die native und die Web App miteinander.
+Die Hybride Programmierung kombiniert die native und die Web-App miteinander.
 Es wird hauptsächlich mit Web-Sprachen programmiert, dennoch wird der Hardware Zugriff nicht eingeschränkt.
 Cross-Platform Apps werden via App Store installiert.
 
 
 *Vorteile*: +
-Durch die Kombination hat man bei der Hybriden App ein besseres Erlebnis als bei den Web Apps
+Durch die Kombination hat man bei der Hybriden App ein besseres Erlebnis als bei den Web-Apps
 Man spart Zeit in der Entwicklung, da man nicht für iOS und Android 2 Apps schreiben muss.
 
 *Nachteile*: +
-Die Unterstützung ist nicht zu 100% die Selbe, wie bei nativer Programmierung, da neue Funktionen des öftern etwas länger auf
+Die Unterstützung ist nicht zu 100 % dieselbe, wie bei nativer Programmierung, da neue Funktionen des Öfteren etwas länger auf
 sich warten lassen.
-Einige Elmente müssen Seperat programmiert werden, da sowohl iOS als auch Android bestimme Vorgaben bei einigen Elementen haben,
-die mittels Cross-Platform bisher noch nicht gelöst werden konnten. Daher muss an manchen Stellen ebenso wie bei Nativen Apps doppelt programmiert werden.
+Einige Elemente müssen Separat programmiert werden, da sowohl iOS als auch Android bestimme Vorgaben bei einigen Elementen haben,
+die mittels Cross-Platform bisher noch nicht gelöst werden konnten. Daher muss an manchen Stellen ebenso wie bei nativen Apps doppelt programmiert werden.
 Dennoch hält sich der Aufwand meist in Grenzen.
 
 
@@ -85,7 +93,7 @@ ohne dass man eine App für jedes mobile Betriebsystem machen muss. Wenn man fin
 nicht bezahlen muss, da die App nicht über den App Store vertrieben werden muss. Allerdings, kann man bei den WebApps oft nicht so gut oder teilweise erst später
 den vollen Funktionsumfang der Hardware Features der Smartphones nutzen.
 
-Beispiel für eine Cross Platform wäre Bloomberg.
+Ein Beispiel für eine Cross Platform App wäre Bloomberg.
 
 image::../images/bloomberg.jpg[bloomberg,220,640]
 
@@ -103,32 +111,34 @@ In diesem Kapitel werden die verschiedenen, meist kostenpflichtigen Kompaktlösu
 *Erklärung:* +
 Appcelerator ist ein Komplettpaket im Bereich der Mobilen Programmierung, denn es bietet die Möglichkeit
 eine App mit dem App-Designer zu bauen, sowie man ebenfalls ein Dashboard inkludiert hat, das
-mit einigen Statistiken zur App glänzen kann. Es wird außerdem die Möglichkeit geboten die App im Cross-Platform stil zu programmieren.
+mit einigen Statistiken zur App glänzen kann. Es wird außerdem die Möglichkeit geboten die App im Cross-Platform Stil zu programmieren.
 Dies wird mithilfe von JavaScript umgesetzt. Für viele ebenso relevant ist der inkludierte API Builder, der sicherlich einiges an Zeit sparen kann.
 Einstellungen zu Push-Benachrichtigungen sind auch ein angepriesenes Feature.
 
 *Preis*: +
-Die Studio IDE und der API Builder sind gratis,.
-Für den App Designer und die API Calls sowie die App Preview muss man 99$ pro Monat bezahlen.
-Ebenso besteht die möglichkeit noch mehr zu kaufen, dies muss man sich allerdings selbst zusammenbauen und dementsprechend
+Die Studio IDE und der API Builder sind gratis.
+Für den App-Designer und die API Calls sowie die App Preview muss man 99 $ pro Monat bezahlen.
+Ebenso besteht die Möglichkeit noch mehr zu kaufen, dies muss man sich allerdings selbst zusammenbauen und dementsprechend
 variiert der Preis. Hier besteht zum Beispiel die Möglichkeit noch eine Crash detection und Performance Analysen zu bekommen, sowie
-auch automatiertes Testen zu benutzen.
-Als Extra werden noch Cloud Kapazitäten geboten, die mit 15$ / Monat anfangen.
+auch automatisiertes Testen zu benutzen.
+Als Extra werden noch Cloud Kapazitäten geboten, die mit 15 $ / Monat anfangen.
 
+offizielle Website: https://www.appcelerator.com/
 
 === RhoMobile
 *Erklärung*:  +
 Rhomobile Suite ist ein Software Stack für App-Entwickler, der unter anderem die Möglichkeit bietet mit Ruby zu programmieren,
-was den Focus auf die Einfachheit und Produktivität lenkt. Es wir auf Cross-Platform Entwicklung gesetzt und zusätzlich ist es auch
+was den Focus auf die Einfachheit und Produktivität lenkt. Es wird auf Cross-Platform Entwicklung gesetzt und zusätzlich ist es auch
 möglich HTML/CSS/JS zu verwenden. Programmiert wird mittels RhoStudio Extension in Eclipse.
-Der Sinn von RhoMobile besteht laut Hersteller darin, dass Firmen sichere, aber dennoch dem Customer-Standart entsprechende
-Apps progammieren können.
+Der Sinn von RhoMobile besteht laut Hersteller darin, dass Firmen sichere, aber dennoch den Customer-Standards entsprechende
+Apps programmieren können.
 
 *Preis*:  +
 Das Basis App Framework (Rhodes, RhoStudio, RhoElements) ist gratis.
-Gegen Bezahlung erhält man besseren Support sowie einige extra Features wie das Lesen von Barcodes oder automatische Daten verschlüsselung.
+Gegen Bezahlung erhält man besseren Support sowie einige extra Features wie das Lesen von Barcodes oder automatische Datenverschlüsselung.
 Die Preise sind auf Anfrage.
 
+offizielle Website: https://tau-platform.com/en/products/rhomobile/
 
 === MoSync
 *Erklärung*:  +
@@ -138,10 +148,10 @@ Einer der Vorteile von MoSync ist, dass man sicher und schnell Files in der Clou
 teilen kann. Mittels der Platform ist es möglich, dass man überall und jederzeit daran Arbeiten kann. Ebenso soll die Datensicherung und
 Wiederherstellung sehr gut funktionieren.
 
-
 *Preis*: +
-Open Source SDK. Daher keine Kosten.
+MoSync ist ein Open-Source SDK, daher fallen hierfür keine Kosten an.
 
+offizielle Website: https://mosync.com/
 
 === Sencha Ext JS
 *Erklärung*: +
@@ -151,14 +161,16 @@ Es besteht die Option Statistiken und Heatmaps zu verwenden um Monitoring und Da
 
 *Preis*:
 Ab 1800€ / Jahr für je einen Entwickler
+Allerdings gibt es auch teurere Pakete, die man individuell auf Anfrage zuschneiden lassen kann.
 
+offizielle Website: https://www.sencha.com/products/extjs/
 
 
 *Fazit zu den Kompaktlösungen:* +
 Die meisten oben genannten Lösungen sind kostenpflichtig, dafür bekommt man wirklich etwas geboten, das durchaus sehr viel Zeit und Ressourcen spart.
 Wenn man eine App schnell auf den Markt bringen will, so sind diese Lösungen sicherlich von Vorteil, da sie Arbeit abnehmen.
 Ebenso ist vermutlich auf lange Sicht auch eine Kostenreduktion bei den Mitarbeitern ein positiver wirtschaftlicher Aspekt.
-Von der technischen Sicht, kriegt man einige Hilfestellungen, die vor allem den Erstellungs Prozess der App verkürzen, aber auch das
+Von der technischen Sicht, kriegt man einige Hilfestellungen, die vor allem den Erstellungsprozess der App verkürzen, aber auch das
 Überwachen und Testen, sowie einige Analysen anbieten, was für kommerzielle Programmierung sicherlich einen starken Vorteil bringt.
 
 Im Diplomprojekt wurde von so einer Lösung abgesehen, da es für  zu teuer gewesen wäre und die Features bis auf die App-Baukasten und
@@ -167,19 +179,18 @@ das automatisierte Testen, für das Projekt im aktuellen Stadium nicht relevant 
 
 
 == Frontend Frameworks
-In diesem Kapitel werden 5 verschiedene Frontend Frameworks näher beleuchtet und auf vorab definierte Kriterien überporüft.
+In diesem Kapitel werden 5 verschiedene Frontend Frameworks näher beleuchtet und auf vorab definierte Kriterien überprüft.
 
-Bei der Auswahl bei den Frameworks gibt es entscheidende Kritierien, die natürlich bei jeder App unterschiedlich sind.
+Bei der Auswahl bei den Frameworks gibt es entscheidende Kriterien, die natürlich bei jeder App unterschiedlich sind.
 Daher ist eine allgemeine Aussage schwer zu treffen. Für diese Untersuchung gibt es folgende wichtige Kriterien.
 Alle Frontend Frameworks müssen schon etwas länger existieren und sollten auch in naher Zukunft nicht ohne Weiterführung und Support
 auskommen müssen. Aufgrund dieser zwei Punkte ist Ionic mit Vue aus der möglichen Auswahl rausgefallen, da sich dieses derzeit noch in einer
 Betaphase befindet.
 
-
 === Weitere Kriterien:
 
 ==== Übersetzung
-Kann man in dem Framework eine Internationalization umsetzen? Im Jahr 2021 sollten Apps in mehreren Sprachen verfügbar sein.
+Kann man in dem Framework eine Internationalisierung umsetzen? Im Jahr 2021 sollten Apps in mehreren Sprachen verfügbar sein.
 Auch hier wird unterschieden, wie einfach sich eine Internationalisierung umsetzen lässt.
 
 ==== Anpassbares Design (während der Runtime)
@@ -191,21 +202,27 @@ Hier wird unterschieden, wie einfach das Framework solche Schnittstellen zuläss
 
 ==== Support
 Es ist wichtig, dass regelmäßige Updates erfolgen, um die App auch zukunftssicher machen zu können.
-Regelmäßige Updates sind hierfür wichtig, allerdings ist der Abstand der Updates ebenfalls subjektiv zu werten, da für viele Entwickler zu häufige updates für mehraufwand sorgen können für andere dennoch kein Problem
+Regelmäßige Updates sind hierfür wichtig, allerdings ist der Abstand der Updates ebenfalls subjektiv zu werten, da für viele Entwickler zu häufige Updates für Mehraufwand sorgen können für andere dennoch kein Problem
 darstellen.
 
 ==== Dokumentation
 Gibt es eine gute Dokumentation? Wie ausgereift und verständlich sind die Dokumentationen?
 
+==== Code Snippets
+Zu den verschiedenen Frameworks werden jeweils ein Ausschnitt von einem App-Screen und einer Navigationsleiste gezeigt.
+Die Samples sind teilweise ausgeschnitten, da der ganze Code eines Screens zum Teil zu viel Platz benötigen würde.
+
 
 === Flutter
 *Disclaimer:*  +
 Da im Diplomprojekt mit Flutter gearbeitet wurde, ist in diesem Teil auch erworbenes Wissen eingeflossen, deshalb ist die
-Erklärung / Analyse genauer und auch teilweise detailierter.
+Erklärung / Analyse genauer und auch teilweise detaillierter.
 
 Flutter ist ein Open-Source UI Entwicklungs-Kit. Die zugrundeliegende Programmiersprache
 ist Dart. Das Framework wird für die Programmierung von Apps verwendet.
 Das Framework selbst ist mittels {CPP} geschrieben worden.
+
+offizielle Website: https://flutter.dev/
 
 image::../images/flutter.png[Flutter]
 Funktionsweise von Flutter
@@ -213,8 +230,8 @@ footnote:[medium.com:Cross-platform mobile apps development in 2021: Xamarin vs 
 
 
 ==== Übersetzung
-Die Übersetzung in Flutter ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
-Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
+Die Übersetzung in Flutter ist relativ einfach vor allem, sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON File in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst werden dann statt Strings einfach
 die Feld-Namen verwendet, die als Key für die Übersetzung fungieren.
 
 
@@ -229,12 +246,12 @@ Da Flutter sehr eng mit der Hardware kommuniziert, ist der Hardwarezugriff einfa
 bereits fertige Packages, die eingebaut werden können.
 
 ==== Support
-Flutter versucht ungefährt jedes Quartal ein stable Update zu releasen. Erst im März 2021 kam Flutter 2.0 auf den Markt.
+Flutter versucht ungefähr  jedes Quartal ein stable Update zu releasen. Erst im März 2021 kam Flutter 2.0 auf den Markt.
 Updates sind einfach mit dem Befehl "flutter upgrade" durchzuführen.
 
 ==== Dokumentation
 Obwohl Flutter noch (im Vergleich zu Anderen) relativ "neu" ist, wird es sehr stark von Google unterstützt und es gibt eine durchaus beachtliche Dokumentation.
-Ebenfalls gibt es viele Kurzvideos zu bestimmten Widgets oder Funktionen, die einem die Arbeit beim einlesen/einarbeiten erleichtern.
+Ebenfalls gibt es viele Kurzvideos zu bestimmten Widgets oder Funktionen, die einem die Arbeit beim Einlesen / Einarbeiten erleichtern.
 Die Flutter Dokumentation ist vor allem sehr organisiert und einfach zu lesen.
 
 
@@ -242,19 +259,19 @@ Die Flutter Dokumentation ist vor allem sehr organisiert und einfach zu lesen.
 Für Flutter gibt es unzählige fertige Packages, die einem das Leben als Entwickler erleichtern, da man nicht alles von Grund auf neu machen muss.
 Für viele Use Cases gibt es bereits fertige Umsetzungen, die in die App eingebaut werden können.
 Ein Beispiel dafür wären Barcode Scanner. Hierfür ist es lediglich notwendig auf pub.dev danach zu suchen
-und eine Dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailiert unter dem Reiter "Installing" nachzulesen.
+und eine Dependency zu setzen. Dies ist, wie im unten stehenden Bild ersichtlich, alles detailliert  unter dem Reiter "Installing" nachzulesen.
 Das Verwenden von Packages ist simpel, die einzige Hürde ist es packages zu finden, die auch noch supported werden und laufend auf updates auch reagieren.
 
 image::../images/flutter_packages.jpg[Hallo]
 
 
 ==== Gut zu wissen
-In Flutter dreht sich alles um Widgets. Alles was in der App dann sichtbar ist, ist ein Widget.
-Ein Widget kann wiederum in ein anderen Widget gepackt werden.
+In Flutter dreht sich alles um Widgets. Alles, was in der App dann sichtbar ist, ist ein Widget.
+Ein Widget kann wiederum in ein anderes Widget gepackt werden.
 Was ist nun also ein Widget?
 Es ist die Komponente, die Logik, Interaktion und Darstellung bündelt.
 
-Eine App die mit dem Flutter Framework gemacht wurde ist Alibaba für das Smartphone:
+Eine App die mit dem Flutter Framework gemacht wurde, ist Alibaba für das Smartphone:
 
 image::../images/alibaba.jpg[alibaba,220,640]
 
@@ -264,6 +281,11 @@ image::../images/alibaba.jpg[alibaba,220,640]
 .Beispiel eines Home-Screens in Flutter
 [source,dart]
 ----
+class StartPage extends StatefulWidget {
+  @override
+  _StartPageState createState() => _StartPageState();
+}
+
 class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
@@ -313,26 +335,77 @@ class _StartPageState extends State<StartPage> {
   }
 ----
 
-
-
-.Beispiel einer Appbar in Flutter
+.Beispiel einer Navigationbar in Flutter
 [source,dart]
 ----
-Scaffold(
-  appBar: AppBar(
-    iconTheme: IconThemeData(
-      color: Color(0xffFF0000), //OR Colors.red or whatever you want
-    ),
-    title: Text("Title"),
-    backgroundColor: Color(0xffFAFAFA),
-  ),
-)
+class NavigationBar extends StatefulWidget {
+  @override
+  _NavigationBarState createState() => _NavigationBarState();
+}
+
+class _NavigationBarState extends State<NavigationBar> {
+  int _currentIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      onTap: (value) {
+        // Respond to item press.
+        setState(() => _currentIndex = value);
+        if (value == 2) {
+          _navigateToScannerPage();
+          setState(() => _currentIndex = 0);
+        }
+        if (value == 3) {
+          _navigateToSettingsPage();
+          setState(() => _currentIndex = 0);
+        }
+      },
+      type: BottomNavigationBarType.fixed,
+      items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: translate('navigation_bar.home'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(MdiIcons.clipboardList),
+          label: translate('navigation_bar.list'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.add),
+          label: translate('navigation_bar.scan'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(MdiIcons.cogOutline),
+          label: translate('navigation_bar.settings'),
+        ),
+      ],
+    );
+  }
+
+  Future _navigateToScannerPage() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (c) => ScanPage()),
+    );
+  }
+
+  Future _navigateToSettingsPage() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (c) => SettingsPage()),
+    );
+  }
+}
 ----
+
 
 
 === Ionic/Angular
 Ist ein Open-Source Webframework, dass vor allem für Cross-Platform und Progressive Webs Apps geeignet ist.
 Ionic mit Angular basiert, wie Angular auf TypeScript.
+
+offizielle Website: https://ionicframework.com/
 
 image::../images/ionic.png[IonicAngular]
 Architektur Ionic
@@ -340,11 +413,11 @@ footnote:[ICT-BZ.ch:Ionic Architektur, https://m335.ict-bz.ch/tag-1/ionic-archit
 
 ==== Übersetzung
 Die Übersetzung ist mittels rxweb Package möglich, allerdings ein wenig umständlicher in der Handhabung, als andere Frameworks.
-Dennoch gibt es für die Internatinalisierung bei Angular eine gute Dokumentation, die eine Step-by-Step Anleitung bereitstellt.
+Dennoch gibt es für die Internationalisierung  bei Angular eine gute Dokumentation, die eine Step-by-Step Anleitung bereitstellt.
 
 
 ==== Anpassbares Design
-Das Anpassen von Designs während der Runtime ist prinzipiell möglich, aber im Vergleich zu anderen Frameowrks
+Das Anpassen von Designs während der Runtime ist prinzipiell möglich, aber im Vergleich zu anderen Frameworks
 eher unhandlich.
 
 
@@ -359,19 +432,87 @@ keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat rele
 
 
 ==== Dokumentation
-Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
+Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalls jedes Mal nach Major Updates auch angepasst wird
 und somit auch die User Experience weiter verbessert wird.
 
-Eine App die mit dem Ionic Framework gemacht wurde ist McLaren Automotive:
+Eine App die mit dem Ionic Framework gemacht wurde, ist McLaren Automotive:
 
 image::../images/mclaren.jpg[mclaren,220,640]
 
 *Code Snippets:*
 
+.Beispiel einer Page, die Elemente anzeigt und sich die Werte aus einer Liste holt.
+[source,html]
+----
+<ion-header class="categories-listing-main-header">
+  <ion-toolbar class="categories-listing-main-toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Learning Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Categories Listing</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <p class="categories-call-out">
+    <span>Showing:</span>
+    <ion-badge color="light">{{ listingTopic }}</ion-badge>
+    <span>concepts</span>
+  </p>
+
+  <div class="container">
+    <ion-card class="category-card" style="--background:{{category.color}}" [routerLink]="['/learn', category.slug]" *ngFor="let category of categories">
+      <ion-card-header>
+        <ion-card-subtitle>Framework</ion-card-subtitle>
+        <ion-card-title>
+          {{category.title}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{category.description}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+----
+
+.Beispiel einer NavBar in Ionic
+[source,html]
+----
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Page Title
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+----
+
+Die Code Samples sind von diesem Projekt: https://github.com/ionicthemes/build-a-complete-mobile-app-with-ionic-framework/
+
 === Ionic/React
 Ist ein Open-Source UI und Native API Projekt, dass vor allem für Cross-Platform und Progressive Webs Apps geeignet ist.
 Ionic mit React basiert, wie React auf JavaScript.
 
+offizielle Website: https://ionicframework.com/
 
 image::../images/ionic.png[IonicAngular]
 Architektur Ionic
@@ -379,38 +520,104 @@ footnote:[ICT-BZ.ch:Ionic Architektur, https://m335.ict-bz.ch/tag-1/ionic-archit
 
 
 ==== Übersetzung
-Die Übersetzung in Ionic/React ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
-Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
-die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
-verwendet, sonder direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
+Die Übersetzung in Ionic/React ist relativ einfach vor allem, sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON File in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst werden dann statt Strings einfach
+die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als Zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
+verwendet, sondern direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
 Ermöglicht wird dies durch i18next.
 
 
 ==== Anpassbares Design
 Ionic/React ermöglicht es während der Runtime die Designs zu verändern. Hierfür kann CSS oder ein bereits vorhandenes Theme Switcher Package
-verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
+verwendet werden. Durch die gute Dokumentation stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
 
 
 ==== Hardwarezugriff
-Im vergleich zu Flutter, fällt hier der Kamera Zugriff etwas schwerer aus, dennoch ist mittels Ionic/React der Hardwarezugriff
+Im Vergleich zu Flutter, fällt hier der Kamera Zugriff etwas schwerer aus, dennoch ist mittels Ionic/React der Hardwarezugriff
 generell auch relativ einfach möglich.
 
 
 ==== Support
-Major Releases werden alle sechs Monate veröffentlicht. Daneben gibt es noch Minor Releases, die sich mit API changes befassen, die
+Major Releases werden alle sechs Monate veröffentlicht. Daneben gibt es noch Minor Releases, die sich mit API cCanges befassen, die
 keinen großen Eingriff vornehmen. Diese werden ungefähr ein Mal pro Monat released.
 
 ==== Dokumentation
-Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalle jedes mal nach Major updates auch angepasst wird
+Ionic hat eine übersichtliche und auch weitreichende Dokumentation, die ebenfalls jedes Mal nach Major Updates auch angepasst wird
 und somit auch die User Experience weiter verbessert wird.
 
 
 *Code Snippets:*
 
+.Beispiel einer Page in Ionic React
+[source,tsx]
+----
+import {
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+    IonMenuButton
+} from '@ionic/react';
+import React, { useEffect } from 'react';
+import './Home.css';
+
+import { LeavesSummary } from '../components/Leaves';
+import { IUrlOptions } from '../models/rest-api.model';
+import { RemoteService } from '../services/remote.service';
+
+
+const HomePage = ({ users, history }: any) => {
+    const remoteService = new RemoteService();
+
+    const getRecordById = (recordId: string) => {
+        const options: IUrlOptions = {
+            endPoint: ``,
+            restOfUrl: '',
+            isSecure: true,
+            contentType: 'application/json'
+        };
+
+        remoteService.request('GET', options).then((data) => {
+            console.log('Home data : ', data);
+        })
+    }
+
+    useEffect(() => {
+        let isLoggedIn = sessionStorage.getItem('userToken');
+        if (!isLoggedIn) {
+            history.push('/login');
+        }
+        getRecordById('2');
+    }, []);
+
+    return (
+        <IonPage>
+
+            <IonHeader>
+                <IonToolbar>
+                    <IonMenuButton slot="start"></IonMenuButton>
+                    <IonTitle>Home</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+
+            <IonContent class="ion-padding">
+                <LeavesSummary users={users} />
+            </IonContent>
+
+        </IonPage>
+    );
+};
+----
+
+Die Code Samples sind von diesem Projekt: https://github.com/JigneshRaval/ionic-react-app
+
 
 === React Native
 React Native ist ein Open-Source-Mobile Application Framework, das speziell für die Entwicklung von Apps für Android, Android TV, iOS, macOS, Web und Windows geeignet ist.
 Das Framework wurde von Facebook entwickelt.
+
+offizielle Website: https://reactnative.dev/
 
 image::../images/reactnative.png[ReactNative]
 Architektur React Native
@@ -418,39 +625,157 @@ footnote:[formidable.com : The New React Native Architecture Explained: Part Fou
 
 
 ==== Übersetzung
-Die Übersetzung in React Native ist relativ einfach vor allem sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
-Sprache, die man unterstützen will, ein JSON file in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst, werden dann statt Strings einfach
-die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
-verwendet, sonder direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
+Die Übersetzung in React Native ist relativ einfach vor allem, sobald man diese aufgesetzt hat. In der laufenden Entwicklung hat man dann für jede
+Sprache, die man unterstützen will, ein JSON File in dem man die verschiedenen Elemente dann übersetzt. Im Code selbst werden dann statt Strings einfach
+die Feld-Namen verwendet, die als Key für die Übersetzung fungieren. Als Zusatz ist es ebenso möglich, direkt mit dem String zu Arbeiten. Im JSON File wird also kein Key
+verwendet, sondern direkt der Text und mittels ":" dann die Übersetzung dahinter gemacht.
 Ermöglicht wird dies durch i18next.
 
 
 ==== Anpassbares Design
 React Native ermöglicht es während der Runtime die Designs zu verändern. Hierfür kann CSS oder ein bereits vorhandenes Theme Switcher Package
-verwendet werden. Durch die gute Dokumentation, stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
+verwendet werden. Durch die gute Dokumentation stellt auch das Ändern des Designs während dem Benutzer der App kein Problem dar.
 
 
 ==== Hardwarezugriff
 Dadurch, dass es Native Framework ist, fällt die Einbindung der Hardware relativ einfach und ist auch leicht umsetzbar.
 
 ==== Support
-Es werden regelmäßig jedes Monat neue Updates released. Die Updates werden über das GitHub Repository ausgerollt. Bevor das update eingebaut wird, gibt es eine Testphase für 1 Monat, wo reviewt werden kann.
+Es werden regelmäßig jedes Monat neue Updates released. Die Updates werden über das GitHub Repository ausgerollt. Bevor das Update eingebaut wird, gibt es eine Testphase für 1 Monat, wo reviewt werden kann.
 Ebenso können sich die Entwickler in der Phase mit den Änderungen vertraut machen.
 
 ==== Dokumentation
 Es gibt eine generelle Dokumentation, dennoch ist diese bei weitem nicht so ausgereift, wie bei anderen Frameworks
 
-Eine App die mit  React Native gemacht wurde ist AirBnB:
+Eine App die mit  React Native gemacht wurde, ist AirBnB:
 
 image::../images/airbnb.jpg[airbnb,220,640]
 
 
 *Code Snippets:*
 
+.Beispiel einer Page in React Native
+[source,tsx]
+----
+return (
+    <>
+      <HeaderWrapper>
+        <Row>
+          <Avatar size={119} name={userStore.userData?.avatar} />
+          <InfosWrapper>
+            <UserName>{userStore.user.displayName}</UserName>
+            <PostsInfos>
+              {userStore.posts?.length || 'no'} post
+              {userStore.posts?.length === 1 ? '' : 's'}
+            </PostsInfos>
+            <BadgesRow>
+              {userStore.userData?.badges?.map((badge) => (
+                <Avatar
+                  key={badge}
+                  cloudRef={`badges/${badge.toLowerCase()}.png`}
+                />
+              ))}
+            </BadgesRow>
+          </InfosWrapper>
+          <EditButton onPress={() => navigation.navigate('EditProfile')}>
+            <Icon name="Edit" color={colors.text} size={24} />
+          </EditButton>
+        </Row>
+        <ButtonsRow>
+          <IconButton
+            title="Published"
+            onPress={() => setShowDrafts(false)}
+            active={!showDrafts}
+            icon="Picture"
+            color="green"
+          />
+          <IconButton
+            title="Drafts"
+            onPress={() => setShowDrafts(true)}
+            active={showDrafts}
+            icon="EditPicture"
+            color="yellow"
+          />
+        </ButtonsRow>
+      </HeaderWrapper>
+      {userStore.state === STATES.LOADING && (
+        <ActivityIndicator style={{ margin: 50 }} />
+      )}
+      <ScrollView>
+        <PostWrapper>
+          {displayedData?.map((post, index) => (
+            <TouchableOpacity key={index} onPress={() => openArt(index, post)}>
+              <PixelArt
+                size={postSize}
+                data={post.data.pixels}
+                backgroundColor={post.data.backgroundColor}
+                rounded
+                style={{ marginBottom: 10 }}
+              />
+            </TouchableOpacity>
+          ))}
+          {!displayedData || (displayedData.length === 0 && <Empty />)}
+          {!showDrafts &&
+            displayedData &&
+            postsDisplayed < userStore.posts.length && (
+              <ButtonsRow style={{ marginTop: 15 }}>
+                <Button
+                  fill
+                  title="Show more"
+                  onPress={() => setPostDisplayed(postsDisplayed + 4)}
+                />
+              </ButtonsRow>
+            )}
+        </PostWrapper>
+      </ScrollView>
+    </>
+  );
+});
+----
+
+.Beispiel einer NavBar in React Native mittels navbar-native Package
+[source,tsx]
+----
+import React, { Component } from 'react';
+import { View } from 'react-native';
+
+import { Container, Navbar } from 'navbar-native';
+
+class ReactNativeProject extends Component {
+    render() {
+        return (
+            <Container>
+                <Navbar
+                    title={"Navbar Native"}
+                    left={{
+                        icon: "ios-arrow-back",
+                        label: "Back",
+                        onPress: () => {alert('Go back!')}
+                    }}
+                    right={[{
+                        icon: "ios-search",
+                        onPress: () => {alert('Search!')}
+                    },{
+                        icon: "ios-menu",
+                        onPress: () => {alert('Toggle menu!')}
+                    }]}
+                />
+            </Container>
+        );
+    }
+}
+----
+
+Die Code Samples sind von diesem Projekt: https://github.com/Illu/Pix
+und dieser NPM-Package Seite: https://www.npmjs.com/package/navbar-native
+
+
 === Xamarin
-Xamarin ist eine Open-Source Platform zum Erstellen von leistungsfähigen Anwendungen für den Mobilen Entwicklungsbereich, wie auch für Windows.
+Xamarin ist eine Open-Source Plattform zum Erstellen von leistungsfähigen Anwendungen für den Mobilen Entwicklungsbereich, wie auch für Windows.
 Xamarin verwendet C# als Programmiersprache und hat Xamarin.Android, Xamarin.iOS und eine Xamarin.Essential Libraries, die für Native, aber auch für Cross-Platform Apps
 verwendet werden können.
+
+offizielle Website: https://dotnet.microsoft.com/apps/xamarin
 
 image::../images/xamarinaufbau.png[Xamarin]
 Architektur Xamarin
@@ -459,16 +784,16 @@ https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/
 
 ==== Übersetzung
 Die Übersetzung in Xamarin erfolgft mittels RESX Files. Im Vergleich zu Flutter und React ist, hier allerdings etwas mehr Aufwand zu betreiben, dennoch gibt es
-dazu eine detailierte Dokumentation auf docs.microsoft.com. Ebenfalls muss man iOS und Android etwas seperat behandeln, da es nicht einheitlich ist und man somit mehr Aufwand erfordert.
+dazu eine detaillierte Dokumentation auf docs.microsoft.com. Ebenfalls muss man iOS und Android etwas separat behandeln, da es nicht einheitlich ist und man somit mehr Aufwand erfordert.
 
 
 ==== Anpassbares Design
-Es ist möglich die Design während der Runtime zu ändern
+Es ist möglich die Design während der Runtime zu ändern.
 
 
 ==== Hardwarezugriff
 Der Hardwarezugriff ist etwas schwieriger, da man für iOS und Android jeweils 2 unterschiedliche Codebases benötigt.
-Es ist grundseätztlich möglich sowohl auf Apple Geräten, als auch bei Android auf die Hardware zuzugreifen, dennoch ist es mit mehr Aufwand verbunden,
+Es ist grundsätzlich  möglich sowohl auf Apple Geräten, als auch bei Android auf die Hardware zuzugreifen, dennoch ist es mit mehr Aufwand verbunden,
 als bei anderen Frameworks. Hierfür gibt es Libraries aus Xamarin.Essentials.
 
 
@@ -480,32 +805,112 @@ einstellen, was in der Zukunft auf einen zukommt. Ebenfalls steht auch dabei, wi
 ==== Dokumentation
 Xamarin hat eine vollständige Dokumentation samt intuitiver Navigation, die sehr weitreichend ist. Vom Anfänger bis zum Profi ist alles dabei.
 
-Eine App die mit  Xamarin gemacht wurde ist UPS:
+Eine App die mit  Xamarin gemacht wurde, ist UPS:
 
 image::../images/ups.jpg[ups,220,640]
 
 
 *Code Snippets:*
 
-.
+.Beispiel einer Page in Xamarin
+[source,xml]
+----
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:TestAdministrator.App"
+             x:Class="TestAdministrator.App.DashboardPage"
+             mc:Ignorable="d"
+             Title="Dashboard"
+             x:Name="MyDashboardPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+            IconImageSource="{local:ImageResource TestAdministrator.App.Resources.add.png}"
+            Order="Primary"
+            Command="{Binding NewItem}"
+            Priority="0" />
+        <ToolbarItem Text="Edit"
+            IconImageSource="{local:ImageResource TestAdministrator.App.Resources.edit.png}"
+            Order="Primary"
+            Command="{Binding EditItem}"
+            Priority="1" />
+        <ToolbarItem Text="Delete"
+            IconImageSource="{local:ImageResource TestAdministrator.App.Resources.delete.png}"
+            Order="Primary"
+            Command="{Binding DeleteItem}"
+            Priority="2" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="FillAndExpand">
+            <ListView x:Name="TestList" ItemsSource="{Binding TestInfos}" SelectedItem="{Binding SelectedTest}" RowHeight="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Delete"
+                                     Command="{Binding Source={x:Reference MyDashboardPage}, Path=BindingContext.DeleteItem}" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Schoolclass}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Subject}" FontAttributes="Bold" />
+                                </StackLayout>
+                                <Label Text="{Binding Teacher}" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding DateFrom, StringFormat='{0:dd.MM.yyyy}'}" />
+                                    <Label Text="{Binding Lesson, StringFormat='{0:0}. Stunde'}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+----
+
+.Beispiel einer NavBar in Xamarin
 [source,csharp]
 ----
-private FahrzeugContext GetContext()
-        {
-            var db = new FahrzeugContext();
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
-            db.Import("data.sql");
-            return db;
-        }
+class TabbedPageDemoPage2 : TabbedPage
+{
+    public TabbedPageDemoPage2 ()
+    {
+        this.Title = "TabbedPage";
+        this.Children.Add (new ContentPage
+            {
+                Title = "Blue",
+                Content = new BoxView
+                {
+                    Color = Color.Blue,
+                    HeightRequest = 100f,
+                    VerticalOptions = LayoutOptions.Center
+                },
+            }
+        );
+        this.Children.Add (new ContentPage {
+            Title = "Blue and Red",
+            Content = new StackLayout {
+                Children = {
+                    new BoxView { Color = Color.Blue },
+                    new BoxView { Color = Color.Red}
+                }
+            }
+        });
+    }
+}
 ----
 
+Die Code Samples sind von diesem Projekt: https://github.com/schletz/Pos4xhif
+und dieser Xamarin Dokumentationsseite: https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.tabbedpage?view=xamarin-forms
 
-===
 
 [section]
 === Auswertung / Vergleich
-Für jedes Kriterium, das für die Bewertung der Frameworks heranzgeogen wurde, können maximal 10 Punkte erreicht werden.
+Für jedes Kriterium, das für die Bewertung der Frameworks herangezogen wurde, können maximal 10 Punkte erreicht werden.
 
 .Auswertungs Tabelle
 |=======
@@ -527,7 +932,7 @@ Für das Diplomprojekt wurde Flutter verwendet, da das Team etwas komplett neues
 
 == Schlussfolgerung der Arbeit
 Es gibt zahlreiche Möglichkeiten im Frontend Bereich eine App zu entwickeln. Von Kompaktlösungen, die Geld kosten, bis zu Open Source Frameworks ist alles enthalten.
-Wichtig ist, dass vorab Kritierien festgelegt werden, die das jeweilige Framework erfüllen muss, um die Applikation umzusetzen.
+Wichtig ist, dass vorab Kriterien  festgelegt werden, die das jeweilige Framework erfüllen muss, um die Applikation umzusetzen.
 "Das Framework" gibt es hierbei nicht, denn jeder hat andere Anforderungen und Angewohnheiten, die eine Auswahl am Ende dann festlegen, denn die Frameworks sind im Großen und
 Ganzen alle sehr gut. Flutter hebt sich mit seiner besonderen Art dennoch ein wenig hervor, da es mit den Widgets eine doch sehr Bildhafte und einfache Programmierung ist und dadurch auch relativ schnell zu lernen ist.
 Die Syntax Highlighter vereinfachen die Lesbarkeit und auch die Fehlerbehebung sehr. Ebenfalls scheint die Zukunft von Flutter als relativ sicher.
