@@ -1,3 +1,10 @@
+[topic-sima]
+:chapter-label: Kapitel
+:author: Dennis Sima
+
+= *Recherche von best practices von UX Design Guidelines für mobile Apps*
+
+Dennis Sima <sim18354@spengergasse.at>
 
 == Abstract
 
